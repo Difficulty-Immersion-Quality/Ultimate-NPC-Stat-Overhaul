@@ -35,6 +35,26 @@ data "Description" "hb2f5c3eag43a7g4f82g89d8g10640b01212b;1"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "IF(SavingThrow(Ability.Constitution,15)):RegainHitPoints(1)"
 
+// ==================================== Bugbears: Brute ====================================
+// Bug Fix: DRS
+
+new entry "Brute_Bugbear"
+type "PassiveData"
+using "Brute_Bugbear"
+// // Brute
+// data "DisplayName" "h7c99562cg5f12g470egb043gc4627bc5454a;2"
+// // Deals an extra 1d8 damage when attacking with a melee weapon.
+// data "Description" "h05c7d373g806dg427cg9dd1g2e75371eed4e;4"
+// data "Properties" "Highlighted"
+// data "StatsFunctorContext" "OnAttack"
+data "StatsFunctorContext" ""
+// data "Conditions" "IsWeaponAttack() and HasDamageEffectFlag(DamageFlags.Hit) and IsMeleeAttack() and not IsMiss()"
+data "Conditions" ""
+// data "StatsFunctors" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):DealDamage(1d8, MainMeleeWeaponDamageType)"
+data "StatsFunctors" ""
+// data "Boosts" ""
+data "Boosts" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):CharacterWeaponDamage(1d8)"
+
 // ==================================== Spectators: Unpetrification Ray ====================================
 // Make the Spectator remove petrification from Drow within 9m (30ft) of the original target. Should probably take 3 rounds of combat to release them all.
 
