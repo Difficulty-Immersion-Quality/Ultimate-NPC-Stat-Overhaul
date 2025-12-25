@@ -55,6 +55,22 @@ data "StatsFunctors" ""
 // data "Boosts" ""
 data "Boosts" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):CharacterWeaponDamage(1d8)"
 
+// ==================================== Githyanki: Psychic Empowerment ====================================
+// Bug Fix: DRS
+
+new entry "PsychicStrikes_Githyanki"
+type "PassiveData"
+// // Psionic Empowerment
+// data "DisplayName" "hc20ca2dageb27g4ebbg8d48g2bb4014b69a0;2"
+// // Your attacks deal an extra [1] - the scars of illithid enslavement run deep. 
+// data "Description" "h101f48a4g15c3g46efga7c6g824851a0311a;5"
+// data "DescriptionParams" "DealDamage(1d6,Psychic)"
+// data "Icon" "GenericIcon_DamageType_Psychic"
+// data "StatsFunctorContext" "OnAttack"
+// data "Conditions" "(IsMeleeAttack() or IsRangedAttack()) and not HasSpellFlag(SpellFlags.Spell) and HasDamageEffectFlag(DamageFlags.Hit) and not HasStatus('INT_ORPHEUSGUARDS_FAKECOMBAT')"
+// data "StatsFunctors" "DealDamage(1d6, Psychic,Magical)"
+data "StatsFunctors" "DealDamage(1d6,Psychic,Magical,,0,,true,false)"
+
 // ==================================== Spectators: Unpetrification Ray ====================================
 // Make the Spectator remove petrification from Drow within 9m (30ft) of the original target. Should probably take 3 rounds of combat to release them all.
 
