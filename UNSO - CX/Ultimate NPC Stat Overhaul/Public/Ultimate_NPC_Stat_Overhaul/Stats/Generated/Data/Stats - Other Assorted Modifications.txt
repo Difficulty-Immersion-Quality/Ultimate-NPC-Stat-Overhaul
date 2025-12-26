@@ -60,6 +60,7 @@ data "Boosts" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):CharacterWeaponDam
 
 new entry "PsychicStrikes_Githyanki"
 type "PassiveData"
+using "PsychicStrikes_Githyanki"
 // // Psionic Empowerment
 // data "DisplayName" "hc20ca2dageb27g4ebbg8d48g2bb4014b69a0;2"
 // // Your attacks deal an extra [1] - the scars of illithid enslavement run deep. 
