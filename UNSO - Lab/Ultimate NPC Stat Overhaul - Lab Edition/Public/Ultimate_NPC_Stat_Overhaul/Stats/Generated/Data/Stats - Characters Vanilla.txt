@@ -422,9 +422,9 @@ data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f"
 // data "Passives" "LAB_Progression_Cleric_War;Dwarf_DwarvenResilience;AttackOfOpportunity;Darkvision;DarknessRules;ExtraAttack;Tactical_Discipline"
 
 // // Guard Vlomina - Cult of Bane (Added Fighter progressions)
-// new entry "Dwarf_Hill_Cultist_Bane_Fist"
-// type "Character"
-// using "Dwarf_Hill_Cultist_Bane_Fist"
+new entry "Dwarf_Hill_Cultist_Bane_Fist"
+type "Character"
+using "Dwarf_Hill_Cultist_Bane_Fist"
 // data "Progressions" ""
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 
