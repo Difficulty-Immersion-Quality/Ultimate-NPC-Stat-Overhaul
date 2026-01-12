@@ -4,8 +4,13 @@ new entry "DOWNED"
 type "StatusData"
 data "StatusType" "DOWNED"
 using "DOWNED"
-// data "Boosts" "AbilityFailedSavingThrow(Strength);AbilityFailedSavingThrow(Dexterity);CriticalHit(AttackTarget,Success,Always,2.5);IF(not DistanceToTargetGreaterThan(3)):Advantage(AttackTarget);IF(DistanceToTargetGreaterThan(3)):Disadvantage(AttackTarget);StatusImmunity(SG_Prone);StatusImmunity(SG_Condition);StatusImmunity(SHOCKWAVE)"
-data "Boosts" "AbilityFailedSavingThrow(Strength);AbilityFailedSavingThrow(Dexterity);CriticalHit(AttackTarget,Success,Always,2.5);IF(not DistanceToTargetGreaterThan(3)):Advantage(AttackTarget);IF(DistanceToTargetGreaterThan(3)):Disadvantage(AttackTarget);StatusImmunity(SG_Prone);StatusImmunity(SG_Condition);StatusImmunity(SHOCKWAVE);Tag(AI_PREFERRED_TARGET)"
+// data "Passives" ""
+data "Passives" "Goon_Downed_Passive"
+
+new entry "Goon_Downed_Passive"
+type "PassiveData"
+data "Boosts" "Tag(AI_PREFERRED_TARGET)"
+data "Properties" "IsHidden"
 
 // ==================================== Dame Aylin: Give her automatic self-revive a saving throw ====================================
 
