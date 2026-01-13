@@ -268,6 +268,7 @@
 	<!-- "GOON_FINESSE_OVERWRITE" --> <content contentuid="h33cb5ef3g9a7dg4cc8g8f51gadb6b5903f43" version="1">Brutish Finesse</content>
 	<!-- "GOON_FINESSE_OVERWRITE" --> <content contentuid="h9818df81gd782g452agb982gee152a4ddfea" version="1">The previous wielder of this weapon controlled it with grace, for a moment you wonder how they did it...</content>
 	<!-- "FinishingStrike" --> <content contentuid="h870ed340gd2afg486fg8be8g65230780dbff" version="1">Finishing Strike</content>
+	<!-- "Goon_Target_Multiattack_Drider_Weaker" --> <content contentuid="h13f9a429g6fceg454dg9853ge1f2f80e2806" version="1">Target must be below [1] &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;.</content>
 	<!-- "SHA_NECROMANCER_LANDOFTHEDEAD_AURA" --> <content contentuid="hb1ac7425gc22fg47a7g9d60g30793696a8be" version="1">This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. Additonally, living creatures have halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[3].</content>
 	<!-- "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF" --> <content contentuid="h55c5a489gaf11g4ed8g8698gf5832282fe1c" version="1">This living creature takes [1] at the end of every turn, has halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[2] while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.</content>
 
