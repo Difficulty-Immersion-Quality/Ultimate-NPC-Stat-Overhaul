@@ -4,7 +4,37 @@ new entry "DOWNED"
 type "StatusData"
 data "StatusType" "DOWNED"
 using "DOWNED"
-// data "Passives" ""
+// Downed
+// data "DisplayName" "h371b7c23g65beg45f4g8680gbcd03907e57f;1"
+// If you reach 0 hit points, you fall Unconscious and must make Death Saving Throws. On 3 successes, you stop bleeding out and become Stable. On 3 failures, you die.
+// 
+// If you regain any hit points, the condition is removed. If an ally &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helps&lt;/LSTag&gt; you, you regain 1 hit point.
+// data "Description" "h82d41284g4437g4202g859cgb7470b39bc22;3"
+// data "DescriptionParams" "Distance(1.5)"
+// data "Icon" "Status_Downed"
+// data "AnimationStart" "c68b348d-fe4c-41af-a29d-83010fc91418(STAT_Downed_Peace_01_Start)"
+// data "AnimationLoop" "b666ee61-f1cb-45bd-ae1b-1123799fbbbe(STAT_Downed_Peace_01_Loop)"
+// data "AnimationEnd" "9630f83c-a369-425d-8c0f-d38e01153a05(STAT_Downed_Peace_01_End)"
+// data "StillAnimationPriority" "Downed"
+// data "UseLyingPickingState" "Yes"
+// data "SoundLoop" "Misc_Status_Downed_MO"
+// data "SoundStop" "Misc_Status_Downed_MO_Stop"
+// data "SoundVocalEnd" "NONE"
+// data "StackId" "DOWNED"
+// data "StackPriority" "1"
+// data "Boosts" "AbilityFailedSavingThrow(Strength);AbilityFailedSavingThrow(Dexterity);CriticalHit(AttackTarget,Success,Always,2.5);IF(not DistanceToTargetGreaterThan(3)):Advantage(AttackTarget);IF(DistanceToTargetGreaterThan(3)):Disadvantage(AttackTarget);StatusImmunity(SG_Prone);StatusImmunity(SG_Condition);StatusImmunity(SHOCKWAVE)"
+// data "StatusPropertyFlags" "DisableOverhead"
+// data "OnApplyFunctors" "RemoveStatus(RAGE);RemoveStatus(SG_Mad)"
+// data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 100%, 0);"
+// data "StableRoll" "1d20"
+// data "StableRollDC" "10"
+// data "NumStableSuccess" "3"
+// data "NumStableFailed" "3"
+// data "OnSuccess" "RegainHitPoints(1)"
+// data "OnRollsFailed" "ApplyStatus(DYING,100,-1,DoT)"
+// data "StatusGroups" "SG_Unconscious;SG_Incapacitated"
+// data "ApplyEffect" "0e4edd5c-26bf-47a4-946d-8b049a5a6034"
+// data "StatusEffect" "bd630d9d-0bad-4cac-a7d6-fa7057f4302d"
 data "Passives" "Goon_Downed_Passive"
 
 new entry "Goon_Downed_Passive"
@@ -17,18 +47,36 @@ data "Properties" "IsHidden"
 new entry "SHA_NightsongResurrection"
 type "PassiveData"
 using "SHA_NightsongResurrection"
-// Blessed with the favour of a goddess, Nightsong cannot be permanently killed. When unconscious, the start of her turn she recovers 1 <LSTag Tooltip="HitPoints">hit point</LSTag>. 
+// Child of the Moonmaiden
+// data "DisplayName" "hc929021bg2701g44aegbcf0g19299216768d;2"
+// Blessed with the favour of a goddess, Nightsong cannot be permanently killed. When unconscious, the start of her turn she recovers 1 &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt;.
 // data "Description" "h193b7ee8g5a0bg4d44g93dega35d0a6530f8;1"
 // Blessed with the favour of a goddess, Nightsong cannot be permanently killed. When unconscious, Nightsong can regain 1 &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; if she succeeds a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; at the beginning of her turn.
 data "Description" "hb2f5c3eag43a7g4f82g89d8g10640b01212b;1"
+// data "Properties" "Highlighted"
+// data "Boosts" "DownedStatus(GLO_NIGHTSONGRESURRECTION_DOWNED,20)"
 
 new entry "GLO_NIGHTSONGRESURRECTION_DOWNED"
 type "StatusData"
 data "StatusType" "DOWNED"
 // using "DOWNED"
 using "GLO_NIGHTSONGRESURRECTION_DOWNED"
+// data "AnimationStart" "c5fccc78-9c37-474e-a059-0374e79da7ae(UTIL_NightsongResurrect_01_Start)"
+// data "AnimationLoop" "2c8fb7f8-c0c0-4ada-8664-52001113665e(UTIL_NightsongResurrect_01_Loop)"
+// data "AnimationEnd" "c9ad579f-dd08-4cc6-b477-6b45103f0be7(UTIL_NightsongResurrect_01_End)"
+// data "Boosts" "Invulnerable();Tag(AI_IGNORED_TARGET)"
 // data "TickFunctors" "RegainHitPoints(1)"
 data "TickFunctors" "ApplyStatus(GOON_NIGHTSONGRESURRECTION_TECHNICAL,100,0)"
+// data "OnApplyFunctors" "Stabilize();RemoveStatus(MOO_NIGHTSONG_MOONBEAM);"
+// data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 100%, 0);"
+// data "StableRollDC" "0"
+// data "NumStableSuccess" "1"
+// data "NumStableFailed" "1"
+// data "OnSuccess" "Stabilize()"
+// data "OnRollsFailed" "Stabilize()"
+// data "StatusGroups" "SG_Unconscious;SG_Condition;SG_Incapacitated;SG_Helpable_Condition"
+// data "StatusEffect" "def81a2d-8c1e-45ae-9cea-4842866aa26a"
+data "Passives" ""
 
 new entry "GOON_NIGHTSONGRESURRECTION_TECHNICAL"
 type "StatusData"
@@ -46,9 +94,9 @@ data "OnApplyFunctors" "IF(SavingThrow(Ability.Constitution,15)):RegainHitPoints
 new entry "Brute_Bugbear"
 type "PassiveData"
 using "Brute_Bugbear"
-// // Brute
+// Brute
 // data "DisplayName" "h7c99562cg5f12g470egb043gc4627bc5454a;2"
-// // Deals an extra 1d8 damage when attacking with a melee weapon.
+// Deals an extra 1d8 damage when attacking with a melee weapon.
 // data "Description" "h05c7d373g806dg427cg9dd1g2e75371eed4e;4"
 // data "Properties" "Highlighted"
 // data "StatsFunctorContext" "OnAttack"
@@ -66,9 +114,9 @@ data "Boosts" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):CharacterWeaponDam
 new entry "PsychicStrikes_Githyanki"
 type "PassiveData"
 using "PsychicStrikes_Githyanki"
-// // Psionic Empowerment
+// Psionic Empowerment
 // data "DisplayName" "hc20ca2dageb27g4ebbg8d48g2bb4014b69a0;2"
-// // Your attacks deal an extra [1] - the scars of illithid enslavement run deep. 
+// Your attacks deal an extra [1] - the scars of illithid enslavement run deep. 
 // data "Description" "h101f48a4g15c3g46efga7c6g824851a0311a;5"
 // data "DescriptionParams" "DealDamage(1d6,Psychic)"
 // data "Icon" "GenericIcon_DamageType_Psychic"
@@ -85,8 +133,25 @@ type "SpellData"
 data "SpellType" "Target"
 // using "Target_ParalyzingRay_Spectator"
 using "Target_UND_Spectator_UnpetrifyingRay"
-// data "AreaRadius" ""
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" "AI_ONLY:CAST:ApplyStatus(AI_STATUS_FAKE,100);RemoveStatus(UND_SPECTATOR_PETRIFIED_001);RemoveStatus(UND_SPECTATOR_PETRIFIED_002);RemoveStatus(UND_SPECTATOR_PETRIFIED_003);RemoveStatus(UND_SPECTATOR_PETRIFIED_004);RemoveStatus(UND_SPECTATOR_PETRIFIED_005);RemoveStatus(UND_SPECTATOR_PETRIFIED_HOOKHORROR);RemoveStatus(PETRIFIED);ApplyStatus(UND_SPECTATOR_CHARMED,100,-1)"
+// data "TargetRadius" "18"
 data "AreaRadius" "9"
+// data "SpellSuccess" ""
+// data "TargetConditions" "HasStatus('UND_SPECTATOR_PETRIFIED_001') or HasStatus('UND_SPECTATOR_PETRIFIED_002') or HasStatus('UND_SPECTATOR_PETRIFIED_003') or HasStatus('UND_SPECTATOR_PETRIFIED_004') or HasStatus('UND_SPECTATOR_PETRIFIED_005') or HasStatus('UND_SPECTATOR_PETRIFIED_HOOKHORROR')"
+// Unpetrification Ray
+// data "DisplayName" "h52c55ea9gd2a2g4630g8d7agbe4cf1381855;1"
+// Turn a &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt; creature back to its organic form.
+// data "Description" "ha975ad8agc567g4a25gbb21gaa32557fc95d;3"
+// data "TooltipAttackSave" "Constitution"
+// data "TooltipStatusApply" ""
+// data "CastSound" "CrSpell_Cast_RayUnpetrifying"
+// data "TargetSound" "CrSpell_Impact_RayUnpetrify"
+// data "VerbalIntent" "Healing"
+// data "CastEffect" "f23bc1e0-9a35-434e-a0b3-c9ef93c4cbf7"
+// data "HitEffect" "b29c7e5e-4b10-47f6-82e6-df8908bb930f"
+// data "BeamEffect" "7c5bb7d7-2549-4232-bc03-c97f57ff18a1"
+// data "Sheathing" "DontChange"
 
 // ==================================== Auntie Ethel: Anti-Cheese Door Unlocker ====================================
 
@@ -116,15 +181,20 @@ data "RemoveEvents" "OnApply;OnStatusApplied;OnStatusRemoved"
 // data "TickFunctors" "Unlock()"
 
 // ==================================== Add a safeguard to the goblin extra attack shit so they don't go crazy if given proper Extra Attack ====================================
-// TODO: Adjust tooltip so it states in some capacity that it only works without Extra Attack.
-// TODO: Thirsting Blade and proper checks.
 
 new entry "GOB_Boss_RecklessAttack"
 type "PassiveData"
 // using "ExtraAttack"
 using "GOB_Boss_RecklessAttack"
+// Crude Frenzy
+// data "DisplayName" "h7e7ac0bbgf9e9g4579gb63bgf580e33f3a73;2"
+// This goblin can make an additional free attack after making a Main Hand Attack, but the second attack has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on its &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt;.
+// data "Description" "h751c3f3dgec25g4c1fgbe25g1e1554069fcb;2"
+// This feature is inactive if the entity posseses &lt;LSTag Type="Passive" Tooltip="ExtraAttack"&gt;Extra Attack&lt;/LSTag&gt;.
+data "ExtraDescription" "h0823dcb7ge7b1g4290g97e8g6249a90fcff2;1"
 // data "EnabledConditions" "not Tagged('EXTRA_ATTACK_BLOCKED')"
-data "EnabledConditions" "not Tagged('EXTRA_ATTACK_BLOCKED') and not HasPassive('ExtraAttack') and not HasPassive('ExtraAttack_2') and not HasPassive('ExtraAttack_3')"
+data "EnabledConditions" "not Tagged('EXTRA_ATTACK_BLOCKED') and not HasPassive('ExtraAttack') and not HasPassive('ExtraAttack_2') and not HasPassive('ExtraAttack_3') and not HasPassive('ThirstingBlade_Blade')"
+// data "StatsFunctors" "IF(HasAnyExtraAttack(context.Source)):ApplyStatus(SELF,EXTRA_ATTACK_Q,100,1);IF(not HasAnyExtraAttack(context.Source)):ApplyStatus(SELF,EXTRA_ATTACK,100,1);ApplyStatus(SELF,GOB_RECKLESS_ATTACK,100,1)"
 
 // ==================================== Gerringothe Thorm - Accursed Keeper of Coins ====================================
 // Bug Fix: Listed appropriate damage for Gerringothe Thorm's Headbutt.
@@ -132,8 +202,22 @@ data "EnabledConditions" "not Tagged('EXTRA_ATTACK_BLOCKED') and not HasPassive(
 new entry "Target_Headbutt_TollCollector_Face"
 type "SpellData"
 data "SpellType" "Target"
+// using "Target_Bite"
 using "Target_Headbutt_TollCollector_Face"
+// data "SpellSuccess" "DealDamage(2d4+UnarmedMeleeAbilityModifier,Bludgeoning);IF(not SavingThrow(Ability.Strength, 8)):Force(2)"
+// data "TargetConditions" "not Self() and not Dead()"
+// data "Icon" "GenericIcon_DamageType_Physical"
+// Headbutt
+// data "DisplayName" "hf8f1a31eg34afg4b9cg829dgd4b7406db203;2"
+// Smash a foe with your head.
+// data "Description" "h50b39fddg64d6g4334g8160g865e4e1996af;2"
+// data "DescriptionParams" "DealDamage(2d4+UnarmedMeleeAbilityModifier,Bludgeoning)"
 data "TooltipDamageList" "DealDamage(2d4+UnarmedMeleeAbilityModifier,Bludgeoning)"
+// data "SpellFlags" "IsAttack;IsMelee;IgnoreSilence;IsHarmful"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "5862bd17-6ec4-4099-8e32-a10806439891"
+// data "TargetEffect" "381a240f-0142-4301-805c-1768eb470a95"
+// data "Sheathing" "DontChange"
 
 // ==================================== Malus Thorm - Shar's Scalpel ====================================
 // Bug Fix: Added missing 40% or less HP threshold for Malus Thorm's Multiattack to be usable.
@@ -144,6 +228,14 @@ type "SpellData"
 data "SpellType" "Target"
 // using "Target_Multiattack"
 using "Target_Multiattack_Surgeon"
+// data "SpellSuccess" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing); Cast2[DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing)]"
+// data "TargetConditions" "not Self() and not Dead() and not (HasStatus('SURGEON_ENABLE_ATTACK_BONESAW',context.Source) or HasStatus('SURGEON_ENABLE_ATTACK_LEECH',context.Source) or HasStatus('SURGEON_ENABLE_ATTACK_SYRINGE',context.Source) or HasStatus('SURGEON_ENABLE_ATTACK_TREPAN',context.Source))"
+// data "DescriptionParams" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing)"
+// data "TooltipDamageList" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing);DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing)"
+// data "CastSound" "CrSpell_Cast_Surgeon_Multiattack"
+// data "TargetSound" "CrSpell_Impact_Surgeon_Multiattack"
+// data "CastEffect" "11041ac2-b64f-4697-88c0-6e09190c190d"
+// data "HitEffect" "03b42dd5-c3b5-442c-bdc9-36c40d616622"
 // data "RequirementConditions" "HasHPPercentageEqualOrLessThan(40,context.Source)"
 data "RequirementConditions" "HasHPPercentageEqualOrLessThan(60,context.Source)"
 
@@ -155,6 +247,18 @@ using "Multiattack_Surgeon"
 // Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 60% or less.
 data "Description" "h71acc892g62a3g4915ga463g01ca37c6054f;1"
 
+new entry "Multiattack_Surgeon"
+type "PassiveData"
+using "Multiattack_Surgeon"
+// Multiattack: Wounded
+// data "DisplayName" "hcaa16a47g2145g4c4dgba8agacc959ee898a;1"
+// Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 40% or less.
+// data "Description" "h0e220109gede8g427cg88d2g4375734e1d14;1"
+// Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 60% or less.
+data "Description" "h71acc892g62a3g4915ga463g01ca37c6054f;1"
+// data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// data "Properties" "Highlighted"
+
 // ==================================== Cranium Rats ====================================
 // Bug Fix: Infectious Madness no longer incorrectly shows that it's been applied to the Cranium Rat.
 // Bug Fix: Infectious Madness can apply to more than one character. (Redundant)
@@ -162,7 +266,15 @@ data "Description" "h71acc892g62a3g4915ga463g01ca37c6054f;1"
 new entry "Confusion_CraniumRat"
 type "PassiveData"
 using "Confusion_CraniumRat"
+// Infectious Madness
+// data "DisplayName" "h5884480eg58d2g44e7gb3c0gaa718a4b1e37;2"
+// After the cranium rat takes damage, the attacker must make an Intelligence &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.
+// data "Description" "hf9b5891agf335g4eb4g8b1egd40761af40db;6"
+// data "Icon" "statIcons_Confused"
+// data "Properties" "Highlighted"
 data "TooltipSave" "Intelligence"
+// data "StatsFunctorContext" "OnDamaged"
+// data "Conditions" "TotalDamageDoneGreaterThan(0)"
 // data "StatsFunctors" "IF(not SavingThrow(Ability.Intelligence, 13, false, false, context.Source)):ApplyStatus(SWAP,CONFUSION,100,2)"
 data "StatsFunctors" "ApplyStatus(SWAP,GOON_CONFUSION_CRANIUMRAT_TECHNICAL_APPLIER, 100, 0)"
 
@@ -185,20 +297,52 @@ type "SpellData"
 data "SpellType" "Target"
 // using "Target_Multiattack"
 using "Target_Multiattack_Mummy"
+// data "SpellRoll" "Attack(AttackType.MeleeUnarmedAttack); Cast2[Attack(AttackType.MeleeUnarmedAttack)]"
+// data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);TARGET:IF(not SavingThrow(Ability.Constitution,SourceSpellDC())):ApplyStatus(CURSE_MUMMY,100,10);Cast2[DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);TARGET:IF(not SavingThrow(Ability.Constitution,SourceSpellDC())):ApplyStatus(CURSE_MUMMY,100,10)];"
 // data "TargetConditions" "not Self() and not Dead() and HasStatus('FRIGHTENED')"
 data "TargetConditions" "not Self() and not Dead() and HasStatus('SG_Frightened')"
 // data "CycleConditions" "Character() and Enemy() and not Dead()"
 data "CycleConditions" "Character() and Enemy() and not Dead() and HasStatus('SG_Frightened')"
+// Aim multiple attacks at a target that is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;. Each one deals [1] and [2].
+// data "Description" "h0c65402ag8c0fg4f75g9442g7e7c987e9bc6;4"
+// data "DescriptionParams" "DealDamage(2d6+UnarmedMeleeAbilityModifier,Slashing);DealDamage(3d6,Necrotic)"
+// data "TooltipDamageList" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);"
+// data "TooltipAttackSave" "MeleeUnarmedAttack;Wisdom"
+// data "TooltipStatusApply" "ApplyStatus(CURSE_MUMMY,100,10)"
+// data "Sheathing" "DontChange"
+
+// new entry "Multiattack_Mummy"
+// type "PassiveData"
+// Multiattack: Frightened
+// data "DisplayName" "hb23c8f25g7ac9g48b3g8effg150f6030359b;2"
+// The Mummy can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Mummy"&gt;Multiattack&lt;/LSTag&gt; if its target is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;.
+// data "Description" "h23cf628fg23fcg458dga51dg7e393c2a7c01;1"
+// data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// data "Properties" "Highlighted"
 
 // ==================================== Father Carrion ====================================
 // Changes: Added condition so he cannot control players, just for the sake of other mods that may give players the Undead tag.
+// TODO: Replace with Sailor's Saving Throw implementation
 
 new entry "Target_LOW_FatherCarrion_FatherOfTheDead"
 type "SpellData"
 data "SpellType" "Target"
 using "Target_LOW_FatherCarrion_FatherOfTheDead"
+// data "SpellProperties" "ApplyStatus(LOW_FATHERCARRION_FATHEROFTHEDEAD, 100, -1)"
 // data "TargetConditions" "Character() and not Dead() and Tagged('UNDEAD') and not HasStatus('LOW_FATHERCARRION_FATHEROFTHEDEAD')"
 data "TargetConditions" "Character() and not Dead() and not Player() and Tagged('UNDEAD') and not HasStatus('LOW_FATHERCARRION_FATHEROFTHEDEAD')"
+// Mortal Uncoiling
+// data "DisplayName" "hd7f77b99ga21dg4182ga107g7bfbce49386e;3"
+// Turn an Undead entity against its master until combat ends. When the effect ends, the entity is destroyed.
+// data "Description" "h0d5f1837g8438g4bacgad92g6caf3cbe50e4;4"
+// data "TooltipStatusApply" "ApplyStatus(LOW_FATHERCARRION_FATHEROFTHEDEAD, 100, -1)"
+// data "CastSound" "CrSpell_Cast_FatherCarrion_FatheroftheDead"
+// data "CastTextEvent" "Cast"
+// data "SpellAnimation" "e57221a1-8648-4642-a8a5-49bdb97e3113,,;69a99ae2-8104-46d8-9841-1fb0a0fb9c16,,;dd6187fd-9a6e-4d4d-b8af-30f2b1b845de,,;5db17e2c-749b-4b79-8dec-5795a3232cdd,,;25b4af43-109f-47db-b9ac-5f8d7887e52d,,;,,;,,;,,;,,"
+// data "VerbalIntent" "Control"
+// data "CastEffect" "20bb61d2-e6f9-4ab7-bdac-e9e25286e537"
+// data "TargetEffect" "3a9ea8c9-b83e-47f1-bee9-0cc9f87639a7"
+// data "Sheathing" "DontChange"
 
 // ==================================== Djinni - Drunken Inhale ====================================
 // Bug Fix: When the spell fails it deals half of 4d8 Poison damage, instead of quartering the damage by dealing half of 2d8.
@@ -208,8 +352,37 @@ type "SpellData"
 data "SpellType" "Zone"
 // using "Zone_Thunderwave"
 using "Zone_Inhale_Djinni"
+// data "SpellSuccess" "DealDamage(4d8,Poison,Magical);ApplyStatus(DRUNK,100,1);Cast2[Force(-8, OriginToTarget)]"
 // data "SpellFail" "DealDamage((2d8)/2,Poison,Magical);"
 data "SpellFail" "DealDamage((4d8)/2,Poison,Magical)"
+// data "Icon" "Action_Monster_Djinni_Inhale"
+// Drunken Inhale
+// data "DisplayName" "hd1595b6eg69b1g4fefg92f6g5ff118b27388;2"
+// Compel foes toward you with an intoxicating wind that makes them &lt;LSTag Type="Status" Tooltip="DRUNK"&gt;Drunk&lt;/LSTag&gt;.
+// data "Description" "h68124cd0g3e75g45c6g8f88gd1b9b0fdc217;5"
+// data "DescriptionParams" "DealDamage(4d8,Poison)"
+// data "TooltipDamageList" "DealDamage(4d8,Poison)"
+// data "TooltipStatusApply" "ApplyStatus(DRUNK,100,1)"
+// data "TooltipOnSave" "9e039c4e-1354-43e9-95eb-6943d9a5a47d"
+// data "TooltipUpcastDescription" ""
+// data "TooltipUpcastDescriptionParams" ""
+// data "PrepareSound" "Spell_Prepare_Damage_Thunder_ChromaticOrbThunder_L1to3"
+// data "CastSound" "CrSpell_Cast_Djinni_Inhale"
+// data "TargetSound" "CrSpell_Impact_Djinni_Inhale"
+// data "AlternativeCastTextEvents" "Cast2"
+// data "Shape" "Cone"
+// data "FrontOffset" "-2"
+// data "Angle" "60"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "284c6dbf-b18a-49a5-9f45-e0724f7013e6,,;4d6df4f9-697c-4e3d-bdf0-cd53ea63e46d,,;3413bb2a-d3c3-4cf0-a998-3bf73221e007,,;b66bdfc5-dff5-4545-a99e-23c63964b6ea,,;6c4a9e2f-b39d-494d-ac02-7333cb71620a,,;,,;,,;,,;,,"
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "PrepareEffect" "400c6036-4cc6-43f3-ae00-dcd6bc4c7d6e"
+// data "CastEffect" "2ea055e5-0f9e-4605-880d-55637a025b49"
+// data "TargetEffect" ""
+// data "HitEffect" "d80a4409-016a-4b20-acff-75453a5fb103"
+// data "DamageType" "Poison"
+// data "Sheathing" "Sheathed"
 
 // ==================================== Yurgir - Concussive Burst / Gortash - Thunderthoom!  ====================================
 // Bug Fix: TooltipAttackSave swapped from Constituion to MeleeWeaponAttack.
@@ -219,8 +392,37 @@ type "SpellData"
 data "SpellType" "Zone"
 // using "Zone_Thunderwave"
 using "Zone_ConcussiveBlast_Orthon"
+// data "SpellSchool" "None"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" ""
+// data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack)"
+// data "SpellSuccess" "DealDamage(5d8,Thunder,Magical);Force(8, OriginToTarget)"
+// data "SpellFail" "DealDamage((5d8)/2,Thunder,Magical);"
+// data "Icon" "GenericIcon_DamageType_Thunder"
+// Concussive Burst
+// data "DisplayName" "hf594d706g2cb1g4a89g82afg7497dbb2e77f;2"
+// A thunderous blast that ripples over your foes and pushes them back.
+// data "Description" "h2186a044gcff1g4ef1ga3d2g1ab84d8c806c;3"
+// data "TooltipDamageList" "DealDamage(5d8,Thunder)"
 // data "TooltipAttackSave" "Constitution"
 data "TooltipAttackSave" "MeleeWeaponAttack"
+// data "PrepareSound" "CrSpell_Prepare_Orthon_Concussive_Blast"
+// data "PrepareLoopSound" "CrSpell_Loop_Orthon_Concussive_Blast_Stop"
+// data "CastSound" "CrSpell_Cast_ConcussiveBlast"
+// data "TargetSound" "CrSpell_Impact_ConcussiveBlast"
+// data "Shape" "Cone"
+// data "Range" "8"
+// data "Angle" "75"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "63292747-6485-4fd0-a1a1-281036b47bfc,,;dc5f3694-ff5a-4c7a-8a94-9e1bd1e43e7d,,;96ea0a93-2bb7-44c6-8b53-64b5c1ebc97e,,;64c836a3-d027-482f-b5a8-184230df9ee7,,;6aca20d7-92f6-4148-a8b2-4d87302f1d44,,;e587b162-1966-4c17-a137-7b40da647f46,,;,,;,,;,,"
+// data "WeaponTypes" "Ammunition"
+// data "SpellFlags" "AddFallDamageOnLand;IsHarmful;IsAttack;IsEnemySpell"
+// data "RechargeValues" ""
+// data "SpellAnimationIntentType" "Aggressive"
+// data "PrepareEffect" "80e0c758-0859-4126-9871-075d4882d9ce"
+// data "CastEffect" "4263a5da-abb4-4f49-b8fe-92e582d99920"
+// data "TargetEffect" "9682a720-5246-4bfe-894c-fd4ac0484e2f"
+// data "Sheathing" "Ranged"
 
 // ==================================== Cursed Skull - Grave Repulsion  ====================================
 // Bug Fix: Description now states the appropriate knockback distance of 8m, instead of 15m.
@@ -230,20 +432,73 @@ type "SpellData"
 data "SpellType" "Zone"
 // using "Zone_Thunderwave_2"
 using "Zone_LOW_OskarsBeloved_ObjectThunderwave"
+// data "SpellRoll" "not SavingThrow(Ability.Constitution, 15)"
+// data "SpellSuccess" "DealDamage(3d8,Necrotic,Magical);Force(8, OriginToTarget)"
+// data "SpellFail" "DealDamage((3d8)/2,Necrotic,Magical);"
+// data "TargetConditions" "not Dead() and not Tagged('UNDEAD') and Character()"
+// Grave Repulsion
+// data "DisplayName" "h6f26ac7ega129g4d09g9fa7g47b4ccca62e5;3"
+// Release an ectoplasmic pulse that knocks living creatures back [1].
+// data "Description" "hfc5e3784g7820g4f6bg8e1dg1a3e347588ad;2"
 // data "DescriptionParams" "Distance(15)"
 data "DescriptionParams" "Distance(8)"
+// data "TooltipDamageList" "DealDamage(3d8,Necrotic)"
+// data "TooltipOnSave" ""
+// data "TooltipUpcastDescription" ""
+// data "TooltipUpcastDescriptionParams" ""
+// data "Range" "5"
+// data "Base" "5"
+// data "UseCosts" ""
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful;ImmediateCast"
+// data "RootSpellID" ""
+// data "DamageType" "Necrotic"
 
 // ==================================== Thisobald Thorm - Roaring Belch  ====================================
-// Bug Fix: When the spell fails it no longer deals Thunder damage, instead dealing Bludgeoning damage, same as if it was a success. The tooltip now shows Bludgeoning damage instead of Thunder.
+// Bug Fix: When the spell fails it no longer deals Thunder damage, instead dealing Bludgeoning damage same as if it was a success. The tooltip now shows Bludgeoning damage instead of Thunder.
 
 new entry "Zone_Belch_Physical_Brewer"
 type "SpellData"
 data "SpellType" "Zone"
 using "Zone_Belch_Physical_Brewer"
+// data "SpellSchool" "None"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" "GROUND:CreateSurface(2,0,None)"
+// data "DeathType" "Physical"
+// data "SurfaceType" "Sentinel"
+// data "SurfaceLifetime" "0"
+// data "SurfaceGrowStep" "5"
+// data "SurfaceGrowInterval" "10"
+// data "SpellRoll" "not SavingThrow(Ability.Strength, SourceSpellDC())"
+// data "SpellSuccess" "DealDamage(3d10+StrengthModifier,Bludgeoning,Magical); Force(5)"
 // data "SpellFail" "DealDamage((3d10)/2+4,Thunder,Magical)"
 data "SpellFail" "DealDamage((3d10)/2+4,Bludgeoning,Magical)"
+// data "TargetConditions" "Character() and not Ally()"
+// data "Icon" "GenericIcon_DamageType_Thunder"
+// Roaring Belch
+// data "DisplayName" "h9a1c6d9fg512dg4ba7g8cebg9c1357d1b85b;2"
+// Let out a colossal burp and possibly push nearby objects and creatures back [1].
+// data "Description" "hbf69a244g0571g42cbg9f5eg7463f4ccd72d;2"
+// data "DescriptionParams" "Distance(5)"
+// On a successful Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;, target still takes half damage.
+// data "ExtraDescription" "h1f7eeb01gab6fg4e37gaa6bgd7edef76f566;1"
 // data "TooltipDamageList" "DealDamage(3d10+4,Thunder)"
 data "TooltipDamageList" "DealDamage(3d10+4,Bludgeoning)"
+// data "TooltipAttackSave" "Strength"
+// data "CastSound" "CrSpell_Cast_MudMephitMudBreath"
+// data "TargetSound" "CrSpell_Impact_MudMephitMudBreath"
+// data "PreviewCursor" "Cast"
+// data "CastTextEvent" "Cast"
+// data "Shape" "Cone"
+// data "TargetCeiling" "2"
+// data "Range" "4"
+// data "Angle" "45"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "73afb4e5-8cfe-4479-95cf-16889597fee3,,;293170ef-b18f-40dc-9a47-88d48249d615,,;25d2cc74-6f2f-48b0-9e01-07ee6928d679,,;eb262b52-92cd-4202-ac4c-e7a8062dbba9,,;6ec808e1-e128-44ef-9361-a713bf86de8f,,;,,;,,;,,;,,"
+// data "WeaponTypes" "None"
+// data "SpellFlags" "IsEnemySpell;IgnoreSilence;IsHarmful"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "4452c67f-d907-4bb1-ba19-494b6034c59d"
+// data "Sheathing" "DontChange"
 
 // ==================================== Fire Myrmidon - Cinderous Swipe  ====================================
 // Bug Fix: Damage is now properly reduced by Evasion, Shield Master: Block and any other CanAreaDamageEvade effects.
@@ -253,18 +508,40 @@ type "SpellData"
 data "SpellType" "Zone"
 // using "Zone_BurningHands"
 using "Zone_RangedSwipe_Myrmidon_Fire"
+// data "Level" ""
+// data "SpellSchool" ""
 // data "SpellSuccess" "IF(not HasEvasion()):DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType);IF(HasEvasion()):DealDamage((2d6)/2, Fire,Magical)"
 data "SpellSuccess" "DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
+// data "SpellFail" "DealDamage((2d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"
+// data "Icon" "GenericIcon_DamageType_Fire"
+// Cinderous Swipe
+// data "DisplayName" "h9050da5dg0c45g4602g8e7eg1d413d1a4ebc;2"
+// Create a blooming cone of fire as you swipe at a foe. 
+// data "Description" "hea54992cg9940g42degbc14g7961aebf19d7;2"
+// data "DescriptionParams" "DealDamage(2d6,Fire)"
+// data "TooltipDamageList" "DealDamage(2d6,Fire);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
+// data "TooltipUpcastDescription" ""
+// data "TooltipUpcastDescriptionParams" ""
+// data "CastSound" "CrSpell_Cast_Myrmidon_Fire_FierySwipe"
+// data "TargetSound" "CrSpell_Impact_Myrmidon_Fire_FierySwipe"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "3c545517-3952-465d-86b9-b79a6ce71d93,,;5326ef50-e126-4a9c-b0d4-a7248c2ffa79,,;87f4ecb0-927e-4053-a270-db215841ae87,,;4aa5d7be-3497-4ddf-9130-5661574dd283,,;e80622bf-2f2c-43af-864b-d3bc91905328,,;,,;,,;,,;,,"
+// data "WeaponTypes" "Melee"
 // data "SpellFlags" "IsHarmful;Wildshape"
 data "SpellFlags" "IsHarmful;Wildshape;CanAreaDamageEvade"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "PrepareEffect" "35831710-27d2-4237-8b45-fb91a0903889"
+// data "CastEffect" "8680ce07-cdcf-4961-9cd2-96720738204d"
+// data "Sheathing" "Melee"
 
-// ==================================== Wildshape: Fire Myrmidon - Cinderous Swipe ====================================
+// ==================================== Wildshape: Fire Myrmidon - Cinderous Swipe
 // Bug Fix: Damage is now properly reduced by Evasion, Shield Master: Block and any other CanAreaDamageEvade effects.
 // Bug Fix: Damage increased from 1d6 Fire to 2d6 Fire, same as the NPC entry.
 
 new entry "Zone_RangedSwipe_Wildshape_Myrmidon_Fire"
 type "SpellData"
 data "SpellType" "Zone"
+// using "Zone_RangedSwipe_Myrmidon_Fire"
 using "Zone_RangedSwipe_Wildshape_Myrmidon_Fire"
 // data "SpellSuccess" "IF(not HasEvasion()):DealDamage(1d6, Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType);IF(HasEvasion()):DealDamage((1d6)/2, Fire,Magical)"
 data "SpellSuccess" "DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
@@ -279,8 +556,31 @@ type "SpellData"
 data "SpellType" "Zone"
 // using "Zone_Thunderwave"
 using "Zone_CRE_PulseTrap_Blast"
+// data "SpellRoll" "not SavingThrow(Ability.Constitution, 18)"
+// data "SpellSuccess" "DealDamage(1d6,Radiant,Magical);Force(8, OriginToTarget);ApplyStatus(PRONE,100,1)"
+// data "SpellFail" "DealDamage(1d6,Radiant,Magical)"
+// data "TargetConditions" "not Self()"
+// data "Icon" "Spell_Evocation_BreakOfDawn"
+// Break of Dawn
+// data "DisplayName" "h5ed42aa5gf2e3g4c4ega607gcfafca4f2006;2"
+// Emit a pulse of energy and possibly push all nearby creatures and objects away and knock them &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+// data "Description" "hc9ee0333gc9ccg43a3ga173gd839c817a1ff;3"
+// data "DescriptionParams" ""
+// data "ExtraDescription" ""
+// data "TooltipDamageList" "DealDamage(1d6,Radiant)"
+// data "TooltipStatusApply" "ApplyStatus(PRONE,100,1)"
+// data "TooltipUpcastDescriptionParams" "DealDamage(1d8,Radiant)"
 // data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
 data "TooltipOnSave" ""
+// data "Shape" "Cone"
+// data "FrontOffset" "-3"
+// data "Range" "20"
+// data "Base" "5"
+// data "Angle" "100"
+// data "SpellFlags" "IsHarmful;IsTrap"
+// data "HitAnimationType" "PhysicalDamage"
+// data "TargetEffect" "5ea086f6-6e11-45b3-a4fa-46520d0e0cff"
+// data "ImpactEffect" "405cb657-8b02-44cd-a4d0-9a8d5967a40c"
 
 // ==================================== Owlbear - Call Consort ====================================
 // Bug Fix: Interrupt can be used while Invisible.
@@ -290,8 +590,14 @@ new entry "Interrupt_FOR_Owlbear_CallConsort"
 type "InterruptData"
 // using "Interrupt_LEGENDARY_ACTIONS"
 using "Interrupt_FOR_Owlbear_CallConsort"
+// Call Consort
+// data "DisplayName" "h8e411f8bg4272g494fg9bbfg346428ec2ab1;2"
+// Summon your mate to protect you in battle.
+// data "Description" "hf33d41fag35a4g432cgaeffg2fdab93f024e;1"
+// data "Container" "YesNoDecision"
 // data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and HasFunctor(StatsFunctorType.DealDamage) and IsHit() and not AnyEntityIsItem() and HasLastAttackTriggered() and not HasStatus('SILENCED',context.Observer)"
 data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and HasFunctor(StatsFunctorType.DealDamage) and IsHit() and not AnyEntityIsItem() and HasLastAttackTriggered() and not HasStatus('SG_Silenced',context.Observer)"
+// data "Properties" "UseSpell(OBSERVER_OBSERVER,Shout_FOR_Owlbear_CallConsort,true,false,true,,true)"
 data "InterruptFlags" "InterruptWhileInvisible"
 
 // ==================================== Auntie Ethel - Healing Pearl ====================================
@@ -302,8 +608,15 @@ new entry "LOW_HAG_MUSHROOM_HEALINGPEARL"
 type "StatusData"
 data "StatusType" "BOOST"
 using "LOW_HAG_MUSHROOM_HEALINGPEARL"
+// Healing Pearl
+// data "DisplayName" "h2250f577gd1d7g4887g90a8gf1d815026779;1"
+// At the start of its turn, this mushroom keeping Auntie Ethel alive regains all its &lt;LSTag Tooltips="HitPoints"&gt;hit points&lt;/LSTag&gt; unless some effect prevents it from restorative healing.
+// data "Description" "hdc1fbb4fg6a30g4609g8544g34853382f096;5"
+// data "Icon" "GenericIcon_Intent_Healing"
+// data "Passives" "LOW_Hag_Mushroom_VFX"
 // data "TickFunctors" "IF(not HasStatus('BURNING') and not HasStatus('SEARING_SMITE') and HasHPPercentageWithoutTemporaryHPEqualOrLessThan(99)):RegainHitPoints(100);IF(HasStatus('BURNING')):RemoveStatus('BURNING');IF(HasStatus('SEARING_SMITE')):RemoveStatus('SEARING_SMITE');IF(not HasStatus('BURNING') and not HasStatus('SEARING_SMITE') and not HasStatus('CHILL_TOUCH') and not HasStatus('WRAITHS_EMBRACE') and not HasStatus('CURSE_MUMMY') and not HasStatus('LOW_HAG_MUSHROOM_VFX')):ApplyStatus(LOW_HAG_MUSHROOM_VFX,100,-1);"
 data "TickFunctors" "IF(not Goon_HasBurningConditionOrTag() and HasHPPercentageWithoutTemporaryHPEqualOrLessThan(99)):RegainHitPoints(100);IF(HasStatus('SG_Burning')):RemoveStatus(SG_Burning);IF(not Goon_HasBurningConditionOrTag() and not HasStatus('CHILL_TOUCH') and not HasStatus('WRAITHS_EMBRACE') and not HasStatus('CURSE_MUMMY') and not HasStatus('LOW_HAG_MUSHROOM_VFX')):ApplyStatus(LOW_HAG_MUSHROOM_VFX,100,-1)"
+// data "StatusEffectOnTurn" "9396e4e3-2af9-465e-adba-5714d97ce66f"
 
 // ==================================== Harpy - Luring Song ====================================
 // Changes: Now checks for all Silenced conditions, not just the base Silenced condition.
@@ -312,10 +625,27 @@ new entry "LURING_SONG_AURA"
 type "StatusData"
 data "StatusType" "BOOST"
 using "LURING_SONG_AURA"
+// Singing
+// data "DisplayName" "h7685dfaag9c57g40a2g84dbgdfb8082a331f;2"
+// The harpy &lt;LSTag Type="Status" Tooltip="LURING_SONG"&gt;Lures&lt;/LSTag&gt; nearby creatures with a magical melody. &lt;br&gt;&lt;br&gt;The song ends if she is incapacitated or loses concentration.
+// data "Description" "h90f8b726g2718g42dfgb342g49f79df53dc7;4"
+// data "Icon" "Action_Singing"
+// data "StillAnimationType" "Shouting"
+// data "StillAnimationPriority" "Dazed"
+// data "StackId" "SILENCED"
+// data "StackPriority" "0"
+// data "AuraRadius" "30"
 // data "AuraStatuses" "TARGET:IF(Character() and not HasStatus('SILENCED') and Tagged('HUMANOID') and not Tagged('HARPY') and not Dead() and Enemy()):ApplyStatus(LURING_SONG_AURA_VICTIM);TARGET:IF(Character() and Tagged('HARPY') and not Dead()):ApplyStatus(LURING_SONG_AURA_LISTENER);"
 data "AuraStatuses" "TARGET:IF(Character() and not HasStatus('SG_Deafened') and Tagged('HUMANOID') and not Tagged('HARPY') and not Dead() and Enemy()):ApplyStatus(LURING_SONG_AURA_VICTIM); TARGET:IF(Character() and Tagged('HARPY') and not HasStatus('SG_Deafened') and not Dead()):ApplyStatus(LURING_SONG_AURA_LISTENER)"
+// data "AuraFlags" "IgnoreItems"
+// data "Boosts" "ActionResourceBlock(Movement);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint); StatusImmunity(LURING_SONG);"
 // data "RemoveConditions" "HasStatus('SILENCED')"
 data "RemoveConditions" "HasStatus('SG_Silenced')"
+// data "RemoveEvents" "OnStatusApplied"
+// data "StatusPropertyFlags" "OverheadOnTurn"
+// data "OnRemoveFunctors" "BreakConcentration()"
+// data "StatusGroups" "SG_DropForNonMutingDialog"
+// data "StatusEffect" "ca367127-9418-45ea-8657-8a1ddcb58931"
 
 // ==================================== Lorroakan - Elemental Retort ====================================
 // Bug Fix: Interrupt can be used while Invisible.
@@ -324,6 +654,12 @@ new entry "Interrupt_LOW_RamazithsTower_ElementalRebuke"
 type "InterruptData"
 // using "Interrupt_LOW_RamazithsTower_Deva_Flame"
 using "Interrupt_LOW_RamazithsTower_ElementalRebuke"
+// Elemental Retort
+// data "DisplayName" "hd3c626c7g2930g4fc1gaff0g607929dbfbff;1"
+// When attacked, the affected entity can draw on &lt;LSTag Type="Passive" Tooltip="LOW_RamazithsTower_ElementalSiphon"&gt;Siphoned&lt;/LSTag&gt; magic to cast &lt;LSTag Type="Spell" Tooltip="Target_LOW_RamazithsTower_Dummy"&gt;Elemental Retort&lt;/LSTag&gt;.
+// data "Description" "h116924a9g6948g4e0fg8540g2ce6373e2016;1"
+// data "Conditions" "IsAbleToReact(context.Observer) and not Ally(context.Source,context.Observer) and HasLastAttackTriggered() and HasActionResource('ReactionActionPoint',1,0, false) and not IsMiss() and (HasStatus('LOW_LORROAKAN_FIRE') or HasStatus('LOW_LORROAKAN_EARTH') or HasStatus('LOW_LORROAKAN_AIR') or HasStatus('LOW_LORROAKAN_WATER'))"
+// data "Properties" "UseSpell(SWAP,Target_LOW_RamazithsTower_Dummy,true,true,true);"
 data "InterruptFlags" "InterruptWhileInvisible"
 
 // ==================================== Counterspell (Mindflayer) ====================================
@@ -333,8 +669,11 @@ new entry "Interrupt_CounterSpell_MindFlayer"
 type "InterruptData"
 // using "Interrupt_Counterspell"
 using "Interrupt_CounterSpell_MindFlayer"
+// data "Cost" "ReactionActionPoint:1;Interupt_CounterSpell_MindFlayer:1"
+// data "Cooldown" "OncePerCombat"
 // data "EnableCondition" "HasActionResource('Interupt_CounterSpell_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'}));"
 data "EnableCondition" "HasActionResource('Interupt_CounterSpell_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus())"
+// data "EnableContext" ""
 
 // ==================================== Shield (Mindflayer) ====================================
 // Bug Fix: Can be used while under the effects of more non-hostile and non-spellcasting restricted Polymorphs.
@@ -343,17 +682,36 @@ new entry "Interrupt_Shield_Mindflayer"
 type "InterruptData"
 // using "Interrupt_Shield_Wizard"
 using "Interrupt_Shield_Mindflayer"
+// data "Cost" "ReactionActionPoint:1;Interupt_Shield_MindFlayer:1"
+// data "Cooldown" "OncePerCombat"
 // data "EnableCondition" "HasActionResource('Interupt_Shield_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'}));"
 data "EnableCondition" "HasActionResource('Interupt_Shield_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus())"
+// data "EnableContext" ""
 
 // ==================================== Legendary Resistance ====================================
-// Bug Fix: Can be used while under the effects of more non-hostile and non-spellcasting restricted Polymorphs.
+// Bug Fix: Interrupt can be used while Invisible.
+// Bug Fix: No longer restricted by non-hostile Polymorphs.
 
 new entry "Interrupt_LegendaryResistance"
 type "InterruptData"
 using "Interrupt_LegendaryResistance"
+// Legendary Resistance
+// data "DisplayName" "hd9d90cafgbde7g4752gaa6egb9d312237ecb;1"
+// Increase your &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; result by 10.
+// data "Description" "hcd1dcb91gab8ag4c4fg87f0gbf514599268d;2"
+// data "Icon" "Action_TransmuterStone_Resistance"
+// data "InterruptContext" "OnPostRoll"
+// data "InterruptContextScope" "Self"
+// data "Container" "YesNoDecision"
+// data "Conditions" "not Self(context.Source,context.Observer) and Self(context.Target,context.Observer) and HasInterruptedSavingThrow() and not AnyEntityIsItem() and IsFlatValueInterruptInteresting(10)"
+// data "Properties" "AdjustRoll(10);ApplyStatus(OBSERVER_OBSERVER,INTERRUPT_LEGENDARY_RESISTANCE,100,0)"
+// data "Cost" "LegendaryResistanceCharge:1"
+// data "Stack" "LegendaryResistance"
+// data "InterruptDefaultValue" "Enabled"
 // data "EnableCondition" "not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'});"
-data "EnableCondition" "not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus()"
+data "EnableCondition" "not HasStatus('SG_Polymorph') or Goon_IsNonHostilePolymorphStatus()"
+// data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+data "InterruptFlags" "InterruptWhileInvisible"
 
 // ==================================== Gortash - Tyrannical Branding ====================================
 // Bug Fix: Interrupt can be used while Invisible.
@@ -495,8 +853,8 @@ data "DescriptionParams" "DealDamage(4d6,Necrotic);RegainHitPoints(,)"
 // ==================================== "UND_Nere" ====================================
 // Bug Fix: Nere and Tahan get gimped on spell slots in Patch #8 because passives no longer stack.
 
-    new entry "Goon_AdditionalSpellSlot_Level_2"
-    type "PassiveData"
-    using "AdditionalSpellSlot_Level_2"
-    data "Properties" "IsHidden"
-    data "Boosts" "ActionResource(SpellSlot,1,2)"
+new entry "Goon_AdditionalSpellSlot_Level_2"
+type "PassiveData"
+using "AdditionalSpellSlot_Level_2"
+data "Properties" "IsHidden"
+data "Boosts" "ActionResource(SpellSlot,1,2)"
