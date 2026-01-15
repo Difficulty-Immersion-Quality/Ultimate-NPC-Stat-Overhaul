@@ -39,7 +39,7 @@ data "Passives" "Goon_Downed_Passive"
 
 new entry "Goon_Downed_Passive"
 type "PassiveData"
-data "Boosts" "Tag(AI_PREFERRED_TARGET)"
+data "Boosts" "IF(Player(context.Source)):Tag(AI_PREFERRED_TARGET)"
 data "Properties" "IsHidden"
 
 // ==================================== Dame Aylin: Give her automatic self-revive a saving throw ====================================
