@@ -27,7 +27,7 @@ data "ForceResistance" "None"
 // Halsin portal defense
 new entry "HAV_ShadowPortal"
 type "Object"
-using "_BaseItem"
+using "HAV_ShadowPortal"
 // data "Vitality" "142"
 data "Vitality" "200"
 // data "PiercingResistance" ""
