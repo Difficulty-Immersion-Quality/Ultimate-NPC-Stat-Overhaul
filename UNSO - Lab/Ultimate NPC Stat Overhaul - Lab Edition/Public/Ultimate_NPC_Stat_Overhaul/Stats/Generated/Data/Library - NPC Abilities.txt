@@ -744,6 +744,48 @@ data "Properties" "IsToggled;ToggledDefaultAddToHotbar;MetaMagic;ToggledDefaultO
 data "ToggleOnEffect" ""
 data "ToggleOffContext" ""
 
+// ==================================== General: Heroes' Feast ====================================
+// AI version that doesn't spawn camp supplies. Upcasts don't matter because this spell is only ever used as a cast on level load spell in Lab and can't be cast in combat anyway 
+
+new entry "Shout_HeroesFeast"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_HeroesFeast"
+// data "Level" "6"
+// data "SpellSchool" "Conjuration"
+// data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1);GROUND:Summon(3d8889c6-936b-4009-955c-d1f3aef46df5, 10, , , ,HEROES_FEAST_CHEST)"
+// data "AreaRadius" "18"
+// data "TargetConditions" "Ally()"
+// data "Icon" "Spell_Conjuration_HeroesFeast"
+// // Heroes' Feast
+// data "DisplayName" "hf64fb172g2b3fg40d1g855eg90c024d4c890;2"
+// // You and everyone around can't be poisoned, diseased, or frightened. Your <LSTag Tooltip="HitPoints">HP</LSTag> increases, and you make Wisdom <LSTag Tooltip="SavingThrow">Saves</LSTag> with <LSTag Tooltip="Advantage">Advantage</LSTag>.
+// data "Description" "hb170ef47g290ag4f0bgbfd1g7b0dc1ffeacf;5"
+// data "TooltipStatusApply" "ApplyStatus(HEROES_FEAST,100,-1)"
+// data "CastSound" "Spell_Cast_Heal_HeroesFeast_L6to8"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:6"
+// data "SpellAnimation" "414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;,,;,,"
+// data "VerbalIntent" "Buff"
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;UnavailableInDialogs"
+// data "HitAnimationType" "MagicalNonDamage"
+// data "Requirements" "!Combat"
+// data "MemoryCost" "1"
+// data "PrepareEffect" "88532675-7be6-4a54-b750-90e6a8f2c012"
+// data "CastEffect" "47f3994a-396b-40ac-a063-aa9ed71dc523"
+// data "TargetEffect" "f7af1a0f-87de-4a60-a725-9c56dd1264a2"
+// data "CombatAIOverrideSpell" ""
+data "CombatAIOverrideSpell" "Shout_HeroesFeast_AI"
+
+new entry "Shout_HeroesFeast_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_HeroesFeast"
+// data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1);GROUND:Summon(3d8889c6-936b-4009-955c-d1f3aef46df5, 10, , , ,HEROES_FEAST_CHEST)"
+data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1)"
+// data "CombatAIOverrideSpell" "Shout_HeroesFeast_AI"
+data "CombatAIOverrideSpell" ""
+
 // ==================================== Spirit Guardians for Squirrels ====================================
 // Separate spells and statuses so they can stack
 
