@@ -344,6 +344,7 @@
 	<!-- "SHA_NECROMANCER_LANDOFTHEDEAD_AURA" --> <content contentuid="hb1ac7425gc22fg47a7g9d60g30793696a8be" version="1">This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. Additonally, living creatures have halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[3].</content>
 	<!-- "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF" --> <content contentuid="h55c5a489gaf11g4ed8g8698gf5832282fe1c" version="1">This living creature takes [1] at the end of every turn, has halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[2] while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.</content>
 	<!-- "GOB_Boss_RecklessAttack" --> <content contentuid="h0823dcb7ge7b1g4290g97e8g6249a90fcff2" version="1">This feature is inactive if the entity posseses &lt;LSTag Type="Passive" Tooltip="ExtraAttack"&gt;Extra Attack&lt;/LSTag&gt;.</content>
+	<!-- "UND_ADAMANTINEGOLEM_SUPERHEATED" --> <content contentuid="h4148f0c7g4839g45ffg98b5g4bd501c21fc3" version="1">Exposure to lava has caused Grym's adamantine body to soften.&lt;br&gt;&lt;br&gt;Can now be affected by certain damage types and is &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1].</content>
 
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>

@@ -51,22 +51,11 @@ data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 //  │   ├─ "Automaton"
 //  │   │   └─ "AdamantineGolem"
 //  │   │       └─ "UND_AdamantineGolem"
-//  │   │           └─"MMM_GRYM2" (Copies the whole entry and overwrites nothing)
 
 // Grym - Provide a baseline way to damage him through Acid and Bludgeoning (see Statuses stats file)
 new entry "UND_AdamantineGolem"
 type "Character"
 using "UND_AdamantineGolem"
-// // data "PersonalStatusImmunities" "PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Poisoned;UNCONSCIOUS;KNOCKED_OUT;BURNING;BURNING_LAVA;STUNNED;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;WILD_MAGIC_BURNING;DAZED;DIFFICULT_TERRAIN_LAVA"
-// data "PersonalStatusImmunities" "KNOCKED_OUT;GAPING_WOUND;CHEST_TRAUMA;BLEEDING;BARBED_ARROW;HAMSTRING;CRIPPLED;DAZED;SUFFOCATING;SG_Blinded;SG_Charmed;SG_Confused;SG_Disease;SG_Drunk;SG_Exhausted;SG_Frightened;SG_Paralyzed;SG_Poisoned;SG_Sleeping;SG_Taunted;SG_Unconscious;SURPRISED;SHOCKED;SHOCKED_SURFACE;RAY_OF_ENFEEBLEMENT;PETRIFIED;STUNNED;BURNING;BURNING_TRIAL;WILD_MAGIC_BURNING;BURNING_AZER;BURNING_TRAPWALL;BURNING_LAVA;DIFFICULT_TERRAIN_LAVA"
-// data "AcidResistance" "Resistant"
-data "AcidResistance" "None"
-
-// Many More Monsters - Grym 2.0
-new entry "MMM_GRYM2"
-type "Character"
-// using "AdamantineGolem"
-using "MMM_GRYM2"
 // // data "PersonalStatusImmunities" "PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Poisoned;UNCONSCIOUS;KNOCKED_OUT;BURNING;BURNING_LAVA;STUNNED;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;WILD_MAGIC_BURNING;DAZED;DIFFICULT_TERRAIN_LAVA"
 // data "PersonalStatusImmunities" "KNOCKED_OUT;GAPING_WOUND;CHEST_TRAUMA;BLEEDING;BARBED_ARROW;HAMSTRING;CRIPPLED;DAZED;SUFFOCATING;SG_Blinded;SG_Charmed;SG_Confused;SG_Disease;SG_Drunk;SG_Exhausted;SG_Frightened;SG_Paralyzed;SG_Poisoned;SG_Sleeping;SG_Taunted;SG_Unconscious;SURPRISED;SHOCKED;SHOCKED_SURFACE;RAY_OF_ENFEEBLEMENT;PETRIFIED;STUNNED;BURNING;BURNING_TRIAL;WILD_MAGIC_BURNING;BURNING_AZER;BURNING_TRAPWALL;BURNING_LAVA;DIFFICULT_TERRAIN_LAVA"
 // data "AcidResistance" "Resistant"
