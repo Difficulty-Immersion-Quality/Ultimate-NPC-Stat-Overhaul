@@ -1,0 +1,31 @@
+// ==================================== Kar'niss - Multiattack ====================================
+// Add once per turn cooldown
+
+new entry "Target_Multiattack_Drider"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Multiattack"
+using "Target_Multiattack_Drider"
+// data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack); Cast2[Attack(AttackType.MeleeWeaponAttack)]; Cast3[Attack(AttackType.MeleeWeaponAttack)]"
+// data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand);Cast2[DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand);];Cast3[DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand)]"
+// data "TargetConditions" "not Self() and not Dead() and (HasHPPercentageEqualOrLessThan(99,context.Target))"
+// // Multiattack
+// data "DisplayName" "h244001cdg98f8g4682g8353g4a96dd0bfd44;1"
+// // Target must be below its maximum <LSTag Tooltip="HitPoints">hit points</LSTag>.
+// data "Description" "h580a4054gfb41g4446gb2ebg8c21ea73ca50;3"
+// data "TooltipDamageList" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType)"
+// data "TooltipAttackSave" "MeleeWeaponAttack"
+// data "CastSound" "CrSpell_Cast_Drider_Multiattack"
+// data "TargetSound" "CrSpell_Impact_Drider_Multiattack"
+// data "CastTextEvent" "Cast"
+// data "AlternativeCastTextEvents" "Cast2;Cast3"
+// data "SpellAnimation" "6d444cbe-28c7-4f69-9409-9b4871851d9b,,;ebd0529b-057e-491f-b124-acfed054728b,,;eeca2c0a-5f81-411e-aad8-b72362322900,,;2b6afcc6-c9c1-4dc1-9904-88bebecb892f,,;caa0d92c-5cd1-4248-9a4a-f2a8e404dac3,,;e6d40932-427f-4699-a0de-66f124d905b1,,;,,;,,;,,"
+// data "VerbalIntent" "Damage"
+// data "WeaponTypes" "Melee"
+// data "HitAnimationType" "PhysicalDamage"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "3edcc29d-0456-4fcf-a19f-016d4b261f2f"
+// data "HitEffect" "11f3ce58-ddce-4448-8f7c-ef14acc34923"
+// data "Sheathing" "Melee"
+// data "Cooldown" ""
+data "Cooldown" "OncePerTurn"
