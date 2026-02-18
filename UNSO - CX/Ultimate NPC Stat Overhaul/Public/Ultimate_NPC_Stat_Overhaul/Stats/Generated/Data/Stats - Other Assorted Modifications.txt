@@ -961,3 +961,30 @@ data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(2d10, Poison);D
 // data "PrepareEffect" "0e0b2dd9-23b6-40ef-b88a-953fed2a9a42"
 // data "CastEffect" "169aaaf6-1dba-4392-af39-598acca9ef22"
 // data "HitEffect" "870ccdb6-38cd-44f7-a578-3e3067d2a0e0"
+
+// ==================================== Mask of Vengeance - Vengeful Strike ====================================
+// Bug Fix: Honour ruleset bools.
+// Changes: Made Psychic damage magical.
+
+new entry "Target_HAG_MaskOfVengeance"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Smash"
+using "Target_HAG_MaskOfVengeance"
+// data "Cooldown" ""
+// data "AIFlags" ""
+// data "SpellSuccess" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand); DealDamage(2d4, Psychic)"
+data "SpellSuccess" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand); DealDamage(2d4, Psychic, Magical,,0,,true,false)"
+// Vengeful Strike
+// data "DisplayName" "h2acfbc1eg90f9g4afaga8ccg5e21a8b131e2;2"
+// Lace your attack with all the vengeance hidden within you.
+// data "Description" "he80cb46ag72abg490cga94dg954b02d56888;5"
+// data "TooltipDamageList" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); DealDamage(2d4, Psychic)"
+// data "CastSound" "CrSpell_Cast_MaskOfVengence"
+// data "TargetSound" "CrSpell_Impact_MaskOfVengence"
+// data "VocalComponentSound" "Vocal_Component_UniqueNPC_Gen_Hag"
+// data "UseCosts" "ReactionActionPoint:1"
+// data "MemoryCost" ""
+// data "PrepareEffect" "b10e10db-604a-45cf-aab0-0fc434eb9f37"
+// data "CastEffect" "1e18afe1-2102-4032-85a6-6214676fe5ee"
+// data "TargetEffect" "550119e3-9c52-42ff-aecc-341ae462df42"
