@@ -923,3 +923,41 @@ data "TickFunctors" "DealDamage(3d8,Necrotic,Magical)"
 // data "StatusEffect" "6d293bd2-1258-4c4f-a006-bfc41628d893"
 // data "StatusEffectOnTurn" "878dfe31-5d87-4a20-b47f-97a8b5742c79"
 // data "EndEffect" "ebb1a68e-f541-49b1-b7db-3d7c6c9560b9"
+
+// ==================================== Yurgir - Infernal Dagger ====================================
+// Bug Fix: No longer has 3 DealDamage instances eligible for DamageBonus.
+// Bug Fix: Conditional damage is displayed as such ans the description is overhauled.
+// Changes: Now executes weapon functors.
+// Changes: Now deals main hand weapon damage.
+
+new entry "Target_InfernalDagger"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_MainHandAttack"
+using "Target_InfernalDagger"
+// data "Cooldown" "OncePerTurn"
+// data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical);DealDamage(max(1,2d4+6), Slashing);DealDamage(2d10, Poison);ApplyStatus(POISONED,100,2)"
+data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical,,0,,true,false);DealDamage(max(1,2d4+6), MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);DealDamage(2d10, Poison,,,0,,true,false);ApplyStatus(POISONED,100,2)"
+// data "Icon" "GenericIcon_DamageType_Physical"
+// Infernal Dagger
+// data "DisplayName" "h9b74272ag086ag4c53gbbbeg639c2590dcba;1"
+// Strike a fiendish blow that might &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poison&lt;/LSTag&gt; the target and deal an additional [2].
+// data "Description" "h55b162f2gcd09g4437ga125gadc2cdc93b4e;2"
+// Strike a fiendish blow &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoning&lt;/LSTag&gt; the target, dealing [1], and an additional [2] if the target fails a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;.
+data "Description" "hea38735dg37d7g493dgb93fgfe81839a18a4;1"
+// data "DescriptionParams" "DealDamage(2d4+6, Slashing);DealDamage(4d10, Poison)"
+data "DescriptionParams" "DealDamage(2d10, Poison);DealDamage(2d10, Poison)"
+// data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(4d10, Poison)"
+data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(2d10, Poison);DealDamage(2d10, Poison,,,,ad727a13-c6f0-4b5b-aefd-aac79c6ed46e)"
+// data "TooltipAttackSave" "MeleeWeaponAttack;Constitution"
+// data "TooltipStatusApply" "ApplyStatus(POISONED,100,2)"
+// data "PrepareSound" "CrSpell_Prepare_Orthon_Infernal_Dagger"
+// data "PrepareLoopSound" "CrSpell_Loop_Orthon_Infernal_Dagger_Stop"
+// data "CastSound" "CrSpell_Cast_InfernalDagger"
+// data "TargetSound" "CrSpell_Impact_InfernalDagger"
+// data "DualWieldingUseCosts" ""
+// data "SpellAnimation" "5fe05141-c5d6-43f9-af1f-2a11805668d9,,;86cbc8f5-6b28-405f-8d5d-7cb7d479fc00,,;65c176a8-6001-4234-897c-87a1c7ac2891,,;8e799518-5134-44e2-ae16-93445fcd65a2,,;f5e67dcc-1368-403b-bcc5-2dc0eb6c9193,,;e6d8bf28-871b-4f3b-ab2e-447107332366,,;,,;,,;,,"
+// data "SpellFlags" "IsMelee;IsHarmful;IsDefaultWeaponAction;IsEnemySpell;IsAttack"
+// data "PrepareEffect" "0e0b2dd9-23b6-40ef-b88a-953fed2a9a42"
+// data "CastEffect" "169aaaf6-1dba-4392-af39-598acca9ef22"
+// data "HitEffect" "870ccdb6-38cd-44f7-a578-3e3067d2a0e0"
