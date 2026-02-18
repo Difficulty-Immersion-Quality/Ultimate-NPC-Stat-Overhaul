@@ -898,3 +898,28 @@ data "DescriptionParams" "DealDamage(,Bludgeoning)"
 data "StatusPropertyFlags" ""
 // data "OnRemoveFunctors" "ApplyStatus(UND_ADAMANTINEGOLEM_DEFAULT, 100, -1);"
 // data "StatusEffect" "9693a806-53c2-4fbe-9df0-a58e9a0e92b5"
+
+// ==================================== Oliver ====================================
+// Bug Fix: The Wasting Quiet: tick damage is now magical, the same as the application damage.
+
+new entry "SCL_OLIVER_CURSEDOME_BUFF"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_OLIVER_CURSEDOME_BUFF"
+// The Wasting Quiet
+// data "DisplayName" "hf4c45664g48efg409egaab3ga2d456ea80ed;2"
+// This creature is &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt; and takes [1] every time they enter or start their turn inside this miasma of childlike terror.
+// data "Description" "hdd6c2290gdbadg4ceag977ag7d97d965481d;3"
+// data "DescriptionParams" "DealDamage(3d8,Necrotic)"
+// data "Icon" "GenericIcon_DamageType_Necrotic"
+// data "SoundStart" "Spell_Status_OliversCursedDome_OneShot"
+// data "TickType" "StartTurn"
+// data "Boosts" "BlockVerbalComponent(); DialogueBlock(); SoundsBlocked()"
+// data "TooltipDamage" "DealDamage(3d8,Necrotic)"
+// data "TickFunctors" "DealDamage(3d8,Necrotic)"
+data "TickFunctors" "DealDamage(3d8,Necrotic,Magical)"
+// data "OnApplyFunctors" "DealDamage(3d8,Necrotic,Magical)"
+// data "ApplyEffect" "8502b53e-d2d7-4ec5-aa3b-e85f3be86991"
+// data "StatusEffect" "6d293bd2-1258-4c4f-a006-bfc41628d893"
+// data "StatusEffectOnTurn" "878dfe31-5d87-4a20-b47f-97a8b5742c79"
+// data "EndEffect" "ebb1a68e-f541-49b1-b7db-3d7c6c9560b9"
