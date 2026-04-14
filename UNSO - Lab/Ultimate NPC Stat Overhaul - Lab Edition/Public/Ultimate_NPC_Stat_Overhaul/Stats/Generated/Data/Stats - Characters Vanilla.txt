@@ -3851,9 +3851,9 @@ data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 //  │   │   │       └─ "LOW_UnholyAssassin_Rycke"
 
 // // Sinister Hooded Man, Night Blade Vrylda, Night Blade Vinnia, Night Blade Klarv, Cilarea, Night Blade Hervyl, Night Blade Abraxa, Night Blade Dellinjah Dax, Night Blade Elda - Cult of Bhaal (Added Rogue progressions, fixed racials)
-// new entry "Human_Cultist_Bhaal_NightBlade"
-// type "Character"
-// using "Human_Cultist_Bhaal_NightBlade"
+new entry "Human_Cultist_Bhaal_NightBlade"
+type "Character"
+using "Human_Cultist_Bhaal_NightBlade"
 // // data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Passives" "HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Darkvision"
 // data "Progressions" ""
