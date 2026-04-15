@@ -401,6 +401,23 @@ data "RequirementConditions" "not HasPassive('CombatInspiration')"
 // data "CombatAIOverrideSpell" "Target_BardicInspiration_AI"
 data "CombatAIOverrideSpell" ""
 
+// ==================================== Cleric - (ClericSubclasses5eCombined) Embodiment of the Law ====================================
+
+// AI version of Embodiment of the Law passive from Sumra's 5e Cleric Subclasses mod to ensure that it's always toggled on for NPCs
+new entry "EmbodimentoftheLawToggle_AI"  
+type "PassiveData"
+using "EmbodimentoftheLawToggle"
+// data "DisplayName" "hdbbe9b9dg6b89g48eeg8e17g214bbd8a763a;1"
+// data "Description" "h4c39a28fg81f8g4ad6gbad3g32d76fb3fda9;1"
+// data "DescriptionParams" "1"
+// data "Icon" "Passive_EmbodimentoftheLaw"
+// data "EnabledConditions" "HasActionResource('EmbodimentoftheLawUse',1,0,false,false,context.Source)"
+// data "EnabledContext" "OnLongRest;OnActionResourcesChanged"
+// data "Properties" "IsToggled;ToggledDefaultAddToHotbar;Temporary"
+data "Properties" "IsToggled;ToggledDefaultAddToHotbar;Temporary;ToggledDefaultOn"
+// data "Boosts" "UnlockSpellVariant(EmbodimentoftheLawSpellCheck(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint),ModifyUseCosts(Add,EmbodimentoftheLawUse,1,0),ModifyIconGlow(),ModifyTooltipDescription())"
+// data "ToggleOnEffect" "VFX_Spells_Cast_Cleric_EmbodimentofLaw_Enable_HeadFX_01:Dummy_HeadFX"
+
 // ==================================== Druid - Fungal Infestation resource passives ====================================
 
 // Prevent breaking of Symbiotic Entity by shapeshifting needlessly

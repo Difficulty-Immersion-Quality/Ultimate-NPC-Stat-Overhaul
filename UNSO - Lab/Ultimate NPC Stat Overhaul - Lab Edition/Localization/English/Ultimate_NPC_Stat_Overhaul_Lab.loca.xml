@@ -235,12 +235,35 @@
 	<!-- "LAB_Progression_Wizard_Transmutation" --> <content contentuid="hab88cc43g1f03g47e1g823bga96d7b5b06cf" version="1">A Wizard who alters the fabric of existence, changing what is into what could be.</content>
 
 <!-- Mods - Subclasses for Vanilla Classes -->
+	<!-- "LAB_Progression_Barbarian_AncestralGuardian" --> <content contentuid="hb9eaafb5g7b73g4f82g89fag0c065b8960a0" version="1">! Subclass: Ancestral Guardian Barbarian</content>
+	<!-- "LAB_Progression_Barbarian_AncestralGuardian" --> <content contentuid="he0dc3febgd2b3g4b0cga015gd77c5517c79b" version="1">A Barbarian who is aided in battle by the spirits of their ancestors.</content>
+	
+	<!-- "LAB_Progression_Barbarian_Zealot" --> <content contentuid="h82cb0f16ge6cag4cf4g9c66ge7ef33e1a7d5" version="1">! Subclass: Zealot Barbarian</content>
+	<!-- "LAB_Progression_Barbarian_Zealot" --> <content contentuid="h6d3857bcg2f3eg44c8g8c6bg7f24b3e3e58b" version="1">A Barbarian whose deity infuses them with divine poewr and inspires them to launch themselves into battle with a ferocious fury.</content>
+
+	<!-- "LAB_Progression_Cleric_Order" --> <content contentuid="hacb7be72g47d3g44f5gac3cgffd83f26d8f5" version="1">! Subclass: Order Domain Cleric</content>
+	<!-- "LAB_Progression_Cleric_Order" --> <content contentuid="hbdacdfa2gdcb4g4b76gb671g90e86b7d0863" version="1">A Cleric who meditates on logic and justice as they serve their god in devotion to law.</content>
+
+	<!-- "LAB_Progression_Cleric_Twilight" --> <content contentuid="hcd3947a0gfaa4g48bdg9e04g0711b62e744f" version="1">! Subclass: Twilight Domain Cleric</content>
+	<!-- "LAB_Progression_Cleric_Twilight" --> <content contentuid="haa5c4ca0gdda5g4178ga7e6g3193c0412c35" version="1">A Cleric whose service to the gods of twilight compells them to bring comfort to those that seek rest.</content>
+
+	<!-- "LAB_Progression_Fighter_Brute" --> <content contentuid="hf763e70cgfd68g424eg98b0gef82ccee5fb1" version="1">! Subclass: Brute Fighter</content>
+	<!-- "LAB_Progression_Fighter_Brute" --> <content contentuid="ha260d3f4g1fc2g4218g8d46gb921dfa9217e" version="1">A simple warrior who relies on mighty attacks and their own durability to overcome their enemies.</content>
+
+	<!-- "LAB_Progression_Fighter_Banneret" --> <content contentuid="hdb2f06e0gfbd4g498fgb25ag7bf909fe00ba" version="1">! Subclass: Banneret Fighter</content>
+	<!-- "LAB_Progression_Fighter_Banneret" --> <content contentuid="h4914c402gade6g46c3ga44bg8add4668962a" version="1">A Fighter whose actions can awaken reserves of courage and conviction in their allies.</content>
 
 	<!-- "LAB_Progression_Fighter_PsiWarrior" --> <content contentuid="hdb61a7f2g09bbg4ccfg9378g49bef34ff329" version="1">! Subclass: Psi Warrior Fighter</content>
 	<!-- "LAB_Progression_Fighter_PsiWarrior" --> <content contentuid="h3e698fecg6d63g4faag918age83a1955490f" version="1">A Fighter who augments their physical might with psi-infused weapon strikes, telekinetic lashes, and barriers of mental force.</content>
 
 	<!-- "LAB_Progression_Paladin_Conquest" --> <content contentuid="hecca81a4g51eeg4ea8g80a5gf78124dcf6a8" version="1">! Subclass: Oath of Conquest Paladin</content>
 	<!-- "LAB_Progression_Paladin_Conquest" --> <content contentuid="hbd89843dg274fg4e8bga664gb7890ed0effa" version="1">A Paladin who seeks glory in battle and the subjugation of their enemies.</content>
+
+	<!-- "LAB_Progression_Ranger_MonsterSlayer" --> <content contentuid="hbb14d35egffa1g41c5gae0agc74bcff8be0b" version="1">! Subclass: Monster Slayer Ranger</content>
+	<!-- "LAB_Progression_Ranger_MonsterSlayer" --> <content contentuid="h5b04945bg2297g44d5g81efg18ff6f91f167" version="1">A Ranger trained in supernatural techniques, dedicated to hunting down creatures of the night and other mystical foes.</content>
+
+	<!-- "LAB_Progression_Rogue_ScionOfTheThree" --> <content contentuid="h36931741g699ag4985gbcfege6f3ee0f22e3" version="1">! Subclass: Scion of the Three Rogue</content>
+	<!-- "LAB_Progression_Rogue_ScionOfTheThree" --> <content contentuid="hd531f517ge555g4f6bga031g88a49cfe1e42" version="1">A Rogue who draws power from the Dead Three: Bane, Bhaal, and Myrkul.</content>
 
 <!-- Mods - Modded Classes -->
 

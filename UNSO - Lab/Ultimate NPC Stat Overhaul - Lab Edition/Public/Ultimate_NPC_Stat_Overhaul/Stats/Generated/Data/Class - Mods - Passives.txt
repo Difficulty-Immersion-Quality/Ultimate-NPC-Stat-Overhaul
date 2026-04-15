@@ -1,6 +1,64 @@
 // ==================================== Vanilla Classes - Modded Subclasses ====================================
 
+// ==================================== Barbarian - Subclasses
+
+new entry "LAB_Progression_Barbarian_AncestralGuardian"
+type "PassiveData"
+// ! Subclass: Ancestral Guardian Barbarian
+data "DisplayName" "hb9eaafb5g7b73g4f82g89fag0c065b8960a0;1"
+// A Barbarian who is aided in battle by the spirits of their ancestors.
+data "Description" "he0dc3febgd2b3g4b0cga015gd77c5517c79b;1"
+data "Properties" "Highlighted"
+data "Icon" "Interrupt_SpiritShield"
+
+new entry "LAB_Progression_Barbarian_Zealot"
+type "PassiveData"
+// ! Subclass: Zealot Barbarian
+data "DisplayName" "h82cb0f16ge6cag4cf4g9c66ge7ef33e1a7d5;1"
+// A Barbarian whose deity infuses them with divine poewr and inspires them to launch themselves into battle with a ferocious fury.
+data "Description" "h6d3857bcg2f3eg44c8g8c6bg7f24b3e3e58b;1"
+data "Properties" "Highlighted"
+data "Icon" "Spell_Zealous_Presence"
+
+// ==================================== Cleric - Subclasses
+
+new entry "LAB_Progression_Cleric_Order"
+type "PassiveData"
+// ! Subclass: Order Domain Cleric
+data "DisplayName" "hacb7be72g47d3g44f5gac3cgffd83f26d8f5;1"
+// A Cleric who meditates on logic and justice as they serve their god in devotion to law.
+data "Description" "hbdacdfa2gdcb4g4b76gb671g90e86b7d0863;1"
+data "Properties" "Highlighted"
+data "Icon" "Action_VoiceofAuthority"
+
+new entry "LAB_Progression_Cleric_Twilight"
+type "PassiveData"
+// ! Subclass: Twilight Domain Cleric
+data "DisplayName" "hcd3947a0gfaa4g48bdg9e04g0711b62e744f;1"
+// A Cleric whose service to the gods of twilight compells them to bring comfort to those that seek rest.
+data "Description" "haa5c4ca0gdda5g4178ga7e6g3193c0412c35;1"
+data "Properties" "Highlighted"
+data "Icon" "Action_EyesofNight"
+
 // ==================================== Fighter - Subclasses
+
+new entry "LAB_Progression_Fighter_Brute"
+type "PassiveData"
+// ! Subclass: Brute Fighter
+data "DisplayName" "hf763e70cgfd68g424eg98b0gef82ccee5fb1;1"
+// A simple warrior who relies on mighty attacks and their own durability to overcome their enemies.
+data "Description" "ha260d3f4g1fc2g4218g8d46gb921dfa9217e;1"
+data "Properties" "Highlighted"
+data "Icon" "Passive_BruteForce"
+
+new entry "LAB_Progression_Fighter_Banneret"
+type "PassiveData"
+// ! Subclass: Banneret Fighter
+data "DisplayName" "hdb2f06e0gfbd4g498fgb25ag7bf909fe00ba;1"
+// A Fighter whose actions can awaken reserves of courage and conviction in their allies.
+data "Description" "h4914c402gade6g46c3ga44bg8add4668962a;1"
+data "Properties" "Highlighted"
+data "Icon" "Spell_Rallying_Cry"
 
 new entry "LAB_Progression_Fighter_PsiWarrior"
 type "PassiveData"
@@ -21,6 +79,28 @@ data "DisplayName" "hecca81a4g51eeg4ea8g80a5gf78124dcf6a8;1"
 data "Description" "hbd89843dg274fg4e8bga664gb7890ed0effa;1"
 data "Properties" "Highlighted"
 data "Icon" "Icon_Conquest_ConqueringPresence"
+
+// ==================================== Ranger - Subclasses
+
+new entry "LAB_Progression_Ranger_MonsterSlayer"
+type "PassiveData"
+// ! Subclass: Monster Slayer Ranger
+data "DisplayName" "hbb14d35egffa1g41c5gae0agc74bcff8be0b;1"
+// A Ranger trained in supernatural techniques, dedicated to hunting down creatures of the night and other mystical foes.
+data "Description" "h5b04945bg2297g44d5g81efg18ff6f91f167;1"
+data "Properties" "Highlighted"
+data "Icon" "Spell_Slayers_Prey"
+
+// ==================================== Rogue - Subclasses
+
+new entry "LAB_Progression_Rogue_ScionOfTheThree"
+type "PassiveData"
+// ! Subclass: Scion of the Three Rogue
+data "DisplayName" "h36931741g699ag4985gbcfege6f3ee0f22e3;1"
+// A Rogue who draws power from the Dead Three: Bane, Bhaal, and Myrkul.
+data "Description" "hd531f517ge555g4f6bga031g88a49cfe1e42;1"
+data "Properties" "Highlighted"
+data "Icon" "D3_DreadAllegiance"
 
 // ==================================== Modded Classes ====================================
 
