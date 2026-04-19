@@ -14,7 +14,7 @@ data "Icon" "Interrupt_SpiritShield"
 new entry "LAB_Progression_Barbarian_Zealot"
 type "PassiveData"
 // ! Subclass: Zealot Barbarian
-data "DisplayName" "h82cb0f16ge6cag4cf4g9c66ge7ef33e1a7d5;1"
+data "DisplayName" "hf613d9a9gd501g4d03g8adfg037905f43d21;1"
 // A Barbarian whose deity infuses them with divine poewr and inspires them to launch themselves into battle with a ferocious fury.
 data "Description" "h6d3857bcg2f3eg44c8g8c6bg7f24b3e3e58b;1"
 data "Properties" "Highlighted"
