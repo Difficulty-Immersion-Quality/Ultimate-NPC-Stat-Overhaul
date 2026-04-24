@@ -1894,7 +1894,7 @@ data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 
 // Monk
 new entry "MMM_BALTHAZARZOMBIEMONK"
-// type "Character"
+type "Character"
 // using "Zombie"
 using "MMM_BALTHAZARZOMBIEMONK"
 // data "Vitality" "52"
