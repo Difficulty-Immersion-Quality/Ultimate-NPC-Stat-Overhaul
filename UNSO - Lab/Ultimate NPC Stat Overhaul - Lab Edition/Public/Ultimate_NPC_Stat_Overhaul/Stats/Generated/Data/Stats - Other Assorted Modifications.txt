@@ -988,3 +988,113 @@ data "SpellSuccess" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeapo
 // data "PrepareEffect" "b10e10db-604a-45cf-aab0-0fc434eb9f37"
 // data "CastEffect" "1e18afe1-2102-4032-85a6-6214676fe5ee"
 // data "TargetEffect" "550119e3-9c52-42ff-aecc-341ae462df42"
+
+// ============================ Raphael - Ravaging Inferno ============================
+// Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
+
+new entry "Projectile_LOW_Raphael_PrimordialHell"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_ChainLightning"
+using "Projectile_LOW_Raphael_PrimordialHell"
+// data "SpellProperties" "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt);GROUND:CreateSurface(5,,Fire);ApplyStatus(BURNING,100,1);"
+// data "TargetRadius" ""
+// data "AreaRadius" "5"
+// data "DeathType" "Incinerate"
+// data "ExplodeRadius" "5"
+// data "SpellRoll" "not SavingThrow(Ability.Dexterity, 15)"
+// data "SpellSuccess" "DealDamage(15d8,Fire,Magical);SpawnExtraProjectiles(Projectile_LOW_Raphael_PrimordialHell_Chain)"
+// data "SpellFail" "DealDamage(15d8/2,Fire,Magical);"
+// data "TargetConditions" "not Self() and not Dead() and Enemy()"
+// data "Trajectories" "001ce817-932e-4d8c-bf86-7097178a7806"
+// data "Icon" "Spell_Evocation_Fireball"
+// Ravaging Inferno
+// data "DisplayName" "hffafc26egb68fg422bgb0a4g272d32405b00;4"
+// Spend [3] souls to deal [1] and cause [2] &lt;LSTag Type="Spell" Tooltip="LOW_Raphael_DancingFlame"&gt;Igniting Sparks&lt;/LSTag&gt; to burst from each target hit.
+// data "Description" "h21f7be7agbd60g4bddgbc7eg175e4a393bcb;5"
+// data "DescriptionParams" "DealDamage(15d8, Fire);DealDamage(4d6, Fire)"
+// data "TooltipDamageList" "DealDamage(15d8, Fire)"
+// Target still takes half damage, but does not expel any &lt;LSTag Type="Spell" Tooltip="Projectile_LOW_Raphael_PrimordialHell_Chain"&gt;Igniting Sparks&lt;/LSTag&gt;.
+// data "TooltipOnSave" "23bf0c8d-a594-4f4c-9571-412af59cb434"
+// data "PrepareSound" ""
+// data "PrepareLoopSound" ""
+// data "CastSound" "CrSpell_Cast_PrimordialHell"
+// data "UseCosts" "ActionPoint:1;SpellSlotsGroup:3:3:1"
+// data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;6444d598-3e0e-4a14-902a-c067905a0b87,,;97f8db1e-e873-490a-9c33-8dbb4b97e583,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
+// data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;IsSpell"
+data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;IsSpell;IsHarmful"
+// data "HitAnimationType" "MagicalDamage_External"
+// data "RechargeValues" "3-6"
+// data "RequirementConditions" "HasStatus('LOW_RAPHAEL_MONSTER_FORM')"
+// data "PrepareEffect" "fdbf8e88-c3a5-4151-a81d-429985de422c"
+// data "CastEffect" "6d134da0-3f09-4bfd-928b-70443b382498"
+// data "HitEffect" "41de42e1-56d0-4336-8b44-99fc38281525"
+// data "DamageType" "Fire"
+// data "Sheathing" "DontChange"
+
+// ============================ Blight Vine - Constrict ============================
+// Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
+
+new entry "Target_Constrict_Blight_Vine"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Constrict_Blight_Vine"
+// data "SpellSchool" "None"
+// data "Cooldown" "OncePerTurn"
+// data "TargetRadius" "14"
+// data "SpellRoll" "not SavingThrow(Ability.Strength, 14,AdvantageOnPlantImpedeAttacks())"
+// data "SpellSuccess" "AI_IGNORE:DealDamage(2d6+UnarmedMeleeAbilityModifier,Bludgeoning);AI_IGNORE:DealDamage(1d4,Necrotic);AI_IGNORE:ApplyStatus(BLIGHT_ENTANGLE,100,4); AI_IGNORE:ApplyStatus(SELF,BLIGHT_CONSTRICT,100,4); AI_ONLY:IF(HasStatus('DIGESTIVE_SAP')):DealDamage(3d6, Bludgeoning);AI_ONLY:DealDamage(1d6, Bludgeoning)"
+// data "TargetConditions" "Character() and not Dead() and not HasStatus('SG_Restrained')"
+// data "Icon" "GenericIcon_Intent_Control"
+// Constrict
+// data "DisplayName" "h20e775dagef27g467fga534g139c775adc5d;2"
+// Wrap your cursed tendrils around a creature to &lt;LSTag Type="Status" Tooltip="BLIGHT_ENTANGLE"&gt;Constrict&lt;/LSTag&gt; it.
+// data "Description" "hbcafc537gb434g4464g8b21g131c082a1a2d;7"
+// data "TooltipDamageList" "DealDamage(2d6+UnarmedMeleeAbilityModifier,Bludgeoning);DealDamage(1d4,Necrotic)"
+// data "TooltipAttackSave" "Strength"
+// data "TooltipStatusApply" "ApplyStatus(BLIGHT_ENTANGLE,100,2);"
+// data "CastSound" "CrSpell_Cast_Constrict"
+// data "TargetSound" "CrSpell_Impact_Constrict"
+// data "PreviewCursor" "Cast"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "f8b91266-f61b-46e2-95ad-34e86a83204d,,;1a7a7d05-d4f3-4311-a48c-a97ce7f78e8f,,;e0b6c473-eb97-4c43-9c07-2071d2e573b9,,;,,;1f2796e2-914a-40ba-8fdf-f39863d094b8,,;,,;3596f970-a135-4242-a7bb-bec88f5b4502,,;,,;,,"
+// data "VerbalIntent" "Debuff"
+// data "SpellFlags" "HasSomaticComponent;IsConcentration;IsEnemySpell;CannotTargetTerrain;CannotTargetItems;IgnoreSilence"
+data "SpellFlags" "HasSomaticComponent;IsConcentration;IsEnemySpell;CannotTargetTerrain;CannotTargetItems;IgnoreSilence;IsHarmful"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "bb56d92b-66cb-4328-a013-490201b919f1"
+// data "TargetEffect" "444e121e-c8d3-4236-be2a-69d914aec905"
+// data "BeamEffect" "e2f39075-1cef-4d84-8217-9521d0bc6fcd"
+// data "Sheathing" "DontChange"
+
+// ============================ Shadow Mound - Slam ============================
+// Bug Fix: "DescriptionParams" melee damage corrected. 
+
+new entry "Target_Slam_ShadowMound"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_UnarmedAttack"
+using "Target_Slam_ShadowMound"
+// data "SpellSuccess" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+// Slam
+// data "DisplayName" "h97d6995ag240cg4b86gb56bg24c02deeaa0b;1"
+// data "DescriptionParams" "DealDamage3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+data "DescriptionParams" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic)"
+// data "TooltipDamageList" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+// data "SpellAnimation" "8b8bb757-21ce-4e02-a2f3-97d55cf2f90b,,;6606c30b-be1c-4f17-ae6b-1a591c80b18c,,;f4ac302b-1569-404f-bd52-1fe443e265df,,;e8a5c57f-855b-4227-acaa-11e8ce8d7d64,,;7bb52cd4-0b1c-4926-9165-fa92b75876a3,,;2b81c18b-9698-4262-a623-932c2bb1296d,,;,,;,,;,,"
+// data "Sheathing" "DontChange"
+
+// ============================ Blight Vine - Slam ============================
+// Bug Fix: "DescriptionParams" melee damage corrected. 
+
+new entry "Target_Slam_Blight_Vine"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Slam_ShadowMound"
+using "Target_Slam_Blight_Vine"
+// data "TargetRadius" "3"
+// data "SpellSuccess" "AI_IGNORE:DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+// data "DescriptionParams" "DealDamage1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+data "DescriptionParams" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic)"
+// data "TooltipDamageList" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
