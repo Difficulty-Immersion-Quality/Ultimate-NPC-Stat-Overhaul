@@ -35,8 +35,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                 -- Fat logs
                 if stored and hasSubclassPassives and stored ~= hasSubclassPassives then
                     assigned[charID][class] = hasSubclassPassives
-                    Logger:BasicDebug(
-                        "Subclass mismatch found for %s (%s) [%s]. Overwriting stored subclass: %s", charName, charID, class, hasSubclassPassives)
+                    Logger:BasicDebug("Subclass mismatch found for %s (%s) [%s]. Overwriting stored subclass: %s", charName, charID, class, hasSubclassPassives)
 
                 elseif not stored and hasSubclassPassives then
                     assigned[charID][class] = hasSubclassPassives
