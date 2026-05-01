@@ -42,7 +42,8 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                     Logger:BasicDebug("Found existing subclass for (%s - %s) [%s]. Storing: [%s].", charName, charID, class, hasSubclassPassives)
 
                 elseif stored and not hasSubclassPassives then
-                    Logger:BasicDebug("Stored subclass exists for (%s - %s) [%s] but [%s] passive not present.", charName, charID, class, stored)
+                    Osi.AddPassive(charID, stored)
+                    Logger:BasicDebug("Restoring missing subclass for (%s - %s) [%s]. Reapplying: [%s].", charName, charID, class, stored)
 
                 elseif not stored and not hasSubclassPassives then
                     Logger:BasicDebug("No subclass found or stored for (%s - %s). No action taken.", charName, charID, class)
