@@ -2,12 +2,15 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
     local assigned = Ext.Vars.GetModVariables(ModuleUUID).AssignedSubclasses or {}
     Ext.Vars.GetModVariables(ModuleUUID).AssignedSubclasses = assigned
 
+    -- Store the vars innit
     for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charID = entity.Uuid and entity.Uuid.EntityUuid or entity
 
+        -- Do the dawg have class
         for className, data in pairs(ClassData) do
             local hasMainClassPassive = data.MainClassPassive and Osi.HasPassive(charID, data.MainClassPassive) == 1
 
+            -- Is bro even real and do he have a name
             assigned[charID] = assigned[charID] or {}
             local stored = assigned[charID][className]
             local charName = "Unknown"
@@ -19,6 +22,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
             charName = Osi.GetDisplayName(charID) or "Unknown"
         end
 
+            -- Do bro with main class have a subclass? We finna find out
             if hasMainClassPassive then
                 local hasSubclassPassives
                 for _, subclassName in ipairs(data.SubclassPassives) do
@@ -28,6 +32,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                     end
                 end
 
+                -- Fat logs
                 if stored and hasSubclassPassives and stored ~= hasSubclassPassives then
                     assigned[charID][className] = hasSubclassPassives
                     Logger:BasicDebug(
