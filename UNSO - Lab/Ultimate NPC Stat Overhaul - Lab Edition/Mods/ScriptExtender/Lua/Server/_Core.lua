@@ -7,12 +7,12 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
         local charID = entity.Uuid and entity.Uuid.EntityUuid or entity
 
         -- Do the dawg have class
-        for className, data in pairs(ClassData) do
+        for class, data in pairs(ClassData) do
             local hasMainClassPassive = data.MainClassPassive and Osi.HasPassive(charID, data.MainClassPassive) == 1
 
-            -- Is bro even real and do he have a name
+            -- Is bro even real and do he have a name + storage
             assigned[charID] = assigned[charID] or {}
-            local stored = assigned[charID][className]
+            local stored = assigned[charID][class]
             local charName = "Unknown"
             local entityObj = Ext.Entity.Get(charID)
 
@@ -25,34 +25,34 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
             -- Do bro with main class have a subclass? We finna find out
             if hasMainClassPassive then
                 local hasSubclassPassives
-                for _, subclassName in ipairs(data.SubclassPassives) do
-                    if Osi.HasPassive(charID, subclassName) == 1 then
-                        hasSubclassPassives = subclassName
+                for _, subclass in ipairs(data.SubclassPassives) do
+                    if Osi.HasPassive(charID, subclass) == 1 then
+                        hasSubclassPassives = subclass
                         break
                     end
                 end
 
                 -- Fat logs
                 if stored and hasSubclassPassives and stored ~= hasSubclassPassives then
-                    assigned[charID][className] = hasSubclassPassives
+                    assigned[charID][class] = hasSubclassPassives
                     Logger:BasicDebug(
-                        "Subclass mismatch found for %s (%s) [%s]. Updating stored subclass: %s", charName, charID, className)
+                        "Subclass mismatch found for %s (%s) [%s]. Overwriting stored subclass: %s", charName, charID, class, hasSubclassPassives)
 
                 elseif not stored and hasSubclassPassives then
-                    assigned[charID][className] = hasSubclassPassives
-                    Logger:BasicDebug("Found existing subclass for %s (%s) [%s]. Storing: %s", charName, charID, className)
+                    assigned[charID][class] = hasSubclassPassives
+                    Logger:BasicDebug("Found existing subclass for %s (%s) [%s]. Storing: %s", charName, charID, class, hasSubclassPassives)
 
                 elseif stored and not hasSubclassPassives then
-                    Logger:BasicDebug("Stored subclass exists for %s (%s) [%s] but passive not present.", charName, charID, className)
+                    Logger:BasicDebug("Stored subclass exists for %s (%s) [%s] but %s passive not present.", charName, charID, class, stored)
 
                 elseif not stored and not hasSubclassPassives then
-                    Logger:BasicDebug("No subclass found or stored for %s (%s). No action taken.", charName, charID, className)
+                    Logger:BasicDebug("No subclass found or stored for %s (%s). No action taken.", charName, charID, class)
                 end
 
             else
                 if stored then
-                    assigned[charID][className] = nil
-                    Logger:BasicDebug("Main passive missing for %s (%s) [%s]. Cleared stored subclass.", charName, charID, className)
+                    assigned[charID][class] = nil
+                    Logger:BasicDebug("Main passive missing for %s (%s) [%s]. Cleared stored subclass: %s", charName, charID, class, stored)
                 end
             end
         end
