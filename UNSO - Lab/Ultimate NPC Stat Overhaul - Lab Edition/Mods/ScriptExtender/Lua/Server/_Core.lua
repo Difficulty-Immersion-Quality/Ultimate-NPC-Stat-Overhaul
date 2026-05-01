@@ -36,26 +36,25 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                 if stored and hasSubclassPassives and stored ~= hasSubclassPassives then
                     assigned[charID][className] = hasSubclassPassives
                     Logger:BasicDebug(
-                        "Subclass mismatch found for %s (%s) [%s]. Updating stored subclass: %s", charName, charID, className, subclassName)
+                        "Subclass mismatch found for %s (%s) [%s]. Updating stored subclass: %s", charName, charID, className)
 
                 elseif not stored and hasSubclassPassives then
                     assigned[charID][className] = hasSubclassPassives
-                    Logger:BasicDebug("Found existing subclass for %s (%s) [%s]. Storing: %s", charName, charID, className, subclassName)
+                    Logger:BasicDebug("Found existing subclass for %s (%s) [%s]. Storing: %s", charName, charID, className)
 
                 elseif stored and not hasSubclassPassives then
-                    Logger:BasicDebug("Stored subclass exists for %s (%s) [%s] but passive not present.", charName, charID, className, subclassName)
+                    Logger:BasicDebug("Stored subclass exists for %s (%s) [%s] but passive not present.", charName, charID, className)
 
                 elseif not stored and not hasSubclassPassives then
-                    Logger:BasicDebug("No subclass found or stored for %s (%s). No action taken.", charName, charID, className, subclassName)
+                    Logger:BasicDebug("No subclass found or stored for %s (%s). No action taken.", charName, charID, className)
                 end
 
             else
                 if stored then
                     assigned[charID][className] = nil
-                    Logger:BasicDebug("Main passive missing for %s (%s) [%s]. Cleared stored subclass.", charName, charID, className, subclassName)
+                    Logger:BasicDebug("Main passive missing for %s (%s) [%s]. Cleared stored subclass.", charName, charID, className)
                 end
             end
-        end
         end
     end
 end)
