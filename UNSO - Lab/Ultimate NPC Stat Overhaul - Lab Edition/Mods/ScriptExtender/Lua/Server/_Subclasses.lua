@@ -1,7 +1,7 @@
 ClassData = {
     Barbarian = {
-        MainPassive = "LAB_Progression_Barbarian",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Barbarian",
+        SubclassPassives = {
             "LAB_Progression_Barbarian_Berserker",
             "LAB_Progression_Barbarian_Giant",
             "LAB_Progression_Barbarian_WildMagic",
@@ -9,8 +9,8 @@ ClassData = {
         }
     },
     Bard = {
-        MainPassive = "LAB_Progression_Bard",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Bard",
+        SubclassPassives = {
             "LAB_Progression_Bard_Glamour",
             "LAB_Progression_Bard_Lore",
             "LAB_Progression_Bard_Swords",
@@ -18,8 +18,8 @@ ClassData = {
         }
     },
     Cleric = {
-        MainPassive = "LAB_Progression_Cleric",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Cleric",
+        SubclassPassives = {
             "LAB_Progression_Cleric_Death",
             "LAB_Progression_Cleric_Life",
             "LAB_Progression_Cleric_Light",
@@ -31,8 +31,8 @@ ClassData = {
         }
     },
     Druid = {
-        MainPassive = "LAB_Progression_Druid",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Druid",
+        SubclassPassives = {
             "LAB_Progression_Druid_Land",
             "LAB_Progression_Druid_Moon",
             "LAB_Progression_Druid_Spores",
@@ -40,8 +40,8 @@ ClassData = {
         }
     },
     Fighter = {
-        MainPassive = "LAB_Progression_Fighter",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Fighter",
+        SubclassPassives = {
             "LAB_Progression_Fighter_ArcaneArcher",
             "LAB_Progression_Fighter_BattleMaster",
             "LAB_Progression_Fighter_Champion",
@@ -49,8 +49,8 @@ ClassData = {
         }
     },
     Monk = {
-        MainPassive = "LAB_Progression_Monk",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Monk",
+        SubclassPassives = {
             "LAB_Progression_Monk_DrunkenMaster",
             "LAB_Progression_Monk_FourElements",
             "LAB_Progression_Monk_OpenHand",
@@ -58,8 +58,8 @@ ClassData = {
         }
     },
     Paladin = {
-        MainPassive = "LAB_Progression_Paladin",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Paladin",
+        SubclassPassives = {
             "LAB_Progression_Paladin_Ancients",
             "LAB_Progression_Paladin_Crown",
             "LAB_Progression_Paladin_Devotion",
@@ -68,8 +68,8 @@ ClassData = {
         }
     },
     Ranger = {
-        MainPassive = "LAB_Progression_Ranger",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Ranger",
+        SubclassPassives = {
             "LAB_Progression_Ranger_BeastMaster",
             "LAB_Progression_Ranger_GloomStalker",
             "LAB_Progression_Ranger_Hunter",
@@ -77,8 +77,8 @@ ClassData = {
         }
     },
     Rogue = {
-        MainPassive = "LAB_Progression_Rogue",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Rogue",
+        SubclassPassives = {
             "LAB_Progression_Rogue_ArcaneTrickster",
             "LAB_Progression_Rogue_Assassin",
             "LAB_Progression_Rogue_Swashbuckler",
@@ -86,8 +86,8 @@ ClassData = {
         }
     },
     Sorcerer = {
-        MainPassive = "LAB_Progression_Sorcerer",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Sorcerer",
+        SubclassPassives = {
             "LAB_Progression_Sorcerer_DraconicBloodline",
             "LAB_Progression_Sorcerer_WildMagic",
             "LAB_Progression_Sorcerer_Shadow",
@@ -95,8 +95,8 @@ ClassData = {
         }
     },
     Warlock = {
-        MainPassive = "LAB_Progression_Warlock",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Warlock",
+        SubclassPassives = {
             "LAB_Progression_Warlock_Archfey",
             "LAB_Progression_Warlock_Fiend",
             "LAB_Progression_Warlock_GreatOldOne",
@@ -104,8 +104,8 @@ ClassData = {
         }
     },
     Wizard = {
-        MainPassive = "LAB_Progression_Wizard",
-        SubclassTable = {
+        MainClassPassive = "LAB_Progression_Wizard",
+        SubclassPassives = {
             "LAB_Progression_Wizard_Abjuration",
             "LAB_Progression_Wizard_Bladesinging",
             "LAB_Progression_Wizard_Conjuration",
