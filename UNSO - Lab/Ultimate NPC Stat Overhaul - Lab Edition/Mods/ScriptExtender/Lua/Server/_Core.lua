@@ -1,6 +1,6 @@
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, _)
-    local assigned = Ext.Vars.GetModVariables(ModuleUUID).AssignedSubclasses or {}
-    Ext.Vars.GetModVariables(ModuleUUID).AssignedSubclasses = assigned
+    local assigned = Ext.Vars.GetModVariables(ModuleUUID).LabSubclasses or {}
+    Ext.Vars.GetModVariables(ModuleUUID).LabSubclasses = assigned
 
     -- Store the vars innit
     for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do

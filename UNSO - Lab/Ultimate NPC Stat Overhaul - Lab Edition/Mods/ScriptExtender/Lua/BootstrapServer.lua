@@ -10,7 +10,7 @@ local opts = {
     SyncOnWrite = false,
     DontCache = false
 }
-Ext.Vars.RegisterModVariable(ModuleUUID, "AssignedSubclasses", opts)
+Ext.Vars.RegisterModVariable(ModuleUUID, "LabSubclasses", opts)
 
 Ext.Require("Shared/Utils/_FileUtils.lua")
 Ext.Require("Shared/Utils/_TableUtils.lua")
