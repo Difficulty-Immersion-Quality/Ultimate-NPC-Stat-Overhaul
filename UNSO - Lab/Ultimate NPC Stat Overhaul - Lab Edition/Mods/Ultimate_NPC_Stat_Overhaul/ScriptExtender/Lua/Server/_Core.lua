@@ -35,23 +35,23 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                 -- Fat logs
                 if stored and hasSubclassPassives and stored ~= hasSubclassPassives then
                     assigned[charID][class] = hasSubclassPassives
-                    Logger:BasicDebug("Subclass mismatch found for %s (%s) [%s]. Overwriting stored subclass: %s", charName, charID, class, hasSubclassPassives)
+                    Logger:BasicDebug("Subclass mismatch found for (%s - %s) [%s]. Overwriting stored subclass: [%s].", charName, charID, class, hasSubclassPassives)
 
                 elseif not stored and hasSubclassPassives then
                     assigned[charID][class] = hasSubclassPassives
-                    Logger:BasicDebug("Found existing subclass for %s (%s) [%s]. Storing: %s", charName, charID, class, hasSubclassPassives)
+                    Logger:BasicDebug("Found existing subclass for (%s - %s) [%s]. Storing: [%s].", charName, charID, class, hasSubclassPassives)
 
                 elseif stored and not hasSubclassPassives then
-                    Logger:BasicDebug("Stored subclass exists for %s (%s) [%s] but %s passive not present.", charName, charID, class, stored)
+                    Logger:BasicDebug("Stored subclass exists for (%s - %s) [%s] but [%s] passive not present.", charName, charID, class, stored)
 
                 elseif not stored and not hasSubclassPassives then
-                    Logger:BasicDebug("No subclass found or stored for %s (%s). No action taken.", charName, charID, class)
+                    Logger:BasicDebug("No subclass found or stored for (%s - %s). No action taken.", charName, charID, class)
                 end
 
             else
                 if stored then
                     assigned[charID][class] = nil
-                    Logger:BasicDebug("Main passive missing for %s (%s) [%s]. Cleared stored subclass: %s", charName, charID, class, stored)
+                    Logger:BasicDebug("Main passive missing for (%s - %s) [%s]. Cleared stored subclass: [%s].", charName, charID, class, stored)
                 end
             end
         end
