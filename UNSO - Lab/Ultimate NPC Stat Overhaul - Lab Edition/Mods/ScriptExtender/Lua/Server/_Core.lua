@@ -7,14 +7,11 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
         if charID then
             for class, data in pairs(ClassData) do
                 if data.MainPassive and Osi.HasPassive(charID, data.MainPassive) == 1 then
-                    local charLevel = Osi.GetLevel(charID)
-                    local unlockLevel = data.SubclassUnlockLevel or 3
-
-                    if charLevel >= unlockLevel then
+                    
                         local stored = assigned[charID]
-
                         local charName = "Unknown"
                         local entityObj = Ext.Entity.Get(charID)
+
                         if entityObj and entityObj.DisplayName and entityObj.DisplayName.NameKey and entityObj.DisplayName.NameKey.Handle then
                             charName = Ext.Loca.GetTranslatedString(entityObj.DisplayName.NameKey.Handle.Handle) or "Unknown"
                         else
@@ -33,20 +30,25 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                             assigned[charID] = found
                             Logger:BasicDebug("Subclass mismatch detected for %s (%s). Updating stored subclass: %s", charName, charID, found)
 
-                        elseif stored and not found then
-                            Osi.AddPassive(charID, stored)
-                            Logger:BasicDebug("Stored subclasss not found for %s (%s). Applying: %s", charName, charID, stored)
-
+                        -- elseif stored and not found then
+                        --     Osi.AddPassive(charID, stored)
+                        --     Logger:BasicDebug("Stored subclasss not found for %s (%s). Applying: %s", charName, charID, stored)
                         elseif not stored and found then
                             assigned[charID] = found
                             Logger:BasicDebug("Found existing subclass on %s (%s). Storing: %s", charName, charID, found)
 
+                        -- elseif not stored and not found then
+                        --     local roll = math.random(1, #data.SubclassTable)
+                        --     local selected = data.SubclassTable[roll]
+                        --     assigned[charID] = selected
+                        --     Osi.AddPassive(charID, selected)
+                        --     Logger:BasicDebug("Rolled random subclass for %s (%s). Storing: %s", charName, charID, selected)
+
                         elseif not stored and not found then
-                            local roll = math.random(1, #data.SubclassTable)
-                            local selected = data.SubclassTable[roll]
-                            assigned[charID] = selected
-                            Osi.AddPassive(charID, selected)
-                            Logger:BasicDebug("Rolled random subclass for %s (%s). Storing: %s", charName, charID, selected)
+                            Logger:BasicDebug("No subclass found or stored for %s (%s). No action taken.", charName, charID)
+
+                        elseif stored and not found then
+                            Logger:BasicDebug("Stored subclass found for %s (%s) but passive not present. No action taken.", charName, charID)
                         end
                     end
                 end
