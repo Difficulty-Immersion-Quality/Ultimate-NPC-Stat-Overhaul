@@ -6,6 +6,8 @@ ClassData = {
             "LAB_Progression_Barbarian_Giant",
             "LAB_Progression_Barbarian_WildMagic",
             "LAB_Progression_Barbarian_Wildheart",
+            "LAB_Progression_Barbarian_AncestralGuardian",
+            "LAB_Progression_Barbarian_Zealot"
         }
     },
     Bard = {
@@ -27,7 +29,9 @@ ClassData = {
             "LAB_Progression_Cleric_Nature",
             "LAB_Progression_Cleric_Tempest",
             "LAB_Progression_Cleric_Trickery",
-            "LAB_Progression_Cleric_War"
+            "LAB_Progression_Cleric_War",
+            "LAB_Progression_Cleric_Order",
+            "LAB_Progression_Cleric_Twilight"
         }
     },
     Druid = {
@@ -45,7 +49,10 @@ ClassData = {
             "LAB_Progression_Fighter_ArcaneArcher",
             "LAB_Progression_Fighter_BattleMaster",
             "LAB_Progression_Fighter_Champion",
-            "LAB_Progression_Fighter_EldritchKnight"
+            "LAB_Progression_Fighter_EldritchKnight",
+            "LAB_Progression_Fighter_Brute",
+            "LAB_Progression_Fighter_Banneret",
+            "LAB_Progression_Fighter_PsiWarrior"
         }
     },
     Monk = {
@@ -64,7 +71,8 @@ ClassData = {
             "LAB_Progression_Paladin_Crown",
             "LAB_Progression_Paladin_Devotion",
             "LAB_Progression_Paladin_Vengeance",
-            "LAB_Progression_Paladin_Oathbreaker"
+            "LAB_Progression_Paladin_Oathbreaker",
+            "LAB_Progression_Paladin_Conquest"
         }
     },
     Ranger = {
@@ -73,7 +81,8 @@ ClassData = {
             "LAB_Progression_Ranger_BeastMaster",
             "LAB_Progression_Ranger_GloomStalker",
             "LAB_Progression_Ranger_Hunter",
-            "LAB_Progression_Ranger_Swarmkeeper"
+            "LAB_Progression_Ranger_Swarmkeeper",
+            "LAB_Progression_Ranger_MonsterSlayer"
         }
     },
     Rogue = {
@@ -82,7 +91,8 @@ ClassData = {
             "LAB_Progression_Rogue_ArcaneTrickster",
             "LAB_Progression_Rogue_Assassin",
             "LAB_Progression_Rogue_Swashbuckler",
-            "LAB_Progression_Rogue_Thief"
+            "LAB_Progression_Rogue_Thief",
+            "LAB_Progression_Rogue_ScionOfTheThree"
         }
     },
     Sorcerer = {
@@ -115,6 +125,15 @@ ClassData = {
             "LAB_Progression_Wizard_Illusion",
             "LAB_Progression_Wizard_Necromancy",
             "LAB_Progression_Wizard_Transmutation"
+        }
+    },
+    Artificer = {
+        MainClassPassive = "LAB_Progression_Artificer",
+        SubclassPassives = {
+            "LAB_Progression_Artificer_Alchemist",
+            "LAB_Progression_Artificer_Armourer",
+            "LAB_Progression_Artificer_Artillerist",
+            "LAB_Progression_Artificer_BattleSmith"
         }
     }
 }
