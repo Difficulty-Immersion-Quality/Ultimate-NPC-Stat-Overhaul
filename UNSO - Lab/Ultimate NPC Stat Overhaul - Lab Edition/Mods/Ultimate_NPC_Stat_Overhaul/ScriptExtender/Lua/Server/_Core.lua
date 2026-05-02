@@ -1,8 +1,10 @@
-Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, _)
+Ext.ModEvents["Absolutes_Laboratory"]["MutationProfileExecuted"]:Subscribe(function(payload)
+    
+    -- Store the vars innit
     local assigned = Ext.Vars.GetModVariables(ModuleUUID).LabSubclasses or {}
     Ext.Vars.GetModVariables(ModuleUUID).LabSubclasses = assigned
 
-    -- Store the vars innit
+    -- Is dawg person
     for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charID = entity.Uuid and entity.Uuid.EntityUuid or entity
 
@@ -10,7 +12,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
         for class, data in pairs(ClassData) do
             local hasMainClassPassive = data.MainClassPassive and Osi.HasPassive(charID, data.MainClassPassive) == 1
 
-            -- Is bro even real and do he have a name + storage
+            -- Does dawg has name and shiii
             assigned[charID] = assigned[charID] or {}
             local stored = assigned[charID][class]
             local charName = "Unknown"
@@ -27,7 +29,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                 local hasSubclassPassives
                 for _, subclass in ipairs(data.SubclassPassives) do
                     if Osi.HasPassive(charID, subclass) == 1 then
-                        hasSubclassPassives = subclass
+                        hasSubclassPassives = subclass .. "_Prep"
                         break
                     end
                 end
@@ -41,6 +43,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
                     assigned[charID][class] = hasSubclassPassives
                     Logger:BasicDebug("Found existing subclass for (%s - %s) [%s]. Storing: [%s].", charName, charID, class, hasSubclassPassives)
 
+                -- Restore that subclass dawg
                 elseif stored and not hasSubclassPassives then
                     Osi.AddPassive(charID, stored)
                     Logger:BasicDebug("Restoring missing subclass for (%s - %s) [%s]. Reapplying: [%s].", charName, charID, class, stored)
