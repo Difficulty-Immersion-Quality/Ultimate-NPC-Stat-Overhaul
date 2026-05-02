@@ -11,6 +11,11 @@ data "Description" "he0dc3febgd2b3g4b0cga015gd77c5517c79b;1"
 data "Properties" "Highlighted"
 data "Icon" "Interrupt_SpiritShield"
 
+new entry "LAB_Progression_Barbarian_AncestralGuardian_Prep"
+type "PassiveData"
+using "LAB_Progression_Barbarian_AncestralGuardian"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Barbarian_Zealot"
 type "PassiveData"
 // ! Subclass: Zealot Barbarian
@@ -19,6 +24,11 @@ data "DisplayName" "hf613d9a9gd501g4d03g8adfg037905f43d21;1"
 data "Description" "h6d3857bcg2f3eg44c8g8c6bg7f24b3e3e58b;1"
 data "Properties" "Highlighted"
 data "Icon" "Spell_Zealous_Presence"
+
+new entry "LAB_Progression_Barbarian_Zealot_Prep"
+type "PassiveData"
+using "LAB_Progression_Barbarian_Zealot"
+data "Properties" "IsHidden"
 
 // ==================================== Cleric - Subclasses
 
@@ -31,6 +41,11 @@ data "Description" "hbdacdfa2gdcb4g4b76gb671g90e86b7d0863;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_VoiceofAuthority"
 
+new entry "LAB_Progression_Cleric_Order_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Order"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Cleric_Twilight"
 type "PassiveData"
 // ! Subclass: Twilight Domain Cleric
@@ -39,6 +54,11 @@ data "DisplayName" "hcd3947a0gfaa4g48bdg9e04g0711b62e744f;1"
 data "Description" "haa5c4ca0gdda5g4178ga7e6g3193c0412c35;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_EyesofNight"
+
+new entry "LAB_Progression_Cleric_Twilight_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Twilight"
+data "Properties" "IsHidden"
 
 // ==================================== Fighter - Subclasses
 
@@ -51,6 +71,11 @@ data "Description" "ha260d3f4g1fc2g4218g8d46gb921dfa9217e;1"
 data "Properties" "Highlighted"
 data "Icon" "Passive_BruteForce"
 
+new entry "LAB_Progression_Fighter_Brute_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_Brute"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Fighter_Banneret"
 type "PassiveData"
 // ! Subclass: Banneret Fighter
@@ -60,6 +85,11 @@ data "Description" "h4914c402gade6g46c3ga44bg8add4668962a;1"
 data "Properties" "Highlighted"
 data "Icon" "Spell_Rallying_Cry"
 
+new entry "LAB_Progression_Fighter_Banneret_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_Banneret"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Fighter_PsiWarrior"
 type "PassiveData"
 // ! Subclass: Psi Warrior Fighter
@@ -68,6 +98,11 @@ data "DisplayName" "hdb61a7f2g09bbg4ccfg9378g49bef34ff329;1"
 data "Description" "h3e698fecg6d63g4faag918age83a1955490f;1"
 data "Properties" "Highlighted"
 data "Icon" "Reaction_TelekineticThrustShove"
+
+new entry "LAB_Progression_Fighter_PsiWarrior_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_PsiWarrior"
+data "Properties" "IsHidden"
 
 // ==================================== Paladin - Subclasses
 
@@ -80,6 +115,11 @@ data "Description" "hbd89843dg274fg4e8bga664gb7890ed0effa;1"
 data "Properties" "Highlighted"
 data "Icon" "Icon_Conquest_ConqueringPresence"
 
+new entry "LAB_Progression_Paladin_Conquest_Prep"
+type "PassiveData"
+using "LAB_Progression_Paladin_Conquest"
+data "Properties" "IsHidden"
+
 // ==================================== Ranger - Subclasses
 
 new entry "LAB_Progression_Ranger_MonsterSlayer"
@@ -91,6 +131,11 @@ data "Description" "h5b04945bg2297g44d5g81efg18ff6f91f167;1"
 data "Properties" "Highlighted"
 data "Icon" "Spell_Slayers_Prey"
 
+new entry "LAB_Progression_Ranger_MonsterSlayer_Prep"
+type "PassiveData"
+using "LAB_Progression_Ranger_MonsterSlayer"
+data "Properties" "IsHidden"
+
 // ==================================== Rogue - Subclasses
 
 new entry "LAB_Progression_Rogue_ScionOfTheThree"
@@ -101,6 +146,11 @@ data "DisplayName" "h36931741g699ag4985gbcfege6f3ee0f22e3;1"
 data "Description" "hd531f517ge555g4f6bga031g88a49cfe1e42;1"
 data "Properties" "Highlighted"
 data "Icon" "D3_DreadAllegiance"
+
+new entry "LAB_Progression_Rogue_ScionOfTheThree_Prep"
+type "PassiveData"
+using "LAB_Progression_Rogue_ScionOfTheThree"
+data "Properties" "IsHidden"
 
 // ==================================== Modded Classes ====================================
 
@@ -126,6 +176,11 @@ data "Description" "h7c8974ebge7c4g4f9dg8552g696f7284ff95;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_ExperimentalElixir"
 
+new entry "LAB_Progression_Artificer_Alchemist_Prep"
+type "PassiveData"
+using "LAB_Progression_Artificer_Alchemist"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Artificer_Armourer"
 type "PassiveData"
 // ! Subclass: Artificer Armourer
@@ -134,6 +189,11 @@ data "DisplayName" "hcebea346g124cg49d7gade2g82fb93bc43a8;1"
 data "Description" "hd9837963g0f62g480eg9c5agb05361ecf40b;1"
 data "Properties" "Highlighted"
 data "Icon" "Passive_PerfectedArmorMkii"
+
+new entry "LAB_Progression_Artificer_Armourer_Prep"
+type "PassiveData"
+using "LAB_Progression_Artificer_Armourer"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Artificer_Artillerist"
 type "PassiveData"
@@ -144,6 +204,11 @@ data "Description" "h3a231135g8d9dg40abga763g5bc8d29c39b1;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_EldritchCannon"
 
+new entry "LAB_Progression_Artificer_Artillerist_Prep"
+type "PassiveData"
+using "LAB_Progression_Artificer_Artillerist"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Artificer_BattleSmith"
 type "PassiveData"
 // ! Subclass: Artificer Battle Smith
@@ -152,3 +217,8 @@ data "DisplayName" "h9d765ccag59f6g409dg9ad1g4f6c779c9805;1"
 data "Description" "hcf3d8330ga37fg485bg8485gb523ddcc4d87;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_SteelDefender"
+
+new entry "LAB_Progression_Artificer_BattleSmith_Prep"
+type "PassiveData"
+using "LAB_Progression_Artificer_BattleSmith"
+data "Properties" "IsHidden"

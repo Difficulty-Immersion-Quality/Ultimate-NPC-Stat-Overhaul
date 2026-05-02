@@ -20,6 +20,11 @@ data "Description" "h28f5bbd1ge7ddg492egb781gbf7d0d1b0be7;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Barbarian_Frenzy"
 
+new entry "LAB_Progression_Barbarian_Berserker_Prep"
+type "PassiveData"
+using "LAB_Progression_Barbarian_Berserker"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Barbarian_Giant"
 type "PassiveData"
 // ! Subclass: Giant Barbarian
@@ -28,6 +33,11 @@ data "DisplayName" "he278d0e8g64c5g4f2bg8b3eg81e0a083f938;1"
 data "Description" "h7d8376fcg2ebeg400fg93b0gb56fb8e2ace1;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_GiantsRage"
+
+new entry "LAB_Progression_Barbarian_Giant_Prep"
+type "PassiveData"
+using "LAB_Progression_Barbarian_Giant"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Barbarian_WildMagic"
 type "PassiveData"
@@ -38,6 +48,11 @@ data "Description" "h344dfc77g19d4g4999g87a7g6b27338790d7;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Barbarian_Rage_WildMagic"
 
+new entry "LAB_Progression_Barbarian_WildMagic_Prep"
+type "PassiveData"
+using "LAB_Progression_Barbarian_WildMagic"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Barbarian_Wildheart"
 type "PassiveData"
 // ! Subclass: Wildheart Barbarian
@@ -46,6 +61,11 @@ data "DisplayName" "h82cb0f16ge6cag4cf4g9c66ge7ef33e1a7d5;1"
 data "Description" "h33314de8gff58g4bc1g8d6cg8acef2820de6;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_AspectOfTheBeast_Wolf"
+
+new entry "LAB_Progression_Barbarian_Wildheart_Prep"
+type "PassiveData"
+using "LAB_Progression_Barbarian_Wildheart"
+data "Properties" "IsHidden"
 
 // ==================================== Bard ====================================
 
@@ -69,6 +89,11 @@ data "Description" "hce0583eag9b9dg47b2gb06eg3085ddc5eefd;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_MantleOfInspiration"
 
+new entry "LAB_Progression_Bard_Glamour_Prep"
+type "PassiveData"
+using "LAB_Progression_Bard_Glamour"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Bard_Lore"
 type "PassiveData"
 // ! Subclass: College of Lore Bard
@@ -77,6 +102,11 @@ data "DisplayName" "h3bcbbd77gfc41g49ebga568g0cbf6a43e9ed;1"
 data "Description" "hc1899b1fgf6aag44c7g8ec9ga7ed8d2cd3b0;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Bard_CuttingWords"
+
+new entry "LAB_Progression_Bard_Lore_Prep"
+type "PassiveData"
+using "LAB_Progression_Bard_Lore"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Bard_Swords"
 type "PassiveData"
@@ -87,6 +117,11 @@ data "Description" "h431b9944g0440g4d3dga526ge6efea533b59;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_SlashingFlourish_Melee"
 
+new entry "LAB_Progression_Bard_Swords_Prep"
+type "PassiveData"
+using "LAB_Progression_Bard_Swords"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Bard_Valor"
 type "PassiveData"
 // ! Subclass: College of Valor Bard
@@ -95,6 +130,11 @@ data "DisplayName" "h16d07619gbb01g405eg814ag230fd0f825e1;1"
 data "Description" "h826a180fg0121g4072ga12bg5e051e7bff11;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Bard_GrantBardicInspiration"
+
+new entry "LAB_Progression_Bard_Valor_Prep"
+type "PassiveData"
+using "LAB_Progression_Bard_Valor"
+data "Properties" "IsHidden"
 
 // ==================================== Cleric ====================================
 
@@ -118,6 +158,11 @@ data "Description" "h17f6e1a5g6f7dg4af9g8b41g8b94524c617f;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_Reaper"
 
+new entry "LAB_Progression_Cleric_Death_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Death"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Cleric_Life"
 type "PassiveData"
 // ! Subclass: Life Domain Cleric
@@ -126,6 +171,11 @@ data "DisplayName" "he573d2b7gbb53g4996gb795g1623ccf40749;1"
 data "Description" "h748bb452ge0bbg4d70gb473g5f16915c5a1c;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_DiscipleOfLife"
+
+new entry "LAB_Progression_Cleric_Life_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Life"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Cleric_Light"
 type "PassiveData"
@@ -136,6 +186,11 @@ data "Description" "he27e3486g5c7bg4607gbae0g2917f0be7c5e;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveAction_WardingFlare"
 
+new entry "LAB_Progression_Cleric_Light_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Light"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Cleric_Knowledge"
 type "PassiveData"
 // ! Subclass: Knowledge Domain Cleric
@@ -144,6 +199,11 @@ data "DisplayName" "h278a7582gf5efg402cg8e4egc63dad62527f;1"
 data "Description" "h2200694egbef8g46b6g9d00g4c4b395248fa;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_BlessingsOfKnowledge"
+
+new entry "LAB_Progression_Cleric_Knowledge_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Knowledge"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Cleric_Nature"
 type "PassiveData"
@@ -154,6 +214,11 @@ data "Description" "h26f0b85fg6ca4g48aeg9123g7343f28aefd3;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_Generic_Nature"
 
+new entry "LAB_Progression_Cleric_Nature_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Nature"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Cleric_Tempest"
 type "PassiveData"
 // ! Subclass: Tempest Domain Cleric
@@ -162,6 +227,11 @@ data "DisplayName" "heeb1062dgec43g432agb19bg5826d981e329;1"
 data "Description" "h6fd8cc08g71adg4648gb7f3g7f8c1bc471d4;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_WrathOfTheStorm_Thunder"
+
+new entry "LAB_Progression_Cleric_Tempest_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Tempest"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Cleric_Trickery"
 type "PassiveData"
@@ -172,6 +242,11 @@ data "Description" "h4a2efd9egffa1g447eg9519g59d2e559fc5e;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Cleric_BlessingOfTheTrickster"
 
+new entry "LAB_Progression_Cleric_Trickery_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_Trickery"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Cleric_War"
 type "PassiveData"
 // ! Subclass: War Domain Cleric
@@ -180,6 +255,11 @@ data "DisplayName" "h2bb139d2gd9d4g450cgb665ge6980000f6fa;1"
 data "Description" "h80a67d37gafe5g46c5g8e35g6a6211f74415;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_WarPriest"
+
+new entry "LAB_Progression_Cleric_War_Prep"
+type "PassiveData"
+using "LAB_Progression_Cleric_War"
+data "Properties" "IsHidden"
 
 // ==================================== Druid ====================================
 
@@ -203,6 +283,11 @@ data "Description" "h5e05e75cgb6feg48f9gada3g4e13802f3dd9;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_Druid_NaturalRecovery"
 
+new entry "LAB_Progression_Druid_Land_Prep"
+type "PassiveData"
+using "LAB_Progression_Druid_Land"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Druid_Moon"
 type "PassiveData"
 // ! Subclass: Circle of the Moon Druid
@@ -211,6 +296,11 @@ data "DisplayName" "hb7785d94g8723g45b8gb252g11f0270642c1"
 data "Description" "h654778cegbf88g49adgb407gcb0cc8299dc0"
 data "Properties" "Highlighted"
 data "Icon" "Skill_Druid_WildShape"
+
+new entry "LAB_Progression_Druid_Moon_Prep"
+type "PassiveData"
+using "LAB_Progression_Druid_Moon"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Druid_Spores"
 type "PassiveData"
@@ -221,6 +311,11 @@ data "Description" "h5872faaag78ffg4f03g99cbgcda17b06d423"
 data "Properties" "Highlighted"
 data "Icon" "Action_SymbioticEntity"
 
+new entry "LAB_Progression_Druid_Spores_Prep"
+type "PassiveData"
+using "LAB_Progression_Druid_Spores"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Druid_Stars"
 type "PassiveData"
 // ! Subclass: Circle of the Stars Druid
@@ -229,6 +324,11 @@ data "DisplayName" "h3c509123g2d68g469aga198g25d6a25261f4"
 data "Description" "h6f1dc210g58e6g4c94g93c7g116b555c6354"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_StarMap"
+
+new entry "LAB_Progression_Druid_Stars_Prep"
+type "PassiveData"
+using "LAB_Progression_Druid_Stars"
+data "Properties" "IsHidden"
 
 // ==================================== Fighter ====================================
 
@@ -252,6 +352,11 @@ data "Description" "ha7114a77g5690g413bg8bcfg823002a4c268;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_MagicArrow"
 
+new entry "LAB_Progression_Fighter_ArcaneArcher_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_ArcaneArcher"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Fighter_BattleMaster"
 type "PassiveData"
 // ! Subclass: Battle Master Fighter
@@ -260,6 +365,11 @@ data "DisplayName" "hefce9befgc089g4b04g9393g1ec534347dea;1"
 data "Description" "hdbe7301eg8093g461fgaa19g99bf294c1819;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_GoadingAttack_Melee"
+
+new entry "LAB_Progression_Fighter_BattleMaster_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_BattleMaster"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Fighter_Champion"
 type "PassiveData"
@@ -270,6 +380,11 @@ data "Description" "hd11661ccgc093g4932gbfd9g2c60088eebb6"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ImprovedCritical"
 
+new entry "LAB_Progression_Fighter_Champion_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_Champion"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Fighter_EldritchKnight"
 type "PassiveData"
 // ! Subclass: Eldritch Knight Fighter
@@ -278,6 +393,11 @@ data "DisplayName" "h56b56a6ag0de5g45e9g8845g97dae05491b3;1"
 data "Description" "h5c580e8ag700cg4159gbc2dg145ea47b7f8b;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_EldritchStrike"
+
+new entry "LAB_Progression_Fighter_EldritchKnight_Prep"
+type "PassiveData"
+using "LAB_Progression_Fighter_EldritchKnight"
+data "Properties" "IsHidden"
 
 // ==================================== Monk ====================================
 
@@ -301,6 +421,11 @@ data "Description" "hfecfef07g1459g43d4gba71g965751120d69;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Monk_IntoxicatingStrike"
 
+new entry "LAB_Progression_Monk_DrunkenMaster_Prep"
+type "PassiveData"
+using "LAB_Progression_Monk_DrunkenMaster"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Monk_FourElements"
 type "PassiveData"
 // ! Subclass: Way of the Four Elements Monk
@@ -309,6 +434,11 @@ data "DisplayName" "h9d7e8339ga648g4afeg8e86gc903fd093317;1"
 data "Description" "hc901b2c6gb064g43d7g899cg1638fa8453b3;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Monk_FangsOfTheFireSnake"
+
+new entry "LAB_Progression_Monk_FourElements_Prep"
+type "PassiveData"
+using "LAB_Progression_Monk_FourElements"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Monk_OpenHand"
 type "PassiveData"
@@ -319,6 +449,11 @@ data "Description" "hb571273dga181g4630g98a1g8e7bf5b83102;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_KiResonation_Punch"
 
+new entry "LAB_Progression_Monk_OpenHand_Prep"
+type "PassiveData"
+using "LAB_Progression_Monk_OpenHand"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Monk_Shadow"
 type "PassiveData"
 // ! Subclass: Way of Shadow Monk
@@ -327,6 +462,11 @@ data "DisplayName" "h8caa5dfage0fcg42cbga831gd3ae22c81b70;1"
 data "Description" "hb722f782g4bfeg46f5gb73bg2fe9d71151b4;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Hide"
+
+new entry "LAB_Progression_Monk_Shadow_Prep"
+type "PassiveData"
+using "LAB_Progression_Monk_Shadow"
+data "Properties" "IsHidden"
 
 // ==================================== Paladin ====================================
 
@@ -350,6 +490,11 @@ data "Description" "h74725b1fg6ed2g42bcg885eg722d3c8802fe;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Paladin_HealingRadiance"
 
+new entry "LAB_Progression_Paladin_Ancients_Prep"
+type "PassiveData"
+using "LAB_Progression_Paladin_Ancients"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Paladin_Crown"
 type "PassiveData"
 // ! Subclass: Oath of the Crown Paladin
@@ -358,6 +503,11 @@ data "DisplayName" "h1189ac1ageb55g4e95g95a2g2b2bf6b9b667;1"
 data "Description" "he2afa2dagaee4g4a22g9c47g13568b3ec01d;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_RighteousClarity"
+
+new entry "LAB_Progression_Paladin_Crown_Prep"
+type "PassiveData"
+using "LAB_Progression_Paladin_Crown"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Paladin_Devotion"
 type "PassiveData"
@@ -368,6 +518,11 @@ data "Description" "hd41ebf55g11bfg459egbda2g7af1996ef3cf;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Paladin_SacredWeapon"
 
+new entry "LAB_Progression_Paladin_Devotion_Prep"
+type "PassiveData"
+using "LAB_Progression_Paladin_Devotion"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Paladin_Vengeance"
 type "PassiveData"
 // ! Subclass: Oath of Vengeance Paladin
@@ -377,6 +532,11 @@ data "Description" "hcedd322eg85bdg4ba6gae85gd39a68f4caa0;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Paladin_InquisitorsMight"
 
+new entry "LAB_Progression_Paladin_Vengeance_Prep"
+type "PassiveData"
+using "LAB_Progression_Paladin_Vengeance"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Paladin_Oathbreaker"
 type "PassiveData"
 // ! Subclass: Oathbreaker Paladin
@@ -385,6 +545,11 @@ data "DisplayName" "h727a7017g43e3g42f2g90aage79f5e4b6513;1"
 data "Description" "h529feb44gb9e2g445dg988cg1311742dc8bc;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Paladin_DreadfulAspect"
+
+new entry "LAB_Progression_Paladin_Oathbreaker_Prep"
+type "PassiveData"
+using "LAB_Progression_Paladin_Oathbreaker"
+data "Properties" "IsHidden"
 
 // ==================================== Ranger ====================================
 
@@ -408,6 +573,11 @@ data "Description" "h47156914gd0afg4844g90adg35868a3b342e;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_Ranger_RangersCompanion"
 
+new entry "LAB_Progression_Ranger_BeastMaster_Prep"
+type "PassiveData"
+using "LAB_Progression_Ranger_BeastMaster"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Ranger_GloomStalker"
 type "PassiveData"
 // ! Subclass: Gloom Stalker Ranger
@@ -416,6 +586,11 @@ data "DisplayName" "ha8256510ga98cg4fe1ga6eegff27a115f3b9;1"
 data "Description" "h6e0579cfgb01dg4402g9faeg65c4c7a21209;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_DreadAmbusher_Ranged"
+
+new entry "LAB_Progression_Ranger_GloomStalker_Prep"
+type "PassiveData"
+using "LAB_Progression_Ranger_GloomStalker"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Ranger_Hunter"
 type "PassiveData"
@@ -426,6 +601,11 @@ data "Description" "hf1e55b72g2b2cg44fagaa04g147842765b7c;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Multiattack_Volley"
 
+new entry "LAB_Progression_Ranger_Hunter_Prep"
+type "PassiveData"
+using "LAB_Progression_Ranger_Hunter"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Ranger_Swarmkeeper"
 type "PassiveData"
 // ! Subclass: Swarmkeeper Ranger
@@ -434,6 +614,11 @@ data "DisplayName" "h145f23f8gca3ag4a38gafa0gaa0c3a91657b;1"
 data "Description" "h8d55816cg6c03g477cg850eg1951f56d9014;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_MightySwarm_Bees"
+
+new entry "LAB_Progression_Ranger_Swarmkeeper_Prep"
+type "PassiveData"
+using "LAB_Progression_Ranger_Swarmkeeper"
+data "Properties" "IsHidden"
 
 // ==================================== Rogue ====================================
 
@@ -457,6 +642,11 @@ data "Description" "h0ea642a7g23e1g456fg86d8gd636064d84e2;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ImprovedMinorIllusion"
 
+new entry "LAB_Progression_Rogue_ArcaneTrickster_Prep"
+type "PassiveData"
+using "LAB_Progression_Rogue_ArcaneTrickster"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Rogue_Assassin"
 type "PassiveData"
 // ! Subclass: Assassin Rogue
@@ -465,6 +655,11 @@ data "DisplayName" "hd110f5cdg6c51g43bdg8555gfd5c8ed9dc43;1"
 data "Description" "h7cdc4536gc8cdg4c24gad5cg1b97c084f97b;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_Generic_Death"
+
+new entry "LAB_Progression_Rogue_Assassin_Prep"
+type "PassiveData"
+using "LAB_Progression_Rogue_Assassin"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Rogue_Swashbuckler"
 type "PassiveData"
@@ -475,6 +670,11 @@ data "Description" "h0953be5dg83d6g4d9eg96cag61173ba377a7;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_DirtyTrick_Disarm"
 
+new entry "LAB_Progression_Rogue_Swashbuckler_Prep"
+type "PassiveData"
+using "LAB_Progression_Rogue_Swashbuckler"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Rogue_Thief"
 type "PassiveData"
 // ! Subclass: Thief Rogue
@@ -483,6 +683,11 @@ data "DisplayName" "h269458f8gf4aag43b7g8289g6620b62050a8;1"
 data "Description" "h0041fb7egb83fg4399ga1cagc07b3f2bb1b2;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_SecondStoryWork_Falling"
+
+new entry "LAB_Progression_Rogue_Thief_Prep"
+type "PassiveData"
+using "LAB_Progression_Rogue_Thief"
+data "Properties" "IsHidden"
 
 // ==================================== Sorcerer ====================================
 
@@ -506,6 +711,11 @@ data "Description" "h1f8b691fgd951g49a3g8ca1g6cfa70cce02a;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_DraconicResilience"
 
+new entry "LAB_Progression_Sorcerer_DraconicBloodline_Prep"
+type "PassiveData"
+using "LAB_Progression_Sorcerer_DraconicBloodline"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Sorcerer_WildMagic"
 type "PassiveData"
 // ! Subclass: Wild Magic Sorcerer
@@ -514,6 +724,11 @@ data "DisplayName" "h87889658gdef3g42aeg9edag5de1784ae854;1"
 data "Description" "h1077e020g23b7g40e7gaba7ge569d2c18331;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_Sorcerer_Passive_TidesOfChaos"
+
+new entry "LAB_Progression_Sorcerer_WildMagic_Prep"
+type "PassiveData"
+using "LAB_Progression_Sorcerer_WildMagic"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Sorcerer_Shadow"
 type "PassiveData"
@@ -524,6 +739,11 @@ data "Description" "hfe79831eg783ag4e14gb808g0d12934b67c7;1"
 data "Properties" "Highlighted"
 data "Icon" "Spell_Darkness_SorceryPoints"
 
+new entry "LAB_Progression_Sorcerer_Shadow_Prep"
+type "PassiveData"
+using "LAB_Progression_Sorcerer_Shadow"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Sorcerer_StormSorcery"
 type "PassiveData"
 // ! Subclass: Storm Sorcery Sorcerer
@@ -532,6 +752,11 @@ data "DisplayName" "heaf07b0cgbb00g4462g8990g7b40b4ae36c0;1"
 data "Description" "he7ee7064g55bfg4b5bga7a2g0f049b35f91e;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_TempestuousMagic"
+
+new entry "LAB_Progression_Sorcerer_StormSorcery_Prep"
+type "PassiveData"
+using "LAB_Progression_Sorcerer_StormSorcery"
+data "Properties" "IsHidden"
 
 // ==================================== Warlock ====================================
 
@@ -555,6 +780,11 @@ data "Description" "h3b6be49cg0492g4d95ga0a2g1350c52c1661;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_FeyPresence"
 
+new entry "LAB_Progression_Warlock_Archfey_Prep"
+type "PassiveData"
+using "LAB_Progression_Warlock_Archfey"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Warlock_Fiend"
 type "PassiveData"
 // ! Subclass: The Fiend Warlock
@@ -563,6 +793,11 @@ data "DisplayName" "h4f5cf0f7g2308g44f5gb298g50721464a20a;1"
 data "Description" "h94272a82gf478g4b23g9d87g2f4dbeb70fc8;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_DarkOnesBlessing"
+
+new entry "LAB_Progression_Warlock_Fiend_Prep"
+type "PassiveData"
+using "LAB_Progression_Warlock_Fiend"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Warlock_GreatOldOne"
 type "PassiveData"
@@ -573,6 +808,11 @@ data "Description" "h1843d056gfbaag473eg8a99g0d5bea998fce;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ClarifiedMortality"
 
+new entry "LAB_Progression_Warlock_GreatOldOne_Prep"
+type "PassiveData"
+using "LAB_Progression_Warlock_GreatOldOne"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Warlock_Hexblade"
 type "PassiveData"
 // ! Subclass: The Hexblade Warlock
@@ -581,6 +821,11 @@ data "DisplayName" "he23b591eg88e0g4dbcgbbe8g7a6084022a3e;1"
 data "Description" "hbe1a1a11g091bg4e78gbfecg310bc8f9a69a;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_HexbladesCurse"
+
+new entry "LAB_Progression_Warlock_Hexblade_Prep"
+type "PassiveData"
+using "LAB_Progression_Warlock_Hexblade"
+data "Properties" "IsHidden"
 
 // ==================================== Wizard ====================================
 
@@ -604,6 +849,11 @@ data "Description" "h421dcedegb396g4298g829eg7ec6ca4116e8;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ProjectedWard"
 
+new entry "LAB_Progression_Wizard_Abjuration_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Abjuration"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Wizard_Bladesinging"
 type "PassiveData"
 // ! Subclass: Bladesinging School Wizard
@@ -612,6 +862,11 @@ data "DisplayName" "hcb2127edgf010g4d7bg8399gd4a50d7a5c72;1"
 data "Description" "hdd08a8d1geee4g4b6fg8e1bg705757476330;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Bladesong"
+
+new entry "LAB_Progression_Wizard_Bladesinging_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Bladesinging"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Wizard_Conjuration"
 type "PassiveData"
@@ -622,6 +877,11 @@ data "Description" "h23bfbf7eg3e48g409fga9b1gbe367aef1724;1"
 data "Properties" "Highlighted"
 data "Icon" "Spell_Conjuration_MageHand"
 
+new entry "LAB_Progression_Wizard_Conjuration_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Conjuration"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Wizard_Divination"
 type "PassiveData"
 // ! Subclass: Divination School Wizard
@@ -630,6 +890,11 @@ data "DisplayName" "hf74dfeecg0aebg47f0gafa1gc189e795b12c;1"
 data "Description" "he0cc5350g71e6g4b06g9ae0ge266c9976799;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_Portent"
+
+new entry "LAB_Progression_Wizard_Divination_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Divination"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Wizard_Enchantment"
 type "PassiveData"
@@ -640,6 +905,11 @@ data "Description" "h485a0feagcf2dg4617g85c9g97ba638e9e47;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_HypnoticGaze"
 
+new entry "LAB_Progression_Wizard_Enchantment_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Enchantment"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Wizard_Evocation"
 type "PassiveData"
 // ! Subclass: Evocation School Wizard
@@ -648,6 +918,11 @@ data "DisplayName" "h6104d86ag1a48g4f23gbf22gda76864a6a14;1"
 data "Description" "h2fa7fcd1g44dfg4020g867fgbaa7d958bc92;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_SculptSpells"
+
+new entry "LAB_Progression_Wizard_Evocation_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Evocation"
+data "Properties" "IsHidden"
 
 new entry "LAB_Progression_Wizard_Illusion"
 type "PassiveData"
@@ -658,6 +933,11 @@ data "Description" "h13a1d527g8e69g4243g8f75gd10d9cd1ba4e;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ImprovedMinorIllusion"
 
+new entry "LAB_Progression_Wizard_Illusion_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Illusion"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Wizard_Necromancy"
 type "PassiveData"
 // ! Subclass: Necromancy School Wizard
@@ -667,6 +947,11 @@ data "Description" "hcffab35fg6567g4cd3ga4eeg568c65b1bbd7;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_UndeadThralls_ExtraSummon"
 
+new entry "LAB_Progression_Wizard_Necromancy_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Necromancy"
+data "Properties" "IsHidden"
+
 new entry "LAB_Progression_Wizard_Transmutation"
 type "PassiveData"
 // ! Subclass: Transmutation School Wizard
@@ -675,3 +960,8 @@ data "DisplayName" "hca1ed09eg7eaeg4eebg8073g46e52fa6350f;1"
 data "Description" "hab88cc43g1f03g47e1g823bga96d7b5b06cf;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ExperimentalAlchemy"
+
+new entry "LAB_Progression_Wizard_Transmutation_Prep"
+type "PassiveData"
+using "LAB_Progression_Wizard_Transmutation"
+data "Properties" "IsHidden"
