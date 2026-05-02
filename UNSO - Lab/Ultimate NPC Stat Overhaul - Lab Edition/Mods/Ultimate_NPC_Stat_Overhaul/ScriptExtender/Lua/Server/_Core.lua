@@ -1,5 +1,7 @@
 Ext.ModEvents["Absolutes_Laboratory"]["MutationProfileExecuted"]:Subscribe(function(payload)
     
+    Ext.Timer.WaitFor(100, function()
+
     -- Store the vars innit
     local assigned = Ext.Vars.GetModVariables(ModuleUUID).LabSubclasses or {}
     Ext.Vars.GetModVariables(ModuleUUID).LabSubclasses = assigned
@@ -20,24 +22,28 @@ Ext.ModEvents["Absolutes_Laboratory"]["MutationProfileExecuted"]:Subscribe(funct
 
             if entityObj and entityObj.DisplayName and entityObj.DisplayName.NameKey and entityObj.DisplayName.NameKey.Handle then
                 charName = Ext.Loca.GetTranslatedString(entityObj.DisplayName.NameKey.Handle.Handle) or "Unknown"
-        else
-            charName = Osi.GetDisplayName(charID) or "Unknown"
-        end
+            else
+                charName = Osi.GetDisplayName(charID) or "Unknown"
+            end
 
             -- Do bro with main class have a subclass? We finna find out
             if hasMainClassPassive then
                 local hasSubclassPassives
+
                 for _, subclass in ipairs(data.SubclassPassives) do
+                        -- Logger:BasicDebug("CHECKING SUBCLASS (%s - %s) [%s]: [%s] = %s", charName, charID, class, subclass, Osi.HasPassive(charID, subclass))
+
                     if Osi.HasPassive(charID, subclass) == 1 then
                         hasSubclassPassives = subclass .. "_Prep"
                         break
                     end
                 end
 
-                -- Fat logs
+                -- Logger:BasicDebug("COMPARE DEBUG (%s - %s) [%s] | Stored=[%s] Detected=[%s]", charName, charID, class, tostring(stored), tostring(hasSubclassPassives))
+
                 if stored and hasSubclassPassives and stored ~= hasSubclassPassives then
                     assigned[charID][class] = hasSubclassPassives
-                    Logger:BasicDebug("Subclass mismatch found for (%s - %s) [%s]. Overwriting stored subclass: [%s].", charName, charID, class, hasSubclassPassives)
+                    Logger:BasicDebug("Subclass mismatch found for (%s - %s) [%s]. Overwriting stored subclass: [%s] -> [%s].", charName, charID, class, stored, hasSubclassPassives)
 
                 elseif not stored and hasSubclassPassives then
                     assigned[charID][class] = hasSubclassPassives
@@ -60,4 +66,7 @@ Ext.ModEvents["Absolutes_Laboratory"]["MutationProfileExecuted"]:Subscribe(funct
             end
         end
     end
-end)
+
+    end) -- WaitFor
+
+end) -- Subscribe
