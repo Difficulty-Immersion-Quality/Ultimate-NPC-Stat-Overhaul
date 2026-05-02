@@ -21,3 +21,4 @@ Logger:ClearLogFile()
 
 Ext.Require("Server/_Subclasses.lua")
 Ext.Require("Server/_Core.lua")
+Ext.Require("Server/_ConsoleCommands.lua")
