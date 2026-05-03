@@ -2315,7 +2315,7 @@ using "MMM_SAHUAGINRANGED"
 // data "Passives" "BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules"
 // data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
-data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 
 // Fighter
 new entry "MMM_WIGGLES3B"
