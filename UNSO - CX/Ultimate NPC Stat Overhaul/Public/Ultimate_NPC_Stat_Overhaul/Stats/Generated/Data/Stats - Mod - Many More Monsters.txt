@@ -482,6 +482,14 @@ using "MMM_BRIDGETROLL"
 // data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
 
+// Prevent from using its normal Rage spell if it has a subclass-specific Rage spell
+new entry "MMM_RAGE_OGRE"
+type "SpellData"
+data "SpellType" "Shout"
+using "MMM_RAGE_OGRE"
+// data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
 // ========================================== Bridge Guard ==========================================
 
 // Barbarian
