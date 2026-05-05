@@ -59,7 +59,188 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "Boosts" "IF(not (HasPassive('LAB_Progression_Barbarian_Berserker',context.Source) or HasPassive('LAB_Progression_Barbarian_Giant',context.Source) or HasPassive('LAB_Progression_Barbarian_WildMagic',context.Source) or HasPassive('LAB_Progression_Barbarian_Wildheart',context.Source))):UnlockSpell(Goon_Shout_Rage_Ogre);IF(HasPassive('LAB_Progression_Barbarian_Berserker',context.Source)):UnlockSpell(Goon_Shout_Rage_Frenzy_Ogre);IF(HasPassive('LAB_Progression_Barbarian_Giant',context.Source)):UnlockSpell(Goon_Shout_Rage_Giant_Ogre);IF(HasPassive('LAB_Progression_Barbarian_WildMagic',context.Source)):UnlockSpell(Goon_Shout_Rage_WildMagic_Ogre);IF(HasPassive('LAB_Progression_Barbarian_Wildheart',context.Source)):UnlockSpell(Goon_Shout_Rage_Totem_Bear_Ogre);IF(HasPassive('LAB_Progression_Barbarian_AncestralGuardian',context.Source)):UnlockSpell(Goon_Shout_Rage_AG_Ogre);IF(HasPassive('LAB_Progression_Barbarian_Zealot',context.Source)):UnlockSpell(Goon_Shout_Zealot_Rage_Ogre)"
 
-// ==================================== Ogre-specific Rages
+// ==================================== Barbarian - AI spells for Rages to prevent the regular Rage spells from being used if the NPC has an NPC-specific Rage spell available
+
+// Basic Rage
+new entry "Shout_Rage"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+data "CombatAIOverrideSpell" "Shout_Rage_AI"
+
+new entry "Shout_Rage_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+// data "CombatAIOverrideSpell" "Shout_Rage_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Berserker
+new entry "Shout_Rage_Frenzy"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Frenzy"
+data "CombatAIOverrideSpell" "Shout_Rage_Frenzy_AI"
+
+new entry "Shout_Rage_Frenzy_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Frenzy"
+// data "CombatAIOverrideSpell" "Shout_Rage_Frenzy_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_FRENZY') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Wild Magic
+new entry "Shout_Rage_WildMagic"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_WildMagic"
+data "CombatAIOverrideSpell" "Shout_Rage_WildMagic_AI"
+
+new entry "Shout_Rage_WildMagic_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_WildMagic"
+// data "CombatAIOverrideSpell" "Shout_Rage_WildMagic_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Wildheart - Bear
+new entry "Shout_Rage_Totem_Bear"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Bear"
+data "CombatAIOverrideSpell" "Shout_Rage_Totem_Bear_AI"
+
+new entry "Shout_Rage_Totem_Bear_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Bear"
+// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Bear_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_BEAR') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Wildheart - Eagle
+new entry "Shout_Rage_Totem_Eagle"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Eagle"
+data "CombatAIOverrideSpell" "Shout_Rage_Totem_Eagle_AI"
+
+new entry "Shout_Rage_Totem_Eagle_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Eagle"
+// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Eagle_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_EAGLE') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Wildheart - Elf
+new entry "Shout_Rage_Totem_Elk"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Elk"
+data "CombatAIOverrideSpell" "Shout_Rage_Totem_Elk_AI"
+
+new entry "Shout_Rage_Totem_Elk_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Elk"
+// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Elk_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_ELK') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Wildheart - Tiger
+new entry "Shout_Rage_Totem_Tiger"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Tiger"
+data "CombatAIOverrideSpell" "Shout_Rage_Totem_Tiger_AI"
+
+new entry "Shout_Rage_Totem_Tiger_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Tiger"
+// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Tiger_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_TIGER') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Wildheart - Wolf
+new entry "Shout_Rage_Totem_Wolf"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Wolf"
+data "CombatAIOverrideSpell" "Shout_Rage_Totem_Wolf_AI"
+
+new entry "Shout_Rage_Totem_Wolf_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Wolf"
+// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Wolf_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_WOLF') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Giant
+new entry "Shout_Rage_Giant"
+type "SpellData"
+data "SpellType" "Shout"
+// using "Shout_Rage"
+using "Shout_Rage_Giant"
+data "CombatAIOverrideSpell" "Shout_Rage_Giant_AI"
+
+new entry "Shout_Rage_Giant_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Giant"
+// data "CombatAIOverrideSpell" "Shout_Rage_Giant_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Ancestral Guardian
+new entry "Shout_Rage_AG"
+type "SpellData"
+data "SpellType" "Shout"
+// using "Shout_Rage"
+using "Shout_Rage_AG"
+data "CombatAIOverrideSpell" "Shout_Rage_AG_AI"
+
+new entry "Shout_Rage_AG_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_AG"
+// data "CombatAIOverrideSpell" "Shout_Rage_AG_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('RAGE_AG') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('RAGE_AG') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// Zealot
+new entry "Shout_Zealot_Rage"
+type "SpellData"
+data "SpellType" "Shout"
+// using "Shout_Rage"
+using "Shout_Zealot_Rage"
+data "CombatAIOverrideSpell" "Shout_Zealot_Rage_AI"
+
+new entry "Shout_Zealot_Rage_AI"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Zealot_Rage"
+// data "CombatAIOverrideSpell" "Shout_Zealot_Rage_AI"
+data "CombatAIOverrideSpell" ""
+// data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
+
+// ==================================== Barbarian - Ogre-specific Rages
 // The Rage spells apply a different RAGE status if Barbarian class is 9 or higher. The only difference in this RAGE_2 status is that it has a _Rage_Boosts_2 passive that replaces the _Rage_Boosts passive. The only difference in this _Rage_Boosts_2 passive is that it changes EntityThrowDamage(2) to EntityThrowDamage(3)
 // As Lab can assign a Class to NPCs, then using ClassLevelHigherOrEqualThan will still work for this AI version
 
@@ -246,187 +427,6 @@ data "CastSound" "CrSpell_Cast_OgreEnrage"
 // data "RequirementConditions" ""
 data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
 data "CombatAIOverrideSpell" ""
-
-// ==================================== AI spells for Rages to prevent them from being used if they have the Ogre Rage passive 
-
-// Basic Rage
-new entry "Shout_Rage"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage"
-data "CombatAIOverrideSpell" "Shout_Rage_AI"
-
-new entry "Shout_Rage_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage"
-// data "CombatAIOverrideSpell" "Shout_Rage_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Berserker
-new entry "Shout_Rage_Frenzy"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Frenzy"
-data "CombatAIOverrideSpell" "Shout_Rage_Frenzy_AI"
-
-new entry "Shout_Rage_Frenzy_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Frenzy"
-// data "CombatAIOverrideSpell" "Shout_Rage_Frenzy_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_FRENZY') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Wild Magic
-new entry "Shout_Rage_WildMagic"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_WildMagic"
-data "CombatAIOverrideSpell" "Shout_Rage_WildMagic_AI"
-
-new entry "Shout_Rage_WildMagic_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_WildMagic"
-// data "CombatAIOverrideSpell" "Shout_Rage_WildMagic_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Wildheart - Bear
-new entry "Shout_Rage_Totem_Bear"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Bear"
-data "CombatAIOverrideSpell" "Shout_Rage_Totem_Bear_AI"
-
-new entry "Shout_Rage_Totem_Bear_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Bear"
-// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Bear_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_BEAR') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Wildheart - Eagle
-new entry "Shout_Rage_Totem_Eagle"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Eagle"
-data "CombatAIOverrideSpell" "Shout_Rage_Totem_Eagle_AI"
-
-new entry "Shout_Rage_Totem_Eagle_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Eagle"
-// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Eagle_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_EAGLE') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Wildheart - Elf
-new entry "Shout_Rage_Totem_Elk"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Elk"
-data "CombatAIOverrideSpell" "Shout_Rage_Totem_Elk_AI"
-
-new entry "Shout_Rage_Totem_Elk_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Elk"
-// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Elk_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_ELK') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Wildheart - Tiger
-new entry "Shout_Rage_Totem_Tiger"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Tiger"
-data "CombatAIOverrideSpell" "Shout_Rage_Totem_Tiger_AI"
-
-new entry "Shout_Rage_Totem_Tiger_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Tiger"
-// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Tiger_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_TIGER') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Wildheart - Wolf
-new entry "Shout_Rage_Totem_Wolf"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Wolf"
-data "CombatAIOverrideSpell" "Shout_Rage_Totem_Wolf_AI"
-
-new entry "Shout_Rage_Totem_Wolf_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Totem_Wolf"
-// data "CombatAIOverrideSpell" "Shout_Rage_Totem_Wolf_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_TOTEM_WOLF') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Giant
-new entry "Shout_Rage_Giant"
-type "SpellData"
-data "SpellType" "Shout"
-// using "Shout_Rage"
-using "Shout_Rage_Giant"
-data "CombatAIOverrideSpell" "Shout_Rage_Giant_AI"
-
-new entry "Shout_Rage_Giant_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_Giant"
-// data "CombatAIOverrideSpell" "Shout_Rage_Giant_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Ancestral Guardian
-new entry "Shout_Rage_AG"
-type "SpellData"
-data "SpellType" "Shout"
-// using "Shout_Rage"
-using "Shout_Rage_AG"
-data "CombatAIOverrideSpell" "Shout_Rage_AG_AI"
-
-new entry "Shout_Rage_AG_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Rage_AG"
-// data "CombatAIOverrideSpell" "Shout_Rage_AG_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('RAGE_AG') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('RAGE_AG') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
-
-// Zealot
-new entry "Shout_Zealot_Rage"
-type "SpellData"
-data "SpellType" "Shout"
-// using "Shout_Rage"
-using "Shout_Zealot_Rage"
-data "CombatAIOverrideSpell" "Shout_Zealot_Rage_AI"
-
-new entry "Shout_Zealot_Rage_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_Zealot_Rage"
-// data "CombatAIOverrideSpell" "Shout_Zealot_Rage_AI"
-data "CombatAIOverrideSpell" ""
-// data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
-data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS') and not HasPassive('Goon_Rage_Ogre_Passive',context.Source)"
 
 // ==================================== Barbarian - Intimidating Presence
 

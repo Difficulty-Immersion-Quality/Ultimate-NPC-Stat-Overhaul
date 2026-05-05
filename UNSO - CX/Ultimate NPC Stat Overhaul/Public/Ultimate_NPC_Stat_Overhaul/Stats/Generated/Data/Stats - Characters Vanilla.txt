@@ -1606,16 +1606,6 @@ data "Passives" "CX_Monk_OpenHand_Boost;AttackOfOpportunity;DarknessRules;Monk_S
 //  │   │   ├─ "Gnoll_Flind"        --- Flind - Gnoll Warlord
 //  │   │   └─ "Gnoll_Hunter"
 
-//TODO: Custom legendary action?
-// Flind (Added Barbarian progressions, and Berserker subclass, added Boss boost)
-new entry "Gnoll_Flind"
-type "Character"
-using "Gnoll_Flind"
-// data "Passives" "ImmuneToDisarm;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Boss_Boost;CX_Barbarian_Berserker_Boost;AttackOfOpportunity;Darkvision;DarknessRules;ImmuneToDisarm"
-// data "Progressions" ""
-data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
-
 // ==================================== Gnomes ====================================
 
 // "_Base"
