@@ -1,8 +1,0 @@
-// ============================================================ Schvance the Goblin Artificer ============================================================
-// Giving Artificer progressions
-
-new entry "Sailor_Schvance_VSENC"
-type "Character"
-using "Sailor_Schvance_VSENC"
-// data "Progressions" ""
-data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
