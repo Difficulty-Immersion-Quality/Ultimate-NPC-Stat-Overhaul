@@ -216,6 +216,36 @@ using "Human_Gondian_Caster"
 // data "Progressions" ""
 data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
 
+// ==================================== Kobold ====================================
+
+// "_Base"
+//  ├─ "_Humanoid"
+//  │   ├─ "_Kobolds"
+//  │   │   └─ "Kobold"
+//  │   │       ├─ "Kobold_Inventor"
+//  │   │       │   └─ "LOW_KoboldGang_Inventor"        --- Unused? (Inherits added Wizard progressions and added Transmutation School subclass)
+//  │   │       ├─ "Kobold_Melee"
+//  │   │       │   ├─ "LOW_KoboldGangLeader"
+//  │   │       │   ├─ "LOW_KoboldGang_Melee"           --- (Inherits added Rogue progressions)
+//  │   │       │   └─ "WYR_Kobold_Popper"
+//  │   │       └─ "Kobold_Ranger"
+//  │   │           └─ "LOW_KoboldGang_Ranger"          --- Unused (Inherits Ranger progressions)
+
+// Koll the Red / Kobold Inventor (previously given Sorcerer progressions, now swapping to Artificer)
+new entry "Kobold_Inventor"
+type "Character"
+using "Kobold_Inventor"
+// data "Intelligence" "8"
+data "Intelligence" "12"
+// data "Charisma" "12"
+data "Charisma" "8"
+// data "SpellCastingAbility" "Dexterity"
+data "SpellCastingAbility" "Intelligence"
+// // data "Passives" "PackTactics;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "LAB_Progression_Sorcerer_WildMagic;PackTactics;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Progressions" "" 
+data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
+
 // ==================================== Summons ====================================
 // "_Base"
 // ├─ "_Summons"
