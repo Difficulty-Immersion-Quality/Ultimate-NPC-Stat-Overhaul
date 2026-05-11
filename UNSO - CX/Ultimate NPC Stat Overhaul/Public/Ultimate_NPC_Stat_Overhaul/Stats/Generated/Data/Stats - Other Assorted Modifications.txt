@@ -88,6 +88,24 @@ data "Description" "hb2f5c3eag43a7g4f82g89d8g10640b01212b;1"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "IF(SavingThrow(Ability.Constitution,15)):RegainHitPoints(1)"
 
+// ==================================== Goblins: Fury of the Small ====================================
+// Bug Fix: DRS
+
+new entry "Goblin_FuryOfTheSmall"
+type "PassiveData"
+using "Goblin_FuryOfTheSmall"
+// Fury of the Small
+// data "DisplayName" "hd2464c6age4feg4cc5g9ec1gfb449926b69d;1"
+// // When you damage a creature larger than you, you can choose to deal [1] extra. Limited to once per combat.
+// data "Description" "he3a6e213g265ag4b8bgb01bg629166ab82dc;2"
+// data "DescriptionParams" "DealDamage(1d6,MainWeaponDamageType)"
+// data "Icon" "GenericIcon_Intent_Damage"
+// data "Properties" "Highlighted"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "not Dead() and SizeEqualOrGreater(Size.Medium) and not HasStatus('GOBLIN_FURY_USED', context.Source)"
+// data "StatsFunctors" "IF(IsWeaponAttack()):DealDamage(1d6,MainWeaponDamageType);IF(IsWeaponAttack()):ApplyStatus(SELF,GOBLIN_FURY_USED,100,-1);"
+data "StatsFunctors" "IF(IsWeaponAttack()):DealDamage(1d6,MainWeaponDamageType,,0,,true,false);IF(IsWeaponAttack()):ApplyStatus(SELF,GOBLIN_FURY_USED,100,-1);"
+
 // ==================================== Bugbears: Brute ====================================
 // Bug Fix: DRS
 
