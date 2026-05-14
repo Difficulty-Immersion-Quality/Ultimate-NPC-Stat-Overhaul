@@ -113,7 +113,7 @@ data "DisplayName" "hecca81a4g51eeg4ea8g80a5gf78124dcf6a8;1"
 // A Paladin who seeks glory in battle and the subjugation of their enemies. 
 data "Description" "hbd89843dg274fg4e8bga664gb7890ed0effa;1"
 data "Properties" "Highlighted"
-data "Icon" "Icon_Conquest_ConqueringPresence"
+data "Icon" "Action_Paladin_DreadfulAspect"
 
 new entry "LAB_Progression_Paladin_Conquest_Prep"
 type "PassiveData"
