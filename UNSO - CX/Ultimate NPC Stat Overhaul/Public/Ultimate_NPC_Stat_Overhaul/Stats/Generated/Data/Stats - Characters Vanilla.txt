@@ -989,12 +989,21 @@ data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 //  │   ├─ "LOW_ArabellaPowers_Brigand_Elf_Melee"       --- Livin' Large Timbo (dead kekw) (Inherits Cleric progressions)
 //  │   ├─ "LOW_DoormanyGuard"                          --- Unused (Inherits Fighter progressions)
 //  │   ├─ "LOW_HouseOfGrief_Cultist_Melee_Elf"         --- Sharran Novice Dollay, Sharran Novice Dohna - Church of Shar (Inherits Fighter progressions)
-//  │   ├─ "LOW_HouseOfGrief_Justiciar"                 --- Justiciar Crusader Owltalon, Justiciar Crusader Nightmist - Church of Shar (Inherits Fighter progressions)
+//  │   ├─ "LOW_HouseOfGrief_Justiciar"                 --- Justiciar Crusader Owltalon, Justiciar Crusader Nightmist - Church of Shar (Swapped Fighter progressions to Paladin, added Vengeance subclass)
 //  │   ├─ "LOW_ShadowheartFather"                      --- (Inherits Fighter progressions)
 //  │   ├─ "SCE_FlamingFist_Elf_Melee"                  --- Flaming Fist (Inherits Fighter progressions)
 //  │   ├─ "SCL_Harper_Elf_Melee"                       --- Shadow-Cursed Harper (Inherits Fighter progressions)
 //  │   │   └─ "SCL_Caravan_Ambusher_Branthos"          --- Harper Branthos (Inherits Fighter progressions)
 //  │   └─ "SHA_Nightsong"
+
+// Justiciar Crusader Owltalon, Justiciar Crusader Nightmist - Church of Shar (Swapped Fighter progressions to Paladin)
+new entry "LOW_HouseOfGrief_Justiciar"
+type "Character"
+using "LOW_HouseOfGrief_Justiciar"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;SHA_DarkVengeance;ExtraAttack;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight"
+data "Passives" "CX_Paladin_Vengeance_Boost;FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;SHA_DarkVengeance;ExtraAttack;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 
 // Aylin - The Nightsong, Singer of Sorrows, Sword of the Moonmaiden, Daughter of Selûne (Has Paladin progressions, added Vengeance subclass, added Boss boost, added "ImmuneToDisarm")
 new entry "SHA_Nightsong"
@@ -2737,7 +2746,7 @@ data "Progressions" "6cae475a-383f-11ed-a261-0242ac120002;f0ede459-8b86-48fd-ac1
 //  ├─ "Halfling_Bard"                                  --- (Has Bard progressions)
 //  │   └─ "WYR_SharessCaress_Halfling_Bard"            --- Monsieur Chapeau (Inherits Bard progressions)
 //  ├─ "Halfling_Caster"                                --- (Has Wizard progressions)
-//  │   ├─ "Halfling_Cultist_Myrkul_SkullLasher"
+//  │   ├─ "Halfling_Cultist_Myrkul_SkullLasher"        --- Ironfinger - Skull Lasher, Cult of Myrkul (Swapped Wizard progressions to Warlock progressions, added Great Old One subclass)
 //  │   ├─ "Halfling_Druid"                             --- (Has Druid progressions)
 //  │   │   ├─ "DEN_Druids_Halfling_Druid"
 //  │   │   │   └─ "DEN_Findal"
@@ -2753,12 +2762,14 @@ using "Halfling_Caster"
 // data "Passives" "Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Magic_Boost;Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
 
-// Ironfinger - Skull Lasher, Cult of Myrkul (Inherits Wizard progressions, Cahoot felt Necromancy was the vibe)
+// Ironfinger - Skull Lasher, Cult of Myrkul (Swapped Wizard progressions to Warlock progressions, added Great Old One subclass)
 new entry "Halfling_Cultist_Myrkul_SkullLasher"
 type "Character"
 using "Halfling_Cultist_Myrkul_SkullLasher"
 // data "Passives" "ExtraAttack;Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Wizard_Necromancy_Boost;CX_Spells_L4;CX_Spells_L2C;Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules;ExtraAttack"
+data "Passives" "CX_Warlock_GreatOldOne_Boost;CX_Spells_L4;CX_Spells_L2C;Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules;ExtraAttack"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 
 // Findal - Circle of the Emerald Grove (Inherits Druid progressions, as a pure caster adding Circle of the Land subclass)
 new entry "DEN_Findal"
@@ -2794,8 +2805,8 @@ data "Passives" "CX_Spells_L5;CX_Spells_L5C;Halfling_Lucky;Halfling_Brave;Attack
 //  │   │   └─ "WYR_OpenHandTemple_Halfling_Cleric_Novice"
 //  │   ├─ "LOW_ArabellaPowers_Brigand_Halfling_Melee"              --- Brigand Harrold (Dead) (Inherits Fighter progressions)
 //  │   ├─ "LOW_CazadorsPalace_GuardTower_Halfling_Melee"           --- Jaryd - Szarr Palace (Inherits Fighter progressions)
-//  │   ├─ "LOW_HouseOfGrief_Cultist_Melee_Halfling"                --- Greymask - Church of Shar (Inherits Fighter progressions) //TODO: Add more diversity to Shar nutsacks, throw some rogues in or something
-//  │   ├─ "LOW_HouseOfGrief_Cultist_Sentry_Halfling"               --- Sentry Fredrichk - Church of Shar (Inherits Fighter progressions)
+//  │   ├─ "LOW_HouseOfGrief_Cultist_Melee_Halfling"                --- Greymask - Church of Shar (Swapped Fighter progressions to Warlock)
+//  │   ├─ "LOW_HouseOfGrief_Cultist_Sentry_Halfling"               --- Sentry Fredrichk - Church of Shar (Swapped Fighter progressions to Warlock)
 //  │   ├─ "SCE_FlamingFist_Halfling_Melee"                         --- Flaming Fist - Flaming Fist (Inherits Fighter progressions)
 //  │   └─ "SCL_Harper_Halfling_Melee"                              --- (Inherits Fighter progressions)
 
@@ -2849,6 +2860,28 @@ type "Character"
 using "WYR_OpenHandTemple_Halfling_Cleric_Novice"
 // data "Passives" "Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Cleric_Life_Boost;Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
+
+// Greymask - Church of Shar (Swapped Fighter progressions to Warlock)
+new entry "LOW_HouseOfGrief_Cultist_Melee_Halfling"
+type "Character"
+using "LOW_HouseOfGrief_Cultist_Melee_Halfling"
+// data "Strength" "18"
+data "Strength" "16"
+// data "Charisma" "12"
+data "Charisma" "16"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
+
+// Sentry Fredrichk - Church of Shar (Swapped Fighter progressions to Warlock)
+new entry "LOW_HouseOfGrief_Cultist_Sentry_Halfling"
+type "Character"
+using "LOW_HouseOfGrief_Cultist_Sentry_Halfling"
+// data "Strength" "18"
+data "Strength" "16"
+// data "Charisma" "12"
+data "Charisma" "16"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
 
 // "_Halfling"
 //  ├─ "Halfling_Ranger"                                --- (Has Ranger progressions)
@@ -3434,7 +3467,7 @@ data "Passives" "AttackOfOpportunity;DarknessRules"
 //  │   ├─ "WYR_Gortash"
 //  │   ├─ "WYR_MessHallBodyguard_09"
 //  │   └─ "WYR_SmugglersCave_Human_Caster"
-//  │       └─ "WYR_SmugglersCave_Human_Caster_2"
+//  │       └─ "WYR_SmugglersCave_Human_Caster_2"           --- Charming Latham - The Guild (Swapped Wizard progressions to Bard)
 
 // Sparks Musgravel - The Guild (Guards the Guildhall entrance in the Lower City) (Inherits Wizard progressions)
 new entry "LOW_Undercellar_Entrance_Human_Caster"
@@ -3509,12 +3542,18 @@ using "WYR_SmugglersCave_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules;SculptSpells;PotentCantrip"
 data "Passives" "CX_Wizard_Evocation_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L4C;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SculptSpells;PotentCantrip"
 
-// Charming Latham - The Guild (Inherits Wizard progressions, added Evocation School subclass)
+// Charming Latham - The Guild (Swapped Wizard progressions to Bard, added Lore subclass)
 new entry "WYR_SmugglersCave_Human_Caster_2"
 type "Character"
 using "WYR_SmugglersCave_Human_Caster_2"
+// data "Intelligence" "18"
+data "Intelligence" "10"
+// data "Charisma" "10"
+data "Charisma" "18"
 // data "Passives" "AttackOfOpportunity;DarknessRules;SculptSpells"
-data "Passives" "CX_Wizard_Evocation_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L4C;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SculptSpells"
+data "Passives" "CX_Bard_Lore_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L4C;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SculptSpells"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "cbe5059f-7a9f-4b98-be6a-07c9cd8e02c2"
 
 // "_Human"
 //  ├─ "Human_Melee"                                --- (Has Fighter progressions)
@@ -4691,8 +4730,8 @@ data "Passives" "CX_Boss_Boost;CX_Martial_Boost;ExtraAttack;TurnResistance;Immun
 
 // "_Undead"
 //  ├─ "DarkJusticiar_Melee"                              --- Justiciar Avengers in Gauntlet of Shar (Added Fighter progression)
-//  │   ├─ "DarkJusticiar_Boss"                           --- Unused (Added Fighter progression)
-//  │   ├─ "DarkJusticiar_Caster"                         --- Justiciar Nightweavers in Gauntlet of Shar (Added Wizard progression)
+//  │   ├─ "DarkJusticiar_Boss"                           --- Justiciar Crusaders in Gauntlet of Shar (swapped Fighter progressions to Paladin)
+//  │   ├─ "DarkJusticiar_Caster"                         --- Justiciar Nightweavers in Gauntlet of Shar (Added Warlock progression)
 //  │   │   ├─ "LOW_HouseOfGrief_Cultist_Caster"          --- Mirie; Sharran Fidelians in House of Grief (Added Wizard progression)
 //  │   │   └─ "SHA_LastJusticiar_Lyrthindor"             --- Lyrthindor (Gauntlet of Shar) (Added Cleric progression)
 //  │   ├─ "DarkJusticiar_Melee_Summon"                   --- Justiciar Avengers that spawn from Umbral Tremors (Inherits Fighter progression)
@@ -4711,14 +4750,27 @@ using "DarkJusticiar_Melee"
 // data "Progressions" ""
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 
+// Justiciar Crusaders in Gauntlet of Shar (swapped Fighter progressions to Paladin, added Vengeance subclass))
+new entry "DarkJusticiar_Boss"
+type "Character"
+using "DarkJusticiar_Boss"
+// data "Passives" "ExtraAttack;SHA_DarkVengeance;SHA_VisionOfShar;LivingShadow;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Paladin_Vengeance_Boost;ExtraAttack;SHA_DarkVengeance;SHA_VisionOfShar;LivingShadow;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
+
 // Justiciar Nightweavers in Gauntlet of Shar (Added Wizard progressions)
 new entry "DarkJusticiar_Caster"
 type "Character"
 using "DarkJusticiar_Caster"
+// data "Intelligence" "14"
+data "Intelligence" "10"
+//data "Charisma" "10"
+data "Charisma" "14"
 // data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;"
 data "Passives" "CX_Spells_L3;CX_Spells_L4;CX_Spells_L3C;CX_Spells_L4C;AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Sight"
 // data "Progressions" ""
-data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 
 // Mirie; Sharran Fidelians in House of Grief (Human AND Elf); summons for Gather Your Allies (Added Wizard progressions)
 // Gonna omit racial passives for now as this entry is used for multiple races
@@ -5409,7 +5461,7 @@ data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyF
 //  │   ├─ "DisplacerBeast"
 //  │   ├─ "Doppelganger"                      --- Doppelgangers (Added Rogue progressions)
 //  │   │   ├─ "LOW_NotJaheira"                --- Fake Jaheira Doppelganger (Inherits Rogue progressions, inherits Assassin subclass)
-//  │   │   └─ "WYR_DG_Dribbles"
+//  │   │   └─ "WYR_DG_Dribbles"               --- Dribbles (Added Bard progressions, added Swords subclass)
 //  │   ├─ "Drider"
 //  │   │   └─ "SCL_DriderCaravan_Drider"
 //  │   ├─ "Ettercap"
@@ -5439,12 +5491,18 @@ data "Passives" "CX_Rogue_Assassin_Boost;AttackOfOpportunity;Darkvision;Darkness
 // data "Progressions" ""
 data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 
-// Dribbles (Inherits Rogue progressions, inherits Assassin subclass)
+// Dribbles (Added Bard progressions, added Swords subclass)
 new entry "WYR_DG_Dribbles"
 type "Character"
 using "WYR_DG_Dribbles"
+// data "Charisma" "14"
+data "Charisma" "16"
 // data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Strength); ProficiencyBonus(SavingThrow, Dexterity); BlockRegainHP(Undead;Construct)"
 data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Strength); ProficiencyBonus(SavingThrow, Dexterity); ProficiencyBonus(SavingThrow, Intelligence); BlockRegainHP(Undead;Construct)"
+// data "Passives" "Multiattack_Doppelganger;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Bard_Swords_Boost;Multiattack_Doppelganger;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Progressions" ""
+data "Progressions" "cbe5059f-7a9f-4b98-be6a-07c9cd8e02c2"
 
 // Kar'niss - Light of the Absolute - HONOUR MODE INHERITANCE (Added Fighter progressions, added Champion subclass, added Boss boost)
 new entry "SCL_DriderCaravan_Drider"
