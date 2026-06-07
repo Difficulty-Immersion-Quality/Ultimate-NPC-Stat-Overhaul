@@ -1,0 +1,5 @@
+{
+    "RequiredVersion": 1,
+    "ModTable": "Ultimate NPC Stat Overhaul - CX",
+    "FeatureFlags": ["Lua"]
+}

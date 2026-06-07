@@ -1,0 +1,1162 @@
+// ==================================== Main class progression passive ====================================
+
+    new entry "Goon_Paladin_NPC_Progressions"
+    type "PassiveData"
+    // ! Class: Paladin
+    data "DisplayName" "hbd9fca0cg8eddg405cga457g81f619e965fe;1"
+    // A character who upholds or neglects a sacred oath, a warrior of divinity or demise.
+    data "Description" "h9194b05fgf6fdg4f01ga63aga16a16fed629;1"
+    data "Properties" "Highlighted"
+    data "Icon" "GenericIcon_Intent_Buff"
+
+// ==================================== Combat Extender and Progression Stat Entries ====================================
+
+// Main passive
+    new entry "CX_Paladin_Boost"
+    type "PassiveData"
+    // data "DisplayName" "h1517365cgc118g4686g8ecbg2ad846d80053"
+    // ! CX Class Boost: Paladin
+    data "DisplayName" "h100e7a9bg3c26g4035g86d9g0762e657c372;1"
+    // data "Description" "he95e16a1gc3a2g44a1gbd19g924de26c78c8"
+    // Entity has Paladin progressions in addition to boosts from configuration.
+    data "Description" "h5ee949eegd3a6g46dbgbf07g91727440a141;1"
+    data "Properties" "Highlighted"
+    // data "Icon" "Action_Paladin_InquisitorsMight"
+    data "Icon" "PassiveFeature_ImprovedDivineSmite"
+    data "Boosts" ""
+    data "StatsFunctorContext" "OnCreate"
+    data "Conditions" "not HasPassive('Goon_Paladin_NPC_Progressions',context.Source)"
+    data "StatsFunctors" "IF(GoonCharacterLevelEqualTo(1)):ApplyStatus(GOON_NPC_SOMETHING_LVL_1,100,-1);IF(GoonCharacterLevelEqualTo(2)):ApplyStatus(GOON_NPC_SOMETHING_LVL_2,100,-1);IF(GoonCharacterLevelEqualTo(3)):ApplyStatus(GOON_NPC_SOMETHING_LVL_3,100,-1);IF(GoonCharacterLevelEqualTo(4)):ApplyStatus(GOON_NPC_SOMETHING_LVL_4,100,-1);IF(GoonCharacterLevelEqualTo(5)):ApplyStatus(GOON_NPC_SOMETHING_LVL_5,100,-1);IF(GoonCharacterLevelEqualTo(6)):ApplyStatus(GOON_NPC_SOMETHING_LVL_6,100,-1);IF(GoonCharacterLevelEqualTo(7)):ApplyStatus(GOON_NPC_SOMETHING_LVL_7,100,-1);IF(GoonCharacterLevelEqualTo(8)):ApplyStatus(GOON_NPC_SOMETHING_LVL_8,100,-1);IF(GoonCharacterLevelEqualTo(9)):ApplyStatus(GOON_NPC_SOMETHING_LVL_9,100,-1);IF(GoonCharacterLevelEqualTo(10)):ApplyStatus(GOON_NPC_SOMETHING_LVL_10,100,-1);IF(GoonCharacterLevelEqualTo(11)):ApplyStatus(GOON_NPC_SOMETHING_LVL_11,100,-1);IF(GoonCharacterLevelEqualTo(12)):ApplyStatus(GOON_NPC_SOMETHING_LVL_12,100,-1);IF(GoonCharacterLevelEqualTo(13)):ApplyStatus(GOON_NPC_SOMETHING_LVL_13,100,-1);IF(GoonCharacterLevelEqualTo(14)):ApplyStatus(GOON_NPC_SOMETHING_LVL_14,100,-1);IF(GoonCharacterLevelEqualTo(15)):ApplyStatus(GOON_NPC_SOMETHING_LVL_15,100,-1);IF(GoonCharacterLevelEqualTo(16)):ApplyStatus(GOON_NPC_SOMETHING_LVL_16,100,-1);IF(GoonCharacterLevelEqualTo(17)):ApplyStatus(GOON_NPC_SOMETHING_LVL_17,100,-1);IF(GoonCharacterLevelEqualTo(18)):ApplyStatus(GOON_NPC_SOMETHING_LVL_18,100,-1);IF(GoonCharacterLevelEqualTo(19)):ApplyStatus(GOON_NPC_SOMETHING_LVL_19,100,-1);IF(GoonCharacterLevelEqualToOrGreaterThan(20)):ApplyStatus(GOON_NPC_SOMETHING_LVL_20,100,-1)"
+
+// Template
+    new entry "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+    data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+    data "StackId" "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackType" "Ignore"
+    data "RemoveConditions" "not HasPassive('CX_Paladin_Boost',context.Source) or HasPassive('Goon_Paladin_NPC_Progressions',context.Source)"
+
+// Progression statuses
+    new entry "GOON_NPC_PALADIN_LVL_1_MULTICLASS"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "1"
+    data "Passives" ""
+    data "Boosts" ""
+
+    // <node id="Progression">
+    // 	<attribute id="Boosts" type="LSString" value="Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,3,0);ActionResource(ChannelOath,1,0)" />
+    // 	<attribute id="IsMulticlass" type="bool" value="True" />
+    // 	<attribute id="Level" type="uint8" value="1" />
+    // 	<attribute id="Name" type="LSString" value="Paladin" />
+    // 	<attribute id="ProgressionType" type="uint8" value="0" />
+    // 	<attribute id="Selectors" type="LSString" value="AddSpells(fb407d81-3a05-46f1-9153-0fb27dce95b6,,,,AlwaysPrepared)" />
+    // 	<attribute id="TableUUID" type="guid" value="ba2afe85-acba-4ea1-a238-2b4543f47821" />
+    // 	<attribute id="UUID" type="guid" value="1f5396ad-65e3-4ed5-a339-d76b11af96ea" />
+
+    new entry "GOON_NPC_PALADIN_LVL_1"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "1"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,3,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren)"
+
+    new entry "GOON_NPC_PALADIN_LVL_2"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "2"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,3,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,2,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,1,0)"
+
+    new entry "GOON_NPC_PALADIN_LVL_3"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "3"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,3,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,3,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,1,0)"
+
+    new entry "GOON_NPC_PALADIN_LVL_4"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "4"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,4,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,3,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,1,0)"
+
+    new entry "GOON_NPC_PALADIN_LVL_5"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "5"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,4,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,1,0);ActionResource(SpellSlot,2,2)"
+
+    new entry "GOON_NPC_PALADIN_LVL_6"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "6"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,4,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,2,2)"
+
+    new entry "GOON_NPC_PALADIN_LVL_7"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "7"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,4,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2)"
+
+    new entry "GOON_NPC_PALADIN_LVL_8"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_LVL_7"
+    data "StackPriority" "8"
+
+    new entry "GOON_NPC_PALADIN_LVL_9"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "9"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,4,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,2,3)"
+
+    new entry "GOON_NPC_PALADIN_LVL_10"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "10"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,5,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,2,3)"
+
+    new entry "GOON_NPC_PALADIN_LVL_11"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "11"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,5,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3)"
+
+    new entry "GOON_NPC_PALADIN_LVL_12"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_LVL_11"
+    data "StackPriority" "12"
+
+// Expansion levels 13-20
+    new entry "GOON_NPC_PALADIN_LVL_13"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "13"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,6,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,1,4)"
+
+    new entry "GOON_NPC_PALADIN_LVL_14"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "14"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite;CleansingTouch;CleansingTouch_Resource"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,7,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,1,4)"
+
+    new entry "GOON_NPC_PALADIN_LVL_15"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "15"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite;CleansingTouch;CleansingTouch_Resource"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,8,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,2,4);ActionResource(DivinePowerPoint,1,0)"
+
+    new entry "GOON_NPC_PALADIN_LVL_16"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_LVL_15"
+    data "StackPriority" "16"
+
+    new entry "GOON_NPC_PALADIN_LVL_17"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "17"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite;CleansingTouch;CleansingTouch_Resource"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,8,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,2,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,3,4);ActionResource(DivinePowerPoint,1,0);ActionResource(SpellSlot,1,5)"
+
+    new entry "GOON_NPC_PALADIN_LVL_18"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "18"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite;CleansingTouch;CleansingTouch_Resource"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,8,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,3,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,3,4);ActionResource(DivinePowerPoint,1,0);ActionResource(SpellSlot,1,5)"
+
+    new entry "GOON_NPC_PALADIN_LVL_19"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_PROGRESSION_TEMPLATE"
+    data "StackPriority" "19"
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost;Smite_Divine_NPC;UnlockedSpellSlotLevel1;HarnessDivinePower;DivineHealth;ExtraAttack;Smite_Divine_2_NPC;UnlockedSpellSlotLevel2;Goon_Aura_Distribution_Passive;Smite_Divine_3_NPC;UnlockedSpellSlotLevel3;ImprovedDivineSmite;CleansingTouch;CleansingTouch_Resource"
+    data "Boosts" "Tag(PALADIN);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(HeavyArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(LayOnHandsCharge,8,0);ActionResource(ChannelOath,1,0);UnlockSpell(Target_LayOnHands,AddChildren);UnlockSpell(Shout_DivineSense,AddChildren);ActionResource(SpellSlot,4,1);UnlockSpell(Target_Smite_Divine,AddChildren);UnlockSpell(Target_Smite_Divine_Unlock,AddChildren);UnlockSpell(Target_Smite_Divine_Critical_Unlock,AddChildren);ActionResource(DivinePowerPoint,3,0);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,3,4);ActionResource(DivinePowerPoint,1,0);ActionResource(SpellSlot,2,5)"
+
+    new entry "GOON_NPC_PALADIN_LVL_20"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_LVL_19"
+    data "StackPriority" "20"
+
+// ==================================== Subclass: Oath of the Ancients ====================================
+
+    new entry "CX_Paladin_Ancients_Boost"
+    type "PassiveData"
+    // ! Subclass: Oath of the Ancients Paladin
+    data "DisplayName" "he08960f8gf689g41e6gbfc2gec7059617d8c;1"
+    // A Paladin who defends the light of life and beauty, standing against despair and decay.
+    data "Description" "h74725b1fg6ed2g42bcg885eg722d3c8802fe;1"
+    data "Properties" "Highlighted"
+    data "Icon" "Action_Paladin_HealingRadiance"
+    data "Boosts" ""
+    data "StatsFunctorContext" "OnCreate"
+    data "Conditions" "not HasPassive('Goon_Paladin_NPC_Progressions',context.Source)"
+    data "StatsFunctors" "IF(GoonCharacterLevelEqualTo(1) or HasStatus('GOON_NPC_SOMETHING_LVL_1')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_1,100,-1);IF(GoonCharacterLevelEqualTo(2) or HasStatus('GOON_NPC_SOMETHING_LVL_2')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_2,100,-1);IF(GoonCharacterLevelEqualTo(3) or HasStatus('GOON_NPC_SOMETHING_LVL_3')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_3,100,-1);IF(GoonCharacterLevelEqualTo(4) or HasStatus('GOON_NPC_SOMETHING_LVL_4')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_4,100,-1);IF(GoonCharacterLevelEqualTo(5) or HasStatus('GOON_NPC_SOMETHING_LVL_5')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_5,100,-1);IF(GoonCharacterLevelEqualTo(6) or HasStatus('GOON_NPC_SOMETHING_LVL_6')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_6,100,-1);IF(GoonCharacterLevelEqualTo(7) or HasStatus('GOON_NPC_SOMETHING_LVL_7')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_7,100,-1);IF(GoonCharacterLevelEqualTo(8) or HasStatus('GOON_NPC_SOMETHING_LVL_8')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_8,100,-1);IF(GoonCharacterLevelEqualTo(9) or HasStatus('GOON_NPC_SOMETHING_LVL_9')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_9,100,-1);IF(GoonCharacterLevelEqualTo(10) or HasStatus('GOON_NPC_SOMETHING_LVL_10')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_10,100,-1);IF(GoonCharacterLevelEqualTo(11) or HasStatus('GOON_NPC_SOMETHING_LVL_11')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_11,100,-1);IF(GoonCharacterLevelEqualTo(12) or HasStatus('GOON_NPC_SOMETHING_LVL_12')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_12,100,-1);IF(GoonCharacterLevelEqualTo(13) or HasStatus('GOON_NPC_SOMETHING_LVL_13')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_13,100,-1);IF(GoonCharacterLevelEqualTo(14) or HasStatus('GOON_NPC_SOMETHING_LVL_14')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_14,100,-1);IF(GoonCharacterLevelEqualTo(15) or HasStatus('GOON_NPC_SOMETHING_LVL_15')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_15,100,-1);IF(GoonCharacterLevelEqualTo(16) or HasStatus('GOON_NPC_SOMETHING_LVL_16')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_16,100,-1);IF(GoonCharacterLevelEqualTo(17) or HasStatus('GOON_NPC_SOMETHING_LVL_17')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_17,100,-1);IF(GoonCharacterLevelEqualTo(18) or HasStatus('GOON_NPC_SOMETHING_LVL_18')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_18,100,-1);IF(GoonCharacterLevelEqualTo(19) or HasStatus('GOON_NPC_SOMETHING_LVL_19')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_19,100,-1);IF(GoonCharacterLevelEqualToOrGreaterThan(20) or HasStatus('GOON_NPC_SOMETHING_LVL_20')):ApplyStatus(GOON_NPC_PALADIN_ANCIENTS_LVL_20,100,-1)"
+
+// Template
+    new entry "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+    data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+    data "StackId" "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackType" "Ignore"
+    data "RemoveConditions" "not HasPassive('CX_Paladin_Ancients_Boost',context.Source)"
+
+// Progression statuses
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_1"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "1"
+    data "Passives" "Oath_Ancients_Tenents"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="1"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="Oath_Ancients_Tenents"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(9e04298e-871d-414d-979a-c05570df603b,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="c5896730-ac3f-4f00-b719-41a1ed82616b"/>
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_1"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "2"
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_3"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "3"
+    data "Passives" "Oath_Ancients_Tenents"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="3"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(de27ac05-a6d2-4c77-8bc9-1611344f6370,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="11c1bab3-90d0-4558-895b-200bca7ec2e3"/>
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_4"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_3"
+    data "StackPriority" "4"
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_5"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "5"
+    data "Passives" "Oath_Ancients_Tenents"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="5"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(0557efcb-f072-45e3-aee0-4f84359e777d,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="ccbbcbad-d2b1-4064-a731-81480cf78d9f"/>
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_6"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_5"
+    data "StackPriority" "6"
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_7"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "7"
+    data "Passives" "Oath_Ancients_Tenents;Goon_Aura_of_Warding_Passive"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="7"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(f6e69adb-d2d3-4d38-aca1-639fb38cf0fd,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="2a57202d-4f50-47de-bdca-f5aa7addf1ff"/>
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_8"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_7"
+    data "StackPriority" "8"
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_9"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "9"
+    data "Passives" "Oath_Ancients_Tenents;Goon_Aura_of_Warding_Passive"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="9"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(02c495eb-c79a-445d-804c-628be82b586b,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="ed44db42-a704-4717-aed3-7d3672775b36"/>
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_10"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_9"
+    data "StackPriority" "10"
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_11"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_9"
+    data "StackPriority" "11"
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_12"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_9"
+    data "StackPriority" "12"
+
+// Expansion levels 13-20
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_13"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "13"
+    data "Passives" "Oath_Ancients_Tenents;Goon_Aura_of_Warding_Passive"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="13"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(e119674f-37d0-49f5-8c6e-426f65a254bc,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="9000efa3-d897-43fc-a378-cbabc73b36bf"/>
+
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_14"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_13"
+    data "StackPriority" "14"
+    
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_15"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "15"
+    data "Passives" "Oath_Ancients_Tenents;Goon_Aura_of_Warding_Passive;UndyingSentinel"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="15"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="UndyingSentinel"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="02de3183-5481-4988-8d00-f2ad177e225b"/>
+    
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_16"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_15"
+    data "StackPriority" "16"
+    
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_17"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "17"
+    data "Passives" "Oath_Ancients_Tenents;Goon_Aura_of_Warding_Passive;UndyingSentinel"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Shout_CommuneWithNature,AddChildren);UnlockSpell(Wall_WallOfStone,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="17"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(8c33c86e-e3e4-4ea2-838e-0823bef06061,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="17db59cb-5db2-4755-be13-84cf8e367c74"/>
+    
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_18"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_17"
+    data "StackPriority" "18"
+    
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_19"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_LVL_17"
+    data "StackPriority" "19"
+    
+    new entry "GOON_NPC_PALADIN_ANCIENTS_LVL_20"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_ANCIENTS_PROGRESSION_TEMPLATE"
+    data "StackPriority" "20"
+    data "Passives" "Oath_Ancients_Tenents;Goon_Aura_of_Warding_Passive;UndyingSentinel;ElderChampion"
+    data "Boosts" "UnlockSpell(Shout_HealingRadiance,AddChildren);UnlockSpell(Target_NaturesWrath,AddChildren);UnlockSpell(Shout_TurnTheFaithless,AddChildren);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Projectile_EnsnaringStrike_Container,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Moonbeam,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Shout_CommuneWithNature,AddChildren);UnlockSpell(Wall_WallOfStone,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="20"/>
+    //     <attribute id="Name" type="LSString" value="Ancients"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="ElderChampion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="b82864a7-b093-4553-a802-e176831029c1"/>
+    //     <attribute id="UUID" type="guid" value="063383db-7e0b-4e18-aba2-4fa4507911d5"/>
+
+// ==================================== Subclass: Oath of Devotion ====================================
+
+    new entry "CX_Paladin_Devotion_Boost"
+    type "PassiveData"
+    // ! Subclass: Oath of Devotion Paladin
+    data "DisplayName" "h08fb1797g13bfg412dga764gc3087601ba95;1"
+    // A Paladin who acts with honour and virtue to protect the weak and pursue the greater good.
+    data "Description" "hd41ebf55g11bfg459egbda2g7af1996ef3cf;1"
+    data "Properties" "Highlighted"
+    data "Icon" "Action_Paladin_SacredWeapon"
+    data "Boosts" ""
+    data "StatsFunctorContext" "OnCreate"
+    data "Conditions" "not HasPassive('Goon_Paladin_NPC_Progressions',context.Source)"
+    data "StatsFunctors" "IF(GoonCharacterLevelEqualTo(1) or HasStatus('GOON_NPC_SOMETHING_LVL_1')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_1,100,-1);IF(GoonCharacterLevelEqualTo(2) or HasStatus('GOON_NPC_SOMETHING_LVL_2')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_2,100,-1);IF(GoonCharacterLevelEqualTo(3) or HasStatus('GOON_NPC_SOMETHING_LVL_3')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_3,100,-1);IF(GoonCharacterLevelEqualTo(4) or HasStatus('GOON_NPC_SOMETHING_LVL_4')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_4,100,-1);IF(GoonCharacterLevelEqualTo(5) or HasStatus('GOON_NPC_SOMETHING_LVL_5')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_5,100,-1);IF(GoonCharacterLevelEqualTo(6) or HasStatus('GOON_NPC_SOMETHING_LVL_6')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_6,100,-1);IF(GoonCharacterLevelEqualTo(7) or HasStatus('GOON_NPC_SOMETHING_LVL_7')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_7,100,-1);IF(GoonCharacterLevelEqualTo(8) or HasStatus('GOON_NPC_SOMETHING_LVL_8')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_8,100,-1);IF(GoonCharacterLevelEqualTo(9) or HasStatus('GOON_NPC_SOMETHING_LVL_9')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_9,100,-1);IF(GoonCharacterLevelEqualTo(10) or HasStatus('GOON_NPC_SOMETHING_LVL_10')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_10,100,-1);IF(GoonCharacterLevelEqualTo(11) or HasStatus('GOON_NPC_SOMETHING_LVL_11')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_11,100,-1);IF(GoonCharacterLevelEqualTo(12) or HasStatus('GOON_NPC_SOMETHING_LVL_12')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_12,100,-1);IF(GoonCharacterLevelEqualTo(13) or HasStatus('GOON_NPC_SOMETHING_LVL_13')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_13,100,-1);IF(GoonCharacterLevelEqualTo(14) or HasStatus('GOON_NPC_SOMETHING_LVL_14')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_14,100,-1);IF(GoonCharacterLevelEqualTo(15) or HasStatus('GOON_NPC_SOMETHING_LVL_15')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_15,100,-1);IF(GoonCharacterLevelEqualTo(16) or HasStatus('GOON_NPC_SOMETHING_LVL_16')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_16,100,-1);IF(GoonCharacterLevelEqualTo(17) or HasStatus('GOON_NPC_SOMETHING_LVL_17')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_17,100,-1);IF(GoonCharacterLevelEqualTo(18) or HasStatus('GOON_NPC_SOMETHING_LVL_18')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_18,100,-1);IF(GoonCharacterLevelEqualTo(19) or HasStatus('GOON_NPC_SOMETHING_LVL_19')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_19,100,-1);IF(GoonCharacterLevelEqualToOrGreaterThan(20) or HasStatus('GOON_NPC_SOMETHING_LVL_20')):ApplyStatus(GOON_NPC_PALADIN_DEVOTION_LVL_20,100,-1)"
+
+// Template
+    new entry "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+    data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+    data "StackId" "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackType" "Ignore"
+    data "RemoveConditions" "not HasPassive('CX_Paladin_Devotion_Boost',context.Source)"
+
+// Progression statuses
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_1"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "1"
+    data "Passives" "Oath_Devotion_Tenents"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="1"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="Oath_Devotion_Tenents"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(b4220712-15bb-4235-b4a8-9946a9708a9c,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="394623a5-f829-4295-9efc-3ea14197536a"/>
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_2"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_1"
+    data "StackPriority" "2"
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_3"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "3"
+    data "Passives" "Oath_Devotion_Tenents"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="3"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(660eb07b-ea07-4ff1-91e7-7ca44694dbe7,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="419d61a5-2e61-4aaa-992a-f113817f607c"/>
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_4"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_3"
+    data "StackPriority" "4"
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_5"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "5"
+    data "Passives" "Oath_Devotion_Tenents"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="5"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(a54421d2-c07c-451a-b060-a125696e0ce7,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="df3ddb35-5479-45ee-be32-63d75ca6fd90"/>
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_6"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_5"
+    data "StackPriority" "6"
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_7"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "7"
+    data "Passives" "Oath_Devotion_Tenents;Goon_Aura_of_Devotion_Passive"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="7"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(7112a6f2-8100-40e8-a411-75cde8847b36,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="d70e545b-851e-4e3f-9a61-165123c5fee0"/>
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_8"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_7"
+    data "StackPriority" "8"
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_9"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "9"
+    data "Passives" "Oath_Devotion_Tenents;Goon_Aura_of_Devotion_Passive"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_RemoveCurse,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="9"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(99a16aaf-233b-4eb0-82cd-c4abfd2e389f,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="5e9cbd8a-af0f-4ce8-a9ac-cc31d4873c61"/>
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_10"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_9"
+    data "StackPriority" "10"
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_11"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_9"
+    data "StackPriority" "11"
+
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_12"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_9"
+    data "StackPriority" "12"
+
+// Expansion levels 13-20
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_13"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "13"
+    data "Passives" "Oath_Devotion_Tenents;Goon_Aura_of_Devotion_Passive"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_RemoveCurse,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="13"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(592ad940-48a6-4835-a147-84d0a237b9bf,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="02eccb42-2065-4d09-850a-f60a0db78c20"/>
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_14"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_13"
+    data "StackPriority" "14"
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_15"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "15"
+    data "Passives" "Oath_Devotion_Tenents;Goon_Aura_of_Devotion_Passive;PurityOfSpirit"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_RemoveCurse,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="15"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="PurityOfSpirit"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="bc293ed7-a2e5-428d-bb83-bf009267b4c5"/>
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_16"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_15"
+    data "StackPriority" "16"
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_17"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "17"
+    data "Passives" "Oath_Devotion_Tenents;Goon_Aura_of_Devotion_Passive;PurityOfSpirit"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_RemoveCurse,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="17"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(70ee3e4a-536f-485d-882a-94de6fbf7c65,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="b11ede35-3379-481f-ac42-1c2a5613cd8a"/>
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_18"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_17"
+    data "StackPriority" "18"
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_19"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_LVL_17"
+    data "StackPriority" "19"
+    
+    new entry "GOON_NPC_PALADIN_DEVOTION_LVL_20"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_DEVOTION_PROGRESSION_TEMPLATE"
+    data "StackPriority" "20"
+    data "Passives" "Oath_Devotion_Tenents;Goon_Aura_of_Devotion_Passive;PurityOfSpirit;HolyNimbus"
+    data "Boosts" "UnlockSpell(Target_HolyRebuke,AddChildren);UnlockSpell(Shout_SacredWeapon,AddChildren);UnlockSpell(Shout_TurnTheUnholy,AddChildren);UnlockSpell(Target_ProtectionFromEvilAndGood,AddChildren);UnlockSpell(Target_Sanctuary,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Target_Silence,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_RemoveCurse,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="20"/>
+    //     <attribute id="Name" type="LSString" value="Devotion"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="HolyNimbus"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="941ca27d-02f7-4f59-bd33-63fa3366134d"/>
+    //     <attribute id="UUID" type="guid" value="941b3dc9-8657-473a-8138-ce306517f1dd"/>
+
+// ==================================== Subclass: Oath of Vengeance ====================================
+
+    new entry "CX_Paladin_Vengeance_Boost"
+    type "PassiveData"
+    // ! Subclass: Oath of Vengeance Paladin
+    data "DisplayName" "h63d656a0g451cg4061gbee8g6e0ae8814137;1"
+    // A Paladin who set aside their own purity to right wrongs and deliver justice by any means necessary.
+    data "Description" "hcedd322eg85bdg4ba6gae85gd39a68f4caa0;1"
+    data "Properties" "Highlighted"
+    data "Icon" "Action_Paladin_InquisitorsMight"
+    data "Boosts" ""
+    data "StatsFunctorContext" "OnCreate"
+    data "Conditions" "not HasPassive('Goon_Paladin_NPC_Progressions',context.Source)"
+    data "StatsFunctors" "IF(GoonCharacterLevelEqualTo(1) or HasStatus('GOON_NPC_SOMETHING_LVL_1')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_1,100,-1);IF(GoonCharacterLevelEqualTo(2) or HasStatus('GOON_NPC_SOMETHING_LVL_2')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_2,100,-1);IF(GoonCharacterLevelEqualTo(3) or HasStatus('GOON_NPC_SOMETHING_LVL_3')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_3,100,-1);IF(GoonCharacterLevelEqualTo(4) or HasStatus('GOON_NPC_SOMETHING_LVL_4')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_4,100,-1);IF(GoonCharacterLevelEqualTo(5) or HasStatus('GOON_NPC_SOMETHING_LVL_5')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_5,100,-1);IF(GoonCharacterLevelEqualTo(6) or HasStatus('GOON_NPC_SOMETHING_LVL_6')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_6,100,-1);IF(GoonCharacterLevelEqualTo(7) or HasStatus('GOON_NPC_SOMETHING_LVL_7')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_7,100,-1);IF(GoonCharacterLevelEqualTo(8) or HasStatus('GOON_NPC_SOMETHING_LVL_8')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_8,100,-1);IF(GoonCharacterLevelEqualTo(9) or HasStatus('GOON_NPC_SOMETHING_LVL_9')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_9,100,-1);IF(GoonCharacterLevelEqualTo(10) or HasStatus('GOON_NPC_SOMETHING_LVL_10')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_10,100,-1);IF(GoonCharacterLevelEqualTo(11) or HasStatus('GOON_NPC_SOMETHING_LVL_11')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_11,100,-1);IF(GoonCharacterLevelEqualTo(12) or HasStatus('GOON_NPC_SOMETHING_LVL_12')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_12,100,-1);IF(GoonCharacterLevelEqualTo(13) or HasStatus('GOON_NPC_SOMETHING_LVL_13')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_13,100,-1);IF(GoonCharacterLevelEqualTo(14) or HasStatus('GOON_NPC_SOMETHING_LVL_14')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_14,100,-1);IF(GoonCharacterLevelEqualTo(15) or HasStatus('GOON_NPC_SOMETHING_LVL_15')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_15,100,-1);IF(GoonCharacterLevelEqualTo(16) or HasStatus('GOON_NPC_SOMETHING_LVL_16')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_16,100,-1);IF(GoonCharacterLevelEqualTo(17) or HasStatus('GOON_NPC_SOMETHING_LVL_17')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_17,100,-1);IF(GoonCharacterLevelEqualTo(18) or HasStatus('GOON_NPC_SOMETHING_LVL_18')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_18,100,-1);IF(GoonCharacterLevelEqualTo(19) or HasStatus('GOON_NPC_SOMETHING_LVL_19')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_19,100,-1);IF(GoonCharacterLevelEqualToOrGreaterThan(20) or HasStatus('GOON_NPC_SOMETHING_LVL_20')):ApplyStatus(GOON_NPC_PALADIN_VENGEANCE_LVL_20,100,-1)"
+
+// Template
+    new entry "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+    data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+    data "StackId" "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackType" "Ignore"
+    data "RemoveConditions" "not HasPassive('CX_Paladin_Vengeance_Boost',context.Source)"
+
+// Progression statuses
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_1"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "1"
+    data "Passives" "Oath_Vengeance_Tenents"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="1"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="Oath_Vengeance_Tenents"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(bc56da1f-38fa-49b6-bf58-1159cecd92a4,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="ebe9b2bf-97fb-460b-860b-22ae602b7e97"/>
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_2"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_1"
+    data "StackPriority" "2"
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_3"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "3"
+    data "Passives" "Oath_Vengeance_Tenents"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="3"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(5f73341d-36d7-4960-a5b2-4f916ec5e4b9,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="bd1e9c6b-84e8-4b9f-9439-398cb9fd452b"/>
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_4"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_3"
+    data "StackPriority" "4"
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_5"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "5"
+    data "Passives" "Oath_Vengeance_Tenents"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="5"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(d04f6f81-6cb3-4dc7-9c78-21701bb1e385,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="333ea8d0-326f-42a1-a150-95ef5a9e7541"/>
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_6"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "6"
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_7"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "7"
+    data "Passives" "Oath_Vengeance_Tenents;RelentlessAvenger"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="7"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="RelentlessAvenger"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="cc34a763-407a-4ea8-8861-826ff842bcdc"/>
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_8"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_7"
+    data "StackPriority" "8"
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_9"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "9"
+    data "Passives" "Oath_Vengeance_Tenents;RelentlessAvenger"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Haste,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="9"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(49a63d5c-04a3-4f20-8da5-fa75136b0255,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="b3d4b30b-8a84-419a-98b2-68639ae3649d"/>
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_10"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_9"
+    data "StackPriority" "10"
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_11"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_9"
+    data "StackPriority" "11"
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_12"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_9"
+    data "StackPriority" "12"
+
+// Expansion levels 13-20
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_13"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "13"
+    data "Passives" "Oath_Vengeance_Tenents;RelentlessAvenger"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Haste,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_Banishment,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="13"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(47d6a1a8-eacc-4355-ac2d-dac73ff01490,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="40f3f886-2c35-4e4b-8653-4d31bf829d47"/>
+
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_14"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_13"
+    data "StackPriority" "14"
+    
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_15"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "15"
+    data "Passives" "Oath_Vengeance_Tenents;RelentlessAvenger;SoulOfVengeance"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Haste,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_Banishment,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="15"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="SoulOfVengeance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="3e49dbdb-a18f-4948-ab4f-c0f3432d425e"/>
+    
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_16"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_15"
+    data "StackPriority" "16"
+    
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_17"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "17"
+    data "Passives" "Oath_Vengeance_Tenents;RelentlessAvenger;SoulOfVengeance"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Haste,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_Banishment,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren);UnlockSpell(Projectile_Smite_Banishing_Container,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="17"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(e8fce689-c836-45b3-9666-fb45d57ab1f9,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="94028853-8335-4584-ba35-69a5a2a50bd2"/>
+    
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_18"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_17"
+    data "StackPriority" "18"
+    
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_19"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_LVL_17"
+    data "StackPriority" "19"
+    
+    new entry "GOON_NPC_PALADIN_VENGEANCE_LVL_20"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_VENGEANCE_PROGRESSION_TEMPLATE"
+    data "StackPriority" "20"
+    data "Passives" "Oath_Vengeance_Tenents;RelentlessAvenger;SoulOfVengeance;AvengingAngel"
+    data "Boosts" "UnlockSpell(Target_InquisitorsMight,AddChildren);UnlockSpell(Target_AbjureEnemy,AddChildren);UnlockSpell(Target_VowOfEnmity,AddChildren);UnlockSpell(Target_Bane,AddChildren);UnlockSpell(Target_HuntersMark,AddChildren);UnlockSpell(Target_HoldPerson,AddChildren);UnlockSpell(Target_MistyStep,AddChildren);UnlockSpell(Target_Haste,AddChildren);UnlockSpell(Target_ProtectionFromEnergy,AddChildren);UnlockSpell(Target_Banishment,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren);UnlockSpell(Projectile_Smite_Banishing_Container,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="20"/>
+    //     <attribute id="Name" type="LSString" value="Vengeance"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="AvengingAngel"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="f769aa02-1f74-4fb6-b94c-8850143daa20"/>
+    //     <attribute id="UUID" type="guid" value="2d99ab4f-26ff-477b-a425-9da6b233ebaf"/>
+
+// ==================================== Subclass: Oathbreaker ====================================
+
+    new entry "CX_Paladin_Oathbreaker_Boost"
+    type "PassiveData"
+    // ! Subclass: Oathbreaker Paladin
+    data "DisplayName" "h727a7017g43e3g42f2g90aage79f5e4b6513;1"
+    // A Paladin who broke their Oath in pursuit of power and ambition.
+    data "Description" "h529feb44gb9e2g445dg988cg1311742dc8bc;1"
+    data "Properties" "Highlighted"
+    data "Icon" "Action_Paladin_DreadfulAspect"
+    data "Boosts" ""
+    data "StatsFunctorContext" "OnCreate"
+    data "Conditions" "not HasPassive('Goon_Paladin_NPC_Progressions',context.Source)"
+    data "StatsFunctors" "IF(GoonCharacterLevelEqualTo(1) or HasStatus('GOON_NPC_SOMETHING_LVL_1')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_1,100,-1);IF(GoonCharacterLevelEqualTo(2) or HasStatus('GOON_NPC_SOMETHING_LVL_2')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_2,100,-1);IF(GoonCharacterLevelEqualTo(3) or HasStatus('GOON_NPC_SOMETHING_LVL_3')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_3,100,-1);IF(GoonCharacterLevelEqualTo(4) or HasStatus('GOON_NPC_SOMETHING_LVL_4')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_4,100,-1);IF(GoonCharacterLevelEqualTo(5) or HasStatus('GOON_NPC_SOMETHING_LVL_5')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_5,100,-1);IF(GoonCharacterLevelEqualTo(6) or HasStatus('GOON_NPC_SOMETHING_LVL_6')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_6,100,-1);IF(GoonCharacterLevelEqualTo(7) or HasStatus('GOON_NPC_SOMETHING_LVL_7')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_7,100,-1);IF(GoonCharacterLevelEqualTo(8) or HasStatus('GOON_NPC_SOMETHING_LVL_8')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_8,100,-1);IF(GoonCharacterLevelEqualTo(9) or HasStatus('GOON_NPC_SOMETHING_LVL_9')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_9,100,-1);IF(GoonCharacterLevelEqualTo(10) or HasStatus('GOON_NPC_SOMETHING_LVL_10')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_10,100,-1);IF(GoonCharacterLevelEqualTo(11) or HasStatus('GOON_NPC_SOMETHING_LVL_11')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_11,100,-1);IF(GoonCharacterLevelEqualTo(12) or HasStatus('GOON_NPC_SOMETHING_LVL_12')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_12,100,-1);IF(GoonCharacterLevelEqualTo(13) or HasStatus('GOON_NPC_SOMETHING_LVL_13')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_13,100,-1);IF(GoonCharacterLevelEqualTo(14) or HasStatus('GOON_NPC_SOMETHING_LVL_14')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_14,100,-1);IF(GoonCharacterLevelEqualTo(15) or HasStatus('GOON_NPC_SOMETHING_LVL_15')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_15,100,-1);IF(GoonCharacterLevelEqualTo(16) or HasStatus('GOON_NPC_SOMETHING_LVL_16')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_16,100,-1);IF(GoonCharacterLevelEqualTo(17) or HasStatus('GOON_NPC_SOMETHING_LVL_17')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_17,100,-1);IF(GoonCharacterLevelEqualTo(18) or HasStatus('GOON_NPC_SOMETHING_LVL_18')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_18,100,-1);IF(GoonCharacterLevelEqualTo(19) or HasStatus('GOON_NPC_SOMETHING_LVL_19')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_19,100,-1);IF(GoonCharacterLevelEqualToOrGreaterThan(20) or HasStatus('GOON_NPC_SOMETHING_LVL_20')):ApplyStatus(GOON_NPC_PALADIN_OATHBREAKER_LVL_20,100,-1)"
+
+// Template
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+    data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+    data "StackId" "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackType" "Ignore"
+    data "RemoveConditions" "not HasPassive('CX_Paladin_Oathbreaker_Boost',context.Source)"
+
+// Progression statuses
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_1"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "1"
+    data "Passives" ""
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="1"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(cb1e5aad-26cd-4370-a179-5536bfcc3d47,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="504688df-4b4b-49fc-abdf-ce7af44f70b1"/>
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_2"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_1"
+    data "StackPriority" "2"
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_3"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "3"
+    data "Passives" ""
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="3"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(a59baeac-1be2-40ac-b93c-20eb498b0e0b,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="27124c6c-fd7f-4895-b1fc-a04515f2a2ac"/>
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_4"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_3"
+    data "StackPriority" "4"
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_5"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "5"
+    data "Passives" ""
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="5"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(06330a3b-4b76-4cb0-b23d-9041a9a2868a,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="65c8e05b-fcdd-456c-b8b9-180b3459c253"/>
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_6"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_5"
+    data "StackPriority" "6"
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_7"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "7"
+    data "Passives" "Goon_Aura_of_Hate_Passive"
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="7"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(20c3ac99-a937-464c-810d-d2f50ba44e6e,,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="8d29d7d1-f27f-40d1-b0ef-ed4e71b9551a"/>
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_8"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_7"
+    data "StackPriority" "8"
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_9"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "9"
+    data "Passives" "Goon_Aura_of_Hate_Passive"
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Target_AnimateDead,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="9"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(dd7c1c98-73ab-4543-a17e-c19e680caaa4,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="254264de-ef38-4219-8150-19886af18603"/>
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_10"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_9"
+    data "StackPriority" "10"
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_11"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_9"
+    data "StackPriority" "11"
+
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_12"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_9"
+    data "StackPriority" "12"
+
+// Expansion levels 13-20
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_13"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "13"
+    data "Passives" "Goon_Aura_of_Hate_Passive"
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Target_AnimateDead,AddChildren);UnlockSpell(Target_Blight,AddChildren);UnlockSpell(Target_Confusion,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="13"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(243663d7-7662-49bc-83cc-f99284138761,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="d6fbe127-1e36-4ee9-b6a8-0e5b2a0e6eba"/>
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_14"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_13"
+    data "StackPriority" "14"
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_15"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "15"
+    data "Passives" "Goon_Aura_of_Hate_Passive;SupernaturalResistance"
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Target_AnimateDead,AddChildren);UnlockSpell(Target_Blight,AddChildren);UnlockSpell(Target_Confusion,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="15"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="SupernaturalResistance"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="688e1448-a7e3-4509-8b15-361b1df24bc4"/>
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_16"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_15"
+    data "StackPriority" "16"
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_17"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "17"
+    data "Passives" "Goon_Aura_of_Hate_Passive;SupernaturalResistance"
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Target_AnimateDead,AddChildren);UnlockSpell(Target_Blight,AddChildren);UnlockSpell(Target_Confusion,AddChildren);UnlockSpell(Target_Contagion,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="17"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="Selectors" type="LSString" value="AddSpells(5054ddf0-e093-4228-8c62-6ed98667c4f7,OathSpells,,,AlwaysPrepared)"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="3ce5aaee-58bf-4828-9a00-4eea8f20b24e"/>
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_18"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_17"
+    data "StackPriority" "18"
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_19"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_LVL_17"
+    data "StackPriority" "19"
+    
+    new entry "GOON_NPC_PALADIN_OATHBREAKER_LVL_20"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_PALADIN_OATHBREAKER_PROGRESSION_TEMPLATE"
+    data "StackPriority" "20"
+    data "Passives" "Goon_Aura_of_Hate_Passive;SupernaturalResistance;DreadLord"
+    data "Boosts" "UnlockSpell(Target_SpitefulSuffering,AddChildren);UnlockSpell(Target_ControlUndead,AddChildren);UnlockSpell(Shout_Dreadful_Aspect,AddChildren);UnlockSpell(Shout_HellishRebuke,AddChildren);UnlockSpell(Target_InflictWounds,AddChildren);UnlockSpell(Target_CrownOfMadness,AddChildren);UnlockSpell(Target_Darkness,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Target_AnimateDead,AddChildren);UnlockSpell(Target_Blight,AddChildren);UnlockSpell(Target_Confusion,AddChildren);UnlockSpell(Target_Contagion,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren)"
+
+    // <node id="Progression">
+    //     <attribute id="Level" type="uint8" value="20"/>
+    //     <attribute id="Name" type="LSString" value="Oathbreaker"/>
+    //     <attribute id="PassivesAdded" type="LSString" value="DreadLord"/>
+    //     <attribute id="ProgressionType" type="uint8" value="1"/>
+    //     <attribute id="TableUUID" type="guid" value="f0d6f933-4532-463f-b378-a1e8b0164325"/>
+    //     <attribute id="UUID" type="guid" value="38367d1e-c35b-4433-9e87-b30556d4ffb6"/>
