@@ -18,7 +18,7 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSWString" value="Goonsack &amp; Cahoot" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSWString" value="Overhaul every aspect of NPCs for quality, consistency, and immersion." />
+          <attribute id="Description" type="LSWString" value="Additional UNSO file for use with Absolute's Laboratory." />
           <attribute id="Folder" type="LSWString" value="Ultimate NPC Stat Overhaul - Lab - Extras" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
