@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<contentList>
-	<!-- "DEATHSHEAD_UNSTOPPABLE_1" --> <content contentuid="hebdf9566ga7a1g4ce2gb495gb29a460bc838" version="1">Reduce the next damage taken by the entity by [1], consuming one charge of Unstoppable. Unstoppable creatures cannot be moved by any external forces, neither mundane nor magical.</content>
-	<!-- "DIAMONDSCALES_BULETTE" --> <content contentuid="h7b2bfbc4gb40fg4219ga0f5g2eb8b681aad0" version="1">This creature has [1]. While it has these Temporary Hit Points, it is &lt;LSTag Type="Status" Tooltip="GROUNDED"&gt;Grounded&lt;/LSTag&gt;, any damage lower than 15 will not affect it, and it can use &lt;LSTag Type="Spell" Tooltip="Shout_DiamondScalesBurst_Bulette"&gt;Shredding Scales&lt;/LSTag&gt; immediately after being hit for the first time in a round.</content>
-	
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-</contentList>

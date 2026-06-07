@@ -430,6 +430,11 @@
 	<!-- "Projectile_Fireball_Dragon" --> <content contentuid="h48bf5152gf621g411fg9636gbe8b0eea61d4" version="1">Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.</content>
 	<!-- "SCL_SHADOW_CURSE_UNDEAD_NEW" --> <content contentuid="h85d8ffbbg94efg428bg8f78g0de0aeff6532" version="1">Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to[2], and cannot use spell or weapon actions.</content>
 	<!-- "SCL_SHADOW_CURSE_UNDEAD" --> <content contentuid="hd3f13f46g70ccg4a58g8152gb375b4603262" version="1">Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1], have &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to[2], and cannot use spells or weapon actions.</content>
+
+<!-- ==================================== Extras ==================================== -->
+
+	<!-- "DEATHSHEAD_UNSTOPPABLE_1" --> <content contentuid="hebdf9566ga7a1g4ce2gb495gb29a460bc838" version="1">Reduce the next damage taken by the entity by [1], consuming one charge of Unstoppable. Unstoppable creatures cannot be moved by any external forces, neither mundane nor magical.</content>
+	<!-- "DIAMONDSCALES_BULETTE" --> <content contentuid="h7b2bfbc4gb40fg4219ga0f5g2eb8b681aad0" version="1">This creature has [1]. While it has these Temporary Hit Points, it is &lt;LSTag Type="Status" Tooltip="GROUNDED"&gt;Grounded&lt;/LSTag&gt;, any damage lower than 15 will not affect it, and it can use &lt;LSTag Type="Spell" Tooltip="Shout_DiamondScalesBurst_Bulette"&gt;Shredding Scales&lt;/LSTag&gt; immediately after being hit for the first time in a round.</content>
 	
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
