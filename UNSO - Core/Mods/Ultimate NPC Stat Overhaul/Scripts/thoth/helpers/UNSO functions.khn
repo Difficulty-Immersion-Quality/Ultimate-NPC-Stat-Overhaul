@@ -1,0 +1,51 @@
+-- ==================================== Barbarian ====================================
+
+-- Consolidated
+function UNSO_NPC_Barbarian_Subclass()
+    return UNSO_NPC_Barbarian_Berserker()
+         | UNSO_NPC_Barbarian_Giant()
+         | UNSO_NPC_Barbarian_WildMagic()
+         | UNSO_NPC_Barbarian_Wildheart()
+         | UNSO_NPC_Barbarian_AncestralGuardian()
+         | UNSO_NPC_Barbarian_Zealot()
+end
+
+-- Vanilla
+function UNSO_NPC_Barbarian_Berserker(entity)
+    entity = entity or context.Source
+    return HasPassive('LAB_Progression_Barbarian_Berserker', entity)
+         | HasPassive('CX_Barbarian_Berserker_Boost', entity)
+end
+
+function UNSO_NPC_Barbarian_Giant(entity)
+    entity = entity or context.Source
+    return HasPassive('LAB_Progression_Barbarian_Giant', entity)
+         | HasPassive('CX_Barbarian_Giant_Boost', entity)
+end
+
+function UNSO_NPC_Barbarian_WildMagic(entity)
+    entity = entity or context.Source
+    return HasPassive('LAB_Progression_Barbarian_WildMagic', entity)
+         | HasPassive('CX_Barbarian_WildMagic_Boost', entity)
+end
+
+function UNSO_NPC_Barbarian_Wildheart(entity)
+    entity = entity or context.Source
+    return HasPassive('LAB_Progression_Barbarian_Wildheart', entity)
+         | HasPassive('CX_Barbarian_Wildheart_Boost', entity)
+end
+
+-- Custom
+function UNSO_NPC_Barbarian_AncestralGuardian(entity)
+    entity = entity or context.Source
+    return HasPassive('LAB_Progression_Barbarian_AncestralGuardian', entity)
+         | HasPassive('CX_Barbarian_AncestralGuardian_Boost', entity)
+end
+
+function UNSO_NPC_Barbarian_Zealot(entity)
+    entity = entity or context.Source
+    return HasPassive('LAB_Progression_Barbarian_Zealot', entity)
+         | HasPassive('CX_Barbarian_Zealot_Boost', entity)
+end
+
+-- ==================================== XXX ====================================
