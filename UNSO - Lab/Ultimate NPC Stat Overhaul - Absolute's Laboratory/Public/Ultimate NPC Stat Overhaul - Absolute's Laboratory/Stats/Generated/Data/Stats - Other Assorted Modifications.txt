@@ -171,6 +171,49 @@ data "AreaRadius" "9"
 // data "BeamEffect" "7c5bb7d7-2549-4232-bc03-c97f57ff18a1"
 // data "Sheathing" "DontChange"
 
+// ==================================== Spectators: Paralysing Ray ====================================
+// Bug Fix: Incorrect "TooltipStatusApply" duration for the Paralysed condition application.
+
+new entry "Target_ParalyzingRay_Spectator"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_MainHandAttack"
+using "Target_ParalyzingRay_Spectator"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" ""
+// data "TargetFloor" ""
+// data "TargetRadius" "18"
+// data "RequirementConditions" "not HasStatus('SLOW',context.Source)"
+// data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC(), AdvantageOnParalyzed())"
+// data "SpellSuccess" "ApplyStatus(PARALYZED_SPECTATOR,100,2)"
+// data "SpellFail" ""
+// data "TargetConditions" "Character() and Enemy() and not HasStatus('PARALYZED_SPECTATOR')"
+// data "Icon" "GenericIcon_Intent_Control"
+// // Paralysing Ray
+// data "DisplayName" "he63b490cgad31g42e1ga966gf05f67546eb2;1"
+// // Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="PARALYZED_SPECTATOR"&gt;Paralyses&lt;/LSTag&gt; its target.
+// data "Description" "h9af766acg4281g44b8g8581ge75c79705222;2"
+// data "TooltipDamageList" ""
+// data "TooltipAttackSave" "Constitution"
+// data "TooltipStatusApply" "ApplyStatus(PARALYZED_SPECTATOR,100,3)"
+data "TooltipStatusApply" "ApplyStatus(PARALYZED_SPECTATOR,100,2)"
+// data "CastSound" "CrSpell_Cast_RayParalyzing"
+// data "TargetSound" "CrSpell_Impact_RayParalyzing"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" "EyeStalkActionPoint:1"
+// data "SpellAnimation" ",,;f12a602f-a39e-4752-a5bd-8fe8c8ff654e,,;23e80ef6-39b6-4229-9e2e-60a6d65c7aa7,,;f73184a5-9046-49dc-a6a7-c4d2a0005732,,;,,;f12a602f-a39e-4752-a5bd-8fe8c8ff654e,,;,,;,,;,,"
+// data "VerbalIntent" "Control"
+// data "WeaponTypes" "None"
+// data "SpellFlags" "CannotRotate;IsEnemySpell"
+// data "RechargeValues" "4-6"
+// data "HitAnimationType" "None"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "SourceLimbIndex" "1"
+// data "CastEffect" "6acd6b15-c4ed-4acd-8f10-9d7d54460e46"
+// data "TargetEffect" "3787f028-453a-4b76-ac7f-9ff677da6748"
+// data "HitEffect" "eec186d8-ae79-4800-a463-756d9834ecbb"
+// data "BeamEffect" "0ceeadd7-b6a7-43f0-882b-2509ecb5c635"
+
 // ==================================== Auntie Ethel: Anti-Cheese Door Unlocker ====================================
 
 new entry "Goon_NPC_Ethel_Unlocker"
@@ -917,7 +960,7 @@ data "StatusPropertyFlags" ""
 // data "OnRemoveFunctors" "ApplyStatus(UND_ADAMANTINEGOLEM_DEFAULT, 100, -1);"
 // data "StatusEffect" "9693a806-53c2-4fbe-9df0-a58e9a0e92b5"
 
-// ==================================== Oliver ====================================
+// ==================================== Oliver - The Wasting Quiet ====================================
 // Bug Fix: The Wasting Quiet: tick damage is now magical, the same as the application damage.
 
 new entry "SCL_OLIVER_CURSEDOME_BUFF"
@@ -1116,3 +1159,165 @@ using "Target_Slam_Blight_Vine"
 // data "DescriptionParams" "DealDamage1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
 data "DescriptionParams" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic)"
 // data "TooltipDamageList" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+
+// ============================ Mindflayer - Tentacle Whip ============================
+// Bug Fix: Tooltip now correctly displays a melee spell attack, instead of a melee unarmed attack.
+
+new entry "Target_Tentacles_MindFlayer"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Claws"
+using "Target_Tentacles_MindFlayer"
+// data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
+// data "SpellSuccess" "DealDamage(2d10+4,Psychic);IF(not SavingThrow(Ability.Intelligence, 14)):ApplyStatus(STUNNED,100,1);"
+// Tentacle Whip
+// data "DisplayName" "ha32797b6g8153g43b6gbb5cga37cc6c149a2;2"
+// Lash out with your tentacles and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; your target.
+// data "Description" "hf0c16535gd5a3g4da1gbf6agb69118db4419;5"
+// data "TooltipDamageList" "DealDamage(2d10+4,Psychic)"
+// data "TooltipAttackSave" "MeleeUnarmedAttack;Intelligence"
+data "TooltipAttackSave" "MeleeSpellAttack;Intelligence"
+// data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
+// data "CastSound" "CrSpell_Cast_Tentacle"
+// data "TargetSound" "CrSpell_Impact_Tentacle"
+// data "CastTextEvent" "Cast"
+// data "SpellAnimation" "8b8bb757-21ce-4e02-a2f3-97d55cf2f90b,,;b8a95317-2226-4f00-82b2-af97fb1f36bc,,;2eaa08cb-b2bd-453c-b80a-f1bf1cd90a1a,,;f8d1de3f-8fd1-42b2-87a5-d83ce4937e8c,,;7bb52cd4-0b1c-4926-9165-fa92b75876a3,,;66cb2d8a-f5c5-4edd-8c1c-e2c03c80d3f7,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "f29f7ac8-cce2-45f9-8302-b824847a8bbe"
+// data "TargetEffect" "cc09a13d-5d07-4604-a77f-87e0fa1df56b"
+
+// ============================ Mindflayer - Extract Brain ============================
+// Bug Fix: Made "TargetConditions" more robust.
+
+new entry "Target_ExtractBrain_Mindflayer"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Tentacles_MindFlayer"
+using "Target_ExtractBrain_Mindflayer"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" ""
+// data "SpellSuccess" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(SELF,6d6)"
+// data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
+data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Sleeping') or Goon_HasProneCondition_Unconscious())"
+// data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// Extract Brain
+// data "DisplayName" "hdc7aef70g430bg453bg8572g8834a2364262;2"
+// Try to extract the brain of a Stunned or Unconscious creature.
+// data "Description" "hdccfcac3g7a8dg45e8gb683g9ffc48c4a1c7;3"
+// Try to extract the brain of a &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="UNCONSCIOUS"&gt;Unconscious&lt;/LSTag&gt; creature.
+data "Description" "hc8edff4bgab54g4c52g8018ge1010d0a799d;1"
+// data "TooltipDamageList" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(6d6)"
+// data "TooltipAttackSave" "MeleeUnarmedAttack"
+// data "CastSound" "CrSpell_Cast_ExtractBrain"
+// data "TargetSound" "CrSpell_Impact_ExtractBrain"
+// data "SpellAnimation" "8cbf3b5e-bf3f-4772-b09a-d91af2305aed,,;,,;68a739dd-63bf-468d-afeb-9e15467adc2c,e508f83e-90e9-4d4e-b13d-683d5954bd9e,2e0ad6cb-66f7-49ce-82c6-3a4b932d555f;7840ced8-dd25-4cc7-a987-8f58a72f48f9,187ade91-b581-41a1-ad5c-8625391d12b3,ac412b30-e7bf-4e2e-a65c-02c9a5d756db;19c50781-0c14-4329-9356-602d40c10ae3,,;e0dca5b0-f877-4934-8c57-a976b8ce3784,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+// data "SpellFlags" "IsMelee;IsEnemySpell;IsHarmful"
+// data "SpellAnimationIntentType" "Peaceful"
+// data "MemoryCost" "6"
+// data "CastEffect" "09214cd7-37f3-48c6-bbcf-b6666743479b"
+// data "TargetEffect" "76b18a50-9f43-4711-9f37-f52a022f9060"
+
+// ============================ Shadow-Cursed Undead ============================
+// Bug Fix: description cleanup.
+// TODO: Hidden status talks about Radiant vulnerability?
+// TODO: StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing)
+
+new entry "SCL_SHADOW_CURSE_UNDEAD_NEW"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// Shadow-Cursed Undead
+// data "DisplayName" "h577cc741g5b1bg4f94g8aa9ge2ba2d4c36e2;2"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to Necrotic damage, and cannot use spell or weapon actions.
+// data "Description" "ha30a8ab9g3be0g40a1gbba4g9f5ed448ebe9;10"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to[2], and cannot use spell or weapon actions.
+data "Description" "h85d8ffbbg94efg428bg8f78g0de0aeff6532;1"
+data "DescriptionParams" "DealDamage(,Radiant);DealDamage(,Necrotic)"
+// data "Icon" "GenericIcon_DamageType_Necrotic"
+// data "StillAnimationType" "Weakened"
+// data "StillAnimationPriority" "Weakened"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "RemoveConditions" "IsKillingBlow()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+// data "RemoveEvents" "OnDamage"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+// data "TemplateID" "a42a8493-b701-4d71-bdc8-0857e718c247"
+// data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
+// data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
+
+new entry "SCL_SHADOW_CURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+// Shadow-Cursed Undead
+// data "DisplayName" "h5bb2c482gac30g42d1ga586ge1ec51ecd63b;5"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced hit points and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Radiant damage, have &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Necrotic damage, and cannot use spells or weapon actions.
+// data "Description" "h5ea5b875g69e7g4542gad2fg0a672c3dfaf8;12"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1], have &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to[2], and cannot use spells or weapon actions.
+data "Description" "hd3f13f46g70ccg4a58g8152gb375b4603262;1"
+data "DescriptionParams" "DealDamage(,Radiant);DealDamage(,Necrotic)"
+// data "Icon" "GenericIcon_DamageType_Necrotic"
+// data "StillAnimationType" "Weakened"
+// data "StillAnimationPriority" "Weakened"
+// data "SoundVocalStart" "GASP"
+// data "StackId" "SCL_SHADOW_CURSE_UNDEAD"
+// data "StackType" "Ignore"
+// data "Boosts" "BlockTravel()"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+// data "RemoveEvents" "OnTurn"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+// data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
+
+// ============================ Bulette ============================
+// Bug Fix: Incorrect "TooltipStatusApply" duration for the Acid condition application.
+
+new entry "Target_Bite_Bulette"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Bite"
+using "Target_Bite_Bulette"
+// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
+// Bite a target and possibly push it back [1].
+// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
+// data "DescriptionParams" "Distance(1.5)"
+// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
+// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
+data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
+// data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+// ============================ Dominated Red Dragon - Fire Breath ============================
+// Bug Fix: Description referred to humanoid Fireball, and it being cast with hands...
+
+new entry "Projectile_Fireball_Dragon"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_Fireball"
+using "Projectile_Fireball_Dragon"
+// data "Level" ""
+// data "SpellSchool" ""
+// data "Cooldown" "OncePerTurn"
+// data "TargetRadius" "30"
+// data "AreaRadius" "6"
+// data "SpellSuccess" "DealDamage(14d6,Fire,Magical);ApplyStatus(BURNING,100,2)"
+// data "SpellFail" "DealDamage((14d6)/2,Fire,Magical)"
+// data "TargetConditions" "DistanceToTargetGreaterThan(6.0) and not Tagged('HIT_PROXY')"
+// data "Trajectories" "ee353c2a-31e7-4fe2-a1b8-1902da1f4371"
+// Fire Breath
+// data "DisplayName" "h735039aag9237g4b5fg84c7g68350212b31a;2"
+// Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity.
+// data "Description" "hf6dae528gfd1eg426dg9776g4fff66e4734f;6"
+// Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.
+data "Description" "h48bf5152gf621g411fg9636gbe8b0eea61d4;1"
+// data "TooltipDamageList" "DealDamage(14d6,Fire)"
+// data "CastSound" "CrSpell_Cast_RedDragon_FireBreath"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e1ea033-bdac-4dff-94c9-482102632c06,,;13b7fbd2-dbce-4f25-8670-d08df8efa021,,;d25e89c9-2785-4ed2-abbc-5eee6f2785db,,;669703db-5624-41e4-af99-db768c26c9b4,,;e2376226-8b50-4023-b59c-5604016de454,,;,,;,,;,,;,,"
+// data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade;HasSomaticComponent;RangeIgnoreTargetBounds;RangeIgnoreSourceBounds"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "RechargeValues" ""
+// data "MemoryCost" ""
+// data "PrepareEffect" ""
+// data "CastEffect" "5796c9bd-e0e8-4cd3-a2e2-e2e385860a44"
+// data "Sheathing" "DontChange"
