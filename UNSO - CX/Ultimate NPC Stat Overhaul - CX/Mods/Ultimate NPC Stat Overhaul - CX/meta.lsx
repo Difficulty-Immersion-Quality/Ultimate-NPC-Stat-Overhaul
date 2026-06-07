@@ -18,14 +18,14 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSWString" value="Goonsack &amp; Cahoot" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSWString" value="Overhaul every aspect of NPCs for quality, consistency, and immersion." />
-          <attribute id="Folder" type="LSWString" value="Ultimate NPC Stat Overhaul - Absolute's Laboratory" />
+          <attribute id="Description" type="LSWString" value="UNSO file for use with Combat Extender." />
+          <attribute id="Folder" type="LSWString" value="Ultimate NPC Stat Overhaul - CX" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />
           <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
           <attribute id="MenuLevelName" type="FixedString" value="" />
-          <attribute id="Name" type="FixedString" value="Ultimate NPC Stat Overhaul - Absolute's Laboratory" />
+          <attribute id="Name" type="FixedString" value="Ultimate NPC Stat Overhaul - CX" />
           <attribute id="NumPlayers" type="uint8" value="4" />
           <attribute id="PhotoBooth" type="FixedString" value="" />
           <attribute id="StartupLevelName" type="FixedString" value="" />
