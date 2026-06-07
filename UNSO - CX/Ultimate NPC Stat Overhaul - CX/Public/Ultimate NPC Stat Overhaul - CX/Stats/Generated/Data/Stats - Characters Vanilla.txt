@@ -85,7 +85,7 @@ data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;SuperiorDarkvisio
 //  ├─ "_Humanoid"
 //  │   └─ "Meazel"
 
-// Meazels (Maybe making Meazels Assassin Rogues isn't the best idea... or it's the best idea) (Added Rogue progressions, added Assassin subclass)
+// Meazels (Added Rogue progressions, added Assassin subclass)
 new entry "Meazel"
 type "Character"
 using "Meazel"
@@ -1843,7 +1843,7 @@ data "Passives" "CX_Rogue_Thief_Boost;Gnome_Cunning;Gnome_Speed;AttackOfOpportun
 
 // "_Gnome"
 //  ├─ "MOO_AcolyteOfTheAbsolute_Gnome"     --- (Has Cleric progressions) 
-//  ├─ "MOO_FanaticOfTheAbsolute_Gnome"
+//  ├─ "MOO_FanaticOfTheAbsolute_Gnome"     --- (Has Cleric progressions) 
 //  └─ "MOO_ZealotOfTheAbsolute_Gnome"
 
 // (Has Cleric progressions) 
@@ -3467,7 +3467,7 @@ data "Passives" "AttackOfOpportunity;DarknessRules"
 //  │   ├─ "WYR_Gortash"
 //  │   ├─ "WYR_MessHallBodyguard_09"
 //  │   └─ "WYR_SmugglersCave_Human_Caster"
-//  │       └─ "WYR_SmugglersCave_Human_Caster_2"           --- Charming Latham - The Guild (Swapped Wizard progressions to Bard)
+//  │       └─ "WYR_SmugglersCave_Human_Caster_2"           --- Charming Latham - The Guild (Swapped Wizard progressions to Bard, added Lore subclass)
 
 // Sparks Musgravel - The Guild (Guards the Guildhall entrance in the Lower City) (Inherits Wizard progressions)
 new entry "LOW_Undercellar_Entrance_Human_Caster"
@@ -4750,7 +4750,7 @@ using "DarkJusticiar_Melee"
 // data "Progressions" ""
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 
-// Justiciar Crusaders in Gauntlet of Shar (swapped Fighter progressions to Paladin, added Vengeance subclass))
+// Justiciar Crusaders in Gauntlet of Shar (swapped Fighter progressions to Paladin, added Vengeance subclass)
 new entry "DarkJusticiar_Boss"
 type "Character"
 using "DarkJusticiar_Boss"
@@ -4759,7 +4759,7 @@ data "Passives" "CX_Paladin_Vengeance_Boost;ExtraAttack;SHA_DarkVengeance;SHA_Vi
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 
-// Justiciar Nightweavers in Gauntlet of Shar (Added Wizard progressions)
+// Justiciar Nightweavers in Gauntlet of Shar (Added Warlock progressions)
 new entry "DarkJusticiar_Caster"
 type "Character"
 using "DarkJusticiar_Caster"
@@ -5688,6 +5688,7 @@ data "Passives" "CX_Boss_Boost;Blindsight;DarknessRules;END_Netherbrain_LowHp;Ps
 //  │   ├─ "KillerReplica_Warlock"
 //  │   └─ "KillerReplica_Wizard"
 
+// TODO: This sorc passive stuck no good yucky yucky
 // Countermeasure - Sorcerer (Swapped Wizard progressions for custom Sorcerer progressions)
 new entry "KillerReplica_Sorcerer"
 type "Character"
