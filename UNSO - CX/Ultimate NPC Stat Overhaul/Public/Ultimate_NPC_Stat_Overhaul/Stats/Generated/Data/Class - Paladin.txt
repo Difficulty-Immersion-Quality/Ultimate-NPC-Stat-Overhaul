@@ -2,7 +2,9 @@
 
     new entry "Goon_Paladin_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Paladin
     data "DisplayName" "hbd9fca0cg8eddg405cga457g81f619e965fe;1"
+    // A character who upholds or neglects a sacred oath, a warrior of divinity or demise.
     data "Description" "h9194b05fgf6fdg4f01ga63aga16a16fed629;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Paladin_Boost"
     type "PassiveData"
     // data "DisplayName" "h1517365cgc118g4686g8ecbg2ad846d80053"
+    // ! CX Class Boost: Paladin
     data "DisplayName" "h100e7a9bg3c26g4035g86d9g0762e657c372;1"
     // data "Description" "he95e16a1gc3a2g44a1gbd19g924de26c78c8"
+    // Entity has Paladin progressions in addition to boosts from configuration.
     data "Description" "h5ee949eegd3a6g46dbgbf07g91727440a141;1"
     data "Properties" "Highlighted"
     // data "Icon" "Action_Paladin_InquisitorsMight"
@@ -210,7 +214,9 @@
 
     new entry "CX_Paladin_Ancients_Boost"
     type "PassiveData"
+    // ! Subclass: Oath of the Ancients Paladin
     data "DisplayName" "he08960f8gf689g41e6gbfc2gec7059617d8c;1"
+    // A Paladin who defends the light of life and beauty, standing against despair and decay.
     data "Description" "h74725b1fg6ed2g42bcg885eg722d3c8802fe;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Paladin_HealingRadiance"
@@ -446,7 +452,9 @@
 
     new entry "CX_Paladin_Devotion_Boost"
     type "PassiveData"
+    // ! Subclass: Oath of Devotion Paladin
     data "DisplayName" "h08fb1797g13bfg412dga764gc3087601ba95;1"
+    // A Paladin who acts with honour and virtue to protect the weak and pursue the greater good.
     data "Description" "hd41ebf55g11bfg459egbda2g7af1996ef3cf;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Paladin_SacredWeapon"
@@ -682,7 +690,9 @@
 
     new entry "CX_Paladin_Vengeance_Boost"
     type "PassiveData"
+    // ! Subclass: Oath of Vengeance Paladin
     data "DisplayName" "h63d656a0g451cg4061gbee8g6e0ae8814137;1"
+    // A Paladin who set aside their own purity to right wrongs and deliver justice by any means necessary.
     data "Description" "hcedd322eg85bdg4ba6gae85gd39a68f4caa0;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Paladin_InquisitorsMight"
@@ -918,7 +928,9 @@
 
     new entry "CX_Paladin_Oathbreaker_Boost"
     type "PassiveData"
+    // ! Subclass: Oathbreaker Paladin
     data "DisplayName" "h727a7017g43e3g42f2g90aage79f5e4b6513;1"
+    // A Paladin who broke their Oath in pursuit of power and ambition.
     data "Description" "h529feb44gb9e2g445dg988cg1311742dc8bc;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Paladin_DreadfulAspect"

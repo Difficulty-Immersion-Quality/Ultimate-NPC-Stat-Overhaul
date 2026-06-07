@@ -2,7 +2,9 @@
 
     new entry "Goon_Warlock_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Warlock
     data "DisplayName" "h286630c6gcd5bg4f56g84edg9ede6b7fc8cb;1"
+    // A character who wields eldritch magic granted by a supernatural patron.
     data "Description" "hde5563d5g900eg49abg801ag0de6eed45e6a;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -12,7 +14,9 @@
 // Main passive
     new entry "CX_Warlock_Boost"
     type "PassiveData"
+    // ! CX Class Boost: Warlock
     data "DisplayName" "hbeb3c7c1g30ddg4b0ega936g02439e04c829;1"
+    // Entity has Warlock progressions in addition to boosts from configuration.
     data "Description" "h45452726ge3a8g4311g98adg1853a70ff4a6;1"
     data "Properties" "Highlighted"
     data "Icon" "Spell_Necromancy_BestowCurse"
@@ -194,7 +198,9 @@
 
     new entry "CX_Warlock_Archfey_Boost"
     type "PassiveData"
+    // ! Subclass: The Archfey Warlock
     data "DisplayName" "h90440882gb237g45d4g9576g39ca5802004e;1"
+    // A Warlock who serves a capricious fey patron, mastering charm, illusion, and misdirection.
     data "Description" "h3b6be49cg0492g4d95ga0a2g1350c52c1661;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_FeyPresence"
@@ -435,7 +441,9 @@
 
     new entry "CX_Warlock_Fiend_Boost"
     type "PassiveData"
+    // ! Subclass: The Fiend Warlock
     data "DisplayName" "h4f5cf0f7g2308g44f5gb298g50721464a20a;1"
+    // A Warlock who bargains with fiends to unleash devastating power.
     data "Description" "h94272a82gf478g4b23g9d87g2f4dbeb70fc8;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_DarkOnesBlessing"
@@ -753,7 +761,9 @@
 
     new entry "CX_Warlock_GreatOldOne_Boost"
     type "PassiveData"
+    // ! Subclass: The Great Old One Warlock
     data "DisplayName" "hbd91b70fgdebeg4f12g8bd8g2c0f863d3656;1"
+    // A Warlock who touches the mind of an unknowable entity, speaking secrets not meant for mortals.
     data "Description" "h1843d056gfbaag473eg8a99g0d5bea998fce;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ClarifiedMortality"

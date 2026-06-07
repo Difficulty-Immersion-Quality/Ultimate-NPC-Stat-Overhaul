@@ -2,7 +2,9 @@
 
     new entry "Goon_Fighter_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Fighter
     data "DisplayName" "h6d12a72egfab9g4f45gae31g5d4491dd2b6b;1"
+    // A character who has mastered weapons and tactics, excelling in martial combat.
     data "Description" "h5e48ac49gaae0g4a00g8c47g03b6fca54a3c;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Fighter_Boost"
     type "PassiveData"
     // data "DisplayName" "hd382954ege821g4920gb1c0g588794653928"
+    // ! CX Class Boost: Fighter
     data "DisplayName" "h9bbf1a66g5136g4de6gb0f1g8e48e853d2ad;1"
     // data "Description" "h914310b1ga5dbg4fcdg9123g9980b7508d4e"
+    // Entity has Fighter progressions in addition to boosts from configuration.
     data "Description" "hbf3404a9g766dg4d85gbf2egca83383094c6;1"
     data "Properties" "Highlighted"
     // data "DescriptionParams" "4"
@@ -198,7 +202,9 @@
 
     new entry "CX_Fighter_BattleMaster_Boost"
     type "PassiveData"
+    // ! Subclass: Battle Master Fighter
     data "DisplayName" "hefce9befgc089g4b04g9393g1ec534347dea;1"
+    // A paragon of tactical superiority, who can employ a wide array of combat manoeuvres to dominate every fight.
     data "Description" "hdbe7301eg8093g461fgaa19g99bf294c1819;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_GoadingAttack_Melee"
@@ -400,8 +406,10 @@
 
     new entry "CX_Fighter_Champion_Boost"
     type "PassiveData"
-    data "DisplayName" "haa6f223cg7130g434egb18ag82be10976ef1"
-    data "Description" "hd11661ccgc093g4932gbfd9g2c60088eebb6"
+    // ! Subclass: Champion Fighter
+    data "DisplayName" "haa6f223cg7130g434egb18ag82be10976ef1;1"
+    // A Fighter who perfects the fundamentals of combat, turning every strike into a display of raw mastery.
+    data "Description" "hd11661ccgc093g4932gbfd9g2c60088eebb6;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ImprovedCritical"
     data "Boosts" ""
@@ -596,7 +604,9 @@
 
     new entry "CX_Fighter_EldritchKnight_Boost"
     type "PassiveData"
+    // ! Subclass: Eldritch Knight Fighter
     data "DisplayName" "h56b56a6ag0de5g45e9g8845g97dae05491b3;1"
+    // A warrior of spell and sword who weaves incantations to supplement their martial expertise.
     data "Description" "h5c580e8ag700cg4159gbc2dg145ea47b7f8b;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_EldritchStrike"

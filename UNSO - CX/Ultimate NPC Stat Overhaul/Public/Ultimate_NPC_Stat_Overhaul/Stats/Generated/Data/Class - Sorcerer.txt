@@ -2,7 +2,9 @@
 
     new entry "Goon_Sorcerer_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Sorcerer
     data "DisplayName" "h9987ac52g08b3g40e0gac8eg056b928b8d4b;1"
+    // A character with raw arcane power, shaping magic through will alone.
     data "Description" "h306a8551g3347g4c3dg99a7g5c609daac297;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -12,7 +14,9 @@
 // Main passive
     new entry "CX_Sorcerer_Boost"
     type "PassiveData"
+    // ! CX Class Boost: Sorcerer
     data "DisplayName" "hb9ff98d2g22d8g48efgb462g147c72a602d7;1"
+    // Entity has Sorcerer progressions in addition to boosts from configuration.
     data "Description" "hf8533079gfd16g4590g9754g99a81d9cd95f;1"
     data "Properties" "Highlighted"
     data "Icon" "Skill_Sorcerer_Passive_Metamagic_CarefulSpell"
@@ -215,7 +219,9 @@
 
     new entry "CX_Sorcerer_DraconicBloodline_Boost"
     type "PassiveData"
+    // ! Subclass: Draconic Bloodline Sorcerer
     data "DisplayName" "h14f8ccc9g8bbag4546g9028g5a5c65f8ec0c;1"
+    // A Sorcerer whose blood carries the legacy of dragons, manifesting in powerful and resilient magic.
     data "Description" "h1f8b691fgd951g49a3g8ca1g6cfa70cce02a;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_DraconicResilience"
@@ -402,7 +408,9 @@
 
     new entry "CX_Sorcerer_WildMagic_Boost"
     type "PassiveData"
+    // ! Subclass: Wild Magic Sorcerer
     data "DisplayName" "h87889658gdef3g42aeg9edag5de1784ae854;1"
+    // A Sorcerer whose spells sometimes twist reality in strange and unexpected ways.
     data "Description" "h1077e020g23b7g40e7gaba7ge569d2c18331;1"
     data "Properties" "Highlighted"
     data "Icon" "Skill_Sorcerer_Passive_TidesOfChaos"
@@ -578,7 +586,9 @@
 
     new entry "CX_Sorcerer_StormSorcery_Boost"
     type "PassiveData"
+    // ! Subclass: Storm Sorcery Sorcerer
     data "DisplayName" "heaf07b0cgbb00g4462g8990g7b40b4ae36c0;1"
+    // A Sorcerer whose presence crackles with thunder and fury, a living conduit of the storm's wrath.
     data "Description" "he7ee7064g55bfg4b5bga7a2g0f049b35f91e;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_TempestuousMagic"

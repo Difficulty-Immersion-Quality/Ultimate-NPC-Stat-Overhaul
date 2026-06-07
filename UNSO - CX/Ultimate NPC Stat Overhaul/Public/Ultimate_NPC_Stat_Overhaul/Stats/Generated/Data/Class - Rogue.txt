@@ -2,7 +2,9 @@
 
     new entry "Goon_Rogue_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Rogue
     data "DisplayName" "h8ac0402fgb1fbg439bgb720g741bc0484c6a;1"
+    // A character who excels in stealth, strategy, and quick thinking.
     data "Description" "hcc37f62dg9011g4af1ga083gbfdfa4b3cdc7;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Rogue_Boost"
     type "PassiveData"
     // data "DisplayName" "h176f5e83g15cdg4c1egb43egfa0a70e44f02"
+    // ! CX Class Boost: Rogue
     data "DisplayName" "h27b20f1eg064cg46f7ga4b0gcb11492a810b;1"
     // data "Description" "h171ac933ge2dfg42fdg86cegdc47ca403e79"
+    // Entity has Rogue progressions in addition to boosts from configuration.
     data "Description" "h42db1062gb882g467fgb8cdgba975ea87ffd;1"
     data "Properties" "Highlighted"
     // data "Icon" "PassiveFeature_AttackOfOpportunity"
@@ -199,7 +203,9 @@
 
     new entry "CX_Rogue_ArcaneTrickster_Boost"
     type "PassiveData"
+    // ! Subclass: Arcane Trickster Rogue
     data "DisplayName" "h00c83504ge2bcg42cagbe97g0bc5d6eff8b9;1"
+    // A Rogue who weaves magic into their mischief, bending reality to enhance their cunning.
     data "Description" "h0ea642a7g23e1g456fg86d8gd636064d84e2;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ImprovedMinorIllusion"
@@ -520,7 +526,9 @@
 
     new entry "CX_Rogue_Assassin_Boost"
     type "PassiveData"
+    // ! Subclass: Assassin Rogue
     data "DisplayName" "hd110f5cdg6c51g43bdg8555gfd5c8ed9dc43;1"
+    // A Rogue who blends disguise, poison, and precision to eliminate targets before they're aware.
     data "Description" "h7cdc4536gc8cdg4c24gad5cg1b97c084f97b;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_Generic_Death"
@@ -685,7 +693,9 @@
 
     new entry "CX_Rogue_Thief_Boost"
     type "PassiveData"
+    // ! Subclass: Thief Rogue
     data "DisplayName" "h269458f8gf4aag43b7g8289g6620b62050a8;1"
+    // A Rogue who turns nimbleness and nerve into an unmatched edge in any situation.
     data "Description" "h0041fb7egb83fg4399ga1cagc07b3f2bb1b2;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_SecondStoryWork_Falling"

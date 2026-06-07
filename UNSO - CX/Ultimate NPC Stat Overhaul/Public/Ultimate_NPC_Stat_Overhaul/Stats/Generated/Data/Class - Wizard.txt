@@ -3,7 +3,9 @@
     new entry "Goon_Wizard_NPC_Progressions"
     type "PassiveData"
     using "Goon_NPC_Progressions_Template"
+    // ! Class: Wizard
     data "DisplayName" "hda3c8533gc225g4f6cgb65fg22e6f4ea9deb;1"
+    // A character who masters the weave through study and intellect.
     data "Description" "h26dbae4dg088dg4ad8ga389gf5246cabdf7e;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,7 +15,9 @@
 // Main passive
     new entry "CX_Wizard_Boost"
     type "PassiveData"
+    // ! CX Class Boost: Wizard
     data "DisplayName" "h90218be8gf884g45e3g9024g6747c175e952;1"
+    // Entity has Wizard progressions in addition to boosts from configuration.
     data "Description" "he480cbbbg8bbeg4bb9gb3c2g8929f117fd2b;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ImprovedAbjuration"
@@ -211,7 +215,9 @@
 
     new entry "CX_Wizard_Abjuration_Boost"
     type "PassiveData"
+    // ! Subclass: Abjuration School Wizard
     data "DisplayName" "h8505ff22gb614g4657g8915g81a1561d0160;1"
+    // A Wizard who masters wards and barriers, standing firm against magical and mundane threats.
     data "Description" "h421dcedegb396g4298g829eg7ec6ca4116e8;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ProjectedWard"
@@ -521,7 +527,9 @@
 
     new entry "CX_Wizard_Conjuration_Boost"
     type "PassiveData"
+    // ! Subclass: Conjuration School Wizard
     data "DisplayName" "h805c3f38g7da2g4c54ga216g30bd5086ee8a;1"
+    // A Wizard who summons creatures and objects from thin air, commanding forces from across the planes.
     data "Description" "h23bfbf7eg3e48g409fga9b1gbe367aef1724;1"
     data "Properties" "Highlighted"
     data "Icon" "Spell_Conjuration_MageHand"
@@ -826,7 +834,9 @@
 
     new entry "CX_Wizard_Divination_Boost"
     type "PassiveData"
+    // ! Subclass: Divination School Wizard
     data "DisplayName" "hf74dfeecg0aebg47f0gafa1gc189e795b12c;1"
+    // A Wizard who peers into the future, bending fate through insight and foresight.
     data "Description" "he0cc5350g71e6g4b06g9ae0ge266c9976799;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_Portent"
@@ -1132,7 +1142,9 @@
 
     new entry "CX_Wizard_Enchantment_Boost"
     type "PassiveData"
+    // ! Subclass: Enchantment School Wizard
     data "DisplayName" "h7b6c3fa8gcc1dg4993g8592g7674ff050577;1"
+    // A Wizard who twists minds and emotions, weaving spells of charm, command, and domination.
     data "Description" "h485a0feagcf2dg4617g85c9g97ba638e9e47;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_HypnoticGaze"
@@ -1438,7 +1450,9 @@
 
     new entry "CX_Wizard_Evocation_Boost"
     type "PassiveData"
+    // ! Subclass: Evocation School Wizard
     data "DisplayName" "h6104d86ag1a48g4f23gbf22gda76864a6a14;1"
+    // A Wizard who unleashes pure destructive magic.
     data "Description" "h2fa7fcd1g44dfg4020g867fgbaa7d958bc92;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_SculptSpells"
@@ -1748,7 +1762,9 @@
 
     new entry "CX_Wizard_Illusion_Boost"
     type "PassiveData"
+    // ! Subclass: Illusion School Wizard
     data "DisplayName" "h750ad510g0290g4677gb63fgff5f06e8c106;1"
+    // A Wizard who manipulates perception, crafting shadows and phantoms to deceive and disorient.
     data "Description" "h13a1d527g8e69g4243g8f75gd10d9cd1ba4e;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ImprovedMinorIllusion"
@@ -2054,7 +2070,9 @@
 
     new entry "CX_Wizard_Necromancy_Boost"
     type "PassiveData"
+    // ! Subclass: Necromancy School Wizard
     data "DisplayName" "h46e43d67gf9f1g48f7g8ce0g14ef160309c2;1"
+    // A Wizard who bends mortality itself, wielding death as both a weapon and a shield.
     data "Description" "hcffab35fg6567g4cd3ga4eeg568c65b1bbd7;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_UndeadThralls_ExtraSummon"
@@ -2364,7 +2382,9 @@
 
     new entry "CX_Wizard_Transmutation_Boost"
     type "PassiveData"
+    // ! Subclass: Transmutation School Wizard
     data "DisplayName" "hca1ed09eg7eaeg4eebg8073g46e52fa6350f;1"
+    // A Wizard who alters the fabric of existence, changing what is into what could be.
     data "Description" "hab88cc43g1f03g47e1g823bga96d7b5b06cf;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_ExperimentalAlchemy"

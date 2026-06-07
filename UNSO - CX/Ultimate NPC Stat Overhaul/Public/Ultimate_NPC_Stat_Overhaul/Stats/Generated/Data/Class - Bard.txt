@@ -2,7 +2,9 @@
 
     new entry "Goon_Bard_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Bard
     data "DisplayName" "h3b2a32d0gf5bdg4994g8a0agbc545ff76f16;1"
+    // A character with a versatile skillset, who blends artistry, trickery, and spellcraft.
     data "Description" "h01fa41a8g0349g4d61gac86g3475d0e98ded;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Bard_Boost"
     type "PassiveData"
     // data "DisplayName" ""
+    // ! CX Class Boost: Bard
     data "DisplayName" "h54aa6df3g3e46g4c2cg85bdga5d196c4f97e;1"
     // data "Description" ""
+    // Entity has Bard progressions in addition to boosts from configuration.
     data "Description" "h97a23da3gd2c1g4b07gb187g9f8696856259;1"
     // data "Icon" ""
     data "Icon" "PassiveFeature_FontOfInspiration"
@@ -214,7 +218,9 @@
 
     new entry "CX_Bard_Lore_Boost"
     type "PassiveData"
+    // ! Subclass: College of Lore Bard
     data "DisplayName" "h3bcbbd77gfc41g49ebga568g0cbf6a43e9ed;1"
+    // A Bard who blends magic, wit, and scholarship into a versatile and unpredictable force.
     data "Description" "hc1899b1fgf6aag44c7g8ec9ga7ed8d2cd3b0;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Bard_CuttingWords"
@@ -388,7 +394,9 @@
 
     new entry "CX_Bard_Swords_Boost"
     type "PassiveData"
+    // ! Subclass: College of Swords Bard
     data "DisplayName" "hc5b127ccg619cg4af7gad38g0947e697dafc;1"
+    // A Bard who turns combat into performance, striking with style, speed, and precision.
     data "Description" "h431b9944g0440g4d3dga526ge6efea533b59;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_SlashingFlourish_Melee"
@@ -564,7 +572,9 @@
 
     new entry "CX_Bard_Valor_Boost"
     type "PassiveData"
+    // ! Subclass: College of Valor Bard
     data "DisplayName" "h16d07619gbb01g405eg814ag230fd0f825e1;1"
+    // A Bard who inspires bravery and leads with blade and song in the heart of battle.
     data "Description" "h826a180fg0121g4072ga12bg5e051e7bff11;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Bard_GrantBardicInspiration"

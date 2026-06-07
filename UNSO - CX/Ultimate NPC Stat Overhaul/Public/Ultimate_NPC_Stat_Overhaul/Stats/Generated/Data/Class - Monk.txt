@@ -2,7 +2,9 @@
 
     new entry "Goon_Monk_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Monk
     data "DisplayName" "h5f6db4dfgb3b4g4289g937bg039af3d0b1f8;1"
+    // A character who disciplines body and spirit, moving with speed, precision, and inner focus.
     data "Description" "h2456c053g4d3fg4c2ag89fag9ea0f0bb2e1d;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Monk_Boost"
     type "PassiveData"
     // data "DisplayName" "hb43ce3d7g6c06g46d0g975agcd1417e98969"
+    // ! CX Class Boost: Monk
     data "DisplayName" "h39b8a7b9g1718g4ee9ga92cgda8d8ede2808;1"
     // data "Description" "hedca9cd9ga20eg4660gb40cgb4b0000c042d"
+    // Entity has Monk progressions in addition to boosts from configuration.
     data "Description" "h705db622g0893g4d79gae8age3f4ebeca536;1"
     data "Properties" "Highlighted"
     // data "Icon" "PassiveFeature_PurityOfBody"
@@ -219,7 +223,9 @@
 
     new entry "CX_Monk_FourElements_Boost"
     type "PassiveData"
+    // ! Subclass: Way of the Four Elements Monk
     data "DisplayName" "h9d7e8339ga648g4afeg8e86gc903fd093317;1"
+    // A Monk who uses their ki to bend the elements to their will.
     data "Description" "hc901b2c6gb064g43d7g899cg1638fa8453b3;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Monk_FangsOfTheFireSnake"
@@ -535,7 +541,9 @@
 
     new entry "CX_Monk_OpenHand_Boost"
     type "PassiveData"
+    // ! Subclass: Way of the Open Hand Monk
     data "DisplayName" "h07a62781gfb0fg4225g92f8g8ca347236ec5;1"
+    // A Monk who refines each strike into a disciplined force, overwhelming foes with precision.
     data "Description" "hb571273dga181g4630g98a1g8e7bf5b83102;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_KiResonation_Punch"
@@ -732,7 +740,9 @@
 
     new entry "CX_Monk_Shadow_Boost"
     type "PassiveData"
+    // ! Subclass: Way of Shadow Monk
     data "DisplayName" "h8caa5dfage0fcg42cbga831gd3ae22c81b70;1"
+    // A Monk who weaves through darkness, mastering stealth, illusion, and swift, unseen strikes.
     data "Description" "hb722f782g4bfeg46f5gb73bg2fe9d71151b4;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Hide"

@@ -2,7 +2,9 @@
 
     new entry "Goon_Cleric_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Cleric
     data "DisplayName" "he6acc5c5gd23bg4c8dgb60cg3de3da611c9f;1"
+    // A character of faith, channeling divine magic both to aid and harm.
     data "Description" "hdc223953g447cg47f5gada1g3d26f4158e54;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Cleric_Boost"
     type "PassiveData"
     // data "DisplayName" "hd78bde2fg5767g458eg822fg0684c68cc601"
+    // ! CX Class Boost: Cleric
     data "DisplayName" "hf9960aa3g25a4g44e7ga5d6g3f7f254ec53b"
     // data "Description" "hc0870e25gdc4dg4f41g9aa3g5d5c4f17c9c1"
+    // Entity has Cleric progressions in addition to boosts from configuration.
     data "Description" "hacdccdb0ge6c6g454bga598g6df082810262"
     data "Properties" "Highlighted"
     // data "Icon" "Action_DivineIntervention_Weapon"
@@ -213,7 +217,9 @@
 
     new entry "CX_Cleric_Life_Boost"
     type "PassiveData"
+    // ! Subclass: Life Domain Cleric
     data "DisplayName" "he573d2b7gbb53g4996gb795g1623ccf40749;1"
+    // A Cleric who nurtures and protects, channeling radiant energy to heal and uplift.
     data "Description" "h748bb452ge0bbg4d70gb473g5f16915c5a1c;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_DiscipleOfLife"
@@ -463,7 +469,9 @@
 
     new entry "CX_Cleric_Light_Boost"
     type "PassiveData"
+    // ! Subclass: Light Domain Cleric
     data "DisplayName" "h5fbe0f2aga700g4580g838agda89ef533a5e;1"
+    // A Cleric who channels searing light to purify, protect, and punish.
     data "Description" "he27e3486g5c7bg4607gbae0g2917f0be7c5e;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveAction_WardingFlare"
@@ -701,7 +709,9 @@
 
     new entry "CX_Cleric_Knowledge_Boost"
     type "PassiveData"
+    // ! Subclass: Knowledge Domain Cleric
     data "DisplayName" "h278a7582gf5efg402cg8e4egc63dad62527f;1"
+    // A Cleric who seeks the wisdom of the gods, using knowledge to enlighten and defend.
     data "Description" "h2200694egbef8g46b6g9d00g4c4b395248fa;1"
     data "Icon" "PassiveFeature_BlessingsOfKnowledge"
     data "Properties" "Highlighted"
@@ -927,7 +937,9 @@
 
     new entry "CX_Cleric_Nature_Boost"
     type "PassiveData"
+    // ! Subclass: Nature Domain Cleric
     data "DisplayName" "h69a14dafg72a7g4111g80d1g8c2b698b9925;1"
+    // A Cleric who serves both deity and wilderness, blending divine magic with the rhythms of nature.
     data "Description" "h26f0b85fg6ca4g48aeg9123g7343f28aefd3;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_Generic_Nature"
@@ -1156,7 +1168,9 @@
 
     new entry "CX_Cleric_Tempest_Boost"
     type "PassiveData"
+    // ! Subclass: Tempest Domain Cleric
     data "DisplayName" "heeb1062dgec43g432agb19bg5826d981e329;1"
+    // A Cleric who strikes with tempestuous might, standing at the eye of divine chaos.
     data "Description" "h6fd8cc08g71adg4648gb7f3g7f8c1bc471d4;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_WrathOfTheStorm_Thunder"
@@ -1406,7 +1420,9 @@
 
     new entry "CX_Cleric_Trickery_Boost"
     type "PassiveData"
+    // ! Subclass: Trickery Domain Cleric
     data "DisplayName" "h62ef7e5dg444dg4771ga160g2efbe9caa201;1"
+    // A Cleric who bends perception and fate, hiding divine purpose behind clever lies.
     data "Description" "h4a2efd9egffa1g447eg9519g59d2e559fc5e;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Cleric_BlessingOfTheTrickster"
@@ -1654,7 +1670,9 @@
 
     new entry "CX_Cleric_War_Boost"
     type "PassiveData"
+    // ! Subclass: War Domain Cleric
     data "DisplayName" "h2bb139d2gd9d4g450cgb665ge6980000f6fa;1"
+    // A Cleric who thrives in battle, calling upon divine might to strike hard and stand firm.
     data "Description" "h80a67d37gafe5g46c5g8e35g6a6211f74415;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_WarPriest"

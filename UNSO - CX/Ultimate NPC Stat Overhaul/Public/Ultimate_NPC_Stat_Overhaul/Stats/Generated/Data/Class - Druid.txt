@@ -2,7 +2,9 @@
 
     new entry "Goon_Druid_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Druid
     data "DisplayName" "h215206fcg60f6g4af5g94f2gd3c61fc2399b;1"
+    // A character who commands the forces of nature, shaping the world with primal magic.
     data "Description" "h7073005agdd34g494fga7d5g2cf3a7748479;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -12,7 +14,9 @@
 // Main passive
     new entry "CX_Druid_Boost"
     type "PassiveData"
+    // ! CX Class Boost: Druid
     data "DisplayName" "he38308dag9418g482fg8ca1g980cc98ff64a;1"
+    // Entity has Druid progressions in addition to boosts from configuration.
     data "Description" "hc19cb29fgce35g4253g810fge4b35ebb2168;1"
     data "Icon" "Skill_Druid_WildShape"
     data "Properties" "Highlighted"
@@ -209,7 +213,9 @@
 
     new entry "CX_Druid_Land_Boost"
     type "PassiveData"
+    // ! Subclass: Circle of the Land Druid
     data "DisplayName" "h0319b960g4892g4420gb4a0gdb82a83aef42;1"
+    // A Druid who draws deep power from the land itself, shaped by the terrain they call home.
     data "Description" "h5e05e75cgb6feg48f9gada3g4e13802f3dd9;1"
     data "Properties" "Highlighted"
     data "Icon" "Skill_Druid_NaturalRecovery"
@@ -508,7 +514,9 @@
 
     new entry "CX_Druid_Moon_Boost"
     type "PassiveData"
+    // ! Subclass: Circle of the Moon Druid
     data "DisplayName" "hb7785d94g8723g45b8gb252g11f0270642c1"
+    // A Druid who specializes in Wild Shaping into massive beasts or even primal elementals.
     data "Description" "h654778cegbf88g49adgb407gcb0cc8299dc0"
     data "Properties" "Highlighted"
     data "Icon" "Skill_Druid_WildShape"
@@ -718,7 +726,9 @@
 
     new entry "CX_Druid_Spores_Boost"
     type "PassiveData"
+    // ! Subclass: Circle of the Spores Druid
     data "DisplayName" "h407e27feg0d73g483dgbed5gb58542ff0cca"
+    // A Druid who uses fungal growth and decay to augment themselves and harm their foes.
     data "Description" "h5872faaag78ffg4f03g99cbgcda17b06d423"
     data "Properties" "Highlighted"
     data "Icon" "Action_SymbioticEntity"

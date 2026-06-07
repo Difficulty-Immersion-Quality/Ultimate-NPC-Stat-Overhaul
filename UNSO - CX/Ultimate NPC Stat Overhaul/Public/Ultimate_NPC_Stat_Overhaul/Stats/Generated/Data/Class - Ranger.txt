@@ -2,7 +2,9 @@
 
     new entry "Goon_Ranger_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Ranger
     data "DisplayName" "haf18a871g8e0fg46b0gb05eg2ea8ca538b80;1"
+    // A character who thrives in the wilds, blending survival instinct with deadly precision.
     data "Description" "hb866306fgff14g4ea1gbe39g5cab14bea83b"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
@@ -13,8 +15,10 @@
     new entry "CX_Ranger_Boost"
     type "PassiveData"
     // data "DisplayName" "h6a354791gc025g45bega17bg12b0faa6757d"
+    // ! CX Class Boost: Ranger
     data "DisplayName" "hb61a7161gc0d5g473eg9097g796ae5a0900b;1"
     // data "Description" "hb4c03035ga94ag4a3bg9949gfb3cd079ed55"
+    // Entity has Ranger progressions in addition to boosts from configuration.
     data "Description" "hab036a9fg5928g4633ga2d4g9e5fc1483425;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_NaturalExplorer_BeastTamer"
@@ -211,7 +215,9 @@
 
     new entry "CX_Ranger_BeastMaster_Boost"
     type "PassiveData"
+    // ! Subclass: Beast Master Ranger
     data "DisplayName" "hc4337b0ag116ag40f0gbc8fgfcbcb9713b9c;1"
+    // A Ranger who can summon an animal companion to aid them in combat.
     data "Description" "h47156914gd0afg4844g90adg35868a3b342e;1"
     data "Properties" "Highlighted"
     data "Icon" "Skill_Ranger_RangersCompanion"
@@ -531,7 +537,9 @@
 
     new entry "CX_Ranger_GloomStalker_Boost"
     type "PassiveData"
+    // ! Subclass: Gloom Stalker Ranger
     data "DisplayName" "ha8256510ga98cg4fe1ga6eegff27a115f3b9;1"
+    // A Ranger who thrives in the shadows, striking first and unseen in the darkest places.
     data "Description" "h6e0579cfgb01dg4402g9faeg65c4c7a21209;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_DreadAmbusher_Ranged"
@@ -758,7 +766,9 @@
 
     new entry "CX_Ranger_Hunter_Boost"
     type "PassiveData"
+    // ! Subclass: Hunter Ranger
     data "DisplayName" "h54d41724g9946g4399gadd8gd5aeb1490f44;1"
+    // A Ranger who excels at slaying the most dangerous prey.
     data "Description" "hf1e55b72g2b2cg44fagaa04g147842765b7c;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Multiattack_Volley"

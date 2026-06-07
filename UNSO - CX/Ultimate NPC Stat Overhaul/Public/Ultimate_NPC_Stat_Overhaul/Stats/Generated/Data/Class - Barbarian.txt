@@ -2,8 +2,10 @@
 
     new entry "Goon_Barbarian_NPC_Progressions"
     type "PassiveData"
+    // ! Class: Barbarian
     data "DisplayName" "he67b6a65g03fcg431dga01cg0f2685168030;1"
-    data "Description" "h59b5144dgff16g41edg9da8gc79e81e92b69;1"
+    // A character who harnesses their fury to punish foes.
+    data "Description" "h56c46609g72b6g4c39gb166g7f8617bc8a61;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
 
@@ -13,8 +15,10 @@
     new entry "CX_Barbarian_Boost"
     type "PassiveData"
     // data "DisplayName" "h21ea4ac1gf6ffg42cbg94aeg9281460855d6"
+    // ! CX Class Boost: Barbarian
     data "DisplayName" "h80bfa73fg650cg4f93g9fcag07342fa68ece;1"
     // data "Description" "h3d91a6e9ged6ag4203gb90ag7b0741a15eee"
+    // They gain Barbarian progressions in addition to boosts from configuration.
     data "Description" "h59b5144dgff16g41edg9da8gc79e81e92b69;1"
     data "Properties" "Highlighted"
     // data "Icon" "Action_Barbarian_DivingStrike"
@@ -206,7 +210,9 @@
 
     new entry "CX_Barbarian_Berserker_Boost"
     type "PassiveData"
+    // ! Subclass: Berserker Barbarian
     data "DisplayName" "h7fb10ed8gcd0ag4e02g909fg5a9433f5cebc;1"
+    // A Barbarian who follows a path of untrammelled fury and thrills in the chaos of battle, regardless of their own well-being.
     data "Description" "h28f5bbd1ge7ddg492egb781gbf7d0d1b0be7;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Barbarian_Frenzy"
@@ -393,7 +399,9 @@
 
     new entry "CX_Barbarian_WildMagic_Boost"
     type "PassiveData"
+    // ! Subclass: Wild Magic Barbarian
     data "DisplayName" "h3b4ca2edgd773g4765ga420gf434555cc1f1;1"
+    // A Barbarian suffused with the wild influence of arcane power waiting to be released.
     data "Description" "h344dfc77g19d4g4999g87a7g6b27338790d7;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_Barbarian_Rage_WildMagic"
@@ -583,7 +591,9 @@
 
     new entry "CX_Barbarian_Wildheart_Boost"
     type "PassiveData"
+    // ! Subclass: Wildheart Barbarian
     data "DisplayName" "h82cb0f16ge6cag4cf4g9c66ge7ef33e1a7d5;1"
+    // A Barbarian sharing a supernatural bond with nature, channeling the power of beasts.
     data "Description" "h33314de8gff58g4bc1g8d6cg8acef2820de6;1"
     data "Properties" "Highlighted"
     data "Icon" "PassiveFeature_AspectOfTheBeast_Wolf"
