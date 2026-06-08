@@ -7,35 +7,35 @@
         <node id="Dependencies">
           <children>
             <node id="ModuleShortDesc">
-              <attribute id="Folder" type="LSWString" value="Ultimate NPC Stat Overhaul - Core" />
+              <attribute id="Folder" type="LSWString" value="UNSO - CX" />
               <attribute id="MD5" type="LSWString" value="" />
-              <attribute id="Name" type="LSWString" value="Ultimate NPC Stat Overhaul - Core" />
-              <attribute id="UUID" type="FixedString" value="a7b5810e-3ac1-4a8f-bcc9-d18d91de2505" />
+              <attribute id="Name" type="LSWString" value="Ultimate NPC Stat Overhaul - Combat Extender" />
+              <attribute id="UUID" type="FixedString" value="61e8471b-4eda-4493-829d-e3c29ecc36c3" />
               <attribute id="Version64" type="int64" value="108086391056891904" />
             </node>
           </children>
         </node>
         <node id="ModuleInfo">
-          <attribute id="Author" type="LSWString" value="Goonsack &amp; Cahoot" />
+          <attribute id="Author" type="LSString" value="Goonsack &amp; Cahoot" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSWString" value="Overhaul every aspect of NPCs for quality, consistency, and immersion." />
-          <attribute id="Folder" type="LSWString" value="Ultimate NPC Stat Overhaul - Core - Extras" />
+          <attribute id="Description" type="LSString" value="Making the Combat Extender passive visible again for those who want it." />
+          <attribute id="Folder" type="LSString" value="UNSO - CX - Icon Activation" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />
           <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
           <attribute id="MenuLevelName" type="FixedString" value="" />
-          <attribute id="Name" type="FixedString" value="Ultimate NPC Stat Overhaul - Core - Extras" />
+          <attribute id="Name" type="FixedString" value="Ultimate NPC Stat Overhaul - CX - Icon Activation" />
           <attribute id="NumPlayers" type="uint8" value="4" />
           <attribute id="PhotoBooth" type="FixedString" value="" />
           <attribute id="StartupLevelName" type="FixedString" value="" />
-          <attribute id="Tags" type="LSWString" value="" />
+          <attribute id="Tags" type="LSString" value="" />
           <attribute id="Type" type="FixedString" value="Add-on" />
-          <attribute id="UUID" type="FixedString" value="e2863ee8-846a-4492-b8bb-f710e1a382ef" />
-          <attribute id="Version64" type="int64" value="108086391056891904" />
+          <attribute id="UUID" type="FixedString" value="de67d646-414c-4a30-a376-f067802012cd" />
+          <attribute id="Version64" type="int64" value="108086391056891905" />
           <children>
             <node id="PublishVersion">
-              <attribute id="Version64" type="int64" value="108086391056891904" />
+              <attribute id="Version64" type="int64" value="108086391056891905" />
             </node>
             <node id="Scripts" />
             <node id="TargetModes">
