@@ -62,7 +62,7 @@ data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
 // ============================ Corrosive Phlegm ============================
 // Bug Fix: Removed the spell level of 0.
 // Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
-// Note: Included in Goon's Inheritance Fixes.
+// Note: Entry included in Goon's Inheritance Fixes.
 
 new entry "Projectile_ToxicSpit_Bulette"
 type "SpellData"

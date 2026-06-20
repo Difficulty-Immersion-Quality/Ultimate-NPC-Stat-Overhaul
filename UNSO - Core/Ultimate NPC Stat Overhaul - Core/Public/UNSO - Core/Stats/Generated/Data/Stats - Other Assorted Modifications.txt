@@ -735,32 +735,6 @@ using "Interrupt_LOW_RamazithsTower_ElementalRebuke"
 // data "Properties" "UseSpell(SWAP,Target_LOW_RamazithsTower_Dummy,true,true,true);"
 data "InterruptFlags" "InterruptWhileInvisible"
 
-// ==================================== Counterspell (Mindflayer) ====================================
-// Bug Fix: Can be used while under the effects of more non-hostile and non-spellcasting restricted Polymorphs.
-
-new entry "Interrupt_CounterSpell_MindFlayer"
-type "InterruptData"
-// using "Interrupt_Counterspell"
-using "Interrupt_CounterSpell_MindFlayer"
-// data "Cost" "ReactionActionPoint:1;Interupt_CounterSpell_MindFlayer:1"
-// data "Cooldown" "OncePerCombat"
-// data "EnableCondition" "HasActionResource('Interupt_CounterSpell_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'}));"
-data "EnableCondition" "HasActionResource('Interupt_CounterSpell_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus())"
-// data "EnableContext" ""
-
-// ==================================== Shield (Mindflayer) ====================================
-// Bug Fix: Can be used while under the effects of more non-hostile and non-spellcasting restricted Polymorphs.
-
-new entry "Interrupt_Shield_Mindflayer"
-type "InterruptData"
-// using "Interrupt_Shield_Wizard"
-using "Interrupt_Shield_Mindflayer"
-// data "Cost" "ReactionActionPoint:1;Interupt_Shield_MindFlayer:1"
-// data "Cooldown" "OncePerCombat"
-// data "EnableCondition" "HasActionResource('Interupt_Shield_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'}));"
-data "EnableCondition" "HasActionResource('Interupt_Shield_MindFlayer', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus())"
-// data "EnableContext" ""
-
 // ==================================== Legendary Resistance ====================================
 // Bug Fix: Interrupt can be used while Invisible.
 // Bug Fix: No longer restricted by non-hostile Polymorphs.
@@ -1139,63 +1113,6 @@ using "Target_Slam_Blight_Vine"
 // data "DescriptionParams" "DealDamage1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
 data "DescriptionParams" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic)"
 // data "TooltipDamageList" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
-
-// ============================ Mindflayer - Tentacle Whip ============================
-// Bug Fix: Tooltip now correctly displays a melee spell attack, instead of a melee unarmed attack.
-
-new entry "Target_Tentacles_MindFlayer"
-type "SpellData"
-data "SpellType" "Target"
-// using "Target_Claws"
-using "Target_Tentacles_MindFlayer"
-// data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
-// data "SpellSuccess" "DealDamage(2d10+4,Psychic);IF(not SavingThrow(Ability.Intelligence, 14)):ApplyStatus(STUNNED,100,1);"
-// Tentacle Whip
-// data "DisplayName" "ha32797b6g8153g43b6gbb5cga37cc6c149a2;2"
-// Lash out with your tentacles and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; your target.
-// data "Description" "hf0c16535gd5a3g4da1gbf6agb69118db4419;5"
-// data "TooltipDamageList" "DealDamage(2d10+4,Psychic)"
-// data "TooltipAttackSave" "MeleeUnarmedAttack;Intelligence"
-data "TooltipAttackSave" "MeleeSpellAttack;Intelligence"
-// data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
-// data "CastSound" "CrSpell_Cast_Tentacle"
-// data "TargetSound" "CrSpell_Impact_Tentacle"
-// data "CastTextEvent" "Cast"
-// data "SpellAnimation" "8b8bb757-21ce-4e02-a2f3-97d55cf2f90b,,;b8a95317-2226-4f00-82b2-af97fb1f36bc,,;2eaa08cb-b2bd-453c-b80a-f1bf1cd90a1a,,;f8d1de3f-8fd1-42b2-87a5-d83ce4937e8c,,;7bb52cd4-0b1c-4926-9165-fa92b75876a3,,;66cb2d8a-f5c5-4edd-8c1c-e2c03c80d3f7,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
-// data "SpellAnimationIntentType" "Aggressive"
-// data "CastEffect" "f29f7ac8-cce2-45f9-8302-b824847a8bbe"
-// data "TargetEffect" "cc09a13d-5d07-4604-a77f-87e0fa1df56b"
-
-// ============================ Mindflayer - Extract Brain ============================
-// Bug Fix: Made "TargetConditions" more robust.
-
-new entry "Target_ExtractBrain_Mindflayer"
-type "SpellData"
-data "SpellType" "Target"
-// using "Target_Tentacles_MindFlayer"
-using "Target_ExtractBrain_Mindflayer"
-// data "Cooldown" "OncePerTurn"
-// data "SpellProperties" ""
-// data "SpellSuccess" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(SELF,6d6)"
-// data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
-data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Sleeping') or Goon_HasProneCondition_Unconscious())"
-// data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
-// Extract Brain
-// data "DisplayName" "hdc7aef70g430bg453bg8572g8834a2364262;2"
-// Try to extract the brain of a Stunned or Unconscious creature.
-// data "Description" "hdccfcac3g7a8dg45e8gb683g9ffc48c4a1c7;3"
-// Try to extract the brain of a &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="UNCONSCIOUS"&gt;Unconscious&lt;/LSTag&gt; creature.
-data "Description" "hc8edff4bgab54g4c52g8018ge1010d0a799d;1"
-// data "TooltipDamageList" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(6d6)"
-// data "TooltipAttackSave" "MeleeUnarmedAttack"
-// data "CastSound" "CrSpell_Cast_ExtractBrain"
-// data "TargetSound" "CrSpell_Impact_ExtractBrain"
-// data "SpellAnimation" "8cbf3b5e-bf3f-4772-b09a-d91af2305aed,,;,,;68a739dd-63bf-468d-afeb-9e15467adc2c,e508f83e-90e9-4d4e-b13d-683d5954bd9e,2e0ad6cb-66f7-49ce-82c6-3a4b932d555f;7840ced8-dd25-4cc7-a987-8f58a72f48f9,187ade91-b581-41a1-ad5c-8625391d12b3,ac412b30-e7bf-4e2e-a65c-02c9a5d756db;19c50781-0c14-4329-9356-602d40c10ae3,,;e0dca5b0-f877-4934-8c57-a976b8ce3784,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
-// data "SpellFlags" "IsMelee;IsEnemySpell;IsHarmful"
-// data "SpellAnimationIntentType" "Peaceful"
-// data "MemoryCost" "6"
-// data "CastEffect" "09214cd7-37f3-48c6-bbcf-b6666743479b"
-// data "TargetEffect" "76b18a50-9f43-4711-9f37-f52a022f9060"
 
 // ============================ Shadow-Cursed Undead ============================
 // Bug Fix: description cleanup.
