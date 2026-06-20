@@ -1,0 +1,8 @@
+// ==================================== "UND_Nere" ====================================
+// Bug Fix: Nere and Tahan get gimped on spell slots in Patch #8 because passives no longer stack.
+
+new entry "Goon_AdditionalSpellSlot_Level_2"
+type "PassiveData"
+using "AdditionalSpellSlot_Level_2"
+data "Properties" "IsHidden"
+data "Boosts" "ActionResource(SpellSlot,1,2)"

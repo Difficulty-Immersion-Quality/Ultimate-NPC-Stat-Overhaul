@@ -1,0 +1,50 @@
+// ============================ Shadow-Cursed Undead ============================
+// Bug Fix: description cleanup.
+// TODO: Hidden status talks about Radiant vulnerability?
+// TODO: StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing)
+
+new entry "SCL_SHADOW_CURSE_UNDEAD_NEW"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// Shadow-Cursed Undead
+// data "DisplayName" "h577cc741g5b1bg4f94g8aa9ge2ba2d4c36e2;2"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to Necrotic damage, and cannot use spell or weapon actions.
+// data "Description" "ha30a8ab9g3be0g40a1gbba4g9f5ed448ebe9;10"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to[2], and cannot use spell or weapon actions.
+data "Description" "h85d8ffbbg94efg428bg8f78g0de0aeff6532;1"
+data "DescriptionParams" "DealDamage(,Radiant);DealDamage(,Necrotic)"
+// data "Icon" "GenericIcon_DamageType_Necrotic"
+// data "StillAnimationType" "Weakened"
+// data "StillAnimationPriority" "Weakened"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "RemoveConditions" "IsKillingBlow()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+// data "RemoveEvents" "OnDamage"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+// data "TemplateID" "a42a8493-b701-4d71-bdc8-0857e718c247"
+// data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
+// data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
+
+new entry "SCL_SHADOW_CURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+// Shadow-Cursed Undead
+// data "DisplayName" "h5bb2c482gac30g42d1ga586ge1ec51ecd63b;5"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced hit points and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Radiant damage, have &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Necrotic damage, and cannot use spells or weapon actions.
+// data "Description" "h5ea5b875g69e7g4542gad2fg0a672c3dfaf8;12"
+// Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1], have &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to[2], and cannot use spells or weapon actions.
+data "Description" "hd3f13f46g70ccg4a58g8152gb375b4603262;1"
+data "DescriptionParams" "DealDamage(,Radiant);DealDamage(,Necrotic)"
+// data "Icon" "GenericIcon_DamageType_Necrotic"
+// data "StillAnimationType" "Weakened"
+// data "StillAnimationPriority" "Weakened"
+// data "SoundVocalStart" "GASP"
+// data "StackId" "SCL_SHADOW_CURSE_UNDEAD"
+// data "StackType" "Ignore"
+// data "Boosts" "BlockTravel()"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+// data "RemoveEvents" "OnTurn"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+// data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"

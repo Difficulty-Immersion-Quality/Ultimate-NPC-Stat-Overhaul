@@ -1,0 +1,45 @@
+// ==================================== Anti-Cheese Door Unlocker ====================================
+
+new entry "Goon_NPC_Ethel_Unlocker"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnStatusApplied;OnStatusRemoved;OnCombatStarted;OnTurn;OnAttacked;OnDamaged"
+data "Conditions" "not Dead()"
+data "StatsFunctors" "IF(not HasStatus('GOON_NPC_ETHEL_UNLOCKER')):ApplyStatus(GOON_NPC_ETHEL_UNLOCKER,100,-1)"
+
+new entry "GOON_NPC_ETHEL_UNLOCKER"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
+data "AuraRadius" "3"
+//data "TargetConditions" "Item() and (Locked() or Tagged('KNOCK_TARGET')) and not Tagged('KNOCKBLOCK') and not HasStatus('ARCANE_LOCK')"
+data "AuraStatuses" "TARGET:IF(Item() and (Locked(context.Target) or Tagged('KNOCK_TARGET',context.Target))):ApplyStatus(GOON_NPC_ETHEL_UNLOCKER_TECHNICAL)"
+
+new entry "GOON_NPC_ETHEL_UNLOCKER_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "OnApplyFunctors" "Unlock(context.Target)"
+data "RemoveConditions" "not Locked(context.Target)"
+data "RemoveEvents" "OnApply;OnStatusApplied;OnStatusRemoved"
+// data "TickType" "StartTurn"
+// data "TickFunctors" "Unlock()"
+
+// ==================================== Auntie Ethel - Healing Pearl ====================================
+// Bug Fix: Now checks for all Burning conditions, not just the base Burning condition
+// TODO: Maybe turn those other conditions into a themed function too.
+// TODO: Double check that my functionality works as intended when removing "SG_Burning".
+
+new entry "LOW_HAG_MUSHROOM_HEALINGPEARL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "LOW_HAG_MUSHROOM_HEALINGPEARL"
+// Healing Pearl
+// data "DisplayName" "h2250f577gd1d7g4887g90a8gf1d815026779;1"
+// At the start of its turn, this mushroom keeping Auntie Ethel alive regains all its &lt;LSTag Tooltips="HitPoints"&gt;hit points&lt;/LSTag&gt; unless some effect prevents it from restorative healing.
+// data "Description" "hdc1fbb4fg6a30g4609g8544g34853382f096;5"
+// data "Icon" "GenericIcon_Intent_Healing"
+// data "Passives" "LOW_Hag_Mushroom_VFX"
+// data "TickFunctors" "IF(not HasStatus('BURNING') and not HasStatus('SEARING_SMITE') and HasHPPercentageWithoutTemporaryHPEqualOrLessThan(99)):RegainHitPoints(100);IF(HasStatus('BURNING')):RemoveStatus('BURNING');IF(HasStatus('SEARING_SMITE')):RemoveStatus('SEARING_SMITE');IF(not HasStatus('BURNING') and not HasStatus('SEARING_SMITE') and not HasStatus('CHILL_TOUCH') and not HasStatus('WRAITHS_EMBRACE') and not HasStatus('CURSE_MUMMY') and not HasStatus('LOW_HAG_MUSHROOM_VFX')):ApplyStatus(LOW_HAG_MUSHROOM_VFX,100,-1);"
+data "TickFunctors" "IF(not Goon_HasBurningConditionOrTag() and HasHPPercentageWithoutTemporaryHPEqualOrLessThan(99)):RegainHitPoints(100);IF(HasStatus('SG_Burning')):RemoveStatus(SG_Burning);IF(not Goon_HasBurningConditionOrTag() and not HasStatus('CHILL_TOUCH') and not HasStatus('WRAITHS_EMBRACE') and not HasStatus('CURSE_MUMMY') and not HasStatus('LOW_HAG_MUSHROOM_VFX')):ApplyStatus(LOW_HAG_MUSHROOM_VFX,100,-1)"
+// data "StatusEffectOnTurn" "9396e4e3-2af9-465e-adba-5714d97ce66f"

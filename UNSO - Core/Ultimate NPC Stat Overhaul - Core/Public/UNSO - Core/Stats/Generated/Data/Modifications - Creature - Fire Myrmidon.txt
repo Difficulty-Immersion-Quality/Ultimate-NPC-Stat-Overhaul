@@ -1,0 +1,47 @@
+// ==================================== Cinderous Swipe ====================================
+// Bug Fix: Damage is now properly reduced by Evasion, Shield Master: Block and any other CanAreaDamageEvade effects.
+
+new entry "Zone_RangedSwipe_Myrmidon_Fire"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_BurningHands"
+using "Zone_RangedSwipe_Myrmidon_Fire"
+// data "Level" ""
+// data "SpellSchool" ""
+// data "SpellSuccess" "IF(not HasEvasion()):DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType);IF(HasEvasion()):DealDamage((2d6)/2, Fire,Magical)"
+data "SpellSuccess" "DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
+// data "SpellFail" "DealDamage((2d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"
+// data "Icon" "GenericIcon_DamageType_Fire"
+// Cinderous Swipe
+// data "DisplayName" "h9050da5dg0c45g4602g8e7eg1d413d1a4ebc;2"
+// Create a blooming cone of fire as you swipe at a foe. 
+// data "Description" "hea54992cg9940g42degbc14g7961aebf19d7;2"
+// data "DescriptionParams" "DealDamage(2d6,Fire)"
+// data "TooltipDamageList" "DealDamage(2d6,Fire);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
+// data "TooltipUpcastDescription" ""
+// data "TooltipUpcastDescriptionParams" ""
+// data "CastSound" "CrSpell_Cast_Myrmidon_Fire_FierySwipe"
+// data "TargetSound" "CrSpell_Impact_Myrmidon_Fire_FierySwipe"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "3c545517-3952-465d-86b9-b79a6ce71d93,,;5326ef50-e126-4a9c-b0d4-a7248c2ffa79,,;87f4ecb0-927e-4053-a270-db215841ae87,,;4aa5d7be-3497-4ddf-9130-5661574dd283,,;e80622bf-2f2c-43af-864b-d3bc91905328,,;,,;,,;,,;,,"
+// data "WeaponTypes" "Melee"
+// data "SpellFlags" "IsHarmful;Wildshape"
+data "SpellFlags" "IsHarmful;Wildshape;CanAreaDamageEvade"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "PrepareEffect" "35831710-27d2-4237-8b45-fb91a0903889"
+// data "CastEffect" "8680ce07-cdcf-4961-9cd2-96720738204d"
+// data "Sheathing" "Melee"
+
+// ==================================== Cinderous Swipe (Wildshape)
+// Bug Fix: Damage is now properly reduced by Evasion, Shield Master: Block and any other CanAreaDamageEvade effects.
+// Bug Fix: Damage increased from 1d6 Fire to 2d6 Fire, matching the tooltip damage.
+
+new entry "Zone_RangedSwipe_Wildshape_Myrmidon_Fire"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_RangedSwipe_Myrmidon_Fire"
+using "Zone_RangedSwipe_Wildshape_Myrmidon_Fire"
+// data "SpellSuccess" "IF(not HasEvasion()):DealDamage(1d6, Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType);IF(HasEvasion()):DealDamage((1d6)/2, Fire,Magical)"
+data "SpellSuccess" "DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
+// data "SpellFail" "DealDamage((1d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"
+data "SpellFail" "DealDamage((2d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"

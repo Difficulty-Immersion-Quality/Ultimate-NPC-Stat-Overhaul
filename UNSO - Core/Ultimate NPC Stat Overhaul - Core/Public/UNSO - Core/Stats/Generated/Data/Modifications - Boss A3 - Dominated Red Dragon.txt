@@ -1,0 +1,34 @@
+// ============================ Fire Breath ============================
+// Bug Fix: Description referred to humanoid Fireball, and it being cast with hands...
+
+new entry "Projectile_Fireball_Dragon"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_Fireball"
+using "Projectile_Fireball_Dragon"
+// data "Level" ""
+// data "SpellSchool" ""
+// data "Cooldown" "OncePerTurn"
+// data "TargetRadius" "30"
+// data "AreaRadius" "6"
+// data "SpellSuccess" "DealDamage(14d6,Fire,Magical);ApplyStatus(BURNING,100,2)"
+// data "SpellFail" "DealDamage((14d6)/2,Fire,Magical)"
+// data "TargetConditions" "DistanceToTargetGreaterThan(6.0) and not Tagged('HIT_PROXY')"
+// data "Trajectories" "ee353c2a-31e7-4fe2-a1b8-1902da1f4371"
+// Fire Breath
+// data "DisplayName" "h735039aag9237g4b5fg84c7g68350212b31a;2"
+// Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity.
+// data "Description" "hf6dae528gfd1eg426dg9776g4fff66e4734f;6"
+// Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.
+data "Description" "h48bf5152gf621g411fg9636gbe8b0eea61d4;1"
+// data "TooltipDamageList" "DealDamage(14d6,Fire)"
+// data "CastSound" "CrSpell_Cast_RedDragon_FireBreath"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e1ea033-bdac-4dff-94c9-482102632c06,,;13b7fbd2-dbce-4f25-8670-d08df8efa021,,;d25e89c9-2785-4ed2-abbc-5eee6f2785db,,;669703db-5624-41e4-af99-db768c26c9b4,,;e2376226-8b50-4023-b59c-5604016de454,,;,,;,,;,,;,,"
+// data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade;HasSomaticComponent;RangeIgnoreTargetBounds;RangeIgnoreSourceBounds"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "RechargeValues" ""
+// data "MemoryCost" ""
+// data "PrepareEffect" ""
+// data "CastEffect" "5796c9bd-e0e8-4cd3-a2e2-e2e385860a44"
+// data "Sheathing" "DontChange"

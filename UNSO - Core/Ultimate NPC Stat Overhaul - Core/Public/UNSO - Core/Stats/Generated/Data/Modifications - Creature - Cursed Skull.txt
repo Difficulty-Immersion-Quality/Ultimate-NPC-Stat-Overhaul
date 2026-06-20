@@ -1,0 +1,30 @@
+// ==================================== Grave Repulsion  ====================================
+// Bug Fix: Description now states the appropriate knockback distance of 8m, instead of 15m.
+// TODO: TargetConditions are used but the description states the knockback is for living creatures.
+// Constructs? Differentiation between the knockback and damage?
+
+new entry "Zone_LOW_OskarsBeloved_ObjectThunderwave"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_Thunderwave_2"
+using "Zone_LOW_OskarsBeloved_ObjectThunderwave"
+// data "SpellRoll" "not SavingThrow(Ability.Constitution, 15)"
+// data "SpellSuccess" "DealDamage(3d8,Necrotic,Magical);Force(8, OriginToTarget)"
+// data "SpellFail" "DealDamage((3d8)/2,Necrotic,Magical);"
+// data "TargetConditions" "not Dead() and not Tagged('UNDEAD') and Character()"
+// Grave Repulsion
+// data "DisplayName" "h6f26ac7ega129g4d09g9fa7g47b4ccca62e5;3"
+// Release an ectoplasmic pulse that knocks living creatures back [1].
+// data "Description" "hfc5e3784g7820g4f6bg8e1dg1a3e347588ad;2"
+// data "DescriptionParams" "Distance(15)"
+data "DescriptionParams" "Distance(8)"
+// data "TooltipDamageList" "DealDamage(3d8,Necrotic)"
+// data "TooltipOnSave" ""
+// data "TooltipUpcastDescription" ""
+// data "TooltipUpcastDescriptionParams" ""
+// data "Range" "5"
+// data "Base" "5"
+// data "UseCosts" ""
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful;ImmediateCast"
+// data "RootSpellID" ""
+// data "DamageType" "Necrotic"

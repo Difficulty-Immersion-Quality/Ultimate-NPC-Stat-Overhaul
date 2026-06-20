@@ -1,0 +1,35 @@
+// ==================================== Crude Frenzy ====================================
+// Bug Fix: Added a safeguard so they don't go crazy and stack it if given Extra Attack proper.
+// Used by Crusher, Fezzerk, Rozzak, Skrut, Za'krug and Zurga.
+
+new entry "GOB_Boss_RecklessAttack"
+type "PassiveData"
+// using "ExtraAttack"
+using "GOB_Boss_RecklessAttack"
+// // Crude Frenzy
+// data "DisplayName" "h7e7ac0bbgf9e9g4579gb63bgf580e33f3a73;2"
+// // This goblin can make an additional free attack after making a Main Hand Attack, but the second attack has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on its &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt;.
+// data "Description" "h751c3f3dgec25g4c1fgbe25g1e1554069fcb;2"
+// // This feature is inactive if the entity posseses &lt;LSTag Type="Passive" Tooltip="ExtraAttack"&gt;Extra Attack&lt;/LSTag&gt;.
+data "ExtraDescription" "h0823dcb7ge7b1g4290g97e8g6249a90fcff2;1"
+// data "EnabledConditions" "not Tagged('EXTRA_ATTACK_BLOCKED')"
+data "EnabledConditions" "not Tagged('EXTRA_ATTACK_BLOCKED') and not HasPassive('ExtraAttack') and not HasPassive('ExtraAttack_2') and not HasPassive('ExtraAttack_3') and not HasPassive('ThirstingBlade_Blade')"
+// data "StatsFunctors" "IF(HasAnyExtraAttack(context.Source)):ApplyStatus(SELF,EXTRA_ATTACK_Q,100,1);IF(not HasAnyExtraAttack(context.Source)):ApplyStatus(SELF,EXTRA_ATTACK,100,1);ApplyStatus(SELF,GOB_RECKLESS_ATTACK,100,1)"
+
+// ==================================== Fury of the Small ====================================
+// Bug Fix: Added missing Honour ruleset bools to prevent damage riders acting as a damage rider source.
+
+new entry "Goblin_FuryOfTheSmall"
+type "PassiveData"
+using "Goblin_FuryOfTheSmall"
+// // Fury of the Small
+// data "DisplayName" "hd2464c6age4feg4cc5g9ec1gfb449926b69d;1"
+// // When you damage a creature larger than you, you can choose to deal [1] extra. Limited to once per combat.
+// data "Description" "he3a6e213g265ag4b8bgb01bg629166ab82dc;2"
+// data "DescriptionParams" "DealDamage(1d6,MainWeaponDamageType)"
+// data "Icon" "GenericIcon_Intent_Damage"
+// data "Properties" "Highlighted"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "not Dead() and SizeEqualOrGreater(Size.Medium) and not HasStatus('GOBLIN_FURY_USED', context.Source)"
+// data "StatsFunctors" "IF(IsWeaponAttack()):DealDamage(1d6,MainWeaponDamageType);IF(IsWeaponAttack()):ApplyStatus(SELF,GOBLIN_FURY_USED,100,-1);"
+data "StatsFunctors" "IF(IsWeaponAttack()):DealDamage(1d6,MainWeaponDamageType,,0,,true,false);IF(IsWeaponAttack()):ApplyStatus(SELF,GOBLIN_FURY_USED,100,-1);"

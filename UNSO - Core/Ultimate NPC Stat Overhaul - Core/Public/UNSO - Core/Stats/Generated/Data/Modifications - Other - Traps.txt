@@ -1,0 +1,33 @@
+// ==================================== Dawnbreaker (Trap) - Break of Dawn ====================================
+// Bug Fix: Tooltip no longer states that targets take halved damage on a successful Saving Throw.
+
+new entry "Zone_CRE_PulseTrap_Blast"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_Thunderwave"
+using "Zone_CRE_PulseTrap_Blast"
+// data "SpellRoll" "not SavingThrow(Ability.Constitution, 18)"
+// data "SpellSuccess" "DealDamage(1d6,Radiant,Magical);Force(8, OriginToTarget);ApplyStatus(PRONE,100,1)"
+// data "SpellFail" "DealDamage(1d6,Radiant,Magical)"
+// data "TargetConditions" "not Self()"
+// data "Icon" "Spell_Evocation_BreakOfDawn"
+// Break of Dawn
+// data "DisplayName" "h5ed42aa5gf2e3g4c4ega607gcfafca4f2006;2"
+// Emit a pulse of energy and possibly push all nearby creatures and objects away and knock them &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+// data "Description" "hc9ee0333gc9ccg43a3ga173gd839c817a1ff;3"
+// data "DescriptionParams" ""
+// data "ExtraDescription" ""
+// data "TooltipDamageList" "DealDamage(1d6,Radiant)"
+// data "TooltipStatusApply" "ApplyStatus(PRONE,100,1)"
+// data "TooltipUpcastDescriptionParams" "DealDamage(1d8,Radiant)"
+// data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
+data "TooltipOnSave" ""
+// data "Shape" "Cone"
+// data "FrontOffset" "-3"
+// data "Range" "20"
+// data "Base" "5"
+// data "Angle" "100"
+// data "SpellFlags" "IsHarmful;IsTrap"
+// data "HitAnimationType" "PhysicalDamage"
+// data "TargetEffect" "5ea086f6-6e11-45b3-a4fa-46520d0e0cff"
+// data "ImpactEffect" "405cb657-8b02-44cd-a4d0-9a8d5967a40c"

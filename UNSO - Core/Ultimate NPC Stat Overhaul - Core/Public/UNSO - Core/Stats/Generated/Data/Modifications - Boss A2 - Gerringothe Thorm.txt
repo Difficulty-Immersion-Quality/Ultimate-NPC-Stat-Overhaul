@@ -1,0 +1,22 @@
+// ==================================== Headbutt ====================================
+// Bug Fix: Tooltip now shows damage dealt.
+
+new entry "Target_Headbutt_TollCollector_Face"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Bite"
+using "Target_Headbutt_TollCollector_Face"
+// data "SpellSuccess" "DealDamage(2d4+UnarmedMeleeAbilityModifier,Bludgeoning);IF(not SavingThrow(Ability.Strength, 8)):Force(2)"
+// data "TargetConditions" "not Self() and not Dead()"
+// data "Icon" "GenericIcon_DamageType_Physical"
+// Headbutt
+// data "DisplayName" "hf8f1a31eg34afg4b9cg829dgd4b7406db203;2"
+// Smash a foe with your head.
+// data "Description" "h50b39fddg64d6g4334g8160g865e4e1996af;2"
+// data "DescriptionParams" "DealDamage(2d4+UnarmedMeleeAbilityModifier,Bludgeoning)"
+data "TooltipDamageList" "DealDamage(2d4+UnarmedMeleeAbilityModifier,Bludgeoning)"
+// data "SpellFlags" "IsAttack;IsMelee;IgnoreSilence;IsHarmful"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "5862bd17-6ec4-4099-8e32-a10806439891"
+// data "TargetEffect" "381a240f-0142-4301-805c-1768eb470a95"
+// data "Sheathing" "DontChange"

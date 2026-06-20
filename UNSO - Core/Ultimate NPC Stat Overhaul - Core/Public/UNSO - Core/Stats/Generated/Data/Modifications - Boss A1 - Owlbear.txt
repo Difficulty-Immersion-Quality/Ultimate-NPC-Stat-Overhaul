@@ -1,0 +1,17 @@
+// ==================================== Call Consort ====================================
+// Bug Fix: Interrupt can be used while Invisible.
+// Changes: Now checks for all Silenced conditions, not just the base Silenced condition.
+
+new entry "Interrupt_FOR_Owlbear_CallConsort"
+type "InterruptData"
+// using "Interrupt_LEGENDARY_ACTIONS"
+using "Interrupt_FOR_Owlbear_CallConsort"
+// Call Consort
+// data "DisplayName" "h8e411f8bg4272g494fg9bbfg346428ec2ab1;2"
+// Summon your mate to protect you in battle.
+// data "Description" "hf33d41fag35a4g432cgaeffg2fdab93f024e;1"
+// data "Container" "YesNoDecision"
+// data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and HasFunctor(StatsFunctorType.DealDamage) and IsHit() and not AnyEntityIsItem() and HasLastAttackTriggered() and not HasStatus('SILENCED',context.Observer)"
+data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and HasFunctor(StatsFunctorType.DealDamage) and IsHit() and not AnyEntityIsItem() and HasLastAttackTriggered() and not HasStatus('SG_Silenced',context.Observer)"
+// data "Properties" "UseSpell(OBSERVER_OBSERVER,Shout_FOR_Owlbear_CallConsort,true,false,true,,true)"
+data "InterruptFlags" "InterruptWhileInvisible"

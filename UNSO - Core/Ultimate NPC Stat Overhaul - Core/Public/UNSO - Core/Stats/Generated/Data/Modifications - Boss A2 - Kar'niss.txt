@@ -1,0 +1,24 @@
+// ==================================== Kar'niss - Cull the Weak (at home) ====================================
+// Bug Fix: No longer functions as a damage rider and damage rider source, creating an infinite loop of damage being applied.
+// Changes: Renamed from Cull the Weak to Finishing Strike, after the name of the entry itself to distinguish it from the Illithid power of the same name.
+// Changes: Made it magical damage.
+// Changes: Added OncePerAttack so it's no longer as strong with multiattack features
+
+new entry "FinishingStrike"
+type "PassiveData"
+using "FinishingStrike"
+// Cull the Weak
+// data "DisplayName" "h91cc359bgd395g4009g9d4eg9a25fc7f7b33;1"
+// Finishing Strike
+data "DisplayName" "h870ed340gd2afg486fg8be8g65230780dbff;1"
+// You deal an additional [1] damage to targets below [2]% of their maximum hit points.
+// data "Description" "h8c720c86g1f4dg4b78g8f17g2ef2b9754ceb;1"
+// data "DescriptionParams" "DealDamage(2d6,Slashing); 50"
+data "DescriptionParams" "DealDamage(2d6,Slashing);50"
+// data "Icon" "GenericIcon_DamageType_Physical"
+// data "Properties" "Highlighted"
+data "Properties" "Highlighted;OncePerAttack"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "HasHPPercentageWithoutTemporaryHPLessThan(50, context.Target) and Character()"
+// data "StatsFunctors" "DealDamage(2d6,Slashing)"
+data "StatsFunctors" "DealDamage(2d6,Slashing,Magical,,0,,true,false)"

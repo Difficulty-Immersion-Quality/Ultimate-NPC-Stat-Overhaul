@@ -1,0 +1,40 @@
+// ==================================== Vengeful Strike ====================================
+// Bug Fix: Added missing Honour ruleset bools to prevent damage riders acting as a damage rider source.
+// Changes: Made Psychic damage magical.
+// TODO: Make a proper reaction?
+
+// new entry "HAG_MaskOfVengeance"
+// type "PassiveData"
+// // Vengeful
+// data "DisplayName" "hd1077f7bg88e7g44f0ga5e9gb32b789b4106;2"
+// // Creature gains an extra reaction. When attacked, the creature can use a reaction to counterattack with Vengeful Strike, dealing [1] and [2].
+// data "Description" "h69a228a2g3139g4535g916fg1289243752da;2"
+// data "DescriptionParams" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); DealDamage(2d6+2, Psychic)"
+// data "TooltipUseCosts" "ReactionActionPoint:1"
+// data "Boosts" "ActionResourceOverride(ReactionActionPoint,2,0)"
+// data "StatsFunctorContext" "OnAttacked"
+// data "Conditions" "HasActionResource('ReactionActionPoint', 1, 0, false) and Enemy() and not DistanceToTargetGreaterThan(2.0) and Combat() and not WieldingWeapon('Ammunition', false, false) and HasLastAttackTriggered() and not Unarmed() and not (SpellId('Target_ShockingGrasp') and not IsMiss())"
+// data "StatsFunctors" "UseSpell(SWAP,Target_HAG_MaskOfVengeance,true,true,true);UseActionResource(ReactionActionPoint,1)"
+
+new entry "Target_HAG_MaskOfVengeance"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Smash"
+using "Target_HAG_MaskOfVengeance"
+// data "Cooldown" ""
+// data "AIFlags" ""
+// data "SpellSuccess" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand); DealDamage(2d4, Psychic)"
+data "SpellSuccess" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); ExecuteWeaponFunctors(MainHand); DealDamage(2d4, Psychic, Magical,,0,,true,false)"
+// Vengeful Strike
+// data "DisplayName" "h2acfbc1eg90f9g4afaga8ccg5e21a8b131e2;2"
+// Lace your attack with all the vengeance hidden within you.
+// data "Description" "he80cb46ag72abg490cga94dg954b02d56888;5"
+// data "TooltipDamageList" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeaponDamageType); DealDamage(2d4, Psychic)"
+// data "CastSound" "CrSpell_Cast_MaskOfVengence"
+// data "TargetSound" "CrSpell_Impact_MaskOfVengence"
+// data "VocalComponentSound" "Vocal_Component_UniqueNPC_Gen_Hag"
+// data "UseCosts" "ReactionActionPoint:1"
+// data "MemoryCost" ""
+// data "PrepareEffect" "b10e10db-604a-45cf-aab0-0fc434eb9f37"
+// data "CastEffect" "1e18afe1-2102-4032-85a6-6214676fe5ee"
+// data "TargetEffect" "550119e3-9c52-42ff-aecc-341ae462df42"

@@ -1,4 +1,4 @@
-// ==================================== Gortash - Thunderthoom!  ====================================
+// ==================================== Thunderthoom!  ====================================
 // Bug Fix: Added missing "IsAttack" "SpellFlags".
 // Note: Inherits additional fixes from Yurgir's Concussive Burst.
 
@@ -19,3 +19,22 @@ data "SpellFlags" "HasSomaticComponent;AddFallDamageOnLand;IsHarmful;IsAttack;Is
 // data "CastEffect" "22929c95-a08d-40bb-9842-c6ef6f059015"
 // data "TargetEffect" ""
 // data "HitEffect" "58e30e58-71f8-465c-9bf4-a6418afd987b"
+
+// ==================================== Tyrannical Branding ====================================
+// Bug Fix: Interrupt can be used while Invisible.
+// Bug Fix: Interrupt cannot target entities with any Invisibility conditions, instead of just the base Invisibility condition.
+
+new entry "Interrupt_WYR_DivineBeckoning_Gortash"
+type "InterruptData"
+using "Interrupt_WYR_DivineBeckoning_Gortash"
+// // Tyrannical Branding
+// data "DisplayName" "hfd6d842eg4595g4f08gb137gc8eba3f8bfe5;2"
+// // Place a &lt;LSTag Type="Status" Tooltip="WYR_DIVINEBECKONING_GORTASH"&gt;Tyrant's Curse&lt;/LSTag&gt; on a target.
+// data "Description" "h5e141e72gc683g46efg81bdg30b16293a63d;2"
+// data "InterruptContext" "OnCastHit"
+// data "InterruptContextScope" "Self"
+// data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and not HasStatus('INVISIBILITY') and not AnyEntityIsItem() and HasLastAttackTriggered()"
+data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and not HasStatus('SG_Invisible') and not AnyEntityIsItem() and HasLastAttackTriggered()"
+// data "Properties" "UseSpell(OBSERVER_SOURCE,Target_WYR_DivineBeckoning_Gortash,true,true,true,,true)"
+// data "InterruptDefaultValue" "Enabled"
+data "InterruptFlags" "InterruptWhileInvisible"

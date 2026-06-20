@@ -1,0 +1,30 @@
+// ==================================== Multiattack: Frightened ====================================
+// Bug Fix: Now functions with all conditions in the SG_Frightened status group, instead of just the Frightened condition itself.
+
+// new entry "Multiattack_Mummy"
+// type "PassiveData"
+// // Multiattack: Frightened
+// data "DisplayName" "hb23c8f25g7ac9g48b3g8effg150f6030359b;2"
+// // The Mummy can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Mummy"&gt;Multiattack&lt;/LSTag&gt; if its target is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;.
+// data "Description" "h23cf628fg23fcg458dga51dg7e393c2a7c01;1"
+// data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// data "Properties" "Highlighted"
+
+new entry "Target_Multiattack_Mummy"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Multiattack"
+using "Target_Multiattack_Mummy"
+// data "SpellRoll" "Attack(AttackType.MeleeUnarmedAttack); Cast2[Attack(AttackType.MeleeUnarmedAttack)]"
+// data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);TARGET:IF(not SavingThrow(Ability.Constitution,SourceSpellDC())):ApplyStatus(CURSE_MUMMY,100,10);Cast2[DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);TARGET:IF(not SavingThrow(Ability.Constitution,SourceSpellDC())):ApplyStatus(CURSE_MUMMY,100,10)];"
+// data "TargetConditions" "not Self() and not Dead() and HasStatus('FRIGHTENED')"
+data "TargetConditions" "not Self() and not Dead() and HasStatus('SG_Frightened')"
+// data "CycleConditions" "Character() and Enemy() and not Dead()"
+data "CycleConditions" "Character() and Enemy() and not Dead() and HasStatus('SG_Frightened')"
+// Aim multiple attacks at a target that is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;. Each one deals [1] and [2].
+// data "Description" "h0c65402ag8c0fg4f75g9442g7e7c987e9bc6;4"
+// data "DescriptionParams" "DealDamage(2d6+UnarmedMeleeAbilityModifier,Slashing);DealDamage(3d6,Necrotic)"
+// data "TooltipDamageList" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(3d6,Necrotic);"
+// data "TooltipAttackSave" "MeleeUnarmedAttack;Wisdom"
+// data "TooltipStatusApply" "ApplyStatus(CURSE_MUMMY,100,10)"
+// data "Sheathing" "DontChange"

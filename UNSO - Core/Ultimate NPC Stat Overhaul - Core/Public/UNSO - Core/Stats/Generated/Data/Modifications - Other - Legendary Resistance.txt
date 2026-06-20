@@ -1,0 +1,24 @@
+// ==================================== Legendary Resistance ====================================
+// Bug Fix: Interrupt can be used while Invisible.
+// Bug Fix: No longer restricted by non-hostile Polymorphs.
+
+new entry "Interrupt_LegendaryResistance"
+type "InterruptData"
+using "Interrupt_LegendaryResistance"
+// Legendary Resistance
+// data "DisplayName" "hd9d90cafgbde7g4752gaa6egb9d312237ecb;1"
+// Increase your &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; result by 10.
+// data "Description" "hcd1dcb91gab8ag4c4fg87f0gbf514599268d;2"
+// data "Icon" "Action_TransmuterStone_Resistance"
+// data "InterruptContext" "OnPostRoll"
+// data "InterruptContextScope" "Self"
+// data "Container" "YesNoDecision"
+// data "Conditions" "not Self(context.Source,context.Observer) and Self(context.Target,context.Observer) and HasInterruptedSavingThrow() and not AnyEntityIsItem() and IsFlatValueInterruptInteresting(10)"
+// data "Properties" "AdjustRoll(10);ApplyStatus(OBSERVER_OBSERVER,INTERRUPT_LEGENDARY_RESISTANCE,100,0)"
+// data "Cost" "LegendaryResistanceCharge:1"
+// data "Stack" "LegendaryResistance"
+// data "InterruptDefaultValue" "Enabled"
+// data "EnableCondition" "not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'});"
+data "EnableCondition" "not HasStatus('SG_Polymorph') or Goon_IsNonHostilePolymorphStatus()"
+// data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+data "InterruptFlags" "InterruptWhileInvisible"

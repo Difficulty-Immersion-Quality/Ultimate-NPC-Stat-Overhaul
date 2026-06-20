@@ -1,0 +1,59 @@
+// ==================================== The Dead Wastes / Wasting Mortal ====================================
+// Bug Fix: Descriptions for the conditions now properly reflect functionality.
+
+new entry "SHA_NECROMANCER_LANDOFTHEDEAD_AURA"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SHA_NECROMANCER_LANDOFTHEDEAD_AURA"
+// The Dead Wastes
+// data "DisplayName" "hc73bfb7bgbe14g44a3gadfbgbb8cad72c5bc;2"
+// This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. 
+// data "Description" "hdd3a8d79gecffg4143gaa0fg7f670440c7e6;3"
+// This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. Additonally, living creatures have halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[3].
+data "Description" "hb1ac7425gc22fg47a7g9d60g30793696a8be;1"
+// data "DescriptionParams" "RegainHitPoints(4d6);DealDamage(4d6, Necrotic)"
+data "DescriptionParams" "RegainHitPoints(4d6);DealDamage(4d6, Necrotic);RegainHitPoints(,)"
+// data "Icon" "GenericIcon_DamageType_Necrotic"
+// data "AuraRadius" "3"
+// data "AuraStatuses" "TARGET:IF(Tagged('UNDEAD') and not Tagged('CONSTRUCT') and Character() and not Dead()):ApplyStatus(SHA_NECROMANCER_LANDOFTHEDEAD_AURA_BUFF);TARGET:IF(not Tagged('UNDEAD') and not Tagged('CONSTRUCT') and Character() and not Dead() and not HasStatus('BANISHED') and not HasStatus('BLINK_VANISH') and not HasStatus('GASEOUSFORM_BLINK')):ApplyStatus(SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF)"
+// data "TickType" "EndTurn"
+// data "StatusEffect" "4820635c-82b3-4e71-833e-5878bd277835"
+
+// new entry "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_BUFF"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// Blooming Dead
+// data "DisplayName" "h8ea0157dg53d7g4168gbeb8g5a3682c14f83;2"
+// This Undead heals [1] at the start of every turn while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
+// data "Description" "ha8a540c3gff3bg4666gb027gcc5d6fd6e040;2"
+// data "DescriptionParams" "RegainHitPoints(4d6)"
+// data "Icon" "GenericIcon_Intent_Buff"
+// data "SoundStart" "Spell_Status_LandOfTheDead_Enter_MO"
+// data "StackId" "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_BUFF"
+// data "TickType" "EndTurn"
+// data "TickFunctors" "RegainHitPoints(4d6,Undead)"
+// data "ApplyEffect" "87b698f0-acf0-4ff7-9ad4-4c3c76acd9c2"
+// data "StatusEffect" "f517d891-a2d0-462b-9e56-b8ec41f87c67"
+
+new entry "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF"
+// Wasting Mortal
+// data "DisplayName" "h7903b4c0g80b0g46f5ga000g0fba16180f05;2"
+// This living creature takes [1] at the end of every turn while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
+// data "Description" "hfbcd3bddg5bb0g4033g9f33gd7638c9a10ac;2"
+// This living creature takes [1] at the end of every turn, has halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[2] while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
+data "Description" "h55c5a489gaf11g4ed8g8698gf5832282fe1c;1"
+// data "DescriptionParams" "DealDamage(4d6,Necrotic)"
+data "DescriptionParams" "DealDamage(4d6,Necrotic);RegainHitPoints(,)"
+// data "Icon" "GenericIcon_Intent_Debuff"
+// data "SoundStart" "Spell_Status_LandOfTheDead_Enter_MO"
+// data "StackId" "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF"
+// data "TickType" "EndTurn"
+// data "Boosts" "ActionResourceConsumeMultiplier(Movement, 2,0);MovementSpeedLimit(Walk);BlockRegainHP(Living)"
+// data "TickFunctors" "DealDamage(4d6,Necrotic)"
+// data "ApplyEffect" "8502b53e-d2d7-4ec5-aa3b-e85f3be86991"
+// data "StatusEffect" "6d293bd2-1258-4c4f-a006-bfc41628d893"
+// data "StatusEffectOnTurn" "fa4ffb93-faa2-4524-ba01-c060d1e45667"
+// data "EndEffect" "ebb1a68e-f541-49b1-b7db-3d7c6c9560b9"

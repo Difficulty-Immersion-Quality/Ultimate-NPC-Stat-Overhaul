@@ -1,0 +1,31 @@
+// ==================================== Multiattack: Wounded ====================================
+// Bug Fix: Added missing 40% or less HP threshold for Malus Thorm's Multiattack to be usable.
+// Changes: Made the threshold 60% instead.
+
+new entry "Multiattack_Surgeon"
+type "PassiveData"
+using "Multiattack_Surgeon"
+// Multiattack: Wounded
+// data "DisplayName" "hcaa16a47g2145g4c4dgba8agacc959ee898a;1"
+// Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 40% or less.
+// data "Description" "h0e220109gede8g427cg88d2g4375734e1d14;1"
+// Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 60% or less.
+data "Description" "h71acc892g62a3g4915ga463g01ca37c6054f;1"
+// data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// data "Properties" "Highlighted"
+
+new entry "Target_Multiattack_Surgeon"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Multiattack"
+using "Target_Multiattack_Surgeon"
+// data "SpellSuccess" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing); Cast2[DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing)]"
+// data "TargetConditions" "not Self() and not Dead() and not (HasStatus('SURGEON_ENABLE_ATTACK_BONESAW',context.Source) or HasStatus('SURGEON_ENABLE_ATTACK_LEECH',context.Source) or HasStatus('SURGEON_ENABLE_ATTACK_SYRINGE',context.Source) or HasStatus('SURGEON_ENABLE_ATTACK_TREPAN',context.Source))"
+// data "DescriptionParams" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing)"
+// data "TooltipDamageList" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing);DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing)"
+// data "CastSound" "CrSpell_Cast_Surgeon_Multiattack"
+// data "TargetSound" "CrSpell_Impact_Surgeon_Multiattack"
+// data "CastEffect" "11041ac2-b64f-4697-88c0-6e09190c190d"
+// data "HitEffect" "03b42dd5-c3b5-442c-bdc9-36c40d616622"
+// data "RequirementConditions" "HasHPPercentageEqualOrLessThan(40,context.Source)"
+data "RequirementConditions" "HasHPPercentageEqualOrLessThan(60,context.Source)"
