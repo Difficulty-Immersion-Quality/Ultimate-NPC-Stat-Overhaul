@@ -457,46 +457,6 @@ data "SpellFail" "DealDamage((4d8)/2,Poison,Magical)"
 // data "DamageType" "Poison"
 // data "Sheathing" "Sheathed"
 
-// ==================================== Yurgir - Concussive Burst / Gortash - Thunderthoom!  ====================================
-// Bug Fix: TooltipAttackSave swapped from Constituion to MeleeWeaponAttack.
-
-new entry "Zone_ConcussiveBlast_Orthon"
-type "SpellData"
-data "SpellType" "Zone"
-// using "Zone_Thunderwave"
-using "Zone_ConcussiveBlast_Orthon"
-// data "SpellSchool" "None"
-// data "Cooldown" "OncePerTurn"
-// data "SpellProperties" ""
-// data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack)"
-// data "SpellSuccess" "DealDamage(5d8,Thunder,Magical);Force(8, OriginToTarget)"
-// data "SpellFail" "DealDamage((5d8)/2,Thunder,Magical);"
-// data "Icon" "GenericIcon_DamageType_Thunder"
-// Concussive Burst
-// data "DisplayName" "hf594d706g2cb1g4a89g82afg7497dbb2e77f;2"
-// A thunderous blast that ripples over your foes and pushes them back.
-// data "Description" "h2186a044gcff1g4ef1ga3d2g1ab84d8c806c;3"
-// data "TooltipDamageList" "DealDamage(5d8,Thunder)"
-// data "TooltipAttackSave" "Constitution"
-data "TooltipAttackSave" "MeleeWeaponAttack"
-// data "PrepareSound" "CrSpell_Prepare_Orthon_Concussive_Blast"
-// data "PrepareLoopSound" "CrSpell_Loop_Orthon_Concussive_Blast_Stop"
-// data "CastSound" "CrSpell_Cast_ConcussiveBlast"
-// data "TargetSound" "CrSpell_Impact_ConcussiveBlast"
-// data "Shape" "Cone"
-// data "Range" "8"
-// data "Angle" "75"
-// data "UseCosts" "ActionPoint:1"
-// data "SpellAnimation" "63292747-6485-4fd0-a1a1-281036b47bfc,,;dc5f3694-ff5a-4c7a-8a94-9e1bd1e43e7d,,;96ea0a93-2bb7-44c6-8b53-64b5c1ebc97e,,;64c836a3-d027-482f-b5a8-184230df9ee7,,;6aca20d7-92f6-4148-a8b2-4d87302f1d44,,;e587b162-1966-4c17-a137-7b40da647f46,,;,,;,,;,,"
-// data "WeaponTypes" "Ammunition"
-// data "SpellFlags" "AddFallDamageOnLand;IsHarmful;IsAttack;IsEnemySpell"
-// data "RechargeValues" ""
-// data "SpellAnimationIntentType" "Aggressive"
-// data "PrepareEffect" "80e0c758-0859-4126-9871-075d4882d9ce"
-// data "CastEffect" "4263a5da-abb4-4f49-b8fe-92e582d99920"
-// data "TargetEffect" "9682a720-5246-4bfe-894c-fd4ac0484e2f"
-// data "Sheathing" "Ranged"
-
 // ==================================== Cursed Skull - Grave Repulsion  ====================================
 // Bug Fix: Description now states the appropriate knockback distance of 8m, instead of 15m.
 
@@ -802,7 +762,7 @@ data "Properties" "Highlighted;OncePerAttack"
 // data "StatsFunctorContext" "OnDamage"
 // data "Conditions" "HasHPPercentageWithoutTemporaryHPLessThan(50, context.Target) and Character()"
 // data "StatsFunctors" "DealDamage(2d6,Slashing)"
-data "StatsFunctors" "DealDamage(2d6,Slashing,Magical,,0,,true,true)"
+data "StatsFunctors" "DealDamage(2d6,Slashing,Magical,,0,,true,false)"
 
 // ==================================== Balthazar - The Dead Wastes ====================================
 // Bug Fix: Descriptions for Balthazar's The Dead Wastes and Wasting Mortal conditions now properly reflect functionality.
@@ -873,57 +833,34 @@ using "AdditionalSpellSlot_Level_2"
 data "Properties" "IsHidden"
 data "Boosts" "ActionResource(SpellSlot,1,2)"
 
-// ==================================== Grym ====================================
-
-new entry "UND_ADAMANTINEGOLEM_DEFAULT"
-type "StatusData"
-data "StatusType" "BOOST"
-using "UND_ADAMANTINEGOLEM_DEFAULT"
-// Adamantine Plating
-// data "DisplayName" "ha31b50c1g9fa4g4d92gb54egc0ff3d8ea227;1"
-// data "StackId" "UND_ADAMANTINEGOLEM_STATE"
-// data "StackPriority" "1"
-// data "TickType" "StartTurn"
-// data "Boosts" "MovementSpeedLimit(Walk);Resistance(Bludgeoning, Immune);Resistance(Cold, Immune);Resistance(Thunder, Immune);Resistance(Piercing, Immune);Resistance(Slashing, Immune);Resistance(Force, Immune);Resistance(Acid, Immune)"
-// data "Passives" "MAG_MeleeDebuff_AttackDebuff2_OnDamaged_Passive"
-// data "TickFunctors" "IF(InSurface('SurfaceLava')):ApplyStatus(UND_ADAMANTINEGOLEM_SUPERHEATED, 100, 2);"
-// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
-
-new entry "UND_ADAMANTINEGOLEM_SUPERHEATED"
-type "StatusData"
-data "StatusType" "BOOST"
-using "UND_ADAMANTINEGOLEM_SUPERHEATED"
-// Superheated
-// data "DisplayName" "h1c86e758g0b8dg49e9ga5b6g87479b0e9d22;2"
-// Exposure to lava has caused Grym's adamantine body to soften.&lt;br&gt;&lt;br&gt;Can now be affected by certain damage types and is vulnerable to Bludgeoning damage.
-// data "Description" "h6c2d0707g3f82g4c3fga196g4feff3edfb5d;18"
-// Exposure to lava has caused Grym's adamantine body to soften.&lt;br&gt;&lt;br&gt;Can now be affected by certain damage types and is &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1].
-data "Description" "h4148f0c7g4839g45ffg98b5g4bd501c21fc3;1"
-data "DescriptionParams" "DealDamage(,Bludgeoning)"
-// data "Icon" "statIcons_Superheated"
-// data "FormatColor" "Red"
-// data "SoundLoop" "Misc_Status_AdamantineGolem_SuperHeated_MO"
-// data "SoundStop" "Misc_Status_AdamantineGolem_SuperHeated_Stop"
-// data "StackId" "UND_ADAMANTINEGOLEM_STATE"
-// data "StackPriority" "2"
-// data "TickType" "StartTurn"
-// data "Boosts" "MovementSpeedLimit(Run)"
-// data "TickFunctors" "IF(InSurface('SurfaceLava')):ApplyStatus(UND_ADAMANTINEGOLEM_SUPERHEATED, 100, 2)"
-// data "StatusPropertyFlags" "DisableOverhead"
-data "StatusPropertyFlags" ""
-// data "OnRemoveFunctors" "ApplyStatus(UND_ADAMANTINEGOLEM_DEFAULT, 100, -1);"
-// data "StatusEffect" "9693a806-53c2-4fbe-9df0-a58e9a0e92b5"
-
 // ==================================== Oliver - The Wasting Quiet ====================================
 // Bug Fix: The Wasting Quiet: tick damage is now magical, the same as the application damage.
+// Bug Fix: Necrotic damage taken no longer interacts with the target's features, as if they were the source of the damage.
+
+// new entry "SCL_OLIVER_CURSEDOME_AURA"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// // The Wasting Quiet
+// data "DisplayName" "h2ab317e5g7cbdg44b9ga11agc9c80c65c0ce;2"
+// // Any creatures within this miasma of childlike terror are &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt; and take [1] every time they enter or start their turn inside.
+// data "Description" "h9acf0b6fg0aa5g46d1g8c9cg3e63dddc7a79;1"
+// data "DescriptionParams" "DealDamage(3d8,Necrotic)"
+// data "Icon" "Action_Legendary_Defensive"
+// data "SoundLoop" "Spell_Status_OliversNightDome_ST"
+// data "SoundStop" "Spell_Status_OliversNightDome_ST_Stop"
+// data "AuraRadius" "5"
+// data "AuraStatuses" "TARGET:IF(Enemy() and not Tagged('UNDEAD') and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(SCL_OLIVER_CURSEDOME_BUFF,100,-1)"
+// data "Boosts" "StatusImmunity(SG_Invisible)"
+// data "StatusPropertyFlags" "InitiateCombat;BringIntoCombat;DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+// data "StatusEffect" "79447eb2-0c9f-41f5-b97e-12f4c1ae2437"
 
 new entry "SCL_OLIVER_CURSEDOME_BUFF"
 type "StatusData"
 data "StatusType" "BOOST"
 using "SCL_OLIVER_CURSEDOME_BUFF"
-// The Wasting Quiet
+// // The Wasting Quiet
 // data "DisplayName" "hf4c45664g48efg409egaab3ga2d456ea80ed;2"
-// This creature is &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt; and takes [1] every time they enter or start their turn inside this miasma of childlike terror.
+// // This creature is &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt; and takes [1] every time they enter or start their turn inside this miasma of childlike terror.
 // data "Description" "hdd6c2290gdbadg4ceag977ag7d97d965481d;3"
 // data "DescriptionParams" "DealDamage(3d8,Necrotic)"
 // data "Icon" "GenericIcon_DamageType_Necrotic"
@@ -932,50 +869,13 @@ using "SCL_OLIVER_CURSEDOME_BUFF"
 // data "Boosts" "BlockVerbalComponent(); DialogueBlock(); SoundsBlocked()"
 // data "TooltipDamage" "DealDamage(3d8,Necrotic)"
 // data "TickFunctors" "DealDamage(3d8,Necrotic)"
-data "TickFunctors" "DealDamage(3d8,Necrotic,Magical)"
+data "TickFunctors" "DealDamage(3d8,Necrotic,Magical,,0,,true,true)"
 // data "OnApplyFunctors" "DealDamage(3d8,Necrotic,Magical)"
+data "OnApplyFunctors" "DealDamage(3d8,Necrotic,Magical,,0,,true,true)"
 // data "ApplyEffect" "8502b53e-d2d7-4ec5-aa3b-e85f3be86991"
 // data "StatusEffect" "6d293bd2-1258-4c4f-a006-bfc41628d893"
 // data "StatusEffectOnTurn" "878dfe31-5d87-4a20-b47f-97a8b5742c79"
 // data "EndEffect" "ebb1a68e-f541-49b1-b7db-3d7c6c9560b9"
-
-// ==================================== Yurgir - Infernal Dagger ====================================
-// Bug Fix: No longer has 3 DealDamage instances eligible for DamageBonus.
-// Bug Fix: Conditional damage is displayed as such ans the description is overhauled.
-// Changes: Now executes weapon functors.
-// Changes: Now deals main hand weapon damage.
-
-new entry "Target_InfernalDagger"
-type "SpellData"
-data "SpellType" "Target"
-// using "Target_MainHandAttack"
-using "Target_InfernalDagger"
-// data "Cooldown" "OncePerTurn"
-// data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical);DealDamage(max(1,2d4+6), Slashing);DealDamage(2d10, Poison);ApplyStatus(POISONED,100,2)"
-data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical,,0,,true,false);DealDamage(max(1,2d4+6), MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);DealDamage(2d10, Poison,,,0,,true,false);ApplyStatus(POISONED,100,2)"
-// data "Icon" "GenericIcon_DamageType_Physical"
-// Infernal Dagger
-// data "DisplayName" "h9b74272ag086ag4c53gbbbeg639c2590dcba;1"
-// Strike a fiendish blow that might &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poison&lt;/LSTag&gt; the target and deal an additional [2].
-// data "Description" "h55b162f2gcd09g4437ga125gadc2cdc93b4e;2"
-// Strike a fiendish blow &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoning&lt;/LSTag&gt; the target, dealing [1], and an additional [2] if the target fails a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;.
-data "Description" "hea38735dg37d7g493dgb93fgfe81839a18a4;1"
-// data "DescriptionParams" "DealDamage(2d4+6, Slashing);DealDamage(4d10, Poison)"
-data "DescriptionParams" "DealDamage(2d10, Poison);DealDamage(2d10, Poison)"
-// data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(4d10, Poison)"
-data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(2d10, Poison);DealDamage(2d10, Poison,,,,ad727a13-c6f0-4b5b-aefd-aac79c6ed46e)"
-// data "TooltipAttackSave" "MeleeWeaponAttack;Constitution"
-// data "TooltipStatusApply" "ApplyStatus(POISONED,100,2)"
-// data "PrepareSound" "CrSpell_Prepare_Orthon_Infernal_Dagger"
-// data "PrepareLoopSound" "CrSpell_Loop_Orthon_Infernal_Dagger_Stop"
-// data "CastSound" "CrSpell_Cast_InfernalDagger"
-// data "TargetSound" "CrSpell_Impact_InfernalDagger"
-// data "DualWieldingUseCosts" ""
-// data "SpellAnimation" "5fe05141-c5d6-43f9-af1f-2a11805668d9,,;86cbc8f5-6b28-405f-8d5d-7cb7d479fc00,,;65c176a8-6001-4234-897c-87a1c7ac2891,,;8e799518-5134-44e2-ae16-93445fcd65a2,,;f5e67dcc-1368-403b-bcc5-2dc0eb6c9193,,;e6d8bf28-871b-4f3b-ab2e-447107332366,,;,,;,,;,,"
-// data "SpellFlags" "IsMelee;IsHarmful;IsDefaultWeaponAction;IsEnemySpell;IsAttack"
-// data "PrepareEffect" "0e0b2dd9-23b6-40ef-b88a-953fed2a9a42"
-// data "CastEffect" "169aaaf6-1dba-4392-af39-598acca9ef22"
-// data "HitEffect" "870ccdb6-38cd-44f7-a578-3e3067d2a0e0"
 
 // ==================================== Mask of Vengeance - Vengeful Strike ====================================
 // Bug Fix: Honour ruleset bools.
@@ -1004,87 +904,11 @@ data "SpellSuccess" "DealDamage(MainMeleeWeapon+StrengthModifier, MainMeleeWeapo
 // data "CastEffect" "1e18afe1-2102-4032-85a6-6214676fe5ee"
 // data "TargetEffect" "550119e3-9c52-42ff-aecc-341ae462df42"
 
-// ============================ Raphael - Ravaging Inferno ============================
-// Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
-
-new entry "Projectile_LOW_Raphael_PrimordialHell"
-type "SpellData"
-data "SpellType" "Projectile"
-// using "Projectile_ChainLightning"
-using "Projectile_LOW_Raphael_PrimordialHell"
-// data "SpellProperties" "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt);GROUND:CreateSurface(5,,Fire);ApplyStatus(BURNING,100,1);"
-// data "TargetRadius" ""
-// data "AreaRadius" "5"
-// data "DeathType" "Incinerate"
-// data "ExplodeRadius" "5"
-// data "SpellRoll" "not SavingThrow(Ability.Dexterity, 15)"
-// data "SpellSuccess" "DealDamage(15d8,Fire,Magical);SpawnExtraProjectiles(Projectile_LOW_Raphael_PrimordialHell_Chain)"
-// data "SpellFail" "DealDamage(15d8/2,Fire,Magical);"
-// data "TargetConditions" "not Self() and not Dead() and Enemy()"
-// data "Trajectories" "001ce817-932e-4d8c-bf86-7097178a7806"
-// data "Icon" "Spell_Evocation_Fireball"
-// Ravaging Inferno
-// data "DisplayName" "hffafc26egb68fg422bgb0a4g272d32405b00;4"
-// Spend [3] souls to deal [1] and cause [2] &lt;LSTag Type="Spell" Tooltip="LOW_Raphael_DancingFlame"&gt;Igniting Sparks&lt;/LSTag&gt; to burst from each target hit.
-// data "Description" "h21f7be7agbd60g4bddgbc7eg175e4a393bcb;5"
-// data "DescriptionParams" "DealDamage(15d8, Fire);DealDamage(4d6, Fire)"
-// data "TooltipDamageList" "DealDamage(15d8, Fire)"
-// Target still takes half damage, but does not expel any &lt;LSTag Type="Spell" Tooltip="Projectile_LOW_Raphael_PrimordialHell_Chain"&gt;Igniting Sparks&lt;/LSTag&gt;.
-// data "TooltipOnSave" "23bf0c8d-a594-4f4c-9571-412af59cb434"
-// data "PrepareSound" ""
-// data "PrepareLoopSound" ""
-// data "CastSound" "CrSpell_Cast_PrimordialHell"
-// data "UseCosts" "ActionPoint:1;SpellSlotsGroup:3:3:1"
-// data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;6444d598-3e0e-4a14-902a-c067905a0b87,,;97f8db1e-e873-490a-9c33-8dbb4b97e583,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
-// data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;IsSpell"
-data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;IsSpell;IsHarmful"
-// data "HitAnimationType" "MagicalDamage_External"
-// data "RechargeValues" "3-6"
-// data "RequirementConditions" "HasStatus('LOW_RAPHAEL_MONSTER_FORM')"
-// data "PrepareEffect" "fdbf8e88-c3a5-4151-a81d-429985de422c"
-// data "CastEffect" "6d134da0-3f09-4bfd-928b-70443b382498"
-// data "HitEffect" "41de42e1-56d0-4336-8b44-99fc38281525"
-// data "DamageType" "Fire"
-// data "Sheathing" "DontChange"
-
-// ============================ Blight Vine - Constrict ============================
-// Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
-
-new entry "Target_Constrict_Blight_Vine"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_Constrict_Blight_Vine"
-// data "SpellSchool" "None"
-// data "Cooldown" "OncePerTurn"
-// data "TargetRadius" "14"
-// data "SpellRoll" "not SavingThrow(Ability.Strength, 14,AdvantageOnPlantImpedeAttacks())"
-// data "SpellSuccess" "AI_IGNORE:DealDamage(2d6+UnarmedMeleeAbilityModifier,Bludgeoning);AI_IGNORE:DealDamage(1d4,Necrotic);AI_IGNORE:ApplyStatus(BLIGHT_ENTANGLE,100,4); AI_IGNORE:ApplyStatus(SELF,BLIGHT_CONSTRICT,100,4); AI_ONLY:IF(HasStatus('DIGESTIVE_SAP')):DealDamage(3d6, Bludgeoning);AI_ONLY:DealDamage(1d6, Bludgeoning)"
-// data "TargetConditions" "Character() and not Dead() and not HasStatus('SG_Restrained')"
-// data "Icon" "GenericIcon_Intent_Control"
-// Constrict
-// data "DisplayName" "h20e775dagef27g467fga534g139c775adc5d;2"
-// Wrap your cursed tendrils around a creature to &lt;LSTag Type="Status" Tooltip="BLIGHT_ENTANGLE"&gt;Constrict&lt;/LSTag&gt; it.
-// data "Description" "hbcafc537gb434g4464g8b21g131c082a1a2d;7"
-// data "TooltipDamageList" "DealDamage(2d6+UnarmedMeleeAbilityModifier,Bludgeoning);DealDamage(1d4,Necrotic)"
-// data "TooltipAttackSave" "Strength"
-// data "TooltipStatusApply" "ApplyStatus(BLIGHT_ENTANGLE,100,2);"
-// data "CastSound" "CrSpell_Cast_Constrict"
-// data "TargetSound" "CrSpell_Impact_Constrict"
-// data "PreviewCursor" "Cast"
-// data "CastTextEvent" "Cast"
-// data "UseCosts" "ActionPoint:1"
-// data "SpellAnimation" "f8b91266-f61b-46e2-95ad-34e86a83204d,,;1a7a7d05-d4f3-4311-a48c-a97ce7f78e8f,,;e0b6c473-eb97-4c43-9c07-2071d2e573b9,,;,,;1f2796e2-914a-40ba-8fdf-f39863d094b8,,;,,;3596f970-a135-4242-a7bb-bec88f5b4502,,;,,;,,"
-// data "VerbalIntent" "Debuff"
-// data "SpellFlags" "HasSomaticComponent;IsConcentration;IsEnemySpell;CannotTargetTerrain;CannotTargetItems;IgnoreSilence"
-data "SpellFlags" "HasSomaticComponent;IsConcentration;IsEnemySpell;CannotTargetTerrain;CannotTargetItems;IgnoreSilence;IsHarmful"
-// data "SpellAnimationIntentType" "Aggressive"
-// data "CastEffect" "bb56d92b-66cb-4328-a013-490201b919f1"
-// data "TargetEffect" "444e121e-c8d3-4236-be2a-69d914aec905"
-// data "BeamEffect" "e2f39075-1cef-4d84-8217-9521d0bc6fcd"
-// data "Sheathing" "DontChange"
-
 // ============================ Shadow Mound - Slam ============================
-// Bug Fix: "DescriptionParams" melee damage corrected. 
+// Bug Fix: "DescriptionParams" melee damage corrected.
+// Bug Fix: Added missing Honour ruleset bools to prevent damage riders acting as a damage rider source.
+// Bug Fix: Necrotic damage is now magical.
+// Bug Fix: Added missing Necrotic "DamageType".
 
 new entry "Target_Slam_ShadowMound"
 type "SpellData"
@@ -1092,6 +916,7 @@ data "SpellType" "Target"
 // using "Target_UnarmedAttack"
 using "Target_Slam_ShadowMound"
 // data "SpellSuccess" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+data "SpellSuccess" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic,Magical,,0,,true,false)"
 // Slam
 // data "DisplayName" "h97d6995ag240cg4b86gb56bg24c02deeaa0b;1"
 // data "DescriptionParams" "DealDamage3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
@@ -1099,20 +924,7 @@ data "DescriptionParams" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeonin
 // data "TooltipDamageList" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
 // data "SpellAnimation" "8b8bb757-21ce-4e02-a2f3-97d55cf2f90b,,;6606c30b-be1c-4f17-ae6b-1a591c80b18c,,;f4ac302b-1569-404f-bd52-1fe443e265df,,;e8a5c57f-855b-4227-acaa-11e8ce8d7d64,,;7bb52cd4-0b1c-4926-9165-fa92b75876a3,,;2b81c18b-9698-4262-a623-932c2bb1296d,,;,,;,,;,,"
 // data "Sheathing" "DontChange"
-
-// ============================ Blight Vine - Slam ============================
-// Bug Fix: "DescriptionParams" melee damage corrected. 
-
-new entry "Target_Slam_Blight_Vine"
-type "SpellData"
-data "SpellType" "Target"
-// using "Target_Slam_ShadowMound"
-using "Target_Slam_Blight_Vine"
-// data "TargetRadius" "3"
-// data "SpellSuccess" "AI_IGNORE:DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
-// data "DescriptionParams" "DealDamage1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
-data "DescriptionParams" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic)"
-// data "TooltipDamageList" "DealDamage(1d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
+data "DamageType" "Necrotic"
 
 // ============================ Shadow-Cursed Undead ============================
 // Bug Fix: description cleanup.

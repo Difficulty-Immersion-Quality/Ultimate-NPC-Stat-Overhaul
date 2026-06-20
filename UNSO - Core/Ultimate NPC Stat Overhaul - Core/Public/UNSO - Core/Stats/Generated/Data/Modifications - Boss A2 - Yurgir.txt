@@ -1,0 +1,88 @@
+// ==================================== Yurgir - Concussive Burst ====================================
+// Bug Fix: "TooltipAttackSave" swapped from Constituion to MeleeWeaponAttack.
+// Bug Fix: No longer works with Sculpt Spells.
+// Bug Fix: No longer has a spell level.
+// Bug Fix: Added missing "HasSomaticComponent" "SpellFlags".
+// Note: Entry included in Goon's Inheritance Fixes.
+
+new entry "Zone_ConcussiveBlast_Orthon"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_Thunderwave"
+using "Zone_ConcussiveBlast_Orthon"
+// data "Level" "1"
+data "Level" ""
+// data "SpellSchool" "None"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" ""
+// data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack)"
+// data "SpellSuccess" "DealDamage(5d8,Thunder,Magical);Force(8, OriginToTarget)"
+// data "SpellFail" "DealDamage((5d8)/2,Thunder,Magical);"
+// data "TargetConditions" "not Dead() and not (HasPassive('SculptSpells', context.Source) and Ally()) and not Tagged('INVISIBLE_HELPER')"
+data "TargetConditions" "not Dead() and not Tagged('INVISIBLE_HELPER')"
+// data "Icon" "GenericIcon_DamageType_Thunder"
+// Concussive Burst
+// data "DisplayName" "hf594d706g2cb1g4a89g82afg7497dbb2e77f;2"
+// A thunderous blast that ripples over your foes and pushes them back.
+// data "Description" "h2186a044gcff1g4ef1ga3d2g1ab84d8c806c;3"
+// data "TooltipDamageList" "DealDamage(5d8,Thunder)"
+// data "TooltipAttackSave" "Constitution"
+data "TooltipAttackSave" "MeleeWeaponAttack"
+// data "PrepareSound" "CrSpell_Prepare_Orthon_Concussive_Blast"
+// data "PrepareLoopSound" "CrSpell_Loop_Orthon_Concussive_Blast_Stop"
+// data "CastSound" "CrSpell_Cast_ConcussiveBlast"
+// data "TargetSound" "CrSpell_Impact_ConcussiveBlast"
+// data "Shape" "Cone"
+// data "Range" "8"
+// data "Angle" "75"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "63292747-6485-4fd0-a1a1-281036b47bfc,,;dc5f3694-ff5a-4c7a-8a94-9e1bd1e43e7d,,;96ea0a93-2bb7-44c6-8b53-64b5c1ebc97e,,;64c836a3-d027-482f-b5a8-184230df9ee7,,;6aca20d7-92f6-4148-a8b2-4d87302f1d44,,;e587b162-1966-4c17-a137-7b40da647f46,,;,,;,,;,,"
+// data "WeaponTypes" "Ammunition"
+// data "SpellFlags" "AddFallDamageOnLand;IsHarmful;IsAttack;IsEnemySpell"
+data "SpellFlags" "HasSomaticComponent;AddFallDamageOnLand;IsHarmful;IsAttack;IsEnemySpell"
+// data "RechargeValues" ""
+// data "SpellAnimationIntentType" "Aggressive"
+// data "PrepareEffect" "80e0c758-0859-4126-9871-075d4882d9ce"
+// data "CastEffect" "4263a5da-abb4-4f49-b8fe-92e582d99920"
+// data "TargetEffect" "9682a720-5246-4bfe-894c-fd4ac0484e2f"
+// data "Sheathing" "Ranged"
+
+// ==================================== Infernal Dagger ====================================
+// Bug Fix: No longer has 3 DealDamage instances eligible for DamageBonus.
+// Bug Fix: Conditional damage is displayed as such ans the description is overhauled.
+// Bug Fix: Added missing Poison "DamageType".
+// Changes: Now executes weapon functors.
+// Changes: Now deals main hand weapon damage.
+
+new entry "Target_InfernalDagger"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_MainHandAttack"
+using "Target_InfernalDagger"
+// data "Cooldown" "OncePerTurn"
+// data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical);DealDamage(max(1,2d4+6), Slashing);DealDamage(2d10, Poison);ApplyStatus(POISONED,100,2)"
+data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical,,0,,true,false);DealDamage(max(1,2d4+6), MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);DealDamage(2d10, Poison,,,0,,true,false);ApplyStatus(POISONED,100,2)"
+// data "Icon" "GenericIcon_DamageType_Physical"
+// Infernal Dagger
+// data "DisplayName" "h9b74272ag086ag4c53gbbbeg639c2590dcba;1"
+// Strike a fiendish blow that might &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poison&lt;/LSTag&gt; the target and deal an additional [2].
+// data "Description" "h55b162f2gcd09g4437ga125gadc2cdc93b4e;2"
+// Strike a fiendish blow &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoning&lt;/LSTag&gt; the target, dealing [1], and an additional [2] if the target fails a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;.
+data "Description" "hea38735dg37d7g493dgb93fgfe81839a18a4;1"
+// data "DescriptionParams" "DealDamage(2d4+6, Slashing);DealDamage(4d10, Poison)"
+data "DescriptionParams" "DealDamage(2d10, Poison);DealDamage(2d10, Poison)"
+// data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(4d10, Poison)"
+data "TooltipDamageList" "DealDamage(2d4+6, Slashing);DealDamage(2d10, Poison);DealDamage(2d10, Poison,,,,ad727a13-c6f0-4b5b-aefd-aac79c6ed46e)"
+// data "TooltipAttackSave" "MeleeWeaponAttack;Constitution"
+// data "TooltipStatusApply" "ApplyStatus(POISONED,100,2)"
+// data "PrepareSound" "CrSpell_Prepare_Orthon_Infernal_Dagger"
+// data "PrepareLoopSound" "CrSpell_Loop_Orthon_Infernal_Dagger_Stop"
+// data "CastSound" "CrSpell_Cast_InfernalDagger"
+// data "TargetSound" "CrSpell_Impact_InfernalDagger"
+// data "DualWieldingUseCosts" ""
+// data "SpellAnimation" "5fe05141-c5d6-43f9-af1f-2a11805668d9,,;86cbc8f5-6b28-405f-8d5d-7cb7d479fc00,,;65c176a8-6001-4234-897c-87a1c7ac2891,,;8e799518-5134-44e2-ae16-93445fcd65a2,,;f5e67dcc-1368-403b-bcc5-2dc0eb6c9193,,;e6d8bf28-871b-4f3b-ab2e-447107332366,,;,,;,,;,,"
+// data "SpellFlags" "IsMelee;IsHarmful;IsDefaultWeaponAction;IsEnemySpell;IsAttack"
+// data "PrepareEffect" "0e0b2dd9-23b6-40ef-b88a-953fed2a9a42"
+// data "CastEffect" "169aaaf6-1dba-4392-af39-598acca9ef22"
+// data "HitEffect" "870ccdb6-38cd-44f7-a578-3e3067d2a0e0"
+data "DamageType" "Poison"

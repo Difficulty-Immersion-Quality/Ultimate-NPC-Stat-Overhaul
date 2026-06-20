@@ -1,0 +1,21 @@
+// ==================================== Gortash - Thunderthoom!  ====================================
+// Bug Fix: Added missing "IsAttack" "SpellFlags".
+// Note: Inherits additional fixes from Yurgir's Concussive Burst.
+
+new entry "Zone_WYR_Crossbow_Shotgun_Gortash"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_ConcussiveBlast_Orthon"
+using "Zone_WYR_Crossbow_Shotgun_Gortash"
+// data "Icon" "GenericIcon_Intent_Control"
+// // Thunderthoom! 
+// data "DisplayName" "h02b2fbe3g185eg420bg971bg59ebff8fb847;2"
+// data "CastSound" "CrSpell_Cast_CrossbowShotgun"
+// data "TargetSound" "TMP_Silence"
+// data "SpellAnimation" "73afb4e5-8cfe-4479-95cf-16889597fee3,,;9583ecee-cf6c-4735-86db-7ebf1df15eae,,;de006e3f-70fb-4eb7-a98d-d845d15b20e8,,;50696db7-d931-4734-915d-32d038ba99a5,,;6ec808e1-e128-44ef-9361-a713bf86de8f,,;,,;f920a0a6-f257-4ce4-8d17-2dcaa7bb7bbb,,;,,;,,"
+// data "WeaponTypes" "Ammunition"
+// data "SpellFlags" "HasSomaticComponent;AddFallDamageOnLand;IsHarmful;IsEnemySpell"
+data "SpellFlags" "HasSomaticComponent;AddFallDamageOnLand;IsHarmful;IsAttack;IsEnemySpell"
+// data "CastEffect" "22929c95-a08d-40bb-9842-c6ef6f059015"
+// data "TargetEffect" ""
+// data "HitEffect" "58e30e58-71f8-465c-9bf4-a6418afd987b"

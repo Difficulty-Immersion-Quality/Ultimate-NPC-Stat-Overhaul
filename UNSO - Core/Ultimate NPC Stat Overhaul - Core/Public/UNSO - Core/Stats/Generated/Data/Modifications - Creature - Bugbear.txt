@@ -1,5 +1,6 @@
 // ==================================== Brute ====================================
-// Bug Fix: DRS
+// Bug Fix: Swapped "DealDamage" functors for a "CharacterWeaponDamage" boost, to prevent damage riders acting as a damage rider source.
+// Bug Fix: Now works with offhand weapon attacks.
 
 new entry "Brute_Bugbear"
 type "PassiveData"
@@ -15,4 +16,4 @@ data "Conditions" ""
 // data "Conditions" "IsWeaponAttack() and HasDamageEffectFlag(DamageFlags.Hit) and IsMeleeAttack() and not IsMiss()"
 data "StatsFunctors" ""
 // data "StatsFunctors" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):DealDamage(1d8, MainMeleeWeaponDamageType)"
-data "Boosts" "IF(IsAttackType(AttackType.MeleeWeaponAttack)):CharacterWeaponDamage(1d8)"
+data "Boosts" "IF(IsMeleeWeaponAttack()):CharacterWeaponDamage(1d8)"
