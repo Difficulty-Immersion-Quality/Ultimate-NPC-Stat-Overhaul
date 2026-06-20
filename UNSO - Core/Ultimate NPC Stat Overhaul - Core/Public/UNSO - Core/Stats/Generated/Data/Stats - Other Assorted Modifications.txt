@@ -1248,25 +1248,6 @@ data "DescriptionParams" "DealDamage(,Radiant);DealDamage(,Necrotic)"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
 // data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
 
-// ============================ Bulette ============================
-// Bug Fix: Incorrect "TooltipStatusApply" duration for the Acid condition application.
-
-new entry "Target_Bite_Bulette"
-type "SpellData"
-data "SpellType" "Target"
-// using "Target_Bite"
-using "Target_Bite_Bulette"
-// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
-// Bite a target and possibly push it back [1].
-// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
-// data "DescriptionParams" "Distance(1.5)"
-// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
-// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
-data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
-// data "SpellAnimationIntentType" "Aggressive"
-// data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
-// data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
-
 // ============================ Dominated Red Dragon - Fire Breath ============================
 // Bug Fix: Description referred to humanoid Fireball, and it being cast with hands...
 

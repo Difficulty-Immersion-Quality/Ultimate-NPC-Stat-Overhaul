@@ -1,0 +1,100 @@
+// ============================ Deadly Leap ============================
+// Bug Fix: The explosion is now flagged as a harmful spell.
+
+// new entry "Projectile_Jump_Bulette"
+// type "SpellData"
+// data "SpellType" "Projectile"
+// using "Projectile_Jump_HookHorror"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" "GROUND:CreateExplosion(Projectile_Jump_Bulette_Spawn)"
+// data "TargetConditions" "CanStand('0ea356fc-7a6f-4c60-8017-86349e2777ab')"
+// data "Trajectories" "a6154eff-e34d-4f7b-b115-ada400496e97,3ea6c884-d13b-855d-882c-b08fa701f1ee,58a077ad-fa49-05ce-c438-5c74ad9021a6"
+// data "Icon" "Action_Jump"
+// // Deadly Leap
+// data "DisplayName" "h950bba7agb376g4c97gb479gaac721aedae8;1"
+// // Leap to your targets, pushing them back, and possibly making them fall &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+// data "Description" "h54f10337g1d80g41f6gb848g3e03e518782b;3"
+// data "ExtraDescription" ""
+// data "TooltipDamageList" "DealDamage(3d6+4,Bludgeoning);DealDamage(3d6+4,Slashing)"
+// data "TooltipOnSave" "f6bac56a-c82f-4265-87b4-00a7ff7746eb"
+// data "CastSound" "CrSpell_Cast_DeadlyLeap"
+// data "UseCosts" "Movement:6"
+// data "SpellAnimation" "958dd4d6-3ad3-4f58-a4ae-9499743a6dab,,;,,;d7741bd3-2ec9-41aa-803b-39d2be52aac5,,;78da379c-5535-4a07-b650-b695831bab9a,,;1accbc00-728f-44d4-8926-268944ce5f03,,;,,;,,;,,;,,"
+// data "SpellFlags" "IsJump;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IgnoreVisionBlock;CannotTargetItems;CannotTargetCharacter"
+// data "CastEffect" "fb36e39f-1bc9-4421-96ef-0acdd663a0c6"
+
+new entry "Projectile_Jump_Bulette_Spawn"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_Jump_Bulette"
+using "Projectile_Jump_Bulette_Spawn"
+// data "SpellProperties" ""
+// data "AreaRadius" "4"
+// data "ExplodeRadius" "4"
+// data "SpellRoll" "not SavingThrow(Ability.Strength, 16)"
+// data "SpellSuccess" "DealDamage(3d6+StrengthModifier,Bludgeoning); DealDamage(3d6+4,Slashing); ApplyStatus(PRONE,100,2); Force(4);"
+// data "SpellFail" "DealDamage((3d6+4)/2,Bludgeoning);DealDamage((3d6+4)/2,Slashing);Force(2);"
+// data "TargetConditions" "not Self() and not Dead() and Enemy()"
+// data "TooltipDamageList" "DealDamage(3d6+4,Bludgeoning);DealDamage(3d6+4,Slashing)"
+// data "SpellAnimation" ",,;,,;6c816a60-d5e5-45c4-9b4c-27bf3f1cca4e,,;,,;,,;,,;,,;,,;,,"
+// data "SpellFlags" "IsJump;IgnoreVisionBlock;RangeIgnoreVerticalThreshold;CannotTargetItems"
+data "SpellFlags" "IsJump;IgnoreVisionBlock;RangeIgnoreVerticalThreshold;CannotTargetItems;IsHarmful"
+
+// ============================ Bite ============================
+// Bug Fix: Incorrect "TooltipStatusApply" duration for the Acid condition application.
+
+new entry "Target_Bite_Bulette"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Bite"
+using "Target_Bite_Bulette"
+// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
+// Bite a target and possibly push it back [1].
+// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
+// data "DescriptionParams" "Distance(1.5)"
+// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
+// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
+data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
+// data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+// ============================ Corrosive Phlegm ============================
+// Bug Fix: Removed the spell level of 0.
+// Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
+// Note: Included in Goon's Inheritance Fixes.
+
+new entry "Projectile_ToxicSpit_Bulette"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_AcidSplash"
+using "Projectile_ToxicSpit_Bulette"
+// data "Level" "0"
+data "Level" ""
+// data "SpellSchool" "None"
+// data "SpellProperties" "GROUND:CreateSurface(2,3,Acid)"
+// data "TargetRadius" "14"
+// data "AreaRadius" "2"
+// data "DeathType" "Acid"
+// data "ExplodeRadius" "2"
+// data "SpellRoll" "not SavingThrow(Ability.Dexterity, 15)"
+// data "SpellSuccess" "DealDamage(2d8+3,Acid)"
+// data "SpellFail" "DealDamage((2d8+3)/2,Acid)"
+// data "TargetConditions" "not Dead()"
+// data "Trajectories" "f1512ea3-8d5d-4320-87ac-6674309bac49"
+// data "Icon" "GenericIcon_DamageType_Acid"
+// // Corrosive Phlegm
+// data "DisplayName" "hee8288cag120cg4bc3gaeccgf8452633bd76;2"
+// // Expectorate on a target.
+// data "Description" "h13d36fa8g5377g45d7g8c28gebdf476e508e;4"
+// data "TooltipDamageList" "DealDamage(2d8+3,Acid)"
+// data "TooltipOnSave" "961753f4-c345-4bc4-b408-1d5b87a5ab0c"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "accc80a3-002d-4236-9343-2e29b7bee5fd,,;5ed9b242-79de-4eca-a884-319b3c139edf,,;eb088193-13f6-44ec-889d-2f1966587697,,;72ee5db6-869d-4a43-9add-8056ab7159e3,,;ea6e0c45-db66-4034-a4eb-4e890d91168e,,;d21075df-3648-4626-b211-84cd99a21cb4,,;,,;,,;,,"
+// data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CanAreaDamageEvade"
+data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CanAreaDamageEvade;IsHarmful"
+// data "HitAnimationType" "MagicalDamage_External"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "PrepareEffect" "cc98935b-6ddf-4386-9f10-bd324fc1bd8d"
+// data "CastEffect" "91f536d1-be47-4c7b-812e-4ade8041b77c"
+// data "Sheathing" "DontChange"
