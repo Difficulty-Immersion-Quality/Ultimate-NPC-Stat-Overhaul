@@ -94,7 +94,7 @@ data "DisplayName" "ha3a1c23bgc133g41c4gbba6ga8be11bbbfa3;3"
 // // Hurl fiery energy that damages the target and creates a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface on impact.
 // data "Description" "h487a736dgdca8g4175ga3d3g22cea0bbd9f9;2"
 // // Spend [3] soul to teleport to an area and deal [1] where you land. The impact blast spreads a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface in a [2] radius.
-data "Description" "h2af2c1a0g258bg4dceg9eb5g40f728f1a685;1"
+data "Description" "h482a6c03gb906g495dg94dbg398ff8f881ab;1"
 // data "DescriptionParams" "DealDamage(2d8, Fire);Distance(3)"
 data "TooltipPermanentWarnings" ""
 // data "TooltipAttackSave" "RangedSpellAttack"
