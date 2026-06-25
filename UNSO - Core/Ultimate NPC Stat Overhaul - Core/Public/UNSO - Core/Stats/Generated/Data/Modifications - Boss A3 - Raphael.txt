@@ -1,5 +1,7 @@
+// TODO: IIRC there was shit to fix with the way Raphael ignores fire resistance and immunity.
 // ============================ Ravaging Inferno ============================
 // Bug Fix: Is now flagged as a harmful spell and will not ignore effects like Sanctuary.
+// TODO: Bad inheritance.
 
 new entry "Projectile_LOW_Raphael_PrimordialHell"
 type "SpellData"
@@ -40,3 +42,65 @@ data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;IsSpell;IsHar
 // data "HitEffect" "41de42e1-56d0-4336-8b44-99fc38281525"
 // data "DamageType" "Fire"
 // data "Sheathing" "DontChange"
+
+// ============================ Hell Crawler ============================
+// Note: These changes largely mirror Helldusk Boots fixes in Goon's Gear and Throwing Overhaul.
+
+new entry "Target_LOW_Raphael_Hellcrawler"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_MAG_Legendary_HellCrawler"
+using "Target_LOW_Raphael_Hellcrawler"
+// data "Level" "6"
+// data "Cooldown" "OncePerTurn"
+data "AreaRadius" "3"
+// data "SpellProperties" "AI_IGNORE:GROUND:CreateExplosion(Projectile_MAG_Infernal_MistyStep_Fireball);GROUND:TeleportSource()"
+data "SpellProperties" "AI_IGNORE:GROUND:CreateExplosion(Goon_Projectile_MAG_Infernal_MistyStep_Fireball);GROUND:TeleportSource()"
+// data "RequirementConditions" "not HasStatus('LOW_RAPHAEL_MONSTER_FORM') and not HasStatus('LOW_RAPHAEL_OVERCHARGE')"
+// data "TargetConditions" "CanStand('001b64f6-4918-4045-8197-878cf263e893')"
+// // Spend [3] soul to teleport to a location, dealing [1] in a [2] radius upon arrival.
+// data "Description" "h68f72cc5g8e18g4366g9ac5gc8264d013f44;2"
+// // Spend [3] soul to teleport to an area and deal [1] where you land. The impact blast spreads a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface in a [2] radius.
+data "Description" "h482a6c03gb906g495dg94dbg398ff8f881ab;1"
+// data "DescriptionParams" "DealDamage(2d8, Fire);Distance(3);1"
+data "TooltipPermanentWarnings" ""
+data "TooltipAttackSave" "Dexterity"
+// data "UseCosts" "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
+data "RequirementConditions" ""
+// data "RechargeValues" "4-6"
+
+new entry "Goon_Projectile_MAG_Infernal_MistyStep_Fireball"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_ChromaticOrb_Fire"
+using "Projectile_MAG_Infernal_MistyStep_Fireball"
+// data "Level" "1"
+data "Level" ""
+// data "SpellSchool" "Evocation"
+data "SpellSchool" ""
+// data "SpellContainerID" "Projectile_ChromaticOrb"
+data "SpellContainerID" ""
+// data "AreaRadius" "3"
+// data "ExplodeRadius" "3"
+// data "SpellRoll" "not SavingThrow(Ability.Dexterity, 15)"
+// data "SpellSuccess" "DealDamage(2d8,Fire,Magical)"
+// data "SpellFail" "DealDamage(1d8,Fire,Magical)"
+data "SpellFail" "DealDamage(2d8/2,Fire,Magical)"
+// data "Trajectories" "c07540e0-9581-42e0-8f4f-f2698957d171"
+// // Chromatic Orb: Fire
+// data "DisplayName" "he160b381g7b4fg4babg801cgcc1ad3153559;1"
+// // Hellcrawler
+data "DisplayName" "ha3a1c23bgc133g41c4gbba6ga8be11bbbfa3;3"
+// // Hurl fiery energy that damages the target and creates a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface on impact.
+// data "Description" "h487a736dgdca8g4175ga3d3g22cea0bbd9f9;2"
+// // Spend [3] soul to teleport to an area and deal [1] where you land. The impact blast spreads a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface in a [2] radius.
+data "Description" "h2af2c1a0g258bg4dceg9eb5g40f728f1a685;1"
+// data "DescriptionParams" "DealDamage(2d8, Fire);Distance(3)"
+data "TooltipPermanentWarnings" ""
+// data "TooltipAttackSave" "RangedSpellAttack"
+data "TooltipAttackSave" "Dexterity"
+// data "UseCosts" ""
+// data "SpellFlags" "IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade"
+// data "PrepareEffect" ""
+// data "CastEffect" ""
