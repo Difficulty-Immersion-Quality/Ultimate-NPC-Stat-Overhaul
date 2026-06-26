@@ -1,0 +1,20 @@
+// ==================================== Immutable Form ====================================
+// Bug Fix: The +5 to Saving Throws against being Banished works for more banishments.
+// TODO: Custom version with a pseudo status group for POLYMORPHED_UNWILLING tagged conditions, add immunity to that instead.
+// Because we want to be able to have characters with this passive, also able to use transformations they might be given.
+// Don't do it to the vanilla entry because it's not relevant for Ansur, Apostle of Myrkul, Flesh, Hellfire Watcher, Ketheric Thorm, Milil, Orin, and Steel Watcher.
+
+new entry "ImmutableForm"
+type "PassiveData"
+using "ImmutableForm"
+// // Immutable Form
+// data "DisplayName" "h7cee150cgc296g4e6dg86f2geb0e2726bcfb;2"
+// // Spells that alter someone's form have no effect on the affected entity, and it has a +[1] bonus to &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells that would remove it from this plane.
+// data "Description" "h273b7889g3a20g435dg996fg315a22d6f163;3"
+// // Entity is immune to &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphs&lt;/LSTag&gt;, and gains a +[1] bonus to &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells that would &lt;LSTag Type="Status" Tooltip="BANISHED"&gt;Banish&lt;/LSTag&gt; it, or otherwise remove it from this plane.
+data "Description" "h273b7889g3a20g435dg996fg315a22d6f163;3"
+// data "DescriptionParams" "5"
+// data "Icon" "PassiveFeature_SteelWatcher_ImmutableForm"
+// data "Properties" "Highlighted"
+// data "Boosts" "StatusImmunity(SG_Polymorph);IF(SpellId('Target_Banishment')):RollBonus(SavingThrow,5);IF(SpellId('Projectile_ArcaneShot_BanishingArrow')):RollBonus(SavingThrow,5);"
+data "Boosts" "StatusImmunity(SG_Polymorph);IF(Goon_IsBanishSpell()):RollBonus(SavingThrow,5)"
