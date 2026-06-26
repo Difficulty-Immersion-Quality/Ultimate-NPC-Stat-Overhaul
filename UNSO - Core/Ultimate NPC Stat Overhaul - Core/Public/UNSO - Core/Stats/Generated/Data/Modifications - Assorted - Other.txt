@@ -12,7 +12,7 @@ using "ImmutableForm"
 // // Spells that alter someone's form have no effect on the affected entity, and it has a +[1] bonus to &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells that would remove it from this plane.
 // data "Description" "h273b7889g3a20g435dg996fg315a22d6f163;3"
 // // Entity is immune to &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphs&lt;/LSTag&gt;, and gains a +[1] bonus to &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells that would &lt;LSTag Type="Status" Tooltip="BANISHED"&gt;Banish&lt;/LSTag&gt; it, or otherwise remove it from this plane.
-data "Description" "h273b7889g3a20g435dg996fg315a22d6f163;3"
+data "Description" "h0a2cb7c9g7cebg4cd2gb2deg3886bfae4d18;1"
 // data "DescriptionParams" "5"
 // data "Icon" "PassiveFeature_SteelWatcher_ImmutableForm"
 // data "Properties" "Highlighted"

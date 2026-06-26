@@ -444,6 +444,8 @@
 	<content contentuid="hd3f13f46g70ccg4a58g8152gb375b4603262" version="1">Those who die in the shadows are cursed to remain there forever.&lt;br&gt;&lt;br&gt;These undead have reduced &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; and &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt;, are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1], have &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to[2], and cannot use spells or weapon actions.</content>
 	<!-- "Target_LOW_Raphael_Hellcrawler", "Goon_Projectile_MAG_Infernal_MistyStep_Fireball" -->
 	<content contentuid="h482a6c03gb906g495dg94dbg398ff8f881ab" version="1">Spend [3] soul to teleport to an area and deal [1] where you land. The impact blast spreads a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface in a [2] radius.</content>
+	<!-- "ImmutableForm" -->
+	<content contentuid="h0a2cb7c9g7cebg4cd2gb2deg3886bfae4d18" version="1">Entity is immune to &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphs&lt;/LSTag&gt;, and gains a +[1] bonus to &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells that would &lt;LSTag Type="Status" Tooltip="BANISHED"&gt;Banish&lt;/LSTag&gt; it, or otherwise remove it from this plane.</content>
 
 <!-- ==================================== Extras ==================================== -->
 
