@@ -446,6 +446,10 @@
 	<content contentuid="h482a6c03gb906g495dg94dbg398ff8f881ab" version="1">Spend [3] soul to teleport to an area and deal [1] where you land. The impact blast spreads a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface in a [2] radius.</content>
 	<!-- "ImmutableForm" -->
 	<content contentuid="h0a2cb7c9g7cebg4cd2gb2deg3886bfae4d18" version="1">Entity is immune to &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphs&lt;/LSTag&gt;, and gains a +[1] bonus to &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells that would &lt;LSTag Type="Status" Tooltip="BANISHED"&gt;Banish&lt;/LSTag&gt; it, or otherwise remove it from this plane.</content>
+	<!-- "Rampage" -->
+	<content contentuid="h8f47d735g4588g43d0g9bb6g12fe4a584beb" version="1">When a gnoll &lt;LSTag Tooltip="Downed"&gt;Downs&lt;/LSTag&gt; a creature with a melee attack, it gains a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and [1] &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; for [2] round.</content>
+	<!-- "GNOLL_RAMPAGE" -->
+	<content contentuid="h29a0eb35g0390g484bg8692ge7db075e0a26" version="1">The gnoll has a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and [1] &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;.</content>
 
 <!-- ==================================== Extras ==================================== -->
 

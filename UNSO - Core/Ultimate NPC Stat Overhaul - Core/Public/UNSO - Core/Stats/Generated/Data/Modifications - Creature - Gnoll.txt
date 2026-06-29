@@ -1,0 +1,35 @@
+// ==================================== Rampage ====================================
+// Bug Fix: Descriptions now match the mechanics.
+// Interesting implementation checking for TotalDamageDoneGreaterThan as a means to see if you downed the target.
+
+new entry "Rampage"
+type "PassiveData"
+using "Rampage"
+// // Rampage
+// data "DisplayName" "h5a07bcc9gab1cg4e48g9ad1g1646c69f57c3;1"
+// // When a gnoll &lt;LSTag Tooltip="Downed"&gt;Downs&lt;/LSTag&gt; a creature with a melee attack, the gnoll can use a bonus action to move up to half its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and make a bite attack.
+// data "Description" "h669e78bfg8235g4d25g8884g4014409a5947;2"
+// // When a gnoll &lt;LSTag Tooltip="Downed"&gt;Downs&lt;/LSTag&gt; a creature with a melee attack, it gains a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and [1] &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; for [2] round.
+data "Description" "h8f47d735g4588g43d0g9bb6g12fe4a584beb;1"
+data "DescriptionParams" "Distance(4.5);1"
+// data "Icon" "PassiveFeature_Generic_Explosion"
+// data "Properties" "Highlighted"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "IsMeleeAttack() and Enemy() and HasHPLessThan(1) and TotalDamageDoneGreaterThan(0)"
+// data "StatsFunctors" "ApplyStatus(SELF,GNOLL_RAMPAGE,100,1)"
+
+new entry "GNOLL_RAMPAGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "GNOLL_RAMPAGE"
+// // Rampage
+// data "DisplayName" "hff5da981g75e9g4858gb0d2gc9c9b5d83d43;1"
+// // When a gnoll Downs a creature with a melee attack on its turn, it regains 1 bonus action and half of its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;.
+// data "Description" "hb0d4eb86gf0d4g4ddcg8749g24e61ca08075;1"
+// // The gnoll has a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and [1] &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;.
+data "Description" "h29a0eb35g0390g484bg8692ge7db075e0a26;1"
+data "DescriptionParams" "Distance(4.5)"
+// data "Icon" "statIcons_Gnoll_Rampage"
+// data "SoundVocalStart" "SHOUT"
+// data "StackId" "GNOLL_RAMPAGE"
+// data "Boosts" "ActionResource(Movement,4.5,0);ActionResource(BonusActionPoint,1,0)"
