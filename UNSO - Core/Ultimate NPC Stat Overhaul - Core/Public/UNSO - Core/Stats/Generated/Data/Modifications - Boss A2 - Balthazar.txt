@@ -57,3 +57,55 @@ data "DescriptionParams" "DealDamage(4d6,Necrotic);RegainHitPoints(,)"
 // data "StatusEffect" "6d293bd2-1258-4c4f-a006-bfc41628d893"
 // data "StatusEffectOnTurn" "fa4ffb93-faa2-4524-ba01-c060d1e45667"
 // data "EndEffect" "ebb1a68e-f541-49b1-b7db-3d7c6c9560b9"
+
+// ==================================== Legendary Action: Spectral Aspect ====================================
+// Bug Fix: Spectral Aspect condition now specifies that the creature ignores AoO.
+// Changes: Spectral Aspect description improved.
+
+// new entry "LEGENDARYACTION_SHA_NECROMANCER_SPECTRALFORM"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// // Legendary Action: Spectral Aspect
+// data "DisplayName" "h3b327e56g18d2g4c87gafe5gbce09e66d121;2"
+// // Balthazar can adopt his &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_SPECTRALFORM"&gt;Spectral Aspect&lt;/LSTag&gt; after being struck.
+// data "Description" "h57de0a10g7d19g4ceag94a5g00bcd24e5c3b;2"
+// data "Icon" "Action_Legendary_Defensive"
+// data "FormatColor" "Gold"
+// data "StackId" "LEGENDARYACTION_SHA_NECROMANCER_SPECTRALFORM"
+// data "Boosts" "UnlockInterrupt(Interrupt_SHA_Necromancer_SpectralForm); Tag(CHASM_IMMUNE_FLY)"
+
+// new entry "Interrupt_SHA_Necromancer_SpectralForm"
+// type "InterruptData"
+// // Spectral Aspect
+// data "DisplayName" "h96805c73gc32bg48fcgb622g2c2f5d95ed9d;3"
+// // Adopt your &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_SPECTRALFORM"&gt;Spectral Aspect&lt;/LSTag&gt; after being struck.
+// data "Description" "h93722309g57efg4858g82bage2b2a9172de7;3"
+// data "InterruptContext" "OnCastHit"
+// data "InterruptContextScope" "Self"
+// data "Conditions" "((HasFunctor(StatsFunctorType.DealDamage) and (IsHit() or HasDamageEffectFlag(DamageFlags.SavingThrow))) or IsHit()) and Enemy(context.Source, context.Observer) and Self(context.Target, context.Observer) and not HasStatus('SHA_NECROMANCER_SPECTRALFORM_TECHNICAL')"
+// data "Properties" "ApplyStatus(OBSERVER_OBSERVER,SHA_NECROMANCER_SPECTRALFORM,100,1)"
+// data "InterruptDefaultValue" "Enabled"
+
+new entry "SHA_NECROMANCER_SPECTRALFORM"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SHA_NECROMANCER_SPECTRALFORM"
+// // Spectral Aspect
+// data "DisplayName" "hedd3d76bg8a5cg4af5ga916g05819d12c410;2"
+// // This creature has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Acid, Fire, Lightning, and Thunder damage, and is &lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to Cold and Necrotic damage. Creatures that strike it become &lt;LSTag Type="Status" Tooltip="CHILL_TOUCH"&gt;Bone Chilled&lt;/LSTag&gt; for [1] turns. It cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PARALYZED"&gt;Paralysed&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="RESTRAINED"&gt;Restrained&lt;/LSTag&gt; or made &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;. It can also &lt;LSTag Type="Spell" Tooltip="Projectile_Fly"&gt;Fly&lt;/LSTag&gt; while in this ghostly form.
+// data "Description" "h0ca9a101g9248g4a56gbb56g6bb74f5b82b7;4"
+// // This creature has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1],[2],[3], and[4], and is &lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to[5] and[6]. Creatures that strike it become &lt;LSTag Type="Status" Tooltip="CHILL_TOUCH"&gt;Bone Chilled&lt;/LSTag&gt; for [7] turns.&lt;br&gt;It cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PARALYZED"&gt;Paralysed&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="RESTRAINED"&gt;Restrained&lt;/LSTag&gt; or made &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;, and doesn't provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.&lt;br&gt;It can also &lt;LSTag Type="Spell" Tooltip="Projectile_Fly"&gt;Fly&lt;/LSTag&gt; while in this ghostly form.
+data "Description" "h3602fd21g99a9g4d28g8730g38263863f127;1"
+// data "DescriptionParams" "2"
+data "DescriptionParams" "DealDamage(,Acid);DealDamage(,Fire);DealDamage(,Lightning);DealDamage(,Thunder);DealDamage(,Cold);DealDamage(,Necrotic);2"
+// data "Icon" "Action_Legendary_Defensive"
+// data "SoundStart" "Misc_Status_BalthazarSpectralForm_Enter_MO"
+// data "SoundLoop" "Misc_Status_BalthazarSpectralForm_Loop_MO"
+// data "SoundStop" "Misc_Status_BalthazarSpectralForm_Loop_MO_Stop"
+// data "StackId" "SHA_NECROMANCER_SPECTRALFORM"
+// data "TickType" "EndTurn"
+// data "Boosts" "Resistance(Acid, Resistant); Resistance(Fire, Resistant); Resistance(Lightning, Resistant); Resistance(Thunder, Resistant); Resistance(Cold, Immune); Resistance(Necrotic, Immune); StatusImmunity(SG_Charmed);StatusImmunity(SG_Frightened);StatusImmunity(SG_Paralyzed);StatusImmunity(SG_Petrified);StatusImmunity(SG_Prone);StatusImmunity(SG_Restrained); Tag(CHASM_IMMUNE_FLY);UnlockSpell(Projectile_Fly_Spell) "
+// data "Passives" "SHA_Necromancer_SpectralForm_BoneChill"
+// data "OnApplyFunctors" "RemoveStatus(LEGENDARYACTION_SHA_NECROMANCER_SPECTRALFORM)"
+// data "StatusGroups" "SG_Ignore_AOO"
+// data "StatusEffect" "7a9df5f2-59de-4021-a0d5-b54692630967"

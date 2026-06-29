@@ -450,6 +450,8 @@
 	<content contentuid="h8f47d735g4588g43d0g9bb6g12fe4a584beb" version="1">When a gnoll &lt;LSTag Tooltip="Downed"&gt;Downs&lt;/LSTag&gt; a creature with a melee attack, it gains a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and [1] &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; for [2] round.</content>
 	<!-- "GNOLL_RAMPAGE" -->
 	<content contentuid="h29a0eb35g0390g484bg8692ge7db075e0a26" version="1">The gnoll has a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and [1] &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;.</content>
+	<!-- "SHA_NECROMANCER_SPECTRALFORM" -->
+	<content contentuid="h3602fd21g99a9g4d28g8730g38263863f127" version="1">This creature has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1],[2],[3], and[4], and is &lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to[5] and[6]. Creatures that strike it become &lt;LSTag Type="Status" Tooltip="CHILL_TOUCH"&gt;Bone Chilled&lt;/LSTag&gt; for [7] turns.&lt;br&gt;It cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PARALYZED"&gt;Paralysed&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="RESTRAINED"&gt;Restrained&lt;/LSTag&gt; or made &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;, and doesn't provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.&lt;br&gt;It can also &lt;LSTag Type="Spell" Tooltip="Projectile_Fly"&gt;Fly&lt;/LSTag&gt; while in this ghostly form.</content>
 
 <!-- ==================================== Extras ==================================== -->
 
