@@ -33,3 +33,23 @@ data "DescriptionParams" "Distance(4.5)"
 // data "SoundVocalStart" "SHOUT"
 // data "StackId" "GNOLL_RAMPAGE"
 // data "Boosts" "ActionResource(Movement,4.5,0);ActionResource(BonusActionPoint,1,0)"
+
+// ==================================== Sudden Rush ====================================
+// Bug Fix: Correct movement speed bonus of 9m shown in the tooltip instead of 18.
+// Bug Fix: Fixed a syntax error with the "IgnoreLeaveAttackRange" boost, added the "SG_Ignore_AOO" status group to double down.
+
+new entry "GNOLL_SUDDENRUSH"
+type "StatusData"
+data "StatusType" "BOOST"
+using "GNOLL_SUDDENRUSH"
+// // Sudden Rush
+// data "DisplayName" "haf02f15ag3d00g467cg9223gb3cd8eb14c36;1"
+// // &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; is increased by [1] and moving doesn't provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.
+// data "Description" "h87a925a2g0184g4101ga2e9ga9ec1b3759a8;1"
+// data "DescriptionParams" "Distance(18)"
+data "DescriptionParams" "Distance(9)"
+// data "Icon" "GenericIcon_Intent_Buff"
+// data "StackId" "GNOLL_SUDDENRUSH"
+// data "Boosts" "ActionResource(Movement,9,0);IgnoreLeaveAttackRange"
+data "Boosts" "ActionResource(Movement,9,0);IgnoreLeaveAttackRange()"
+data "StatusGroups" "SG_Ignore_AOO"
