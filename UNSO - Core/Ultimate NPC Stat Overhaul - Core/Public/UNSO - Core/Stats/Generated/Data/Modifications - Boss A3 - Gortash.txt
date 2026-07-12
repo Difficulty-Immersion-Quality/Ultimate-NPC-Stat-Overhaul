@@ -1,4 +1,4 @@
-// ==================================== Thunderthoom!  ====================================
+// ==================================== Thunderthoom! ====================================
 // Bug Fix: Added missing "IsAttack" "SpellFlags".
 // Note: Inherits additional fixes from Yurgir's Concussive Burst.
 
@@ -23,6 +23,7 @@ data "SpellFlags" "HasSomaticComponent;AddFallDamageOnLand;IsHarmful;IsAttack;Is
 // ==================================== Tyrannical Branding ====================================
 // Bug Fix: Interrupt can be used while Invisible.
 // Bug Fix: Interrupt cannot target entities with any Invisibility conditions, instead of just the base Invisibility condition.
+// Changes: Can now be used by Invisible characters.
 
 new entry "Interrupt_WYR_DivineBeckoning_Gortash"
 type "InterruptData"
@@ -34,7 +35,264 @@ using "Interrupt_WYR_DivineBeckoning_Gortash"
 // data "InterruptContext" "OnCastHit"
 // data "InterruptContextScope" "Self"
 // data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and not HasStatus('INVISIBILITY') and not AnyEntityIsItem() and HasLastAttackTriggered()"
-data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and not HasStatus('SG_Invisible') and not AnyEntityIsItem() and HasLastAttackTriggered()"
+data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and not HasStatus('SG_Invisible') and not AnyEntityIsItem() and IsHit() and HasLastAttackTriggered()"
 // data "Properties" "UseSpell(OBSERVER_SOURCE,Target_WYR_DivineBeckoning_Gortash,true,true,true,,true)"
 // data "InterruptDefaultValue" "Enabled"
 data "InterruptFlags" "InterruptWhileInvisible"
+
+// ==================================== Invoke the Black Hand ====================================
+// Bug Fix: Added safeguards to prevent Gortash repeatedly using Invoke the Black Hand, as well as safeguards for proper removal of the related conditions post-combat.
+// Bug Fix: Instead of looking for a status application, the interrupt now checks for getting hit and does not trigger until the final attack is finished. This is done to prevent any issues with the casting animation being cut short.
+// Changes: Can now be used by Invisible characters.
+// Changes: Descriptions improved.
+
+new entry "Interrupt_WYR_Gortash_Gortane"
+type "InterruptData"
+using "Interrupt_WYR_Gortash_Gortane"
+// // Invoke the Black Hand
+// data "DisplayName" "h41d457e2g55c8g4c0bgb13ag382354876430;2"
+// // Gortash calls upon Bane's tyrannical aid, gaining [1] along with new strength and powers.
+// data "Description" "hb962f447g0ccbg4c8ag801ag0c271689a8c0;1"
+// data "DescriptionParams" "GainTemporaryHitPoints(150)"
+// data "Icon" "GenericIcon_Intent_Buff"
+data "TooltipStatusApply" "ApplyStatus(WYR_GORTASH_BANE_BUFF,100,-1)"
+// data "InterruptContext" "OnStatusApplied"
+data "InterruptContext" "OnCastHit"
+// data "InterruptContextScope" "Self"
+// data "Container" "YesNoDecision"
+// data "Conditions" "HasStatus('WYR_GORTASH_GORTANE_TECHNICAL',context.Observer) and not HasStatus('WYR_GORTASH_GORTANE') and not HasStatus('WYR_GORTASH_BANE_BUFF');"
+data "Conditions" "Self(context.Target,context.Observer) and not Self(context.Source,context.Observer) and HasStatus('WYR_GORTASH_GORTANE_TECHNICAL',context.Observer) and not HasStatus('WYR_GORTASH_GORTANE') and not HasStatus('WYR_GORTASH_BANE_BUFF') and IsHit() and HasLastAttackTriggered()"
+// data "Properties" "UseSpell(OBSERVER_OBSERVER,Shout_WYR_CallForHelp_Bane_Gortash,true,true,true);"
+data "EnableCondition" "not HasStatus('WYR_GORTASH_GORTANE')"
+data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+// data "Cooldown" "OncePerCombat"
+// data "InterruptDefaultValue" "Enabled"
+data "InterruptFlags" "InterruptWhileInvisible"
+
+// new entry "Shout_WYR_CallForHelp_Bane_Gortash"
+// type "SpellData"
+// data "SpellType" "Shout"
+// using "Shout_ActionSurge"
+// data "Cooldown" "OncePerCombat"
+// data "AIFlags" ""
+// data "SpellProperties" "AI_ONLY:ApplyStatus(AI_HELPER_BUFF_LARGE,100,-1); AI_IGNORE:ApplyStatus(WYR_GORTASH_BANE_BUFF,100,-1); AI_IGNORE:ApplyStatus(WYR_GORTASH_GORTANE,100,-1)"
+// data "Icon" "GenericIcon_Intent_Buff"
+// // Invoke the Black Hand
+// data "DisplayName" "h09a82df0gc406g4333g8a50g55b17a58b464;2"
+// // Gortash calls upon Bane's tyrannical aid, gaining [1] along with new strength and powers. 
+// data "Description" "h9835c7d2geb17g4c77gaf0eg45a7b9129a35;4"
+// data "DescriptionParams" "GainTemporaryHitPoints(150)"
+// data "TooltipStatusApply" "ApplyStatus(WYR_GORTASH_BANE_BUFF,100,-1)"
+// data "CastSound" "CrSpell_Cast_GortashBane"
+// data "UseCosts" ""
+// data "SpellAnimation" "fef19cdc-5bff-49df-8326-2194f65b0196,,;7dcb86e8-10a0-4b2b-8ae8-1c89b34eb662,,;d023fb2a-9f22-4be4-ac17-5f21f0dccd38,,;2880434c-46b2-464b-aeb8-f3d9b1399274,,;,,;,,;,,;,,;,,"
+// data "SpellFlags" "HasVerbalComponent;IsEnemySpell;IgnoreVisionBlock;RangeIgnoreBlindness"
+// data "SpellAnimationIntentType" "Action"
+// data "Requirements" ""
+// data "RequirementConditions" "not HasStatus('WYR_GORTASH_BANE_BUFF') and not HasStatus('IRRESISTIBLE_DANCE')"
+// data "PrepareEffect" ""
+// data "CastEffect" "341fb811-c788-4d23-846e-65ef31197790"
+// data "Sheathing" "Sheathed"
+
+// new entry "WYR_GORTASH_GORTANE_TECHNICAL"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// // %%% EMPTY
+// data "DisplayName" "hb83fc963g4147g4730g8f4bg842f265d9119;1"
+// data "StackId" "WYR_GORTASH_GORTANE_TECHNICAL"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// new entry "WYR_GORTASH_GORTANE"
+// type "StatusData"
+// data "StatusType" "POLYMORPHED"
+// // %%% Technical: Transforms Gortash into his Gortane form
+// data "DisplayName" "h3468c882g262fg45dbg8137g766c0a228117;1"
+// // %%% Empty
+// data "Description" "h657200ceg3a14g4e0bgb65cg999446f4ea88;1"
+// data "Icon" "Spell_Illusion_DisguiseSelf_Human_Male"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
+// data "OnApplyFunctors" ""
+// data "OnApplyFunctors" "ApplyStatus(LEGENDARYACTION_WYR_DIVINEBECKONING_GORTASH,100,-1)"
+// data "OnRemoveFunctors" "ApplyStatus(SELF,WYR_GORTASH_GORTANE_REMOVE_VFX,100,1)"
+// data "TemplateID" "4b426b07-2fde-421d-b7db-56d66486e844"
+// data "Rules" "ceccc4eb-d774-4cd5-9147-12322b81b763"
+// data "StatusGroups" "SG_Polymorph;SG_RemoveOnRespec"
+// data "StatusEffect" "bdaf11d1-f404-440c-b5fa-94fc1652c5ad"
+// data "Passives" ""
+// data "Passives" "LegendaryAction_WYR_DivineBeckoning_Gortash"
+
+// GLO_CombatNPCs_PostEA failsafe
+new entry "WYR_GORTASH_BANE_BUFF"
+type "StatusData"
+data "StatusType" "BOOST"
+// using "ENLARGE"
+using "WYR_GORTASH_BANE_BUFF"
+// // Avatar of Tyranny
+// data "DisplayName" "h7801a70cga82eg4516g87c2g7dfbbebaf18f;2"
+// // Bane has come to Gortash's aid! Gortash has [1], advantage to Strength Saving Throws and Strength Ability checks... And now has fearsome new powers!
+// data "Description" "h38977128gd0c6g44bdgbfa3g5090b757f441;5"
+// // Bane has come to Gortash's aid! Gortash has [1], &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; to &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;... And now has fearsome new powers!
+data "Description" "h2c881a43gbef3g4912g8995gb8e096b0d37c;1"
+// data "DescriptionParams" "GainTemporaryHitPoints(150)"
+// data "Icon" "Action_Barbarian_Rage"
+// data "FormatColor" "Gold"
+// data "SoundVocalStart" "ATTACK"
+// data "SoundStart" "Misc_Status_GortashBane_Start"
+// data "SoundLoop" "Misc_Status_GortashBane_Start"
+// data "SoundStop" "Misc_Status_GortashBane_Start"
+// data "StackId" "WYR_GORTASH_BANE_BUFF"
+// data "Boosts" "Ability(Strength,4);TemporaryHP(150); Advantage(Ability, Strength); Advantage(SavingThrow, Strength); ScaleMultiplier(1.5); CharacterUnarmedDamage(1d4); UnlockSpell(Target_WYR_CrushingFist_Gortash); UnlockSpell(Shout_WYR_ChainsOfTyranny_Gortash); AttackSpellOverride(Target_WYR_UnarmedAttack_Bane_Gortash, Target_MainHandAttack); AiArchetypeOverride(act3_WYR_Gortash_melee,1); Resistance(Fire, Immune); Resistance(Thunder, Immune); Resistance(Force, Immune)"
+// data "Passives" "EnlargeWeightMedium;EnlargeWeightLarge;ExtraAttack"
+// data "OnApplyFunctors" "RestoreResource(ActionPoint,100%,0); RestoreResource(BonusActionPoint,100%,0); RestoreResource(Movement,100%,0)"
+data "RemoveEvents" "OnCombatEnded"
+// data "OnRemoveFunctors" "RemoveStatus(WYR_GORTASH_GORTANE)"
+// data "OnRemoveFunctors" "RemoveStatus(WYR_GORTASH_GORTANE); RemoveStatus(LEGENDARYACTION_WYR_DIVINEBECKONING_GORTASH)"
+data "OnRemoveFunctors" "RemoveStatus(WYR_GORTASH_GORTANE);RemoveStatus(LEGENDARYACTION_WYR_DIVINEBECKONING_GORTASH)"
+// data "StatusEffect" "66769569-4bc9-4ded-8217-d2a564dc32c6"
+
+// ==================================== The Closed Fist of Bane ====================================
+// Bug Fix: Condition tooltip fixes.
+
+// new entry "Target_WYR_CrushingFist_Gortash"
+// type "SpellData"
+// data "SpellType" "Target"
+// using "Target_FindFamiliar_Dog"
+// data "Level" "6"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" "GROUND:Spawn(4a7dbf09-3bd1-4547-ae5f-dcc1ce4b3ea9, Projectile_AiHelper_Summon_Strong, WYR_GORTASH_CRUSHINGFIST_HANGING);AI_ONLY:DealDamage(12d8,Bludgeoning)"
+// data "RequirementConditions" ""
+// data "TargetConditions" "Character() and not Dead() and Enemy() and not Tagged('BANITE')"
+// data "Icon" "PassiveFeature_Generic_Explosion"
+// // The Closed Fist of Bane
+// data "DisplayName" "he516819bg7d97g4c09gbdf5g6bc64746199d;3"
+// // Conjure the divine aspect of Bane the Accursed - a fist that hangs in the air until the end of the round before falling, crushing anyone under it for [1].
+// data "Description" "h5dc29864g9065g49c4gaba1gbc88a98b7cd5;2"
+// data "DescriptionParams" "DealDamage(12d10,Force)"
+// data "CastSound" "CrSpell_Cast_GortashCrushingFist"
+// data "TargetSound" "Silence"
+// data "UseCosts" "BonusActionPoint:1"
+// data "RitualCosts" ""
+// data "SpellAnimation" ",,;,,;2da41f71-3471-4ac8-a268-63983acbe88c,,;70c2d89d-98bd-4462-82e2-8e30e9c727be,,;,,;,,;,,;,,;,,"
+// data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;CannotTargetItems"
+// data "RechargeValues" "2-6"
+// data "PrepareEffect" ""
+// data "CastEffect" "875eb0e1-51b7-4ce2-9569-3df77b281b28"
+
+new entry "WYR_GORTASH_CRUSHINGFIST_HANGING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "WYR_GORTASH_CRUSHINGFIST_HANGING"
+// // %%% EMPTY
+// data "DisplayName" "hb2e1bdbagdec3g45d9gb1a9g69b472dd8d35;3"
+// // The Closed Fist of Bane
+data "DisplayName" "he516819bg7d97g4c09gbdf5g6bc64746199d;3"
+// // Conjure the divine aspect of Bane the Accursed - a fist that hangs in the air until the end of the round before falling, crushing anyone under it for [1].
+data "Description" "h5dc29864g9065g49c4gaba1gbc88a98b7cd5;2"
+data "DescriptionParams" "DealDamage(12d10,Force)"
+data "Icon" "PassiveFeature_Generic_Explosion"
+// data "FormatColor" "White"
+// data "TickType" "StartTurn"
+// data "TickFunctors" "RemoveStatus(WYR_GORTASH_CRUSHINGFIST_HANGING)"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+// data "OnApplyFunctors" "IF(Character() and not Tagged('ACT3_WYR_GORTASH'))ApplyStatus(WYR_AI_HELPER_AVOIDAREA_EXCEPT_GORTASH,100,-1)"
+// data "StatusEffect" "16afd8d3-be99-445c-bcab-dce474d521e0"
+
+// new entry "WYR_AI_HELPER_AVOIDAREA_EXCEPT_GORTASH"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "AI_HELPER_AVOIDAREA_STRONG_RADIUS4"
+// data "AuraStatuses" "TARGET:IF(Character() and not Tagged('ACT3_WYR_GORTASH')):ApplyStatus(AI_HELPER_AVOIDAREA_STRONG,100,-1)"
+
+// ==================================== Tyrant's Bindings ====================================
+// Bug Fix: Chain of Tyranny condition damage no longer benefits from the target's features.
+// Changes: Descriptions improved.
+
+new entry "Shout_WYR_ChainsOfTyranny_Gortash"
+type "SpellData"
+data "SpellType" "Shout"
+// using "Shout_ArmsOfHadar"
+using "Shout_WYR_ChainsOfTyranny_Gortash"
+// data "Level" "6"
+// data "Cooldown" "OncePerTurn"
+// data "SpellProperties" "AI_ONLY:ApplyStatus(WYR_AI_HELPER_CHAINSOFTYRANNY_GORTASH,100,1);"
+// data "AreaRadius" "12"
+// data "SpellRoll" "not SavingThrow(Ability.Wisdom, 18)"
+// data "SpellSuccess" "ApplyStatus(WYR_GORTASH_CHAINSOFTYRANNY,100,1);ApplyStatus(WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC,100,1);"
+data "SpellSuccess" "ApplyStatus(WYR_GORTASH_CHAINSOFTYRANNY,100,1)"
+// data "SpellFail" ""
+// data "TargetConditions" "Character() and Enemy()"
+// data "AoEConditions" "Enemy()"
+// data "Icon" "GenericIcon_Intent_Control"
+// // Tyrant's Bindings
+// data "DisplayName" "h3d40ce2bg9af6g4738gabf0g4b2efcccca40;2"
+// // Create heavy magical chains that bind to your targets, halving their &lt;LSTag Tooltip="MovementSpeed"&gt;Movement&lt;/LSTag&gt; speed. &lt;br&gt;&lt;br&gt;If the chains are still present at the beginning of your next turn, they break, dealing [1] to all targets.
+// data "Description" "h6a4fdae8g5acdg4f6agbe67ga77325d9738c;4"
+// // Create heavy magical chains that bind to your targets, halving their &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;If the chains are still present at the beginning of your next turn, they break, dealing [1] to all targets.
+data "Description" "hd22b7c95gcebeg4a0egba28ga95bb3e4b597;1"
+// data "DescriptionParams" "DealDamage(8d8, Force)"
+// data "TooltipDamageList" "DealDamage(8d8, Force)"
+// data "TooltipAttackSave" "Wisdom"
+// data "TooltipStatusApply" "ApplyStatus(WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC,100,1)"
+data "TooltipStatusApply" "ApplyStatus(WYR_GORTASH_CHAINSOFTYRANNY,100,1)"
+// data "CastSound" "CrSpell_Cast_GortashChainsofTyranny"
+// data "TargetSound" "CrSpell_Impact_GortashChainsofTyranny"
+// data "VocalComponentSound" "Silence"
+// data "UseCosts" "BonusActionPoint:1"
+// data "SpellAnimation" ",,;,,;62e74220-ba87-4fe7-aa99-9d12cab9d654,,;b1f3f86a-a1fc-43f6-8a2b-0110a9f99ead,,;,,;,,;,,;,,;,,"
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsConcentration"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "RechargeValues" "4-6"
+// data "MemoryCost" ""
+// data "PrepareEffect" ""
+// data "CastEffect" "c752e95d-efa7-434a-82b9-7499fa583a92"
+// data "TargetEffect" "2f08a6c2-3f94-4a75-bc90-bb90027777e6"
+// data "DamageType" "Force"
+// data "Sheathing" "DontChange"
+
+// new entry "WYR_AI_HELPER_CHAINSOFTYRANNY_GORTASH"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "AI_HELPER_DEBUFF"
+// data "Boosts" "AC(-3);Disadvantage(AllSavingThrows);Disadvantage(AttackRoll);"
+
+new entry "WYR_GORTASH_CHAINSOFTYRANNY"
+type "StatusData"
+data "StatusType" "EFFECT"
+// using "WITCH_BOLT"
+using "WYR_GORTASH_CHAINSOFTYRANNY"
+// // Chain of Tyranny
+// data "DisplayName" "h7be0cc59gdfc0g4ac4ga67cg2c89d9832cda;1"
+// // Affected entity has only half its movement speed. When the chain breaks, it'll take 8d8 Force damage.
+// data "Description" "h986543f7g2bd3g41e3g8dabg7c0033260301;2"
+// // Affected entity has only half its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If the chain breaks at the start of Gortash's turn, the affected entity takes [1].
+data "Description" "hc30a0201g8bc1g42ebgbc4dgad714bcee0ad;1"
+data "DescriptionParams" "DealDamage(8d8,Force)"
+// data "Icon" "GenericIcon_Intent_Control"
+// data "FormatColor" "Red"
+// data "SoundStart" "Spell_Status_GortashChainsofTyranny_Start"
+// data "SoundLoop" "Spell_Status_GortashChainsofTyranny_Start"
+// data "SoundStop" "Spell_Status_GortashChainsofTyranny_End"
+// data "Boosts" "MovementSpeedLimit(Walk); ActionResourceMultiplier(Movement,50,0)"
+// data "TickType" "StartTurn"
+// data "TickFunctors" "DealDamage(8d8, Force)"
+data "TickFunctors" "DealDamage(8d8, Force,Magical,,0,,true,true)"
+// data "StatusPropertyFlags" "ForceOverhead;TickingWithSource;DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+// data "OnApplyFunctors" ""
+// data "OnRemoveFunctors" "RemoveStatus(WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC)"
+// data "StatusEffect" "2f1f593c-3421-4c54-bc2b-00787e68ae91"
+// data "BeamEffect" "69d2c975-e1f2-4364-8358-c578ae016394"
+
+new entry "WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC"
+type "StatusData"
+data "StatusType" "BOOST"
+using "WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC"
+// // Chain of Tyranny
+// data "DisplayName" "hd6da8977gc467g4a50g91c7ga2950ac8a6d4;1"
+// // Affected entity has only half its movement speed. When the chain breaks, it'll take [1].
+// data "Description" "h0b4dae23g2843g40d0gb33bg4b226ccfc9b7;1"
+// // Affected entity has only half its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If the chain breaks at the start of Gortash's turn, the affected entity takes [1].
+data "Description" "hc30a0201g8bc1g42ebgbc4dgad714bcee0ad;1"
+// data "DescriptionParams" "DealDamage(8d8,Force)"
+// data "Icon" "GenericIcon_Intent_Control"
+// data "FormatColor" "Red"
+// data "StackId" "WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC"

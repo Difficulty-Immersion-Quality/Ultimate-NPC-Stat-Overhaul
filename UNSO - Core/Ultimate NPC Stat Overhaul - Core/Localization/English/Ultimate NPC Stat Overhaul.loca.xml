@@ -411,7 +411,7 @@
 	<content contentuid="hcb41b89eg4155g44bfg8474g32fb031bdd15" version="1">! CX Boost: Level 6 Spells - Control</content>
 	<content contentuid="hfcd2e6c0g291fg4e62gaaccg48073db379de" version="1">They gain access to spells from configuration.</content>
 
-<!-- ==================================== Other ==================================== -->
+<!-- ==================================== Modifications ==================================== -->
 
 	<!-- "SHA_NightsongResurrection", "GOON_NIGHTSONGRESURRECTION_TECHNICAL" -->
 	<content contentuid="hb2f5c3eag43a7g4f82g89d8g10640b01212b" version="1">Blessed with the favour of a goddess, Nightsong cannot be permanently killed. When unconscious, Nightsong can regain 1 &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; if she succeeds a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; at the beginning of her turn.</content>
@@ -453,7 +453,19 @@
 	<!-- "SHA_NECROMANCER_SPECTRALFORM" -->
 	<content contentuid="h3602fd21g99a9g4d28g8730g38263863f127" version="1">This creature has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1],[2],[3], and[4], and is &lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to[5] and[6]. Creatures that strike it become &lt;LSTag Type="Status" Tooltip="CHILL_TOUCH"&gt;Bone Chilled&lt;/LSTag&gt; for [7] turns.&lt;br&gt;It cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PARALYZED"&gt;Paralysed&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="RESTRAINED"&gt;Restrained&lt;/LSTag&gt; or made &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;, and doesn't provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.&lt;br&gt;It can also &lt;LSTag Type="Spell" Tooltip="Projectile_Fly"&gt;Fly&lt;/LSTag&gt; while in this ghostly form.</content>
 
-<!-- ==================================== Extras ==================================== -->
+<!-- ==================================== Modifications - Boss A3 - Gortash -->
+
+	<!-- Invoke the Black Hand -->
+	<!-- "WYR_GORTASH_BANE_BUFF" -->
+	<content contentuid="h2c881a43gbef3g4912g8995gb8e096b0d37c" version="1">Bane has come to Gortash's aid! Gortash has [1], &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; to &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;... And now has fearsome new powers!</content>
+
+	<!-- Tyrant's Bindings -->
+	<!-- "Shout_WYR_ChainsOfTyranny_Gortash" -->
+	<content contentuid="hd22b7c95gcebeg4a0egba28ga95bb3e4b597" version="1">Create heavy magical chains that bind to your targets, halving their &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;If the chains are still present at the beginning of your next turn, they break, dealing [1] to all targets.</content>
+	<!-- "WYR_GORTASH_CHAINSOFTYRANNY", "WYR_GORTASH_CHAINSOFTYRANNY_COSMETIC" -->
+	<content contentuid="hc30a0201g8bc1g42ebgbc4dgad714bcee0ad" version="1">Affected entity has only half its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If the chain breaks at the start of Gortash's turn, the affected entity takes [1].</content>
+
+<!-- ==================================== Modifications - Extras ==================================== -->
 
 	<!-- "DEATHSHEAD_UNSTOPPABLE_1" -->
 	<content contentuid="hebdf9566ga7a1g4ce2gb495gb29a460bc838" version="1">Reduce the next damage taken by the entity by [1], consuming one charge of Unstoppable. Unstoppable creatures cannot be moved by any external forces, neither mundane nor magical.</content>
