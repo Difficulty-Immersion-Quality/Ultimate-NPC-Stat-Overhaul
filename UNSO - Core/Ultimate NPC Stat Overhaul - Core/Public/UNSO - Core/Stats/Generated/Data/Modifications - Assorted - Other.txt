@@ -18,3 +18,18 @@ data "Description" "h0a2cb7c9g7cebg4cd2gb2deg3886bfae4d18;1"
 // data "Properties" "Highlighted"
 // data "Boosts" "StatusImmunity(SG_Polymorph);IF(SpellId('Target_Banishment')):RollBonus(SavingThrow,5);IF(SpellId('Projectile_ArcaneShot_BanishingArrow')):RollBonus(SavingThrow,5);"
 data "Boosts" "StatusImmunity(SG_Polymorph);IF(Goon_IsBanishSpell()):RollBonus(SavingThrow,5)"
+
+// ==================================== Shadow Stealth ====================================
+// TODO: "SLIPPERY_SHADOWS" doesn't exist.
+
+// new entry "ShadowStealth"
+// type "PassiveData"
+// // Shadow Stealth
+// data "DisplayName" "h2e0a6d7dgd7ecg4bb4g96dbg39a98cb948b5;1"
+// // While Lightly or Heavily Obscured, this creature does not provoke opportunity attacks when they move away from a foe.
+// data "Description" "hb012e4c0gbd15g4733gb837g6df8b86aae21;3"
+// data "Icon" "PassiveFeature_Generic_Darkness"
+// data "Properties" "Highlighted"
+// data "StatsFunctorContext" "OnMovedDistance;OnObscurityChanged"
+// data "Conditions" "(((context.HasContextFlag(StatsFunctorContext.OnMovedDistance)) and (not HasObscuredState(ObscuredState.Clear,context.Source) or HasObscuredState(ObscuredState.HeavilyObscured,context.Source) or HasObscuredState(ObscuredState.LightlyObscured,context.Source)) and not HasStatus('SHADOW_STEALTH', context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnObscurityChanged) and (not HasObscuredState(ObscuredState.Clear) or HasObscuredState(ObscuredState.HeavilyObscured) or HasObscuredState(ObscuredState.LightlyObscured)) and not HasStatus('SHADOW_STEALTH'))) and Combat()"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnMovedDistance)):ApplyStatus(SELF,SLIPPERY_SHADOWS,100,-1);IF(context.HasContextFlag(StatsFunctorContext.OnObscurityChanged)):ApplyStatus(SLIPPERY_SHADOWS,100,-1)"
