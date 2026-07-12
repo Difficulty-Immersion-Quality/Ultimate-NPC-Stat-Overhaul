@@ -1,4 +1,4 @@
-// ==================================== Immutable Form ====================================
+// ==================================== Immutable Form - Constructs and Bosses ====================================
 // Bug Fix: The +5 to Saving Throws against being Banished works for more banishments.
 // TODO: Custom version with a pseudo status group for POLYMORPHED_UNWILLING tagged conditions, add immunity to that instead.
 // Because we want to be able to have characters with this passive, also able to use transformations they might be given.
@@ -33,3 +33,31 @@ data "Boosts" "StatusImmunity(SG_Polymorph);IF(Goon_IsBanishSpell()):RollBonus(S
 // data "StatsFunctorContext" "OnMovedDistance;OnObscurityChanged"
 // data "Conditions" "(((context.HasContextFlag(StatsFunctorContext.OnMovedDistance)) and (not HasObscuredState(ObscuredState.Clear,context.Source) or HasObscuredState(ObscuredState.HeavilyObscured,context.Source) or HasObscuredState(ObscuredState.LightlyObscured,context.Source)) and not HasStatus('SHADOW_STEALTH', context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnObscurityChanged) and (not HasObscuredState(ObscuredState.Clear) or HasObscuredState(ObscuredState.HeavilyObscured) or HasObscuredState(ObscuredState.LightlyObscured)) and not HasStatus('SHADOW_STEALTH'))) and Combat()"
 // data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnMovedDistance)):ApplyStatus(SELF,SLIPPERY_SHADOWS,100,-1);IF(context.HasContextFlag(StatsFunctorContext.OnObscurityChanged)):ApplyStatus(SLIPPERY_SHADOWS,100,-1)"
+
+// ==================================== Reach from Beyond - Necromites and Death Shepherds ====================================
+// Bug Fix: Now deals magical damage.
+
+new entry "Target_ClawsOfTheGrave_Necromite"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_ChillTouch"
+using "Target_ClawsOfTheGrave_Necromite"
+// data "SpellSuccess" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic)"
+// // Reach from Beyond
+// data "DisplayName" "hd2d390bcge9bfg4d77gae70g0c0f9bd33ea8;2"
+// // Defile a target with Myrkul's decaying magic.
+// data "Description" "ha008bb9cg0c9eg4e32gb31bg83955996395b;3"
+// data "DescriptionParams" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic)"
+data "DescriptionParams" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic,Magical)"
+// data "TooltipDamageList" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic)"
+data "TooltipDamageList" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic,Magical)"
+// data "TooltipStatusApply" ""
+// data "PrepareSound" "Spell_Prepare_Damage_Necrotic_Gen_L1to3"
+// data "PrepareLoopSound" "Spell_Prepare_Damage_Necrotic_Gen_L1to3_Loop"
+// data "CastSound" "CrSpell_Cast_ClawsOfTheGrave"
+// data "TargetSound" "CrSpell_Impact_ClawsOfTheGrave"
+// data "SpellAnimation" ",,;39d0d707-6c48-4cdb-9a37-9c0044a492cb,,;8883c191-3f37-47a9-aefc-8a4e46b071af,,;12df6961-285e-49f5-9617-f44b0a91d6db,,;,,;b1bbabac-1b3d-4919-a429-c93666198ee3,,;,,;,,;,,"
+// data "SpellFlags" "HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsHarmful;IsSwarmAttack"
+// data "CastEffect" "6bbc3847-96d1-4161-9627-0f8ec3e40412"
+// data "TargetEffect" "e189a5d2-fbb8-485f-9c0e-daafb9fa5c44"
+// data "Sheathing" "Sheathed"
