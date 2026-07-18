@@ -284,6 +284,10 @@
 	<content contentuid="h36931741g699ag4985gbcfege6f3ee0f22e3" version="1">! Subclass: Scion of the Three Rogue</content>
 	<content contentuid="hd531f517ge555g4f6bga031g88a49cfe1e42" version="1">A Rogue who draws power from the Dead Three: Bane, Bhaal, and Myrkul.</content>
 
+	<!-- "LAB_Progression_Warlock_Undead" --> 
+	<content contentuid="he45495c6g6344g486dg831egd43dcabce947" version="1">! Subclass: Undead Warlock</content>
+	<content contentuid="hed50dae2g16deg4054gbc99gfbcaa62689b2" version="1">A Warlock who has made a profane pact with a creature that defies the cycle of life and death.</content>
+
 <!-- ==================================== Mods - Custom Classes ==================================== -->
 
 	<!-- "LAB_Progression_Artificer" --> 
