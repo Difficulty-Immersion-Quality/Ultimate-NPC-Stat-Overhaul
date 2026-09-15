@@ -546,7 +546,7 @@ using "Dwarf_Cultist_Bhaal_NightBlade"
 // data "Progressions" ""
 data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 
-// Death's Head of Bhaal (Inherits Rogue progressions, fixed racials
+// Death's Head of Bhaal (Inherits Rogue progressions, fixed racials)
 new entry "Dwarf_Cultist_Bhaal_DeathsHead"
 type "Character"
 using "Dwarf_Cultist_Bhaal_DeathsHead"
@@ -4728,6 +4728,15 @@ using "Brewer"
 // data "Passives" "ExtraAttack;TurnResistance;ImmuneToControlUndead;AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;LegendaryAction_MixChangeExplosion_Brewer"
 data "Passives" "CX_Boss_Boost;CX_Martial_Boost;ExtraAttack;TurnResistance;ImmuneToControlUndead;AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;LegendaryAction_MixChangeExplosion_Brewer"
 
+// Crawling Claw - Attacks against it no longer have advantage when it's obscured, as intended by Blindsight.
+new entry "CrawlingClaw"
+type "Character"
+using "CrawlingClaw"
+// data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Darkvision"
+// data "DarkvisionRange" "0"
+data "DarkvisionRange" "9"
+
 // "_Undead"
 //  ├─ "DarkJusticiar_Melee"                              --- Justiciar Avengers in Gauntlet of Shar (Added Fighter progression)
 //  │   ├─ "DarkJusticiar_Boss"                           --- Justiciar Crusaders in Gauntlet of Shar (swapped Fighter progressions to Paladin)
@@ -4850,6 +4859,12 @@ data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
 //  │   ├─ "LOW_OskarsBeloved_Poltergeist"
 //  │   └─ "LOW_OskarsBeloved_Spirit"
 
+new entry "FloatingHead"
+type "Character"
+using "FloatingHead"
+// data "PersonalStatusImmunities" "BLEEDING;SLEEPING;SCL_SHADOW_CURSE"
+data "PersonalStatusImmunities" "SG_Bleeding;BLEEDING;SG_Sleeping;SCL_SHADOW_CURSE"
+
 //TODO: "FloatingHead" has more passives
 // Visage of Cowardice; Visage of Greed; Visage of Guilt; Visage of Heartlessness; Visage of Obedience; Visage of Regret - Gerringothe Thorm adds (Added Mini Boss boost)
 new entry "TWN_TollCollector_Visage"
@@ -4857,6 +4872,12 @@ type "Character"
 using "TWN_TollCollector_Visage"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;TWN_TC_Visage_CursedGold"
 data "Passives" "CX_MiniBoss_Boost;AttackOfOpportunity;DarknessRules;Darkvision;TWN_TC_Visage_CursedGold"
+
+new entry "GLO_Jergal"
+type "Character"
+using "GLO_Jergal"
+// data "PersonalStatusImmunities" "KNOCKED_OUT;SG_Charmed;SG_Frightened;SG_Poisoned;PARALYZED;STUNNED"
+data "PersonalStatusImmunities" "KNOCKED_OUT;SG_Charmed;SG_Frightened;SG_Poisoned;SG_Paralyzed;SG_Stunned;DEVOURED_INT"
 
 // Oathbreaker Knight, Custodian of the Fallen (Added Paladin progressions, added Oathbreaker subclass)
 new entry "GLO_Oathbreaker_Paladin"
@@ -4977,6 +4998,8 @@ data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 new entry "TollCollector"
 type "Character"
 using "TollCollector"
+// data "PersonalStatusImmunities" "BLEEDING;SLEEPING;SCL_SHADOW_CURSE"
+data "PersonalStatusImmunities" "SG_Bleeding;BLEEDING;SG_Sleeping;SCL_SHADOW_CURSE"
 // data "SpellCastingAbility" "Dexterity"
 data "SpellCastingAbility" "Intelligence"
 // data "Passives" "Alert;TollCollector_Armor;FastHands;TurnResistance;ImmuneToControlUndead;AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
@@ -5155,7 +5178,7 @@ new entry "LOW_DeathKnight"
 type "Character"
 using "LOW_DeathKnight"
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;SLEEPING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SG_Exhausted;FRIGHTENED"
-data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;SG_Sleeping;GAPING_WOUND;CHEST_TRAUMA;DAZED;SG_Exhausted;SG_Frightened"
+data "PersonalStatusImmunities" "SG_Poisoned;SG_Bleeding;BLEEDING;SG_Sleeping;GAPING_WOUND;CHEST_TRAUMA;DAZED;SG_Exhausted;SG_Frightened"
 // data "Progressions" ""
 data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;Parry;ExtraAttack_2;NecroticAttacks_DeathKnight;Riposte;HellfireDamagePierce_Technical"
@@ -5237,6 +5260,13 @@ data "Passives" "CX_Spells_L5;CX_Spells_L5C;AttackOfOpportunity;DarknessRules;Da
 //  │   │   │   └─ "LOW_BlushingMermaid_Redcap_Caster"
 //  │   │   └─ "UND_BOOOAL"
 //  │   └─ "_Fey_Gustav"
+
+// Dryad (Fixed racials)
+new entry "Dryad"
+type "Character"
+using "Dryad"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
 
 // Auntie Ethel - Trader of Quirks and Sundries, Sister of the Seeing Pearl - HONOUR MODE INHERITANCE (Added Magic boost, added Boss boost) (Added hacky "Goon_Ethel_Unlocker" so she probably can't be cheesed in the fireplace anymore, added to her doubles too just incase I make it a visible passive)
 new entry "HAG_AuntieEthel"
@@ -5337,6 +5367,13 @@ data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
 //  │   │   ├─ "LOW_HouseOfHope_Cambion"
 //  │   │   └─ "TUT_Cambion_NoCrits"
 //  │   │       └─ "TUT_CambionCommander"
+
+// Cambion (Fixed racials)
+new entry "Cambion"
+type "Character"
+using "Cambion"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
 
 // Raphael - Master of the House - HONOUR MODE INHERITANCE (Added Magic boost, added Boss boost, added "ImmuneToDisarm") (Has a lot of very specific and powerful stuff, not worth hamfisting a class archetype into him)
 new entry "GLO_Raphael"
@@ -5607,6 +5644,13 @@ data "Passives" "CX_Boss_Boost;AttackOfOpportunity;SunlightWeakness;DarknessRule
 //  │   │   └─ "Myconid_Sprout"
 //  │   └─ "_Plant_Gustav"
 
+// Dryad (Fixed racials)
+new entry "Dryad_ConjureWoodlandBeings"
+type "Character"
+using "Dryad_ConjureWoodlandBeings"
+// data "SpellCastingAbility" "Wisdom"
+data "SpellCastingAbility" "Charisma"
+
 // Shadow-Cursed Shambling Mound - HONOUR MODE INHERITANCE (Added Boss boost)
 new entry "ShamblingMound_Dark"
 type "Character"
@@ -5832,6 +5876,12 @@ data "Progressions" ""
 //  └─ "UND_ArcaneTurret"
 //      ├─ "CRE_Turret"
 //      └─ "LOW_RamazithTower_ArcaneTurret"
+
+new entry "SHA_TrapJunction_Thief"
+type "Character"
+using "SHA_TrapJunction_Thief"
+// data "PersonalStatusImmunities" "BLEEDING;GAPING_WOUND;CHEST_TRAUMA;SLEEPING;KNOCKED_OUT;DIFFICULT_TERRAIN"
+data "PersonalStatusImmunities" "SG_Bleeding;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;SG_Sleeping;KNOCKED_OUT;SG_DifficultTerrain"
 
 // Steel Watcher Titan - Gortash's Magnum Opus - HONOUR MODE INHERITANCE (Added Boss boost)
 new entry "Steel_Watcher_Quadruped"
@@ -6130,6 +6180,8 @@ data "ProficiencyBonusScaling" "265d62c4-9b82-4ed6-9a86-da675b4ef8fe"
 new entry "Deva"
 type "Character"
 using "Deva"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
 // data "PersonalStatusImmunities" "SG_Charmed;FEARED"
 data "PersonalStatusImmunities" "SG_Charmed;SG_Frightened"
 // data "Passives" "AttackOfOpportunity;DarknessRules;ImmuneToDisarm;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
