@@ -11,7 +11,7 @@
               <attribute id="MD5" type="LSWString" value="" />
               <attribute id="Name" type="LSWString" value="Goon's Library" />
               <attribute id="UUID" type="FixedString" value="07fbc2f1-f359-4b9d-b243-fe28bd783e4c" />
-              <attribute id="Version64" type="int64" value="144818881960083456" />
+              <attribute id="Version64" type="int64" value="147915100261449728" />
             </node>
           </children>
         </node>
@@ -32,10 +32,10 @@
           <attribute id="Tags" type="LSWString" value="" />
           <attribute id="Type" type="FixedString" value="Add-on" />
           <attribute id="UUID" type="FixedString" value="a7b5810e-3ac1-4a8f-bcc9-d18d91de2505" />
-          <attribute id="Version64" type="int64" value="108367866033602560" />
+          <attribute id="Version64" type="int64" value="108367868181086208" />
           <children>
             <node id="PublishVersion">
-              <attribute id="Version64" type="int64" value="108367866033602560" />
+              <attribute id="Version64" type="int64" value="108367868181086208" />
             </node>
             <node id="Scripts" />
             <node id="TargetModes">
