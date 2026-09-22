@@ -828,8 +828,9 @@ using "Shout_Dash_NPC"
 // data "RequirementConditions" "not HasStatus('DASH')"
 data "RequirementConditions" "not HasStatus('DASH') and not HasStatus('ACTION_SURGE')"
 
-// ==================================== Fighter - Arcane Archer NPC spells
-// Gith NPC models don't have proper animations for the regular versions of the Arcane Shot spells
+// ==================================== Fighter - Arcane Archer
+
+// Arcane Shots: AI version since Gith NPC models don't have proper animations for the regular versions of the Arcane Shot spells
 
 // Vanilla spells
 new entry "Projectile_ArcaneShot_BanishingArrow"
@@ -952,27 +953,6 @@ using "Projectile_ArcaneShot_ShadowArrow"
 // data "SpellAnimation" "96760664-e1cc-42e2-a2ab-01be2a4894ed,,;,,;8b5ee54a-b63e-4e5b-8949-a427c38ccc96,,;014e7952-7088-43fa-9124-f74452f5e065,,;c9409594-8480-4ae8-886e-9c50197db5ac,,;b2e9c771-3497-444c-b360-23b4441985a1,,;f920a0a6-f257-4ce4-8d17-2dcaa7bb7bbb,,;,,;,,"
 data "SpellAnimation" "73afb4e5-8cfe-4479-95cf-16889597fee3,,;9583ecee-cf6c-4735-86db-7ebf1df15eae,,;de006e3f-70fb-4eb7-a98d-d845d15b20e8,,;50696db7-d931-4734-915d-32d038ba99a5,,;6ec808e1-e128-44ef-9361-a713bf86de8f,,;,,;f920a0a6-f257-4ce4-8d17-2dcaa7bb7bbb,,;,,;,,"
 data "CombatAIOverrideSpell" ""
-
-// ==================================== Fighter - Eldritch Knight Bound Weapon
-
-new entry "Shout_WeaponBond"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_WeaponBond"
-data "CombatAIOverrideSpell" "Shout_WeaponBond_AI"
-
-new entry "Shout_WeaponBond_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_WeaponBond"
-// data "CombatAIOverrideSpell" "Shout_WeaponBond_AI"
-data "CombatAIOverrideSpell" ""
-// data "UseCosts" "ActionPoint:1"
-data "UseCosts" ""
-// data "Requirements" "!Combat"
-data "Requirements" ""
-// data "RequirementConditions" "not Unarmed()"
-data "RequirementConditions" "not Unarmed() and not HasStatus('WEAPON_BOND', GetActiveWeapon())"
 
 // ==================================== Paladin ====================================
 
@@ -1180,100 +1160,25 @@ data "ToggleOffContext" ""
 
 // ==================================== Wizard - Bladesinging
 
-// Bladesong Climax: Custom version where the healing doesn't always affect player party
-new entry "Goon_Bladesong_Unlock"
-type "PassiveData"
-using "Bladesong_Unlock"
-// // %%% Empty
-// data "DisplayName" "h3c144a66g881ag4bffgbcc7g16c566c206b0;1"
-// data "Properties" "IsHidden"
-// data "Boosts" "UnlockSpell(Shout_Bladesong_Dismiss);UnlockSpell(Projectile_Bladesong_Finisher);"
-data "Boosts" "UnlockSpell(Shout_Bladesong_Dismiss);UnlockSpell(Goon_Projectile_Bladesong_Finisher)"
+// Bladesong Climax: AI version where the healing doesn't always affect player party
+new entry "Projectile_Bladesong_Finisher"
+type "SpellData"
+data "SpellType" "Shout"
+using "Projectile_Bladesong_Finisher"
+// data "CombatAIOverrideSpell" ""
+data "CombatAIOverrideSpell" "Projectile_Bladesong_Finisher_AI"
 
-new entry "Goon_Projectile_Bladesong_Finisher"
+new entry "Projectile_Bladesong_Finisher_AI"
 type "SpellData"
 data "SpellType" "Projectile"
 // using "Projectile_Jump"
 using "Projectile_Bladesong_Finisher"
 // data "SpellProperties" "IF(Party() or Ally() and not Dead()):RegainHitPoints(foreach(1+BLADESONG_HEALING_CHARGE.Duration, 1d6));IF(Party() or Ally() and not Dead()):ApplyStatus(BLADESONGFINISHER_ALLY,100,0);"
 data "SpellProperties" "IF(Ally() and not Dead()):RegainHitPoints(foreach(1+BLADESONG_HEALING_CHARGE.Duration, 1d6));IF(Ally() and not Dead()):ApplyStatus(BLADESONGFINISHER_ALLY,100,0)"
-// data "TargetFloor" "-1"
-// data "TargetRadius" "9"
-// data "ExplodeRadius" "3"
-// data "SpellRoll" "not SavingThrow(Ability.Intelligence, SourceSpellDC())"
-// data "SpellSuccess" "IF(Enemy() and not Dead()):DealDamage(foreach(1+BLADESONG_DAMAGE_CHARGE.Duration, 1d6), Force, Magical);IF(Enemy() and not Dead()):ApplyStatus(BLADESONGFINISHER_ENEMY,100,0);IF(Self()):RemoveStatus(BLADESONG);"
-// data "SpellFail" "IF(Enemy() and not Dead()):DealDamage(foreach(1+BLADESONG_DAMAGE_CHARGE.Duration, 1d6)/2, Force, Magical);IF(Enemy() and not Dead()):ApplyStatus(BLADESONGFINISHER_ENEMY,100,0);IF(Self()):RemoveStatus(BLADESONG);"
-// data "TargetConditions" "not Surface('SurfaceChasm')"
-// data "ProjectileCount" "1"
-// data "Trajectories" "b35ec998-f581-460c-b41c-7c49afa525aa"
-// data "Icon" "Action_Bladesong_Finisher"
-// // Bladesong Climax
-// data "DisplayName" "h8efe6495g970ag47fagb40cgdcd49ff26db2;2"
-// // Unleash the full damaging and healing effects of your Bladesong at once. Your <LSTag Type="Status" Tooltip="BLADESONG_DAMAGE_CHARGE">Bladesong Damage Charges</LSTag> will harm enemies an additional [1], and your <LSTag Type="Status" Tooltip="BLADESONG_HEALING_CHARGE">Bladesong Healing Charges</LSTag> will heal you and your allies an additional [2].
-// data "Description" "hd3652e4fg8aa1g4fc9g9776g0f3cd4a56486;7"
-// data "DescriptionParams" "DealDamage(1d6,Force);RegainHitPoints(1d6)"
-// // This will end your <LSTag Type="Status" Tooltip="BLADESONG">Bladesong</LSTag>.
-// data "ExtraDescription" "hf2b11da6g41aeg4a65g8da8g6acfe7c2515a;1"
-// data "TooltipDamageList" "DealDamage(1d6,Force);RegainHitPoints(1d6)"
-// data "TooltipAttackSave" "Intelligence"
-// data "PrepareSound" "Action_Prepare_Wizard_BladeSongFinisher"
-// data "PrepareLoopSound" "Action_Loop_Wizard_BladeSongFinisher"
-// data "CastSound" "Action_Cast_Wizard_BladeSongFinisher"
-// data "SpellAnimation" "958dd4d6-3ad3-4f58-a4ae-9499743a6dab,,;,,;d7741bd3-2ec9-41aa-803b-39d2be52aac5,,;78da379c-5535-4a07-b650-b695831bab9a,,;1accbc00-728f-44d4-8926-268944ce5f03,,;,,;27c7e1e3-1d72-4ff7-801d-949535e25308,,;,,;,,"
-// data "VerbalIntent" "Control"
-// data "SpellFlags" "IsJump;HasHighGroundRangeExtension;IgnoreVisionBlock;Stealth;Invisible;CannotTargetCharacter;CannotTargetItems;Temporary;IsHarmful"
-// data "HitAnimationType" "None"
-// data "SpellAnimationIntentType" "Aggressive"
-// data "SpellJumpType" "Pounce"
-// data "RequirementConditions" "not HasBladesongClimaxBlocked();"
-// data "RequirementEvents" "OnStatusRemoved;OnStatusApplied"
-// data "PrepareEffect" "5db8c579-2840-4ece-9829-e356c5ab607d"
-// data "CastEffect" "16442173-97c5-424f-905b-b88d8b425e81"
-// data "Sheathing" "Melee"
+// data "CombatAIOverrideSpell" "Projectile_Bladesong_Finisher_AI"
+data "CombatAIOverrideSpell" ""
 
 // ==================================== Other ====================================
-
-// ==================================== Heroes' Feast
-// AI version that doesn't spawn camp supplies. Upcasts don't matter because this spell is only ever used as a cast on level load spell in Lab and can't be cast in combat anyway 
-
-new entry "Shout_HeroesFeast"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_HeroesFeast"
-// data "Level" "6"
-// data "SpellSchool" "Conjuration"
-// data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1);GROUND:Summon(3d8889c6-936b-4009-955c-d1f3aef46df5, 10, , , ,HEROES_FEAST_CHEST)"
-// data "AreaRadius" "18"
-// data "TargetConditions" "Ally()"
-// data "Icon" "Spell_Conjuration_HeroesFeast"
-// // Heroes' Feast
-// data "DisplayName" "hf64fb172g2b3fg40d1g855eg90c024d4c890;2"
-// // You and everyone around can't be poisoned, diseased, or frightened. Your <LSTag Tooltip="HitPoints">HP</LSTag> increases, and you make Wisdom <LSTag Tooltip="SavingThrow">Saves</LSTag> with <LSTag Tooltip="Advantage">Advantage</LSTag>.
-// data "Description" "hb170ef47g290ag4f0bgbfd1g7b0dc1ffeacf;5"
-// data "TooltipStatusApply" "ApplyStatus(HEROES_FEAST,100,-1)"
-// data "CastSound" "Spell_Cast_Heal_HeroesFeast_L6to8"
-// data "CastTextEvent" "Cast"
-// data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:6"
-// data "SpellAnimation" "414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;,,;,,"
-// data "VerbalIntent" "Buff"
-// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;UnavailableInDialogs"
-// data "HitAnimationType" "MagicalNonDamage"
-// data "Requirements" "!Combat"
-// data "MemoryCost" "1"
-// data "PrepareEffect" "88532675-7be6-4a54-b750-90e6a8f2c012"
-// data "CastEffect" "47f3994a-396b-40ac-a063-aa9ed71dc523"
-// data "TargetEffect" "f7af1a0f-87de-4a60-a725-9c56dd1264a2"
-// data "CombatAIOverrideSpell" ""
-data "CombatAIOverrideSpell" "Shout_HeroesFeast_AI"
-
-new entry "Shout_HeroesFeast_AI"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_HeroesFeast"
-// data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1);GROUND:Summon(3d8889c6-936b-4009-955c-d1f3aef46df5, 10, , , ,HEROES_FEAST_CHEST)"
-data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1)"
-// data "CombatAIOverrideSpell" "Shout_HeroesFeast_AI"
-data "CombatAIOverrideSpell" ""
 
 // ==================================== Spirit Guardians for Squirrels
 // Separate spells and statuses so they can stack
