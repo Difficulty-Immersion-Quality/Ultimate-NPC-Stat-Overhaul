@@ -1176,6 +1176,61 @@ data "Properties" "IsToggled;ToggledDefaultAddToHotbar;MetaMagic;ToggledDefaultO
 data "ToggleOnEffect" ""
 data "ToggleOffContext" ""
 
+//  ==================================== Wizard ====================================
+
+// ==================================== Wizard - Bladesinging
+
+// Bladesong Climax: Custom version where the healing doesn't always affect player party
+new entry "Goon_Bladesong_Unlock"
+type "PassiveData"
+using "Bladesong_Unlock"
+// // %%% Empty
+// data "DisplayName" "h3c144a66g881ag4bffgbcc7g16c566c206b0;1"
+// data "Properties" "IsHidden"
+// data "Boosts" "UnlockSpell(Shout_Bladesong_Dismiss);UnlockSpell(Projectile_Bladesong_Finisher);"
+data "Boosts" "UnlockSpell(Shout_Bladesong_Dismiss);UnlockSpell(Goon_Projectile_Bladesong_Finisher)"
+
+new entry "Goon_Projectile_Bladesong_Finisher"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_Jump"
+using "Projectile_Bladesong_Finisher"
+// data "SpellProperties" "IF(Party() or Ally() and not Dead()):RegainHitPoints(foreach(1+BLADESONG_HEALING_CHARGE.Duration, 1d6));IF(Party() or Ally() and not Dead()):ApplyStatus(BLADESONGFINISHER_ALLY,100,0);"
+data "SpellProperties" "IF(Ally() and not Dead()):RegainHitPoints(foreach(1+BLADESONG_HEALING_CHARGE.Duration, 1d6));IF(Ally() and not Dead()):ApplyStatus(BLADESONGFINISHER_ALLY,100,0)"
+// data "TargetFloor" "-1"
+// data "TargetRadius" "9"
+// data "ExplodeRadius" "3"
+// data "SpellRoll" "not SavingThrow(Ability.Intelligence, SourceSpellDC())"
+// data "SpellSuccess" "IF(Enemy() and not Dead()):DealDamage(foreach(1+BLADESONG_DAMAGE_CHARGE.Duration, 1d6), Force, Magical);IF(Enemy() and not Dead()):ApplyStatus(BLADESONGFINISHER_ENEMY,100,0);IF(Self()):RemoveStatus(BLADESONG);"
+// data "SpellFail" "IF(Enemy() and not Dead()):DealDamage(foreach(1+BLADESONG_DAMAGE_CHARGE.Duration, 1d6)/2, Force, Magical);IF(Enemy() and not Dead()):ApplyStatus(BLADESONGFINISHER_ENEMY,100,0);IF(Self()):RemoveStatus(BLADESONG);"
+// data "TargetConditions" "not Surface('SurfaceChasm')"
+// data "ProjectileCount" "1"
+// data "Trajectories" "b35ec998-f581-460c-b41c-7c49afa525aa"
+// data "Icon" "Action_Bladesong_Finisher"
+// // Bladesong Climax
+// data "DisplayName" "h8efe6495g970ag47fagb40cgdcd49ff26db2;2"
+// // Unleash the full damaging and healing effects of your Bladesong at once. Your <LSTag Type="Status" Tooltip="BLADESONG_DAMAGE_CHARGE">Bladesong Damage Charges</LSTag> will harm enemies an additional [1], and your <LSTag Type="Status" Tooltip="BLADESONG_HEALING_CHARGE">Bladesong Healing Charges</LSTag> will heal you and your allies an additional [2].
+// data "Description" "hd3652e4fg8aa1g4fc9g9776g0f3cd4a56486;7"
+// data "DescriptionParams" "DealDamage(1d6,Force);RegainHitPoints(1d6)"
+// // This will end your <LSTag Type="Status" Tooltip="BLADESONG">Bladesong</LSTag>.
+// data "ExtraDescription" "hf2b11da6g41aeg4a65g8da8g6acfe7c2515a;1"
+// data "TooltipDamageList" "DealDamage(1d6,Force);RegainHitPoints(1d6)"
+// data "TooltipAttackSave" "Intelligence"
+// data "PrepareSound" "Action_Prepare_Wizard_BladeSongFinisher"
+// data "PrepareLoopSound" "Action_Loop_Wizard_BladeSongFinisher"
+// data "CastSound" "Action_Cast_Wizard_BladeSongFinisher"
+// data "SpellAnimation" "958dd4d6-3ad3-4f58-a4ae-9499743a6dab,,;,,;d7741bd3-2ec9-41aa-803b-39d2be52aac5,,;78da379c-5535-4a07-b650-b695831bab9a,,;1accbc00-728f-44d4-8926-268944ce5f03,,;,,;27c7e1e3-1d72-4ff7-801d-949535e25308,,;,,;,,"
+// data "VerbalIntent" "Control"
+// data "SpellFlags" "IsJump;HasHighGroundRangeExtension;IgnoreVisionBlock;Stealth;Invisible;CannotTargetCharacter;CannotTargetItems;Temporary;IsHarmful"
+// data "HitAnimationType" "None"
+// data "SpellAnimationIntentType" "Aggressive"
+// data "SpellJumpType" "Pounce"
+// data "RequirementConditions" "not HasBladesongClimaxBlocked();"
+// data "RequirementEvents" "OnStatusRemoved;OnStatusApplied"
+// data "PrepareEffect" "5db8c579-2840-4ece-9829-e356c5ab607d"
+// data "CastEffect" "16442173-97c5-424f-905b-b88d8b425e81"
+// data "Sheathing" "Melee"
+
 // ==================================== Other ====================================
 
 // ==================================== Heroes' Feast
