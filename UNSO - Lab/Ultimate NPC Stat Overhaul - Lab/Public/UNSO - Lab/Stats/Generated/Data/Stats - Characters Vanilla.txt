@@ -567,6 +567,8 @@ data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 new entry "FlamingFist_Dwarf_Caster"
 type "Character"
 using "FlamingFist_Dwarf_Caster"
+// // data "Passives" "Dwarf_DwarvenResilience;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "Dwarf_DwarvenResilience;AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002"
 data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
@@ -879,6 +881,20 @@ using "UND_LoneDuergar"
 // // data "Passives" "AttackOfOpportunity;DarknessRules;AdditionalSpellSlot_Level_3"
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// // Harper Tumeril - Harpers (Inherits Wizard progressions)
+// new entry "HAV_Harper_Elf_Caster"
+// type "Character"
+// using "HAV_Harper_Elf_Caster"
+// // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+
+// // Sharran Fidelian Gloommask - Church of Shar (Inherits Wizard progressions)
+// new entry "LOW_HouseOfGrief_Cultist_Caster_Elf"
+// type "Character"
+// using "LOW_HouseOfGrief_Cultist_Caster_Elf"
+// // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee;"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee"
+
 // Echo of Illasera - Illasera the Quick, Bhaalspawn (Despite being a Fighter/Mage in BG2, and a "caster" in BG3, she was essentially an intro/tutorial enemy and was cut down a lot in original design. Rogue is fitting for both her theme and to add diversity to the echoes, Arcane Trickster because she was a half caster; and she does have a dagger thankfully.)
 new entry "LOW_Illasera"
 type "Character"
@@ -1020,6 +1036,8 @@ data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 new entry "FlamingFist_Elf_Caster"
 type "Character"
 using "FlamingFist_Elf_Caster"
+// // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 // data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002"
 data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
@@ -1065,6 +1083,13 @@ data "Progressions" "6cae475a-383f-11ed-a261-0242ac120002;f0ede459-8b86-48fd-ac1
 //  ├─ "MOO_ZealotOfTheAbsolute_Elf"
 //  ├─ "SCL_Ketheric"
 
+// // Adept of the Absolute (unused?) (Has Cleric progressions) 
+// new entry "MOO_FanaticOfTheAbsolute_Elf"
+// type "Character"
+// using "MOO_FanaticOfTheAbsolute_Elf"
+// // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+
 // // (Has Paladin progressions, added Oathbreaker subclass) 
 // new entry "MOO_ZealotOfTheAbsolute_Elf"
 // type "Character"
@@ -1097,6 +1122,13 @@ data "Progressions" "6cae475a-383f-11ed-a261-0242ac120002;f0ede459-8b86-48fd-ac1
 //      ├─ "MOO_AcolyteOfTheAbsolute_WoodElf"   --- (Has Cleric progressions) 
 //      ├─ "MOO_FanaticOfTheAbsolute_WoodElf"   --- (Has Cleric progressions) 
 //      └─ "MOO_ZealotOfTheAbsolute_WoodElf"
+
+// // (Has Cleric progressions) 
+// new entry "MOO_FanaticOfTheAbsolute_WoodElf"
+// type "Character"
+// using "MOO_FanaticOfTheAbsolute_WoodElf"
+// // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 
 // // (Has Paladin progressions, added Oathbreaker subclass) 
 // new entry "MOO_ZealotOfTheAbsolute_WoodElf"
@@ -1202,7 +1234,7 @@ data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
 // using "UND_Nere"
 // // data "Passives" "Muscular_Athletics;AttackOfOpportunity;ExtraAttack;SunlightSensitivity;FeyAncestry;DarknessRules;Darkvision;AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_2; AdditionalSpellSlot_Level_2"
 // // data "Passives" "Muscular_Athletics;AttackOfOpportunity;ExtraAttack;SunlightSensitivity;FeyAncestry;DarknessRules;Darkvision;AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_1; AdditionalSpellSlot_Level_2; AdditionalSpellSlot_Level_2;LegendaryAction_UND_Nere_PsychicMirror"
-// data "Passives" "CX_Boss_Boost;LAB_Progression_Fighter_EldritchKnight;FeyAncestry;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;DualWielder_BonusAC;DualWielder_PassiveBonuses;ExtraAttack;Muscular_Athletics;AdditionalSpellSlot_Level_1;AdditionalSpellSlot_Level_1;AdditionalSpellSlot_Level_1;AdditionalSpellSlot_Level_1;AdditionalSpellSlot_Level_2;Goon_AdditionalSpellSlot_Level_2;LegendaryAction_UND_Nere_PsychicMirror"
+// data "Passives" "CX_Boss_Boost;LAB_Progression_Fighter_EldritchKnight;FeyAncestry;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;DualWielder_BonusAC;DualWielder_PassiveBonuses;ExtraAttack;Muscular_Athletics;AdditionalSpellSlot_Level_1;AdditionalSpellSlot_Level_2;Goon_AdditionalSpellSlot_Level_2;LegendaryAction_UND_Nere_PsychicMirror"
 
 // "_Elf_Drow"
 //  ├─ "Elf_Drow_Ranger"
@@ -1600,6 +1632,8 @@ data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 new entry "FlamingFist_Gnome_Caster"
 type "Character"
 using "FlamingFist_Gnome_Caster"
+// // data "Passives" "Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision"
 // data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002"
 data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
@@ -1617,7 +1651,7 @@ new entry "FlamingFist_Gnome_Melee_Attacker"
 type "Character"
 using "FlamingFist_Gnome_Melee_Attacker"
 // // data "Passives" "Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision"
-// data "Passives" ";Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision"
 // data "Progressions" "51d47904-383f-11ed-a261-0242ac120002"
 data "Progressions" "51d47904-383f-11ed-a261-0242ac120002;0e6da493-5a37-423b-8c28-629462b22faa"
 
@@ -1684,6 +1718,13 @@ data "Charisma" "18"
 data "SpellCastingAbility" "Charisma"
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
+
+// // Sharran Fidelian (Inherits Wizard progressions)
+// new entry "LOW_HouseOfGrief_Cultist_Caster_Gnome"
+// type "Character"
+// using "LOW_HouseOfGrief_Cultist_Caster_Gnome"
+// // data "Passives" "Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee;"
+// data "Passives" "Gnome_Cunning;Gnome_Speed;AttackOfOpportunity;DarknessRules;Darkvision;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee"
 
 // Questioner Jasin, Questioner Sumera - Cult of the Absolute (Swapped Wizard progressions for Warlock progressions, already has Char Spellcasting Ability, fixed racials)
 new entry "MOO_MindTorturer"
@@ -1891,6 +1932,8 @@ type "Character"
 using "Goblin_Caster"
 // data "DefaultBoosts" "ActionResource(SpellSlot,3,1); BlockRegainHP(Undead;Construct)"
 data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+// // data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Progressions" ""
 data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
@@ -1918,6 +1961,8 @@ data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
 new entry "Goblin_Warlock"
 type "Character"
 using "Goblin_Warlock"
+// // data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Progressions" ""
 data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 
@@ -2636,6 +2681,8 @@ data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 new entry "FlamingFist_Halfling_Caster"
 type "Character"
 using "FlamingFist_Halfling_Caster"
+// // data "Passives" "Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
+// data "Passives" "Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
 // data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002"
 data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
@@ -2803,7 +2850,7 @@ data "Strength" "16"
 // data "Charisma" "12"
 data "Charisma" "16"
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
+data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 
 // Sentry Fredrichk - Church of Shar (Swapped Fighter progressions to Warlock)
 new entry "LOW_HouseOfGrief_Cultist_Sentry_Halfling"
@@ -2814,7 +2861,7 @@ data "Strength" "16"
 // data "Charisma" "12"
 data "Charisma" "16"
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
+data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 
 // "_Halfling"
 //  ├─ "Halfling_Ranger"                                --- (Has Ranger progressions)
@@ -2854,6 +2901,13 @@ data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
 //  ├─ "MOO_AcolyteOfTheAbsolute_Halfling"  --- (Has Cleric progressions) 
 //  ├─ "MOO_FanaticOfTheAbsolute_Halfling"  --- Adept Ghulen - Cult of the Absolute (Has Cleric progressions) 
 //  └─ "MOO_ZealotOfTheAbsolute_Halfling"
+
+// // Adept Ghulen - Cult of the Absolute (Has Cleric progressions) 
+// new entry "MOO_FanaticOfTheAbsolute_Halfling"
+// type "Character"
+// using "MOO_FanaticOfTheAbsolute_Halfling"
+// // data "Passives" "Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
+// data "Passives" "Halfling_Lucky;Halfling_Brave;AttackOfOpportunity;DarknessRules"
 
 // // Zealot Brinn - Cult of the Absolute (Has Paladin progressions, added Oathbreaker subclass)
 // new entry "MOO_ZealotOfTheAbsolute_Halfling"
@@ -4437,6 +4491,8 @@ data "Intelligence" "12"
 data "Charisma" "16"
 // data "SpellCastingAbility" "Intelligence"
 data "SpellCastingAbility" "Charisma"
+// // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f"
 
@@ -4453,6 +4509,12 @@ type "Character"
 using "GLO_Prodigy"
 data "Vitality" "72"
 
+// // Flaming Fist (Inherits Wizard progressions)
+// new entry "SCE_FlamingFist_Tiefling_Caster"
+// type "Character"
+// using "SCE_FlamingFist_Tiefling_Caster"
+// // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
 // (Swapped from Wizard progressions to Bard progressions)
 new entry "Tiefling_Bard"
@@ -4569,6 +4631,8 @@ data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 new entry "FlamingFist_Tiefling_Caster"
 type "Character"
 using "FlamingFist_Tiefling_Caster"
+// // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 // data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002"
 data "Progressions" "7417c0c0-383f-11ed-a261-0242ac120002;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
@@ -4612,6 +4676,13 @@ data "Progressions" "6cae475a-383f-11ed-a261-0242ac120002;f0ede459-8b86-48fd-ac1
 //  ├─ "MOO_AcolyteOfTheAbsolute_Dragonborn"    --- Unused (Has Cleric progressions) 
 //  ├─ "MOO_FanaticOfTheAbsolute_Tiefling"      --- Unused (Has Cleric progressions) 
 //  ├─ "MOO_ZealotOfTheAbsolute_Tiefling"       --- Unused
+
+// // (Has Cleric progressions) 
+// new entry "MOO_FanaticOfTheAbsolute_Tiefling"
+// type "Character"
+// using "MOO_FanaticOfTheAbsolute_Tiefling"
+// // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
+// data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
 // // (Has Paladin progressions, added Oathbreaker subclass) 
 // new entry "MOO_ZealotOfTheAbsolute_Tiefling"
@@ -5029,11 +5100,6 @@ data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 // data "Proficiency Group" "Longbows;Shortbows;LightArmor;SimpleWeapons"
 data "Proficiency Group" "Longbows;Shortbows;HeavyCrossbows;LightCrossbows;HandCrossbows;LightArmor;SimpleWeapons"
 
-new entry "SHA_Skeleton_Ranger"
-type "Character"
-using "SHA_Skeleton_Ranger"
-// data "Proficiency Group" "Longbows;Shortbows;LightArmor;SimpleWeapons"
-data "Proficiency Group" "Longbows;Shortbows;HeavyCrossbows;LightCrossbows;HandCrossbows;LightArmor;SimpleWeapons"
 
 // Apostate Sentinels - reanimated skeletons if fighting Balthazar in the Shadowfell (Inherits Ranger progressions)
 new entry "SHA_Skeleton_Ranger"
@@ -5042,6 +5108,8 @@ type "Character"
 using "SHA_Skeleton_Ranger"
 // data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
 data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;Cloudkill6Cloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
+// data "Proficiency Group" "Longbows;Shortbows;LightArmor;SimpleWeapons"
+data "Proficiency Group" "Longbows;Shortbows;HeavyCrossbows;LightCrossbows;HandCrossbows;LightArmor;SimpleWeapons"
 
 // "_Undead"
 //  ├─ "Skeleton"
@@ -5102,20 +5170,27 @@ data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 
 // "_Undead"
 //  ├─ "Skeleton"
-//  │   ├─ "Skeleton_Caster"                          -- (Has Wizard progressions, added level 1 spell boosts) (how many spells are actually affected by BlockVerbalSpellcasting? Would be the end of the world to remove it from skeleton spellcasters?)
+//  │   ├─ "Skeleton_Caster"                          -- (Has Wizard progressions, added level 1 spell boosts) (How many spells are affected by BlockVerbalSpellcasting? Remove it from skeleton spellcasters?)
 //  │   │   ├─ "CHA_Skeleton_Caster"                  -- Entombed Scribes (Inherits Wizard progressions, added level 1 spell boosts, AoO, and darkvision)
 //  │   │   ├─ "LOW_CazadorPalace_Ritual_Skeleton"
-//  │   │   ├─ "LOW_DamnedKnight_Caster"              -- Unused (Inherits Wizard progressions, added level 5 spell boosts)
+//  │   │   ├─ "LOW_DamnedKnight_Caster"              -- Unused
 //  │   │   ├─ "SHA_Skeleton_Caster"                  -- Apostate Librarians (Inherits Wizard progressions, added level 4 spell boosts)
 //  │   │   ├─ "WYR_Circus_Skeletons"
 //  │   │   └─ "WYR_Wyrmsway_Skeleton_Mage"           -- Fallen Wizards (Inherits Wizard progressions, added level 5 spell boosts)
 
-// // Entombed Scribes (Inherits Wizard progressions, added level 1 spell boosts, AoO, and darkvision)
+// // (Has Wizard progressions, added level 1 spell boosts) (How many spells are affected by BlockVerbalSpellcasting? Remove it from skeleton spellcasters?)
 // new entry "Skeleton_Caster"
 // type "Character"
 // using "Skeleton_Caster"
+// // data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;BlockVerbalSpellcasting;SkeletonDeath_Check;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "Passives" "CX_Spells_L1;CX_Spells_L1C;AttackOfOpportunity;Darkvision;DarknessRules;BlockVerbalSpellcasting;SkeletonDeath_Check;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+
+// // Entombed Scribes (Inherits Wizard progressions, added level 1 spell boosts, AoO, and darkvision)
+// new entry "CHA_Skeleton_Caster"
+// type "Character"
+// using "CHA_Skeleton_Caster"
 // // data "Passives" "DarknessRules;BlockVerbalSpellcasting;SkeletonDeath_Check;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-// data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;BlockVerbalSpellcasting;SkeletonDeath_Check;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;SkeletonDeath_Check;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 
 // // Chatterteeth - part of Cazador fight (Inherits Wizard progressions, added Necromancy subclass and level 6 spell boosts)
 // new entry "LOW_CazadorPalace_Ritual_Skeleton"
@@ -5124,12 +5199,28 @@ data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 // // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;Talkative;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 // data "Passives" "LAB_Progression_Wizard_Necromancy;AttackOfOpportunity;DarknessRules;Darkvision;Talkative;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 
+// // Unused (Inherits Wizard progressions, added level 5 spell boosts)
+// new entry "LOW_DamnedKnight_Caster"
+// type "Character"
+// using "LOW_DamnedKnight_Caster"
+// // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;BlockVerbalSpellcasting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;BlockVerbalSpellcasting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+
 // Apostate Librarians (Inherits Wizard progressions, added level 4 spell boosts)
 new entry "SHA_Skeleton_Caster"
 type "Character"
 using "SHA_Skeleton_Caster"
 // data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
 data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;Cloudkill6Cloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
+// // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+
+// // Fallen Wizards (Inherits Wizard progressions, added level 5 spell boosts)
+// new entry "WYR_Wyrmsway_Skeleton_Mage"
+// type "Character"
+// using "WYR_Wyrmsway_Skeleton_Mage"
+// // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 
 // ==================================== Fey ====================================
 // "_Base"
@@ -5216,7 +5307,7 @@ data "Wisdom" "14"
 // data "Charisma" "9"
 data "Charisma" "16"
 // // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;LOW_BlushingMermaid_Redcap_Buff;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-// data "Passives" "LAB_Progression_Warlock_Archfey;DarknessRules;Darkvision;LOW_BlushingMermaid_Redcap_Buff;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "Passives" "LAB_Progression_Warlock_Archfey;AttackOfOpportunity;DarknessRules;Darkvision;LOW_BlushingMermaid_Redcap_Buff;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 
 // BOOOAL (Added Rogue boost, added Assassin subclass, added Boss boost, added Finesse overwrite passive to enable Sneak Attack)
 new entry "UND_BOOOAL"
@@ -5276,7 +5367,7 @@ data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;HolyFire,40;P
 // type "Character"
 // using "LOW_Raphael_Monster_Form_Stats"
 // // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;DevilsSight;LOW_Raphael_SoulSiphon_Passive;LOW_Raphael_SoulSiphon_Passive_2;LOW_Raphael_SoulSiphon_Passive_3;LOW_Raphael_SoulSiphon_Passive_4;LOW_Raphael_SoulSiphon_Passive_5;LOW_Raphael_SoulSiphon_Passive_6;LOW_Raphael_SoulSiphon_Passive_7;LOW_Raphael_SoulSiphon_Passive_8;LOW_Raphael_SoulSiphon_Passive_9;LOW_Raphael_Reaper;MAG_Infernal_Plate_Armor_Passive;LOW_Raphael_Set_Pillar_Status;LOW_Raphael_ArchfiendWill;"
-// // data "Passives" "LegendaryAction_LOW_Raphael;AttackOfOpportunity;DarknessRules;Darkvision;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;DevilsSight;LOW_Raphael_SoulSiphon_Passive;LOW_Raphael_SoulSiphon_Passive_2;LOW_Raphael_SoulSiphon_Passive_3;LOW_Raphael_SoulSiphon_Passive_4;LOW_Raphael_SoulSiphon_Passive_5;LOW_Raphael_SoulSiphon_Passive_6;LOW_Raphael_SoulSiphon_Passive_7;LOW_Raphael_SoulSiphon_Passive_8;LOW_Raphael_SoulSiphon_Passive_9;LOW_Raphael_Reaper;MAG_Infernal_Plate_Armor_Passive;LOW_Raphael_Set_Pillar_Status;LOW_Raphael_ArchfiendWill;"
+// // data "Passives" "LegendaryAction_LOW_Raphael_Ascended;AttackOfOpportunity;DarknessRules;Darkvision;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;DevilsSight;LOW_Raphael_SoulSiphon_Passive;LOW_Raphael_SoulSiphon_Passive_2;LOW_Raphael_SoulSiphon_Passive_3;LOW_Raphael_SoulSiphon_Passive_4;LOW_Raphael_SoulSiphon_Passive_5;LOW_Raphael_SoulSiphon_Passive_6;LOW_Raphael_SoulSiphon_Passive_7;LOW_Raphael_SoulSiphon_Passive_8;LOW_Raphael_SoulSiphon_Passive_9;LOW_Raphael_Reaper;MAG_Infernal_Plate_Armor_Passive;LOW_Raphael_Set_Pillar_Status;LOW_Raphael_ArchfiendWill;"
 // data "Passives" "CX_Boss_Boost;LegendaryAction_LOW_Raphael_Ascended;AttackOfOpportunity;DarknessRules;Darkvision;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;DevilsSight;LOW_Raphael_SoulSiphon_Passive;LOW_Raphael_SoulSiphon_Passive_2;LOW_Raphael_SoulSiphon_Passive_3;LOW_Raphael_SoulSiphon_Passive_4;LOW_Raphael_SoulSiphon_Passive_5;LOW_Raphael_SoulSiphon_Passive_6;LOW_Raphael_SoulSiphon_Passive_7;LOW_Raphael_SoulSiphon_Passive_8;LOW_Raphael_SoulSiphon_Passive_9;LOW_Raphael_Reaper;MAG_Infernal_Plate_Armor_Passive;LOW_Raphael_Set_Pillar_Status;LOW_Raphael_ArchfiendWill"
 
 // // Commander Zhalk (Added Martial Boost, added Boss boost, AND added "ImmuneToDisarm")
@@ -5351,7 +5442,7 @@ using "Orthon"
 // // data "Passives" "DevilsSight;ExplosiveRetribution;MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules;LegendaryAction_SHA_Orthon;"
 // data "Passives" "CX_Boss_Boost;LAB_Progression_Rogue_Assassin;DevilsSight;ExplosiveRetribution;MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules;LegendaryAction_SHA_Orthon;"
 // data "Progressions" ""
-data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 
 // ==================================== Oozes ====================================
 
