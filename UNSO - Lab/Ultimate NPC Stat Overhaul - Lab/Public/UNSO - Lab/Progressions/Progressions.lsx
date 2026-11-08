@@ -192,6 +192,7 @@
                 </node>
                 <node id="Progression">
                     <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,1)"/> -->
+                    <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,1)"/> -->
                     <attribute id="Level" type="uint8" value="2"/>
                     <attribute id="Name" type="LSString" value="NPC_Bard"/>
                     <!-- MagicalInspiration Eexpansion optional feature added -->
@@ -475,7 +476,7 @@
                     <attribute id="UUID" type="guid" value="1d71a919-c777-41b3-9ad6-55dfcc5334ce"/>
                 </node>
                 <node id="Progression">
-                    <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,5);"/> -->
+                    <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,5)"/> -->
                     <attribute id="Level" type="uint8" value="10"/>
                     <attribute id="Name" type="LSString" value="NPC_Cleric"/>
                     <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
@@ -652,7 +653,7 @@
                 </node>
                 <!-- Duplicate progressions start -->
                 <!-- <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,3)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,3);"/>
                     <attribute id="Level" type="uint8" value="6"/>
                     <attribute id="Name" type="LSString" value="NPC_Druid"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -660,7 +661,7 @@
                     <attribute id="UUID" type="guid" value="6e917d64-bd58-4cfb-93d8-61b3a1615cdc"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4);"/>
                     <attribute id="Level" type="uint8" value="7"/>
                     <attribute id="Name" type="LSString" value="NPC_Druid"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -1206,7 +1207,7 @@
                     <attribute id="UUID" type="guid" value="0ba007e2-806a-4198-ad5d-f47045d27be4"/>
                 </node>
                 <node id="Progression">
-                    <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,1);"/> -->
+                    <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,1)"/> -->
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="NPC_Paladin"/>
                     <!-- <attribute id="PassivesAdded" type="LSString" value="DivineHealth"/> -->
@@ -1741,7 +1742,7 @@
                     <!-- <attribute id="Boosts" type="LSString" value="Tag(SORCERER);ActionResource(SpellSlot,2,1);ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Charisma);Proficiency(Daggers);Proficiency(Quarterstaffs);Proficiency(LightCrossbows)"/> -->
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="NPC_Sorcerer"/>
-                    <!-- <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel1;LAB_Progression_Sorcerer"/> -->
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="LAB_Progression_Sorcerer;UnlockedSpellSlotLevel1"/> -->
                     <attribute id="PassivesAdded" type="LSString" value="LAB_Progression_Sorcerer"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <!-- <attribute id="Selectors" type="LSString" value="SelectSkills(8743f14b-64de-4858-b056-50902a00df1a,2);SelectSpells(485a68b4-c678-4888-be63-4a702efbe391,4,0,SorcererCantrip,,,AlwaysPrepared);SelectSpells(92c4751f-6255-4f67-822c-a75d53830b27,2,0,SorcererSpell);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)"/> -->
@@ -2957,7 +2958,7 @@
                     <attribute id="Name" type="LSString" value="NPC_FlamingFist_Melee_Cleric"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="70c3eb7e-383f-11ed-a261-0242ac120002"/>
-                    <attribute id="UUID" type="guid" value="b96080fc-d5fa-4b25-a4bc-d1f0523c13ad"/>
+                    <attribute id="UUID" type="guid" value="3da54b10-7995-4ddb-bc73-f3a9c2d6eb17"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="IncreaseMaxHP(6)"/>
@@ -3493,6 +3494,7 @@
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="NPC_Artificer"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="Goon_Artificer_NPC_Progressions;CX_Artificer_Boost;CX_Magic_Boost"/> -->
                     <attribute id="PassivesAdded" type="LSString" value="LAB_Progression_Artificer"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="d4159206-4573-43c0-94c6-46acb87d57c1"/>
@@ -3545,7 +3547,7 @@
                     <attribute id="Name" type="LSString" value="NPC_Artificer"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="d4159206-4573-43c0-94c6-46acb87d57c1"/>
-                    <attribute id="UUID" type="guid" value="40372b76-878a-4fc4-b20e-012f10774d4f"/>
+                    <attribute id="UUID" type="guid" value="bb36a368-9390-42f7-b743-9d51aac98082"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="9"/>
