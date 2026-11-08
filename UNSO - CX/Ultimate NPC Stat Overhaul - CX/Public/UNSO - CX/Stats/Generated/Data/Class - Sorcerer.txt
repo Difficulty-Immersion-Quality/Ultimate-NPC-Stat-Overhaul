@@ -42,7 +42,7 @@
     using "GOON_NPC_SORCERER_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
     data "Passives" "CX_Magic_Boost;UnlockedSpellSlotLevel1"
-    data "Boosts" ""
+    data "Boosts" "Tag(SORCERER)"
 
     // <node id="Progression">
     //     <attribute id="IsMulticlass" type="bool" value="true"/>
@@ -247,7 +247,7 @@
     using "GOON_NPC_SORCERER_DRACONICBLOODLINE_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
     data "Passives" "DraconicResilience"
-    data "Boosts" "IncreaseMaxHP(ClassLevel(Sorcerer))"
+    data "Boosts" "IncreaseMaxHP(Level)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="IncreaseMaxHP(ClassLevel(Sorcerer))"/>
@@ -289,7 +289,7 @@
     using "GOON_NPC_SORCERER_DRACONICBLOODLINE_PROGRESSION_TEMPLATE"
     data "StackPriority" "6"
     data "Passives" "DraconicResilience;ElementalAffinity_Damage;ElementalAffinity_Resistance_Check"
-    data "Boosts" "IncreaseMaxHP(ClassLevel(Sorcerer))"
+    data "Boosts" "IncreaseMaxHP(Level)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="6"/>
@@ -329,7 +329,7 @@
     using "GOON_NPC_SORCERER_DRACONICBLOODLINE_PROGRESSION_TEMPLATE"
     data "StackPriority" "11"
     data "Passives" "DraconicResilience;ElementalAffinity_Damage;ElementalAffinity_Resistance_Check"
-    data "Boosts" "IncreaseMaxHP(ClassLevel(Sorcerer));UnlockSpell(Projectile_Fly_DragonWings,AddChildren)"
+    data "Boosts" "IncreaseMaxHP(Level);UnlockSpell(Projectile_Fly_DragonWings,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="11"/>
@@ -382,7 +382,7 @@
     using "GOON_NPC_SORCERER_DRACONICBLOODLINE_PROGRESSION_TEMPLATE"
     data "StackPriority" "18"
     data "Passives" "DraconicResilience;ElementalAffinity_Damage;ElementalAffinity_Resistance_Check;DraconicPresence"
-    data "Boosts" "IncreaseMaxHP(ClassLevel(Sorcerer));UnlockSpell(Projectile_Fly_DragonWings,AddChildren)"
+    data "Boosts" "IncreaseMaxHP(Level);UnlockSpell(Projectile_Fly_DragonWings,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="18"/>
@@ -474,20 +474,8 @@
     new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_6"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_1"
-    data "StackPriority" "6"
-
-    new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_7"
-    type "StatusData"
-    data "StatusType" "BOOST"
-    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_1"
-    data "StackPriority" "7"
-
-    new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_8"
-    type "StatusData"
-    data "StatusType" "BOOST"
     using "GOON_NPC_SORCERER_WILDMAGIC_PROGRESSION_TEMPLATE"
-    data "StackPriority" "8"
+    data "StackPriority" "6"
     data "Passives" "TidesOfChaos;TidesOfChaos_Unlock;WildMagic;BendLuck"
     data "Boosts" "ActionResource(TidesOfChaos,1,0)"
 
@@ -499,16 +487,28 @@
     //     <attribute id="TableUUID" type="guid" value="dbf5281b-5a6e-486d-92db-ff67a0a3842b"/>
     //     <attribute id="UUID" type="guid" value="10eceeb6-f206-47ce-8507-72491fcf3d20"/>
 
+    new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_7"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_6"
+    data "StackPriority" "7"
+
+    new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_8"
+    type "StatusData"
+    data "StatusType" "BOOST"
+    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_6"
+    data "StackPriority" "8"
+
     new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_9"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_8"
+    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_6"
     data "StackPriority" "9"
 
     new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_10"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_8"
+    using "GOON_NPC_SORCERER_WILDMAGIC_LVL_6"
     data "StackPriority" "10"
 
     new entry "GOON_NPC_SORCERER_WILDMAGIC_LVL_11"

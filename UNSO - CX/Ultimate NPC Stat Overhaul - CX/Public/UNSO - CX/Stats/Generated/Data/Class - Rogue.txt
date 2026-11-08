@@ -45,8 +45,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_ROGUE_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
-    data "Passives" ""
-    data "Boosts" ""
+    data "Passives" "SneakAttack_Unlock;CX_Martial_Boost;Goon_Finesse_Overwrite"
+    data "Boosts" "Tag(ROGUE);Proficiency(LightArmor);ActionResource(SneakAttack_Charge,1,0)"
 
     // <node id="Progression">
     //     <attribute id="AllowImprovement" type="bool" value="false"/>

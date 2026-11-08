@@ -44,7 +44,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
-    data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;CX_Magic_Boost"
+    data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost"
     data "Boosts" "Tag(BARD);ActionResource(BardicInspiration,3,0);Proficiency(LightArmor);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting)"
 
     // <node id="Progression">
@@ -62,7 +62,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
-    data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;CX_Magic_Boost"
+    data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost"
     data "Boosts" "Tag(BARD);ActionResource(SpellSlot,2,1);ActionResource(BardicInspiration,3,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting)"
 
     new entry "GOON_NPC_BARD_LVL_2"
@@ -119,7 +119,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "8"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,2,4);ActionResource(BardicInspiration,1,0)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,2,4)"
 
     new entry "GOON_NPC_BARD_LVL_9"
     type "StatusData"
@@ -127,7 +127,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,1,5)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,1,5)"
 
     new entry "GOON_NPC_BARD_LVL_10"
     type "StatusData"
@@ -135,7 +135,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "10"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,2,5)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5)"
 
     new entry "GOON_NPC_BARD_LVL_11"
     type "StatusData"
@@ -143,7 +143,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "11"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6)"
 
     new entry "GOON_NPC_BARD_LVL_12"
     type "StatusData"
@@ -151,7 +151,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "12"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6)"
 
 // Expansion levels 13-20
     new entry "GOON_NPC_BARD_LVL_13"
@@ -160,7 +160,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "13"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7)"
 
     new entry "GOON_NPC_BARD_LVL_14"
     type "StatusData"
@@ -174,7 +174,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "15"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10;BardicInspiration_d12"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8)"
 
     new entry "GOON_NPC_BARD_LVL_16"
     type "StatusData"
@@ -188,7 +188,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "17"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10;BardicInspiration_d12"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
 
     new entry "GOON_NPC_BARD_LVL_18"
     type "StatusData"
@@ -196,7 +196,7 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "18"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10;BardicInspiration_d12"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,3,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,3,5);ActionResource(SpellSlot,1,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
 
     new entry "GOON_NPC_BARD_LVL_19"
     type "StatusData"
@@ -204,15 +204,15 @@
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "19"
     data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10;BardicInspiration_d12"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,3,5);ActionResource(SpellSlot,2,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,3,5);ActionResource(SpellSlot,2,6);ActionResource(SpellSlot,1,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
 
     new entry "GOON_NPC_BARD_LVL_20"
     type "StatusData"
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_PROGRESSION_TEMPLATE"
     data "StackPriority" "20"
-    data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10;BardicInspiration_d12"
-    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(BardicInspiration,1,0);ActionResource(SpellSlot,3,5);ActionResource(SpellSlot,2,6);ActionResource(SpellSlot,2,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
+    data "Passives" "BardicInspiration;BardSpellcasting;UnlockedSpellSlotLevel1;CX_Magic_Boost;JackOfAllTrades;MagicalInspiration;UnlockedSpellSlotLevel2;FontOfInspiration;BardicInspiration_d8;UnlockedSpellSlotLevel3;BardicInspiration_d10;BardicInspiration_d12;SuperiorInspiration"
+    data "Boosts" "Tag(BARD);ActionResource(SpellSlot,4,1);ActionResource(BardicInspiration,5,0);ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);Proficiency(HandCrossbows);Proficiency(Longswords);Proficiency(Rapiers);Proficiency(Shortswords);Proficiency(MusicalInstrument);Attribute(UseMusicalInstrumentForCasting);UnlockSpell(Shout_SongOfRest,AddChildren);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);UnlockSpell(Target_Countercharm,AddChildren);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,3,5);ActionResource(SpellSlot,2,6);ActionResource(SpellSlot,2,7);ActionResource(SpellSlot,1,8);ActionResource(SpellSlot,1,9)"
 
 // ==================================== Subclass: College of Lore ====================================
 
@@ -428,7 +428,7 @@
     using "GOON_NPC_BARD_SWORDS_PROGRESSION_TEMPLATE"
     data "StackPriority" "2"
 
-    new entry "GOON_NPC_BARD_SWORDS_LEVEL_3"
+    new entry "GOON_NPC_BARD_SWORDS_LVL_3"
     type "StatusData"
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_SWORDS_PROGRESSION_TEMPLATE"
@@ -448,16 +448,16 @@
     new entry "GOON_NPC_BARD_SWORDS_LVL_4"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_3"
+    using "GOON_NPC_BARD_SWORDS_LVL_3"
     data "StackPriority" "4"
 
     new entry "GOON_NPC_BARD_SWORDS_LVL_5"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_3"
+    using "GOON_NPC_BARD_SWORDS_LVL_3"
     data "StackPriority" "5"
 
-    new entry "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    new entry "GOON_NPC_BARD_SWORDS_LVL_6"
     type "StatusData"
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_SWORDS_PROGRESSION_TEMPLATE"
@@ -476,44 +476,44 @@
     new entry "GOON_NPC_BARD_SWORDS_LVL_7"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "7"
 
     new entry "GOON_NPC_BARD_SWORDS_LVL_8"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "8"
 
     new entry "GOON_NPC_BARD_SWORDS_LVL_9"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "9"
 
     new entry "GOON_NPC_BARD_SWORDS_LVL_10"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "10"
 
     new entry "GOON_NPC_BARD_SWORDS_LVL_11"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "11"
 
     new entry "GOON_NPC_BARD_SWORDS_LVL_12"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "12"
 
 // Expansion levels 13-20
     new entry "GOON_NPC_BARD_SWORDS_LVL_13"
     type "StatusData"
     data "StatusType" "BOOST"
-    using "GOON_NPC_BARD_SWORDS_LEVEL_6"
+    using "GOON_NPC_BARD_SWORDS_LVL_6"
     data "StackPriority" "13"
     
     new entry "GOON_NPC_BARD_SWORDS_LVL_14"
@@ -746,4 +746,3 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_VALOR_LVL_14"
     data "StackPriority" "20"
-    

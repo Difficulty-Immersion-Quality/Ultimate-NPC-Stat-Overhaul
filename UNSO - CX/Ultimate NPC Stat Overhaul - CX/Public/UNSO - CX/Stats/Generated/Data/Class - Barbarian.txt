@@ -78,7 +78,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "3"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,3,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_4"
@@ -92,7 +92,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "5"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,3,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_6"
@@ -100,7 +100,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "6"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,4,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_7"
@@ -108,7 +108,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,4,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_8"
@@ -122,7 +122,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;BrutalCritical"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;BrutalCritical"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,4,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_10"
@@ -136,7 +136,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "11"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;BrutalCritical;RelentlessRage"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;BrutalCritical;RelentlessRage"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,4,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_12"
@@ -144,7 +144,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "12"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;BrutalCritical;RelentlessRage"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;BrutalCritical;RelentlessRage"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,5,0)"
 
 // Expansion levels 13-20
@@ -153,7 +153,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "13"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;BrutalCritical_2"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;BrutalCritical_2"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,5,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_14"
@@ -167,7 +167,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "15"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;BrutalCritical_2;PersistentRage"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;BrutalCritical_2;PersistentRage"
     data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,5,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_16"
@@ -181,16 +181,16 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "17"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;PersistentRage;BrutalCritical_3"
-    data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,5,0)"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;PersistentRage;BrutalCritical_3"
+    data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,6,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_18"
     type "StatusData"
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "18"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;PersistentRage;BrutalCritical_3"
-    data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,5,0)"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;PersistentRage;BrutalCritical_3;IndomitableMight"
+    data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,6,0)"
 
     new entry "GOON_NPC_BARBARIAN_LVL_19"
     type "StatusData"
@@ -203,8 +203,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARBARIAN_PROGRESSION_TEMPLATE"
     data "StackPriority" "20"
-    data "Passives" "RageUnlock;UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;PersistentRage;BrutalCritical_3;PrimalChampion"
-    data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,5,0);ActionResourceReplenishTypeOverride(Rage,Turn)"
+    data "Passives" "UnarmouredDefence_Barbarian;Rage_Armour_Message;Rage_NoHeavyArmour_VFX;CX_Martial_Boost;DangerSense;RecklessAttack;ExtraAttack;FastMovement;FeralInstinct;InstinctivePounce;RelentlessRage;PersistentRage;BrutalCritical_3;IndomitableMight;PrimalChampion"
+    data "Boosts" "Tag(BARBARIAN);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);ActionResource(Rage,6,0);ActionResourceReplenishTypeOverride(Rage,Turn)"
 
 // ==================================== Subclass: Berserker ====================================
 

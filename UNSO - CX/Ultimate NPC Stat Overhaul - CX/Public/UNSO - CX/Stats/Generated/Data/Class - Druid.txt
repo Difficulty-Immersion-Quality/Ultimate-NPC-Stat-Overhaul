@@ -132,7 +132,7 @@
     using "GOON_NPC_DRUID_PROGRESSION_TEMPLATE"
     data "StackPriority" "10"
     data "Passives" "UnlockedSpellSlotLevel1;CX_Magic_Boost;UnlockedSpellSlotLevel2;UnlockedSpellSlotLevel3;WildStrike;WildStrike_2"
-    data "Boosts" "Tag(DRUID);ActionResource(SpellSlot,4,1);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Intelligence);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(Clubs);Proficiency(Daggers);Proficiency(Javelins);Proficiency(Maces);Proficiency(Quarterstaffs);Proficiency(Scimitars);Proficiency(Sickles);Proficiency(Spears);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,1,5)"
+    data "Boosts" "Tag(DRUID);ActionResource(SpellSlot,4,1);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Intelligence);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(Clubs);Proficiency(Daggers);Proficiency(Javelins);Proficiency(Maces);Proficiency(Quarterstaffs);Proficiency(Scimitars);Proficiency(Sickles);Proficiency(Spears);ActionResource(SpellSlot,3,2);ActionResource(SpellSlot,3,3);ActionResource(SpellSlot,3,4);ActionResource(SpellSlot,2,5)"
 
     new entry "GOON_NPC_DRUID_LVL_11"
     type "StatusData"
@@ -486,7 +486,7 @@
     type "StatusData"
     data "StatusType" "BOOST"
     using "GOON_NPC_DRUID_LAND_LVL_17"
-    data "StackPriority" "18
+    data "StackPriority" "18"
 
     new entry "GOON_NPC_DRUID_LAND_LVL_19"
     type "StatusData"
@@ -515,9 +515,9 @@
     new entry "CX_Druid_Moon_Boost"
     type "PassiveData"
     // ! Subclass: Circle of the Moon Druid
-    data "DisplayName" "hb7785d94g8723g45b8gb252g11f0270642c1"
+    data "DisplayName" "hb7785d94g8723g45b8gb252g11f0270642c1;1"
     // A Druid who specializes in Wild Shaping into massive beasts or even primal elementals.
-    data "Description" "h654778cegbf88g49adgb407gcb0cc8299dc0"
+    data "Description" "h654778cegbf88g49adgb407gcb0cc8299dc0;1"
     data "Properties" "Highlighted"
     data "Icon" "Skill_Druid_WildShape"
     data "Boosts" ""
@@ -727,9 +727,9 @@
     new entry "CX_Druid_Spores_Boost"
     type "PassiveData"
     // ! Subclass: Circle of the Spores Druid
-    data "DisplayName" "h407e27feg0d73g483dgbed5gb58542ff0cca"
+    data "DisplayName" "h407e27feg0d73g483dgbed5gb58542ff0cca;1"
     // A Druid who uses fungal growth and decay to augment themselves and harm their foes.
-    data "Description" "h5872faaag78ffg4f03g99cbgcda17b06d423"
+    data "Description" "h5872faaag78ffg4f03g99cbgcda17b06d423;1"
     data "Properties" "Highlighted"
     data "Icon" "Action_SymbioticEntity"
     data "Boosts" ""
@@ -962,4 +962,3 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_DRUID_SPORE_LVL_14"
     data "StackPriority" "20"
-    

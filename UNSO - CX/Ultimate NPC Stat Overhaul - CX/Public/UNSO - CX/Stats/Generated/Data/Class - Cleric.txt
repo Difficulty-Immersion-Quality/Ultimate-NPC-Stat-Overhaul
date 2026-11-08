@@ -16,10 +16,10 @@
     type "PassiveData"
     // data "DisplayName" "hd78bde2fg5767g458eg822fg0684c68cc601"
     // ! CX Class Boost: Cleric
-    data "DisplayName" "hf9960aa3g25a4g44e7ga5d6g3f7f254ec53b"
+    data "DisplayName" "hf9960aa3g25a4g44e7ga5d6g3f7f254ec53b;1"
     // data "Description" "hc0870e25gdc4dg4f41g9aa3g5d5c4f17c9c1"
     // Entity has Cleric progressions in addition to boosts from configuration.
-    data "Description" "hacdccdb0ge6c6g454bga598g6df082810262"
+    data "Description" "hacdccdb0ge6c6g454bga598g6df082810262;1"
     data "Properties" "Highlighted"
     // data "Icon" "Action_DivineIntervention_Weapon"
     data "Icon" "Action_DivineIntervention_Attack"
@@ -246,7 +246,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
     data "Passives" "DiscipleOfLife"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="Proficiency(HeavyArmor)"/>
@@ -264,7 +264,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "2"
     data "Passives" "DiscipleOfLife"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="2"/>
@@ -280,7 +280,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "3"
     data "Passives" "DiscipleOfLife"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="3"/>
@@ -302,7 +302,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "5"
     data "Passives" "DiscipleOfLife"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="5"/>
@@ -318,7 +318,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "6"
     data "Passives" "DiscipleOfLife;BlessedHealer"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="6"/>
@@ -334,7 +334,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
     data "Passives" "DiscipleOfLife;BlessedHealer"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="7"/>
@@ -350,7 +350,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "8"
     data "Passives" "DiscipleOfLife;BlessedHealer;Divine_Strike_Life_Toggle"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="8"/>
@@ -367,7 +367,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
     data "Passives" "DiscipleOfLife;BlessedHealer;Divine_Strike_Life_Toggle"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren);UnlockSpell(Target_CureWounds_Mass,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren);UnlockSpell(Target_CureWounds_Mass,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="9"/>
@@ -383,7 +383,7 @@
     using "GOON_NPC_CLERIC_LIFE_LVL_9"
     data "StackPriority" "10"
 
-        new entry "GOON_NPC_CLERIC_LIFE_LVL_11"
+    new entry "GOON_NPC_CLERIC_LIFE_LVL_11"
     type "StatusData"
     data "StatusType" "BOOST"
     using "GOON_NPC_CLERIC_LIFE_LVL_9"
@@ -408,7 +408,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "14"
     data "Passives" "DiscipleOfLife;BlessedHealer;Divine_Strike_Life_Toggle_2;Divine_Strike_Life_WeaponAttack"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren);UnlockSpell(Target_CureWounds_Mass,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren);UnlockSpell(Target_CureWounds_Mass,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="14"/>
@@ -437,7 +437,7 @@
     using "GOON_NPC_CLERIC_LIFE_PROGRESSION_TEMPLATE"
     data "StackPriority" "17"
     data "Passives" "DiscipleOfLife;BlessedHealer;Divine_Strike_Life_Toggle_2;Divine_Strike_Life_WeaponAttack;SupremeHealing"
-    data "Boosts" "UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren);UnlockSpell(Target_CureWounds_Mass,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Target_CureWounds,AddChildren);UnlockSpell(Target_Bless,AddChildren);UnlockSpell(Shout_PreserveLife,AddChildren);UnlockSpell(Shout_Aid,AddChildren);UnlockSpell(Target_LesserRestoration,AddChildren);UnlockSpell(Teleportation_Revivify,AddChildren);UnlockSpell(Shout_BeaconOfHope,AddChildren);UnlockSpell(Target_DeathWard,AddChildren);UnlockSpell(Target_GuardianOfFaith,AddChildren);UnlockSpell(Target_DivineStrike_Life_Container,AddChildren);UnlockSpell(Target_CureWounds_Mass,AddChildren);UnlockSpell(Target_GreaterRestoration,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="17"/>
@@ -1000,7 +1000,7 @@
     using "GOON_NPC_CLERIC_NATURE_PROGRESSION_TEMPLATE"
     data "StackPriority" "3"
     data "Passives" "AcolyteOfNature"
-    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Shout_CharmAnimalsAndPlants,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="3"/>
@@ -1022,7 +1022,7 @@
     using "GOON_NPC_CLERIC_NATURE_PROGRESSION_TEMPLATE"
     data "StackPriority" "5"
     data "Passives" "AcolyteOfNature"
-    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Shout_CharmAnimalsAndPlants,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="5"/>
@@ -1038,7 +1038,7 @@
     using "GOON_NPC_CLERIC_NATURE_PROGRESSION_TEMPLATE"
     data "StackPriority" "6"
     data "Passives" "AcolyteOfNature;DampenElements"
-    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Shout_CharmAnimalsAndPlants,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="6"/>
@@ -1054,7 +1054,7 @@
     using "GOON_NPC_CLERIC_NATURE_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
     data "Passives" "AcolyteOfNature;DampenElements"
-    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_DominateBeast,AddChildren);UnlockSpell(Target_GraspingVine,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Shout_CharmAnimalsAndPlants,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DominateBeast,AddChildren);UnlockSpell(Target_GraspingVine,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="7"/>
@@ -1070,7 +1070,7 @@
     using "GOON_NPC_CLERIC_NATURE_PROGRESSION_TEMPLATE"
     data "StackPriority" "8"
     data "Passives" "AcolyteOfNature;DampenElements;Divine_Strike_Nature_Toggle"
-    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_DominateBeast,AddChildren);UnlockSpell(Target_GraspingVine,AddChildren);UnlockSpell(Target_DivineStrike_Nature_Container,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Shout_CharmAnimalsAndPlants,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DominateBeast,AddChildren);UnlockSpell(Target_GraspingVine,AddChildren);UnlockSpell(Target_DivineStrike_Nature_Container,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="8"/>
@@ -1087,7 +1087,7 @@
     using "GOON_NPC_CLERIC_NATURE_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
     data "Passives" "AcolyteOfNature;DampenElements;Divine_Strike_Nature_Toggle"
-    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_DominateBeast,AddChildren);UnlockSpell(Target_GraspingVine,AddChildren);UnlockSpell(Target_DivineStrike_Nature_Container,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren);UnlockSpell(Wall_WallOfStone,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);UnlockSpell(Shout_SpeakWithAnimals,AddChildren);UnlockSpell(Target_AnimalFriendship,AddChildren);UnlockSpell(Shout_CharmAnimalsAndPlants,AddChildren);UnlockSpell(Target_SpikeGrowth,AddChildren);UnlockSpell(Target_Barkskin,AddChildren);UnlockSpell(Target_PlantGrowth,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DominateBeast,AddChildren);UnlockSpell(Target_GraspingVine,AddChildren);UnlockSpell(Target_DivineStrike_Nature_Container,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren);UnlockSpell(Wall_WallOfStone,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="9"/>
@@ -1285,7 +1285,7 @@
     using "GOON_NPC_CLERIC_TEMPEST_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
     data "Passives" "WrathOfTheStorm;DestructiveWrath;ThunderboltStrike"
-    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="7"/>
@@ -1301,7 +1301,7 @@
     using "GOON_NPC_CLERIC_TEMPEST_PROGRESSION_TEMPLATE"
     data "StackPriority" "8"
     data "Passives" "WrathOfTheStorm;DestructiveWrath;ThunderboltStrike;Divine_Strike_Tempest_Toggle"
-    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="8"/>
@@ -1318,7 +1318,7 @@
     using "GOON_NPC_CLERIC_TEMPEST_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
     data "Passives" "WrathOfTheStorm;DestructiveWrath;ThunderboltStrike;Divine_Strike_Tempest_Toggle"
-    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren);UnlockSpell(Shout_DestructiveWave,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren);UnlockSpell(Shout_DestructiveWave,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="9"/>
@@ -1359,7 +1359,7 @@
     using "GOON_NPC_CLERIC_TEMPEST_PROGRESSION_TEMPLATE"
     data "StackPriority" "14"
     data "Passives" "WrathOfTheStorm;DestructiveWrath;ThunderboltStrike;Divine_Strike_Tempest_Toggle_2;Divine_Strike_Tempest_WeaponAttack"
-    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren);UnlockSpell(Shout_DestructiveWave,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren);UnlockSpell(Shout_DestructiveWave,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren)"
     
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="14"/>
@@ -1388,7 +1388,7 @@
     using "GOON_NPC_CLERIC_TEMPEST_PROGRESSION_TEMPLATE"
     data "StackPriority" "17"
     data "Passives" "WrathOfTheStorm;DestructiveWrath;ThunderboltStrike;Divine_Strike_Tempest_Toggle_2;Divine_Strike_Tempest_WeaponAttack;Stormborn"
-    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren);UnlockSpell(Shout_DestructiveWave,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Zone_Thunderwave,AddChildren);UnlockSpell(Target_FogCloud,AddChildren);UnlockSpell(Target_Shatter,AddChildren);UnlockSpell(Zone_GustOfWind,AddChildren);UnlockSpell(Target_CallLightning,AddChildren);UnlockSpell(Target_SleetStorm,AddChildren);UnlockSpell(Target_IceStorm,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_Tempest_Container,AddChildren);UnlockSpell(Shout_DestructiveWave,AddChildren);UnlockSpell(Target_InsectPlague,AddChildren)"
     
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="17"/>
@@ -1481,7 +1481,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "3"
     data "Passives" ""
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="3"/>
@@ -1503,7 +1503,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "5"
     data "Passives" ""
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="5"/>
@@ -1519,7 +1519,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "6"
     data "Passives" ""
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="6"/>
@@ -1535,7 +1535,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
     data "Passives" ""
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="7"/>
@@ -1551,7 +1551,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "8"
     data "Passives" "Divine_Strike_Trickery_Toggle"
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="8"/>
@@ -1568,7 +1568,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
     data "Passives" "Divine_Strike_Trickery_Toggle"
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren);UnlockSpell(Target_Seeming,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren);UnlockSpell(Target_Seeming,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="9"/>
@@ -1609,7 +1609,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "14"
     data "Passives" "Divine_Strike_Trickery_Toggle_2;Divine_Strike_Trickery_WeaponAttack"
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren);UnlockSpell(Target_Seeming,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren);UnlockSpell(Target_Seeming,AddChildren)"
     
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="14"/>
@@ -1638,7 +1638,7 @@
     using "GOON_NPC_CLERIC_TRICKERY_PROGRESSION_TEMPLATE"
     data "StackPriority" "17"
     data "Passives" "Divine_Strike_Trickery_Toggle_2;Divine_Strike_Trickery_WeaponAttack;ImprovedDuplicity"
-    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren);UnlockSpell(Target_Seeming,AddChildren)"
+    data "Boosts" "UnlockSpell(Target_BlessingOfTheTrickster,AddChildren);UnlockSpell(Target_CharmPerson,AddChildren);UnlockSpell(Shout_DisguiseSelf,AddChildren);UnlockSpell(Target_InvokeDuplicity,AddChildren);UnlockSpell(Shout_MirrorImage,AddChildren);UnlockSpell(Shout_PassWithoutTrace,AddChildren);UnlockSpell(Target_BestowCurse,AddChildren);UnlockSpell(Zone_Fear,AddChildren);UnlockSpell(Shout_CloakOfShadows,AddChildren);UnlockSpell(Target_Polymorph,AddChildren);UnlockSpell(Teleportation_DimensionDoor,AddChildren);UnlockSpell(Target_DivineStrike_Trickery_Container,AddChildren);UnlockSpell(Target_DominatePerson,AddChildren);UnlockSpell(Target_Seeming,AddChildren)"
     
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="17"/>
@@ -1699,7 +1699,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
     data "Passives" "CX_Martial_Boost;WarPriest"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);ActionResource(WarPriestActionPoint,3,0);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(WarPriestActionPoint,3,0);Proficiency(HeavyArmor);Proficiency(MartialWeapons)"/>
@@ -1717,7 +1717,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "2"
     data "Passives" "CX_Martial_Boost;WarPriest"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);ActionResource(WarPriestActionPoint,3,0);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="2"/>
@@ -1733,7 +1733,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "3"
     data "Passives" "CX_Martial_Boost;WarPriest"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);ActionResource(WarPriestActionPoint,3,0);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="3"/>
@@ -1755,7 +1755,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "5"
     data "Passives" "CX_Martial_Boost;WarPriest"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,1,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,4,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(WarPriestActionPoint,1,0)"/>
@@ -1772,7 +1772,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "6"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,1,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,4,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="6"/>
@@ -1788,7 +1788,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,1,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,4,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="7"/>
@@ -1804,7 +1804,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "8"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing;Divine_Strike_War_Toggle"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,1,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,5,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(WarPriestActionPoint,1,0)"/>
@@ -1822,7 +1822,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "9"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing;Divine_Strike_War_Toggle"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,1,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,5,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="9"/>
@@ -1844,7 +1844,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "11"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing;Divine_Strike_War_Toggle"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,2,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,6,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(WarPriestActionPoint,1,0)"/>
@@ -1873,7 +1873,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "14"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing;Divine_Strike_War_Toggle_2;Divine_Strike_War_WeaponAttack"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,2,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,6,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
     
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="14"/>
@@ -1902,7 +1902,7 @@
     using "GOON_NPC_CLERIC_WAR_PROGRESSION_TEMPLATE"
     data "StackPriority" "17"
     data "Passives" "CX_Martial_Boost;WarPriest;WarGodsBlessing;Divine_Strike_War_Toggle_2;Divine_Strike_War_WeaponAttack;AvatarOfBattle"
-    data "Boosts" "UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,2,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
+    data "Boosts" "Proficiency(HeavyArmor);Proficiency(MartialWeapons);UnlockSpell(Shout_DivineFavor,AddChildren);UnlockSpell(Target_ShieldOfFaith,AddChildren);UnlockSpell(Shout_GuidedStrike,AddChildren);UnlockSpell(Target_MagicWeapon,AddChildren);UnlockSpell(Target_SpiritualWeapon,AddChildren);ActionResource(WarPriestActionPoint,6,0);UnlockSpell(Shout_SpiritGuardians,AddChildren);UnlockSpell(Shout_CrusadersMantle,AddChildren);UnlockSpell(Target_Stoneskin,AddChildren);UnlockSpell(Target_FreedomOfMovement,AddChildren);UnlockSpell(Target_DivineStrike_War_Container,AddChildren);UnlockSpell(Target_FlameStrike,AddChildren);UnlockSpell(Target_HoldMonster,AddChildren)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="17"/>

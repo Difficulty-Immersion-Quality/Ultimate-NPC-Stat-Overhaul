@@ -45,7 +45,7 @@
     using "GOON_NPC_FIGHTER_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
     data "Passives" "CX_Martial_Boost"
-    data "Boosts" "Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);UnlockSpell(Shout_SecondWind,AddChildren)"
+    data "Boosts" "Tag(FIGHTER);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons);UnlockSpell(Shout_SecondWind,AddChildren)"
 
     // <node id="Progression">
     // <attribute id="AllowImprovement" type="bool" value="false"/>
@@ -242,8 +242,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_FIGHTER_BATTLEMASTER_PROGRESSION_TEMPLATE"
     data "StackPriority" "3"
-    data "Passives" ""
-    data "Boosts" "ActionResource(SuperiorityDie,4,0);UnlockSpell(Riposte,AddChildren);UnlockSpell(DisarmingAttack,AddChildren);UnlockSpell(TripAttack,AddChildren)"
+    data "Passives" "Riposte;DisarmingAttack;TripAttack"
+    data "Boosts" "ActionResource(SuperiorityDie,4,0)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(SuperiorityDie,4,0)"/>
@@ -277,8 +277,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_FIGHTER_BATTLEMASTER_PROGRESSION_TEMPLATE"
     data "StackPriority" "7"
-    data "Passives" ""
-    data "Boosts" "ActionResource(SuperiorityDie,5,0);UnlockSpell(Riposte,AddChildren);UnlockSpell(DisarmingAttack,AddChildren);UnlockSpell(TripAttack,AddChildren);UnlockSpell(SweepingAttack,AddChildren);UnlockSpell(DistractingStrike,AddChildren)"
+    data "Passives" "Riposte;DisarmingAttack;TripAttack;SweepingAttack;DistractingStrike"
+    data "Boosts" "ActionResource(SuperiorityDie,5,0)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(SuperiorityDie,1,0)"/>
@@ -306,8 +306,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_FIGHTER_BATTLEMASTER_PROGRESSION_TEMPLATE"
     data "StackPriority" "10"
-    data "Passives" "ImprovedCombatSuperiority"
-    data "Boosts" "ActionResource(SuperiorityDie,5,0);UnlockSpell(Riposte,AddChildren);UnlockSpell(DisarmingAttack,AddChildren);UnlockSpell(TripAttack,AddChildren);UnlockSpell(SweepingAttack,AddChildren);UnlockSpell(DistractingStrike,AddChildren);UnlockSpell(GoadingAttack,AddChildren);UnlockSpell(MenacingAttack,AddChildren)"
+    data "Passives" "Riposte;DisarmingAttack;TripAttack;SweepingAttack;DistractingStrike;GoadingAttack;MenacingAttack;ImprovedCombatSuperiority"
+    data "Boosts" "ActionResource(SuperiorityDie,5,0)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="10"/>
@@ -348,8 +348,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_FIGHTER_BATTLEMASTER_PROGRESSION_TEMPLATE"
     data "StackPriority" "15"
-    data "Passives" "ImprovedCombatSuperiority;Relentless"
-    data "Boosts" "ActionResource(SuperiorityDie,6,0);UnlockSpell(Riposte,AddChildren);UnlockSpell(DisarmingAttack,AddChildren);UnlockSpell(TripAttack,AddChildren);UnlockSpell(SweepingAttack,AddChildren);UnlockSpell(DistractingStrike,AddChildren);UnlockSpell(GoadingAttack,AddChildren);UnlockSpell(MenacingAttack,AddChildren)"
+    data "Passives" "Riposte;DisarmingAttack;TripAttack;SweepingAttack;DistractingStrike;GoadingAttack;MenacingAttack;ImprovedCombatSuperiority;Relentless"
+    data "Boosts" "ActionResource(SuperiorityDie,6,0)"
 
     // <node id="Progression">
     //     <attribute id="Boosts" type="LSString" value="ActionResource(SuperiorityDie,1,0)"/>
@@ -377,8 +377,8 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_FIGHTER_BATTLEMASTER_LVL_15"
     data "StackPriority" "18"
-    data "Passives" "Relentless;ImprovedCombatSuperiority_2"
-    data "Boosts" "ActionResource(SuperiorityDie,6,0);UnlockSpell(Riposte,AddChildren);UnlockSpell(DisarmingAttack,AddChildren);UnlockSpell(TripAttack,AddChildren);UnlockSpell(SweepingAttack,AddChildren);UnlockSpell(DistractingStrike,AddChildren);UnlockSpell(GoadingAttack,AddChildren);UnlockSpell(MenacingAttack,AddChildren)"
+    data "Passives" "Riposte;DisarmingAttack;TripAttack;SweepingAttack;DistractingStrike;GoadingAttack;MenacingAttack;Relentless;ImprovedCombatSuperiority_2"
+    data "Boosts" "ActionResource(SuperiorityDie,6,0)"
 
     // <node id="Progression">
     //     <attribute id="Level" type="uint8" value="18"/>

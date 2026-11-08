@@ -5,7 +5,7 @@
     // ! Class: Ranger
     data "DisplayName" "haf18a871g8e0fg46b0gb05eg2ea8ca538b80;1"
     // A character who thrives in the wilds, blending survival instinct with deadly precision.
-    data "Description" "hb866306fgff14g4ea1gbe39g5cab14bea83b"
+    data "Description" "hb866306fgff14g4ea1gbe39g5cab14bea83b;1"
     data "Properties" "Highlighted"
     data "Icon" "GenericIcon_Intent_Buff"
 
@@ -43,7 +43,7 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_RANGER_PROGRESSION_TEMPLATE"
     data "StackPriority" "1"
-    data "Passives" ""
+    data "Passives" "CX_Magic_Boost;CX_Martial_Boost"
     data "Boosts" "Tag(RANGER);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"
 
     // <node id="Progression">
