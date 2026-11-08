@@ -1,51 +1,59 @@
 -- ==================================== Barbarian ====================================
 
 -- Consolidated
-function UNSO_NPC_Barbarian_Subclass()
-    return UNSO_NPC_Barbarian_Berserker()
-         | UNSO_NPC_Barbarian_Giant()
-         | UNSO_NPC_Barbarian_WildMagic()
-         | UNSO_NPC_Barbarian_Wildheart()
-         | UNSO_NPC_Barbarian_AncestralGuardian()
-         | UNSO_NPC_Barbarian_Zealot()
+function UNSO_NPC_Barbarian_Subclass(source)
+    source = source or context.Source
+    if UNSO_NPC_Barbarian_Berserker(source).Result         then return ConditionResult(true) end
+    if UNSO_NPC_Barbarian_Giant(source).Result             then return ConditionResult(true) end
+    if UNSO_NPC_Barbarian_WildMagic(source).Result         then return ConditionResult(true) end
+    if UNSO_NPC_Barbarian_Wildheart(source).Result         then return ConditionResult(true) end
+    if UNSO_NPC_Barbarian_AncestralGuardian(source).Result then return ConditionResult(true) end
+    if UNSO_NPC_Barbarian_Zealot(source).Result            then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
--- Vanilla
-function UNSO_NPC_Barbarian_Berserker(entity)
-    entity = entity or context.Source
-    return HasPassive('LAB_Progression_Barbarian_Berserker', entity)
-         | HasPassive('CX_Barbarian_Berserker_Boost', entity)
+-- ==================================== Barbarian - Vanilla
+
+function UNSO_NPC_Barbarian_Berserker(source)
+    source = source or context.Source
+    if HasPassive('LAB_Progression_Barbarian_Berserker', source).Result then return ConditionResult(true) end
+    if HasPassive('CX_Barbarian_Berserker_Boost', source).Result        then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
-function UNSO_NPC_Barbarian_Giant(entity)
-    entity = entity or context.Source
-    return HasPassive('LAB_Progression_Barbarian_Giant', entity)
-         | HasPassive('CX_Barbarian_Giant_Boost', entity)
+function UNSO_NPC_Barbarian_Giant(source)
+    source = source or context.Source
+    if HasPassive('LAB_Progression_Barbarian_Giant', source).Result then return ConditionResult(true) end
+    if HasPassive('CX_Barbarian_Giant_Boost', source).Result        then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
-function UNSO_NPC_Barbarian_WildMagic(entity)
-    entity = entity or context.Source
-    return HasPassive('LAB_Progression_Barbarian_WildMagic', entity)
-         | HasPassive('CX_Barbarian_WildMagic_Boost', entity)
+function UNSO_NPC_Barbarian_WildMagic(source)
+    source = source or context.Source
+    if HasPassive('LAB_Progression_Barbarian_WildMagic', source).Result then return ConditionResult(true) end
+    if HasPassive('CX_Barbarian_WildMagic_Boost', source).Result        then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
-function UNSO_NPC_Barbarian_Wildheart(entity)
-    entity = entity or context.Source
-    return HasPassive('LAB_Progression_Barbarian_Wildheart', entity)
-         | HasPassive('CX_Barbarian_Wildheart_Boost', entity)
+function UNSO_NPC_Barbarian_Wildheart(source)
+    source = source or context.Source
+    if HasPassive('LAB_Progression_Barbarian_Wildheart', source).Result then return ConditionResult(true) end
+    if HasPassive('CX_Barbarian_Wildheart_Boost', source).Result        then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
--- Custom
-function UNSO_NPC_Barbarian_AncestralGuardian(entity)
-    entity = entity or context.Source
-    return HasPassive('LAB_Progression_Barbarian_AncestralGuardian', entity)
-         | HasPassive('CX_Barbarian_AncestralGuardian_Boost', entity)
+-- ==================================== Barbarian - Custom
+
+function UNSO_NPC_Barbarian_AncestralGuardian(source)
+    source = source or context.Source
+    if HasPassive('LAB_Progression_Barbarian_AncestralGuardian', source).Result then return ConditionResult(true) end
+    if HasPassive('CX_Barbarian_AncestralGuardian_Boost', source).Result        then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
-function UNSO_NPC_Barbarian_Zealot(entity)
-    entity = entity or context.Source
-    return HasPassive('LAB_Progression_Barbarian_Zealot', entity)
-         | HasPassive('CX_Barbarian_Zealot_Boost', entity)
+function UNSO_NPC_Barbarian_Zealot(source)
+    source = source or context.Source
+    if HasPassive('LAB_Progression_Barbarian_Zealot', source).Result then return ConditionResult(true) end
+    if HasPassive('CX_Barbarian_Zealot_Boost', source).Result        then return ConditionResult(true) end
+    return ConditionResult(false)
 end
-
--- ==================================== XXX ====================================
