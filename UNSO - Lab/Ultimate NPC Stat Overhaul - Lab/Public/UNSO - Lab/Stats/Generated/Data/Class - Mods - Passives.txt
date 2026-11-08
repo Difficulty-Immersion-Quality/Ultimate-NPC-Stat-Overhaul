@@ -153,6 +153,7 @@ using "LAB_Progression_Rogue_ScionOfTheThree"
 data "Properties" "IsHidden"
 
 // ==================================== Warlock - Subclasses
+// TODO: Not currently included in _Subclasses.lua.
 
 new entry "LAB_Progression_Warlock_Undead"
 type "PassiveData"
