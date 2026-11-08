@@ -4,9 +4,9 @@ new entry "DEATHSHEAD_UNSTOPPABLE_1"
 type "StatusData"
 data "StatusType" "BOOST"
 using "DEATHSHEAD_UNSTOPPABLE_1"
-// Unstoppable: 1
+// // Unstoppable: 1
 // data "DisplayName" "hc68e933eg5691g45c8g813dgbbf54bfe6817;2"
-// Reduce the next damage taken by the entity to [1] and consumes one charge of Unstoppable. Unstoppable creatures cannot be moved by any external forces - mundane or magical. 
+// // Reduce the next damage taken by the entity to [1] and consumes one charge of Unstoppable. Unstoppable creatures cannot be moved by any external forces - mundane or magical. 
 // data "Description" "h56699256g0f61g489dgaf6fg32e9507325ea;7"
 // Reduce the next damage taken by the entity by [1], consuming one charge of Unstoppable. Unstoppable creatures cannot be moved by any external forces, neither mundane nor magical.
 data "Description" "hebdf9566ga7a1g4ce2gb495gb29a460bc838;1"
@@ -27,7 +27,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_2"
-// Unstoppable: 2
+// // Unstoppable: 2
 // data "DisplayName" "h14c27d07g62f7g45aagb659g656b85241a40;2"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "2"
@@ -41,7 +41,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_3"
-// Unstoppable: 3
+// // Unstoppable: 3
 // data "DisplayName" "ha95cffe9g78b5g4986g930eg0340ae3f2ac8;2"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "3"
@@ -55,7 +55,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_4"
-// Unstoppable: 4
+// // Unstoppable: 4
 // data "DisplayName" "h3b8437c0g591cg4c21gbf9cg77fdc050abed;2"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "4"
@@ -83,7 +83,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_6"
-// Unstoppable: 6
+// // Unstoppable: 6
 // data "DisplayName" "h0da5ddbcg52bcg4ebcga3b0g84f6dd755f27;2"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "6"
@@ -97,7 +97,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_7"
-// Unstoppable: 7
+// // Unstoppable: 7
 // data "DisplayName" "h5819eea6g4fa9g42b2gbfdcg7ae09df3969c;2"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "7"
@@ -111,7 +111,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_8"
-// Unstoppable: 8
+// // Unstoppable: 8
 // data "DisplayName" "h4b5760c1g0085g4ee0g87c9g868703972000;1"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "8"
@@ -125,13 +125,13 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_9"
-// Unstoppable: 9
+// // Unstoppable: 9
 // data "DisplayName" "hd6012bb1gb900g4463g8ec3g4d99834d3c90;1"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "9"
 // data "StackPriority" "9"
 // data "Boosts" "IF(HasStatus('DEATHSHEAD_UNSTOPPABLE_9',context.Source)):DamageReduction(All, Threshold, 1000);Attribute(Grounded);"
-data "Boosts" "IF(HasStatus('DEATHSHEAD_UNSTOPPABLE_10',context.Source)):DamageReduction(All, Flat, 9);Attribute(Grounded)"
+data "Boosts" "IF(HasStatus('DEATHSHEAD_UNSTOPPABLE_9',context.Source)):DamageReduction(All, Flat, 9);Attribute(Grounded)"
 // data "OnRemoveFunctors" "ApplyStatus(DEATHSHEAD_UNSTOPPABLE_8,100,-1)"
 
 new entry "DEATHSHEAD_UNSTOPPABLE_10"
@@ -139,7 +139,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_10"
-// Unstoppable: 10
+// // Unstoppable: 10
 // data "DisplayName" "ha60943ccg44cbg4dbega859gae9c4ae66db0;1"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "10"
@@ -153,7 +153,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_11"
-// Unstoppable: 11
+// // Unstoppable: 11
 // data "DisplayName" "h53d607feg22e9g4333gbb14gec9aed14cdbb;1"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "11"
@@ -167,7 +167,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // using "DEATHSHEAD_UNSTOPPABLE_1"
 using "DEATHSHEAD_UNSTOPPABLE_12"
-// Unstoppable: 12
+// // Unstoppable: 12
 // data "DisplayName" "h7d39b4d8gb2b3g4077g9c3cg1ccea2eea718;1"
 // data "DescriptionParams" "1"
 data "DescriptionParams" "12"

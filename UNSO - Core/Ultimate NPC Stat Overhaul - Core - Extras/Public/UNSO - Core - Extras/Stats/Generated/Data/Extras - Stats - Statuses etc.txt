@@ -12,13 +12,14 @@ new entry "DIAMONDSCALES_BULETTE"
 type "StatusData"
 data "StatusType" "BOOST"
 using "DIAMONDSCALES_BULETTE"
-// Diamond Scales
+// // Diamond Scales
 // data "DisplayName" "h5e28102fgbdc0g4822g95fcg7fdb32d51613;2"
-// This creature has [1]. While it has these Temporary Hit Points, it is &lt;LSTag Type="Status" Tooltip="GROUNDED"&gt;Grounded&lt;/LSTag&gt;, any damage lower than 15 will not affect it, and it can use &lt;LSTag Type="Spell" Tooltip="Shout_DiamondScalesBurst_Bulette"&gt;Shredding Scales&lt;/LSTag&gt; immediately after being hit for the first time in a round.
+// // This creature has [1]. While it has these Temporary Hit Points, it is &lt;LSTag Type="Status" Tooltip="GROUNDED"&gt;Grounded&lt;/LSTag&gt;, any damage lower than 15 will not affect it, and it can use &lt;LSTag Type="Spell" Tooltip="Shout_DiamondScalesBurst_Bulette"&gt;Shredding Scales&lt;/LSTag&gt; immediately after being hit for the first time in a round.
 // data "Description" "h4eb1e5f9g7eeeg4f23g888cg822824ca1392;4"
-// This creature has [1]. While it has these Temporary Hit Points, it is &lt;LSTag Type="Status" Tooltip="GROUNDED"&gt;Grounded&lt;/LSTag&gt;, any damage lower than 15 will not affect it, and it can use &lt;LSTag Type="Spell" Tooltip="Shout_DiamondScalesBurst_Bulette"&gt;Shredding Scales&lt;/LSTag&gt; immediately after being hit for the first time in a round.
+// // This creature has [1]. While it has these Temporary Hit Points, it is &lt;LSTag Type="Status" Tooltip="GROUNDED"&gt;Grounded&lt;/LSTag&gt;, any damage lower than 15 will not affect it, and it can use &lt;LSTag Type="Spell" Tooltip="Shout_DiamondScalesBurst_Bulette"&gt;Shredding Scales&lt;/LSTag&gt; immediately after being hit for the first time in a round.
 data "Description" "h7b2bfbc4gb40fg4219ga0f5g2eb8b681aad0;1"
 // data "DescriptionParams" "GainTemporaryHitPoints(100)"
+data "DescriptionParams" "GainTemporaryHitPoints(125)"
 // data "Icon" "statIcons_Bulette_DiamondScales"
 // data "StackId" "DIAMONDSCALES_BULETTE"
 // data "Boosts" "Attribute(Grounded);IgnoreDamageThreshold(All,15);TemporaryHP(100)"
@@ -48,7 +49,7 @@ using "CRE_MINDSTEAL_LINK_TARGET"
 // data "DescriptionParams" "2"
 data "DescriptionParams" "1"
 // data "Boosts" "Resistance(Psychic, Vulnerable); AC(-2);"
-data "Boosts" "Resistance(Psychic, Vulnerable);AC(-1);"
+data "Boosts" "Resistance(Psychic, Vulnerable);AC(-1)"
 
 // Description change for the spell
 new entry "Projectile_CRE_GithyankiInquisitor_Mindsteal_Link"
