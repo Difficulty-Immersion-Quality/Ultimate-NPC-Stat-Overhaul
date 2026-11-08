@@ -182,6 +182,7 @@ new entry "Gnome_Gondian_Caster"
 type "Character"
 using "Gnome_Gondian_Caster"
 // data "Progressions" ""
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" (Stats - Characters Vanilla)
 data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
 
 // ==================================== Human ====================================
@@ -203,6 +204,7 @@ new entry "WYR_Gortash"
 type "Character"
 using "WYR_Gortash"
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" (Stats - Characters Vanilla)
 data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
 
 // "_Human"
@@ -214,6 +216,7 @@ new entry "Human_Gondian_Caster"
 type "Character"
 using "Human_Gondian_Caster"
 // data "Progressions" ""
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" (Stats - Characters Vanilla)
 data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
 
 // ==================================== Kobold ====================================
@@ -240,10 +243,12 @@ data "Intelligence" "12"
 // data "Charisma" "12"
 data "Charisma" "8"
 // data "SpellCastingAbility" "Dexterity"
+// data "SpellCastingAbility" "Charisma" (Stats - Characters Vanilla)
 data "SpellCastingAbility" "Intelligence"
 // // data "Passives" "PackTactics;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Passives" "LAB_Progression_Sorcerer_WildMagic;PackTactics;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Progressions" "" 
+// data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f" (Stats - Characters Vanilla)
 data "Progressions" "d4159206-4573-43c0-94c6-46acb87d57c1"
 
 // ==================================== Summons ====================================

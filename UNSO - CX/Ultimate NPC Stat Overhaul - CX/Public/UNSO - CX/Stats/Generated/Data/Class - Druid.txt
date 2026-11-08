@@ -962,3 +962,4 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_DRUID_SPORE_LVL_14"
     data "StackPriority" "20"
+    

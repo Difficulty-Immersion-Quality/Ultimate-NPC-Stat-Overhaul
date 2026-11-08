@@ -746,3 +746,4 @@
     data "StatusType" "BOOST"
     using "GOON_NPC_BARD_VALOR_LVL_14"
     data "StackPriority" "20"
+    

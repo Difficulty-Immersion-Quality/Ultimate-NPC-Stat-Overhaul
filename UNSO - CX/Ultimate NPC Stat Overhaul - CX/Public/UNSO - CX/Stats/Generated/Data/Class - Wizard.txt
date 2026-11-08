@@ -2,7 +2,6 @@
 
     new entry "Goon_Wizard_NPC_Progressions"
     type "PassiveData"
-    using "Goon_NPC_Progressions_Template"
     // ! Class: Wizard
     data "DisplayName" "hda3c8533gc225g4f6cgb65fg22e6f4ea9deb;1"
     // A character who masters the weave through study and intellect.
@@ -2686,4 +2685,3 @@
     //     <attribute id="Selectors" type="LSString" value="SelectSpells(cb123d97-8809-4d71-a0cb-0ecb66177d15,2,0)"/>
     //     <attribute id="TableUUID" type="guid" value="0bf3a1fe-f4e0-4bd3-aa97-ceec14afa407"/>
     //     <attribute id="UUID" type="guid" value="d4482e0e-b5ba-4bf6-a3ec-21823a107af1"/>
-
