@@ -5,9 +5,9 @@ new entry "LURING_SONG_AURA"
 type "StatusData"
 data "StatusType" "BOOST"
 using "LURING_SONG_AURA"
-// Singing
+// // Singing
 // data "DisplayName" "h7685dfaag9c57g40a2g84dbgdfb8082a331f;2"
-// The harpy &lt;LSTag Type="Status" Tooltip="LURING_SONG"&gt;Lures&lt;/LSTag&gt; nearby creatures with a magical melody. &lt;br&gt;&lt;br&gt;The song ends if she is incapacitated or loses concentration.
+// // The harpy &lt;LSTag Type="Status" Tooltip="LURING_SONG"&gt;Lures&lt;/LSTag&gt; nearby creatures with a magical melody. &lt;br&gt;&lt;br&gt;The song ends if she is incapacitated or loses concentration.
 // data "Description" "h90f8b726g2718g42dfgb342g49f79df53dc7;4"
 // data "Icon" "Action_Singing"
 // data "StillAnimationType" "Shouting"

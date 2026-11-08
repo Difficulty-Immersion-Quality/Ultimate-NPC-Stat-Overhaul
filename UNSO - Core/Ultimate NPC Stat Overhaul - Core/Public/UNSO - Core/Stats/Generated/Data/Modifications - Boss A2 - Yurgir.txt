@@ -21,9 +21,9 @@ data "Level" ""
 // data "TargetConditions" "not Dead() and not (HasPassive('SculptSpells', context.Source) and Ally()) and not Tagged('INVISIBLE_HELPER')"
 data "TargetConditions" "not Dead() and not Tagged('INVISIBLE_HELPER')"
 // data "Icon" "GenericIcon_DamageType_Thunder"
-// Concussive Burst
+// // Concussive Burst
 // data "DisplayName" "hf594d706g2cb1g4a89g82afg7497dbb2e77f;2"
-// A thunderous blast that ripples over your foes and pushes them back.
+// // A thunderous blast that ripples over your foes and pushes them back.
 // data "Description" "h2186a044gcff1g4ef1ga3d2g1ab84d8c806c;3"
 // data "TooltipDamageList" "DealDamage(5d8,Thunder)"
 // data "TooltipAttackSave" "Constitution"
@@ -61,11 +61,11 @@ data "SpellType" "Target"
 using "Target_InfernalDagger"
 // data "Cooldown" "OncePerTurn"
 // data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical);DealDamage(max(1,2d4+6), Slashing);DealDamage(2d10, Poison);ApplyStatus(POISONED,100,2)"
-data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical,,0,,true,false);DealDamage(max(1,2d4+6), MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);DealDamage(2d10, Poison,,,0,,true,false);ApplyStatus(POISONED,100,2)"
+data "SpellSuccess" "IF(not SavingThrow(Ability.Constitution,17)):DealDamage(2d10, Poison,Magical,,0,,true,false);DealDamage(max(1,2d4+6),MainMeleeWeaponDamageType,,,0,,,,,,MainMeleeWeapon);ExecuteWeaponFunctors(MainHand);DealDamage(2d10, Poison,,,0,,true,false);ApplyStatus(POISONED,100,2)"
 // data "Icon" "GenericIcon_DamageType_Physical"
-// Infernal Dagger
+// // Infernal Dagger
 // data "DisplayName" "h9b74272ag086ag4c53gbbbeg639c2590dcba;1"
-// Strike a fiendish blow that might &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poison&lt;/LSTag&gt; the target and deal an additional [2].
+// // Strike a fiendish blow that might &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poison&lt;/LSTag&gt; the target and deal an additional [2].
 // data "Description" "h55b162f2gcd09g4437ga125gadc2cdc93b4e;2"
 // Strike a fiendish blow &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoning&lt;/LSTag&gt; the target, dealing [1], and an additional [2] if the target fails a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;.
 data "Description" "hea38735dg37d7g493dgb93fgfe81839a18a4;1"

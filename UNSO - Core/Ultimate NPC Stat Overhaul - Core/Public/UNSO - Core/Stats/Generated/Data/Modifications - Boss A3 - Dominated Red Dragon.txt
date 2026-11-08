@@ -15,11 +15,11 @@ using "Projectile_Fireball_Dragon"
 // data "SpellFail" "DealDamage((14d6)/2,Fire,Magical)"
 // data "TargetConditions" "DistanceToTargetGreaterThan(6.0) and not Tagged('HIT_PROXY')"
 // data "Trajectories" "ee353c2a-31e7-4fe2-a1b8-1902da1f4371"
-// Fire Breath
+// // Fire Breath
 // data "DisplayName" "h735039aag9237g4b5fg84c7g68350212b31a;2"
-// Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity.
+// // Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity.
 // data "Description" "hf6dae528gfd1eg426dg9776g4fff66e4734f;6"
-// Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.
+// // Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.
 data "Description" "h48bf5152gf621g411fg9636gbe8b0eea61d4;1"
 // data "TooltipDamageList" "DealDamage(14d6,Fire)"
 // data "CastSound" "CrSpell_Cast_RedDragon_FireBreath"

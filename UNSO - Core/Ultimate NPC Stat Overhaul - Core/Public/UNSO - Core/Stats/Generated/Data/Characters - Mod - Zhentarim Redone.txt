@@ -1,4 +1,6 @@
 // TODO: Support for Zhentarim Redone
+// Vashkoth Set’s Passives starts with ;.
+// Roah Moonglow Stats lists Alert twice.
 
 // new entry "Zarys's Stats"
 // type "Character"

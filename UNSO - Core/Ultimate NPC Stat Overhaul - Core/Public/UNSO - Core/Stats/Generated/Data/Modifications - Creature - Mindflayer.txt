@@ -34,9 +34,9 @@ data "SpellType" "Target"
 using "Target_Tentacles_MindFlayer"
 // data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
 // data "SpellSuccess" "DealDamage(2d10+4,Psychic);IF(not SavingThrow(Ability.Intelligence, 14)):ApplyStatus(STUNNED,100,1);"
-// Tentacle Whip
+// // Tentacle Whip
 // data "DisplayName" "ha32797b6g8153g43b6gbb5cga37cc6c149a2;2"
-// Lash out with your tentacles and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; your target.
+// // Lash out with your tentacles and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; your target.
 // data "Description" "hf0c16535gd5a3g4da1gbf6agb69118db4419;5"
 // data "TooltipDamageList" "DealDamage(2d10+4,Psychic)"
 // data "TooltipAttackSave" "MeleeUnarmedAttack;Intelligence"
@@ -64,9 +64,9 @@ using "Target_ExtractBrain_Mindflayer"
 // data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
 data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Sleeping') or Goon_HasProneCondition_Unconscious())"
 // data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
-// Extract Brain
+// // Extract Brain
 // data "DisplayName" "hdc7aef70g430bg453bg8572g8834a2364262;2"
-// Try to extract the brain of a Stunned or Unconscious creature.
+// // Try to extract the brain of a Stunned or Unconscious creature.
 // data "Description" "hdccfcac3g7a8dg45e8gb683g9ffc48c4a1c7;3"
 // Try to extract the brain of a &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="UNCONSCIOUS"&gt;Unconscious&lt;/LSTag&gt; creature.
 data "Description" "hc8edff4bgab54g4c52g8018ge1010d0a799d;1"

@@ -19,13 +19,13 @@ using "Projectile_LOW_Raphael_PrimordialHell"
 // data "TargetConditions" "not Self() and not Dead() and Enemy()"
 // data "Trajectories" "001ce817-932e-4d8c-bf86-7097178a7806"
 // data "Icon" "Spell_Evocation_Fireball"
-// Ravaging Inferno
+// // Ravaging Inferno
 // data "DisplayName" "hffafc26egb68fg422bgb0a4g272d32405b00;4"
-// Spend [3] souls to deal [1] and cause [2] &lt;LSTag Type="Spell" Tooltip="LOW_Raphael_DancingFlame"&gt;Igniting Sparks&lt;/LSTag&gt; to burst from each target hit.
+// // Spend [3] souls to deal [1] and cause [2] &lt;LSTag Type="Spell" Tooltip="LOW_Raphael_DancingFlame"&gt;Igniting Sparks&lt;/LSTag&gt; to burst from each target hit.
 // data "Description" "h21f7be7agbd60g4bddgbc7eg175e4a393bcb;5"
 // data "DescriptionParams" "DealDamage(15d8, Fire);DealDamage(4d6, Fire)"
 // data "TooltipDamageList" "DealDamage(15d8, Fire)"
-// Target still takes half damage, but does not expel any &lt;LSTag Type="Spell" Tooltip="Projectile_LOW_Raphael_PrimordialHell_Chain"&gt;Igniting Sparks&lt;/LSTag&gt;.
+// // Target still takes half damage, but does not expel any &lt;LSTag Type="Spell" Tooltip="Projectile_LOW_Raphael_PrimordialHell_Chain"&gt;Igniting Sparks&lt;/LSTag&gt;.
 // data "TooltipOnSave" "23bf0c8d-a594-4f4c-9571-412af59cb434"
 // data "PrepareSound" ""
 // data "PrepareLoopSound" ""
@@ -96,6 +96,7 @@ data "DisplayName" "ha3a1c23bgc133g41c4gbba6ga8be11bbbfa3;3"
 // // Spend [3] soul to teleport to an area and deal [1] where you land. The impact blast spreads a &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; surface in a [2] radius.
 data "Description" "h482a6c03gb906g495dg94dbg398ff8f881ab;1"
 // data "DescriptionParams" "DealDamage(2d8, Fire);Distance(3)"
+data "DescriptionParams" "DealDamage(2d8, Fire);Distance(3);1"
 data "TooltipPermanentWarnings" ""
 // data "TooltipAttackSave" "RangedSpellAttack"
 data "TooltipAttackSave" "Dexterity"

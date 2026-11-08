@@ -12,9 +12,9 @@ using "Target_UND_Spectator_UnpetrifyingRay"
 data "AreaRadius" "9"
 // data "SpellSuccess" ""
 // data "TargetConditions" "HasStatus('UND_SPECTATOR_PETRIFIED_001') or HasStatus('UND_SPECTATOR_PETRIFIED_002') or HasStatus('UND_SPECTATOR_PETRIFIED_003') or HasStatus('UND_SPECTATOR_PETRIFIED_004') or HasStatus('UND_SPECTATOR_PETRIFIED_005') or HasStatus('UND_SPECTATOR_PETRIFIED_HOOKHORROR')"
-// Unpetrification Ray
+// // Unpetrification Ray
 // data "DisplayName" "h52c55ea9gd2a2g4630g8d7agbe4cf1381855;1"
-// Turn a &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt; creature back to its organic form.
+// // Turn a &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt; creature back to its organic form.
 // data "Description" "ha975ad8agc567g4a25gbb21gaa32557fc95d;3"
 // data "TooltipAttackSave" "Constitution"
 // data "TooltipStatusApply" ""

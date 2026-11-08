@@ -16,9 +16,9 @@ new entry "Interrupt_LOW_RamazithsTower_ElementalRebuke"
 type "InterruptData"
 // using "Interrupt_LOW_RamazithsTower_Deva_Flame"
 using "Interrupt_LOW_RamazithsTower_ElementalRebuke"
-// Elemental Retort
+// // Elemental Retort
 // data "DisplayName" "hd3c626c7g2930g4fc1gaff0g607929dbfbff;1"
-// When attacked, the affected entity can draw on &lt;LSTag Type="Passive" Tooltip="LOW_RamazithsTower_ElementalSiphon"&gt;Siphoned&lt;/LSTag&gt; magic to cast &lt;LSTag Type="Spell" Tooltip="Target_LOW_RamazithsTower_Dummy"&gt;Elemental Retort&lt;/LSTag&gt;.
+// // When attacked, the affected entity can draw on &lt;LSTag Type="Passive" Tooltip="LOW_RamazithsTower_ElementalSiphon"&gt;Siphoned&lt;/LSTag&gt; magic to cast &lt;LSTag Type="Spell" Tooltip="Target_LOW_RamazithsTower_Dummy"&gt;Elemental Retort&lt;/LSTag&gt;.
 // data "Description" "h116924a9g6948g4e0fg8540g2ce6373e2016;1"
 // data "Conditions" "IsAbleToReact(context.Observer) and not Ally(context.Source,context.Observer) and HasLastAttackTriggered() and HasActionResource('ReactionActionPoint',1,0, false) and not IsMiss() and (HasStatus('LOW_LORROAKAN_FIRE') or HasStatus('LOW_LORROAKAN_EARTH') or HasStatus('LOW_LORROAKAN_AIR') or HasStatus('LOW_LORROAKAN_WATER'))"
 // data "Properties" "UseSpell(SWAP,Target_LOW_RamazithsTower_Dummy,true,true,true);"

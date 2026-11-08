@@ -17,9 +17,9 @@ new entry "UND_ADAMANTINEGOLEM_SUPERHEATED"
 type "StatusData"
 data "StatusType" "BOOST"
 using "UND_ADAMANTINEGOLEM_SUPERHEATED"
-// Superheated
+// // Superheated
 // data "DisplayName" "h1c86e758g0b8dg49e9ga5b6g87479b0e9d22;2"
-// Exposure to lava has caused Grym's adamantine body to soften.&lt;br&gt;&lt;br&gt;Can now be affected by certain damage types and is vulnerable to Bludgeoning damage.
+// // Exposure to lava has caused Grym's adamantine body to soften.&lt;br&gt;&lt;br&gt;Can now be affected by certain damage types and is vulnerable to Bludgeoning damage.
 // data "Description" "h6c2d0707g3f82g4c3fga196g4feff3edfb5d;18"
 // Exposure to lava has caused Grym's adamantine body to soften.&lt;br&gt;&lt;br&gt;Can now be affected by certain damage types and is &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to[1].
 data "Description" "h4148f0c7g4839g45ffg98b5g4bd501c21fc3;1"

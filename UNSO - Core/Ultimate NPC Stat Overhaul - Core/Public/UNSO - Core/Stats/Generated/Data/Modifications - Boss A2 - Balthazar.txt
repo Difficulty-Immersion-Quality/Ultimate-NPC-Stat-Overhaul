@@ -5,9 +5,9 @@ new entry "SHA_NECROMANCER_LANDOFTHEDEAD_AURA"
 type "StatusData"
 data "StatusType" "BOOST"
 using "SHA_NECROMANCER_LANDOFTHEDEAD_AURA"
-// The Dead Wastes
+// // The Dead Wastes
 // data "DisplayName" "hc73bfb7bgbe14g44a3gadfbgbb8cad72c5bc;2"
-// This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. 
+// // This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. 
 // data "Description" "hdd3a8d79gecffg4143gaa0fg7f670440c7e6;3"
 // This fragment of Myrkul's realm restores [1] to Undead and deals [2] to living creatures at the end of their turns in the area. Additonally, living creatures have halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[3].
 data "Description" "hb1ac7425gc22fg47a7g9d60g30793696a8be;1"
@@ -22,9 +22,9 @@ data "DescriptionParams" "RegainHitPoints(4d6);DealDamage(4d6, Necrotic);RegainH
 // new entry "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_BUFF"
 // type "StatusData"
 // data "StatusType" "BOOST"
-// Blooming Dead
+// // Blooming Dead
 // data "DisplayName" "h8ea0157dg53d7g4168gbeb8g5a3682c14f83;2"
-// This Undead heals [1] at the start of every turn while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
+// // This Undead heals [1] at the start of every turn while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
 // data "Description" "ha8a540c3gff3bg4666gb027gcc5d6fd6e040;2"
 // data "DescriptionParams" "RegainHitPoints(4d6)"
 // data "Icon" "GenericIcon_Intent_Buff"
@@ -39,9 +39,9 @@ new entry "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF"
 type "StatusData"
 data "StatusType" "BOOST"
 using "SHA_NECROMANCER_LANDOFTHEDEAD_AURA_DEBUFF"
-// Wasting Mortal
+// // Wasting Mortal
 // data "DisplayName" "h7903b4c0g80b0g46f5ga000g0fba16180f05;2"
-// This living creature takes [1] at the end of every turn while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
+// // This living creature takes [1] at the end of every turn while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
 // data "Description" "hfbcd3bddg5bb0g4033g9f33gd7638c9a10ac;2"
 // This living creature takes [1] at the end of every turn, has halved &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; and cannot regain[2] while it is within &lt;LSTag Type="Status" Tooltip="SHA_NECROMANCER_LANDOFTHEDEAD_AURA"&gt;The Dead Wastes&lt;/LSTag&gt;.
 data "Description" "h55c5a489gaf11g4ed8g8698gf5832282fe1c;1"

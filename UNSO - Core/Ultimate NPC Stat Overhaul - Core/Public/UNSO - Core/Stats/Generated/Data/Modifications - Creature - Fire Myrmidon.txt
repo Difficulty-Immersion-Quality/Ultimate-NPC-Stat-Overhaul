@@ -12,9 +12,9 @@ using "Zone_RangedSwipe_Myrmidon_Fire"
 data "SpellSuccess" "DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
 // data "SpellFail" "DealDamage((2d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"
 // data "Icon" "GenericIcon_DamageType_Fire"
-// Cinderous Swipe
+// // Cinderous Swipe
 // data "DisplayName" "h9050da5dg0c45g4602g8e7eg1d413d1a4ebc;2"
-// Create a blooming cone of fire as you swipe at a foe. 
+// // Create a blooming cone of fire as you swipe at a foe. 
 // data "Description" "hea54992cg9940g42degbc14g7961aebf19d7;2"
 // data "DescriptionParams" "DealDamage(2d6,Fire)"
 // data "TooltipDamageList" "DealDamage(2d6,Fire);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
@@ -45,3 +45,5 @@ using "Zone_RangedSwipe_Wildshape_Myrmidon_Fire"
 data "SpellSuccess" "DealDamage(2d6,Fire,Magical);DealDamage(MainMeleeWeapon, MainWeaponDamageType)"
 // data "SpellFail" "DealDamage((1d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"
 data "SpellFail" "DealDamage((2d6)/2, Fire,Magical);DealDamage(MainMeleeWeapon/2, MainWeaponDamageType)"
+// data "SpellFlags" "IsHarmful;Wildshape"
+data "SpellFlags" "IsHarmful;Wildshape;CanAreaDamageEvade"

@@ -34,9 +34,9 @@ new entry "LOW_HAG_MUSHROOM_HEALINGPEARL"
 type "StatusData"
 data "StatusType" "BOOST"
 using "LOW_HAG_MUSHROOM_HEALINGPEARL"
-// Healing Pearl
+// // Healing Pearl
 // data "DisplayName" "h2250f577gd1d7g4887g90a8gf1d815026779;1"
-// At the start of its turn, this mushroom keeping Auntie Ethel alive regains all its &lt;LSTag Tooltips="HitPoints"&gt;hit points&lt;/LSTag&gt; unless some effect prevents it from restorative healing.
+// // At the start of its turn, this mushroom keeping Auntie Ethel alive regains all its &lt;LSTag Tooltips="HitPoints"&gt;hit points&lt;/LSTag&gt; unless some effect prevents it from restorative healing.
 // data "Description" "hdc1fbb4fg6a30g4609g8544g34853382f096;5"
 // data "Icon" "GenericIcon_Intent_Healing"
 // data "Passives" "LOW_Hag_Mushroom_VFX"

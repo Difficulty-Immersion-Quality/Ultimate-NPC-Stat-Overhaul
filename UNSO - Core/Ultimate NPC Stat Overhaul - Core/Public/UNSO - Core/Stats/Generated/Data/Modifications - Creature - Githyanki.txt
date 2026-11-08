@@ -4,9 +4,9 @@
 new entry "PsychicStrikes_Githyanki"
 type "PassiveData"
 using "PsychicStrikes_Githyanki"
-// Psionic Empowerment
+// // Psionic Empowerment
 // data "DisplayName" "hc20ca2dageb27g4ebbg8d48g2bb4014b69a0;2"
-// Your attacks deal an extra [1] - the scars of illithid enslavement run deep. 
+// // Your attacks deal an extra [1] - the scars of illithid enslavement run deep. 
 // data "Description" "h101f48a4g15c3g46efga7c6g824851a0311a;5"
 // data "DescriptionParams" "DealDamage(1d6,Psychic)"
 // data "Icon" "GenericIcon_DamageType_Psychic"

@@ -10,9 +10,9 @@ using "Zone_Inhale_Djinni"
 // data "SpellFail" "DealDamage((2d8)/2,Poison,Magical);"
 data "SpellFail" "DealDamage((4d8)/2,Poison,Magical)"
 // data "Icon" "Action_Monster_Djinni_Inhale"
-// Drunken Inhale
+// // Drunken Inhale
 // data "DisplayName" "hd1595b6eg69b1g4fefg92f6g5ff118b27388;2"
-// Compel foes toward you with an intoxicating wind that makes them &lt;LSTag Type="Status" Tooltip="DRUNK"&gt;Drunk&lt;/LSTag&gt;.
+// // Compel foes toward you with an intoxicating wind that makes them &lt;LSTag Type="Status" Tooltip="DRUNK"&gt;Drunk&lt;/LSTag&gt;.
 // data "Description" "h68124cd0g3e75g45c6g8f88gd1b9b0fdc217;5"
 // data "DescriptionParams" "DealDamage(4d8,Poison)"
 // data "TooltipDamageList" "DealDamage(4d8,Poison)"

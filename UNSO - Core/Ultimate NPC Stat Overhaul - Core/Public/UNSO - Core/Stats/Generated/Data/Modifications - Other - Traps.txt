@@ -11,9 +11,9 @@ using "Zone_CRE_PulseTrap_Blast"
 // data "SpellFail" "DealDamage(1d6,Radiant,Magical)"
 // data "TargetConditions" "not Self()"
 // data "Icon" "Spell_Evocation_BreakOfDawn"
-// Break of Dawn
+// // Break of Dawn
 // data "DisplayName" "h5ed42aa5gf2e3g4c4ega607gcfafca4f2006;2"
-// Emit a pulse of energy and possibly push all nearby creatures and objects away and knock them &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+// // Emit a pulse of energy and possibly push all nearby creatures and objects away and knock them &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
 // data "Description" "hc9ee0333gc9ccg43a3ga173gd839c817a1ff;3"
 // data "DescriptionParams" ""
 // data "ExtraDescription" ""

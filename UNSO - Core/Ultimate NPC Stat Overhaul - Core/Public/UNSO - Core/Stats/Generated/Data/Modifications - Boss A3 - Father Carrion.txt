@@ -9,9 +9,9 @@ using "Target_LOW_FatherCarrion_FatherOfTheDead"
 // data "SpellProperties" "ApplyStatus(LOW_FATHERCARRION_FATHEROFTHEDEAD, 100, -1)"
 data "SpellProperties" "IF(Player()):ApplyStatus(GOON_LOW_FATHERCARRION_FATHEROFTHEDEAD_TECHNICAL_APPLIER,100,0);IF(not Player()):ApplyStatus(LOW_FATHERCARRION_FATHEROFTHEDEAD, 100, -1)"
 // data "TargetConditions" "Character() and not Dead() and Tagged('UNDEAD') and not HasStatus('LOW_FATHERCARRION_FATHEROFTHEDEAD')"
-// Mortal Uncoiling
+// // Mortal Uncoiling
 // data "DisplayName" "hd7f77b99ga21dg4182ga107g7bfbce49386e;3"
-// Turn an Undead entity against its master until combat ends. When the effect ends, the entity is destroyed.
+// // Turn an Undead entity against its master until combat ends. When the effect ends, the entity is destroyed.
 // data "Description" "h0d5f1837g8438g4bacgad92g6caf3cbe50e4;4"
 data "Icon" "Spell_Enchantment_Enthrall"
 // data "TooltipStatusApply" "ApplyStatus(LOW_FATHERCARRION_FATHEROFTHEDEAD, 100, -1)"
@@ -27,9 +27,9 @@ data "TooltipAttackSave" "Charisma"
 // new entry "LOW_FATHERCARRION_FATHEROFTHEDEAD"
 // type "StatusData"
 // data "StatusType" "BOOST"
-// Wayward Undead
+// // Wayward Undead
 // data "DisplayName" "h25f8d56ag0d6eg47eegbf8fg37b1f02720e6;2"
-// Affected entity is controlled by Mystic Carrion until combat ends. When this affect ends, the entity will be destroyed.
+// // Affected entity is controlled by Mystic Carrion until combat ends. When this affect ends, the entity will be destroyed.
 // data "Description" "h1f60381cge8eag449eg8462g329b45c557e6;3"
 // data "Icon" "Spell_Enchantment_Enthrall"
 // data "SoundLoop" "Spell_Status_FatherCarrion_FatheroftheDead_Loop"

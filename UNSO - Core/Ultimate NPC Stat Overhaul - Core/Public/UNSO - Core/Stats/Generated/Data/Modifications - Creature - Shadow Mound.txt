@@ -11,7 +11,7 @@ data "SpellType" "Target"
 using "Target_Slam_ShadowMound"
 // data "SpellSuccess" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
 data "SpellSuccess" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic,Magical,,0,,true,false)"
-// Slam
+// // Slam
 // data "DisplayName" "h97d6995ag240cg4b86gb56bg24c02deeaa0b;1"
 // data "DescriptionParams" "DealDamage3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic);"
 data "DescriptionParams" "DealDamage(3d8+UnarmedMeleeAbilityModifier, Bludgeoning);DealDamage(1d4,Necrotic)"

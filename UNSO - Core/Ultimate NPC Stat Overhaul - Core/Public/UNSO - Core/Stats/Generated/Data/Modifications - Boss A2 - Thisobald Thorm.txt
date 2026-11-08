@@ -19,12 +19,12 @@ using "Zone_Belch_Physical_Brewer"
 data "SpellFail" "DealDamage((3d10)/2+4,Bludgeoning,Magical)"
 // data "TargetConditions" "Character() and not Ally()"
 // data "Icon" "GenericIcon_DamageType_Thunder"
-// Roaring Belch
+// // Roaring Belch
 // data "DisplayName" "h9a1c6d9fg512dg4ba7g8cebg9c1357d1b85b;2"
-// Let out a colossal burp and possibly push nearby objects and creatures back [1].
+// // Let out a colossal burp and possibly push nearby objects and creatures back [1].
 // data "Description" "hbf69a244g0571g42cbg9f5eg7463f4ccd72d;2"
 // data "DescriptionParams" "Distance(5)"
-// On a successful Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;, target still takes half damage.
+// // On a successful Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;, target still takes half damage.
 // data "ExtraDescription" "h1f7eeb01gab6fg4e37gaa6bgd7edef76f566;1"
 // data "TooltipDamageList" "DealDamage(3d10+4,Thunder)"
 data "TooltipDamageList" "DealDamage(3d10+4,Bludgeoning)"

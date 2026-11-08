@@ -43,6 +43,7 @@ data "SpellType" "Target"
 // using "Target_ChillTouch"
 using "Target_ClawsOfTheGrave_Necromite"
 // data "SpellSuccess" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic)"
+data "SpellSuccess" "DealDamage(2d4+SpellCastingAbilityModifier, Necrotic, Magical)"
 // // Reach from Beyond
 // data "DisplayName" "hd2d390bcge9bfg4d77gae70g0c0f9bd33ea8;2"
 // // Defile a target with Myrkul's decaying magic.

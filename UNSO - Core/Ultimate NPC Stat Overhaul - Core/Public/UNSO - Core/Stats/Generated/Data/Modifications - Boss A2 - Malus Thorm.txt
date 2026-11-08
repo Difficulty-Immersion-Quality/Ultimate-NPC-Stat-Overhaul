@@ -5,9 +5,9 @@
 new entry "Multiattack_Surgeon"
 type "PassiveData"
 using "Multiattack_Surgeon"
-// Multiattack: Wounded
+// // Multiattack: Wounded
 // data "DisplayName" "hcaa16a47g2145g4c4dgba8agacc959ee898a;1"
-// Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 40% or less.
+// // Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 40% or less.
 // data "Description" "h0e220109gede8g427cg88d2g4375734e1d14;1"
 // Malus Thorm can &lt;LSTag Type="Spell" Tooltip="Target_Multiattack_Surgeon"&gt;Multiattack&lt;/LSTag&gt; if his &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; are at 60% or less.
 data "Description" "h71acc892g62a3g4915ga463g01ca37c6054f;1"

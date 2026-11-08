@@ -1,4 +1,6 @@
 // TODO: Support
+// END_FlorrickGoon_Melee’s ActionResources string breaks across two lines.
+// END_FlorrickManip_Melee has the ;; your TODO already flags.
 
 // new entry "END_FlorrickGoon_Caster"
 // type "Character"
@@ -39,7 +41,6 @@
 // data "StepsType" "Metal"
 // data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom); ProficiencyBonus(SavingThrow, Constitution); BlockRegainHP(Undead;Construct)"
 // data "ActionResources" "ActionPoint:1;BonusActionPoint:2;Movement:12;ReactionActionPoint:1"
-// TODO: Double ;;
 // data "Passives" "AttackOfOpportunity;DarknessRules;;ImprovedCombatSuperiority;Alert"
 // data "DifficultyStatuses" "STATUS_EASY: HEALTHBOOST_ALLIEDNPC_EASYMODE"
 

@@ -5,9 +5,9 @@
 new entry "Confusion_CraniumRat"
 type "PassiveData"
 using "Confusion_CraniumRat"
-// Infectious Madness
+// // Infectious Madness
 // data "DisplayName" "h5884480eg58d2g44e7gb3c0gaa718a4b1e37;2"
-// After the cranium rat takes damage, the attacker must make an Intelligence &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.
+// // After the cranium rat takes damage, the attacker must make an Intelligence &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.
 // data "Description" "hf9b5891agf335g4eb4g8b1egd40761af40db;6"
 // data "Icon" "statIcons_Confused"
 // data "Properties" "Highlighted"
@@ -20,9 +20,9 @@ data "StatsFunctors" "ApplyStatus(SWAP,GOON_CONFUSION_CRANIUMRAT_TECHNICAL_APPLI
 new entry "GOON_CONFUSION_CRANIUMRAT_TECHNICAL_APPLIER"
 type "StatusData"
 data "StatusType" "BOOST"
-// Infectious Madness
+// // Infectious Madness
 data "DisplayName" "h5884480eg58d2g44e7gb3c0gaa718a4b1e37;2"
-// After the cranium rat takes damage, the attacker must make an Intelligence &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.
+// // After the cranium rat takes damage, the attacker must make an Intelligence &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.
 data "Description" "hf9b5891agf335g4eb4g8b1egd40761af40db;6"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyRoll" "not SavingThrow(Ability.Intelligence,13)"

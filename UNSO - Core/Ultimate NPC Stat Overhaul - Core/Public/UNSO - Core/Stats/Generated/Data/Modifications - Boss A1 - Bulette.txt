@@ -49,7 +49,7 @@ data "SpellType" "Target"
 // using "Target_Bite"
 using "Target_Bite_Bulette"
 // data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
-// Bite a target and possibly push it back [1].
+// // Bite a target and possibly push it back [1].
 // data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
 // data "DescriptionParams" "Distance(1.5)"
 // data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"

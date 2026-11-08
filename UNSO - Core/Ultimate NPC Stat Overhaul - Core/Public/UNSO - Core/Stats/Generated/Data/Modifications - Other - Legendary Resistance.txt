@@ -5,9 +5,9 @@
 new entry "Interrupt_LegendaryResistance"
 type "InterruptData"
 using "Interrupt_LegendaryResistance"
-// Legendary Resistance
+// // Legendary Resistance
 // data "DisplayName" "hd9d90cafgbde7g4752gaa6egb9d312237ecb;1"
-// Increase your &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; result by 10.
+// // Increase your &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; result by 10.
 // data "Description" "hcd1dcb91gab8ag4c4fg87f0gbf514599268d;2"
 // data "Icon" "Action_TransmuterStone_Resistance"
 // data "InterruptContext" "OnPostRoll"
