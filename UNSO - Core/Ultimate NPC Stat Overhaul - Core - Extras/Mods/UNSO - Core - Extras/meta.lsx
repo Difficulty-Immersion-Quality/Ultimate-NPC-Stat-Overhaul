@@ -11,7 +11,7 @@
               <attribute id="MD5" type="LSWString" value="" />
               <attribute id="Name" type="LSWString" value="Ultimate NPC Stat Overhaul - Core" />
               <attribute id="UUID" type="FixedString" value="a7b5810e-3ac1-4a8f-bcc9-d18d91de2505" />
-              <attribute id="Version64" type="int64" value="108086391056891904" />
+              <attribute id="Version64" type="int64" value="108367868181086208" />
             </node>
           </children>
         </node>
@@ -32,10 +32,10 @@
           <attribute id="Tags" type="LSWString" value="" />
           <attribute id="Type" type="FixedString" value="Add-on" />
           <attribute id="UUID" type="FixedString" value="e2863ee8-846a-4492-b8bb-f710e1a382ef" />
-          <attribute id="Version64" type="int64" value="108086391056891905" />
+          <attribute id="Version64" type="int64" value="108367868181086208" />
           <children>
             <node id="PublishVersion">
-              <attribute id="Version64" type="int64" value="108086391056891905" />
+              <attribute id="Version64" type="int64" value="108367868181086208" />
             </node>
             <node id="Scripts" />
             <node id="TargetModes">

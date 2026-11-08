@@ -10,8 +10,19 @@
               <attribute id="Folder" type="LSString" value="UNSO - CX" />
               <attribute id="MD5" type="LSString" value="" />
               <attribute id="Name" type="LSString" value="Ultimate NPC Stat Overhaul - CX" />
-              <attribute id="UUID" type="FixedString" value="61e8471b-4eda-4493-829d-e3c29ecc36c3" />
-              <attribute id="Version64" type="int64" value="108086391056891904" />
+              <attribute id="UUID" type="FixedString" value="3763e174-332f-4aed-b675-bf0a6c117fae" />
+              <attribute id="Version64" type="int64" value="108367868181086208" />
+            </node>
+          </children>
+        </node>
+        <node id="Conflicts">
+          <children>
+            <node id="ModuleShortDesc">
+              <attribute id="Folder" type="LSWString" value="UNSO - Lab - Extras" />
+              <attribute id="MD5" type="LSWString" value="" />
+              <attribute id="Name" type="LSWString" value="Ultimate NPC Stat Overhaul - Lab - Extras" />
+              <attribute id="UUID" type="FixedString" value="445cacd6-70b2-43ca-8f09-1836da616e8a" />
+              <attribute id="Version64" type="int64" value="108367868181086208" />
             </node>
           </children>
         </node>
@@ -31,11 +42,11 @@
           <attribute id="StartupLevelName" type="FixedString" value="" />
           <attribute id="Tags" type="LSWString" value="" />
           <attribute id="Type" type="FixedString" value="Add-on" />
-          <attribute id="UUID" type="FixedString" value="445cacd6-70b2-43ca-8f09-1836da616e8a" />
-          <attribute id="Version64" type="int64" value="108086391056891905" />
+          <attribute id="UUID" type="FixedString" value="3719878e-cdaa-4a68-be5f-d66cc320782f" />
+          <attribute id="Version64" type="int64" value="108367868181086208" />
           <children>
             <node id="PublishVersion">
-              <attribute id="Version64" type="int64" value="108086391056891905" />
+              <attribute id="Version64" type="int64" value="108367868181086208" />
             </node>
             <node id="Scripts" />
             <node id="TargetModes">
