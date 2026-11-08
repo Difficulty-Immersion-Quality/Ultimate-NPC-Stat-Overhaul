@@ -73,6 +73,7 @@ using "AnimatedArmor"
 // data "PersonalStatusImmunities" "PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Poisoned;SLEEPING;UNCONSCIOUS;BLINDED;KNOCKED_OUT;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;SG_Sleeping;BARBED_ARROW"
 data "PersonalStatusImmunities" "KNOCKED_OUT;GAPING_WOUND;CHEST_TRAUMA;BLEEDING;BARBED_ARROW;HAMSTRING;CRIPPLED;DAZED;SUFFOCATING;SG_Blinded;SG_Charmed;SG_Confused;SG_Disease;SG_Drunk;SG_Exhausted;SG_Frightened;SG_Paralyzed;SG_Poisoned;SG_Sleeping;SG_Taunted;SG_Unconscious;SURPRISED;SHOCKED;RAY_OF_ENFEEBLEMENT;PETRIFIED"
 // data "Passives" "ExtraAttack;AntimagicSusceptibility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Fighter_Champion_Boost;ExtraAttack;AntimagicSusceptibility;AttackOfOpportunity;Darkvision;DarknessRules" (Stats - Characters Vanilla)
 data "Passives" "CX_Fighter_Champion_Boost;ExtraAttack;AntimagicSusceptibility;AttackOfOpportunity;Darkvision;DarknessRules;MAG_ChargedLightning_TempHP_Helmet_Passive;MAG_ChargedLightning_Electrocute_Armor_Passive;MAG_ChargedLightning_ElectricSurface_Boots_Passive;MAG_ChargedLightning_ElectrifyWater_Boots_Passive;MAG_ChargedLightning_Dash_Boots_Passive;MAG_Thunder_Reverberation_Gloves_Passive;LightningAbsortion;ARA_Cloak_StaticCharge_Passive;ARA_Cloak_KeepCharged_Passive"
 // data "PoisonResistance" "Resistant"
 data "PoisonResistance" "Immune"
@@ -83,6 +84,7 @@ using "TWN_ShadowAnimatedArmour"
 // data "PersonalStatusImmunities" "PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Poisoned;SLEEPING;UNCONSCIOUS;BLINDED;KNOCKED_OUT;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;"
 data "PersonalStatusImmunities" "KNOCKED_OUT;GAPING_WOUND;CHEST_TRAUMA;BLEEDING;BARBED_ARROW;HAMSTRING;CRIPPLED;DAZED;SUFFOCATING;SG_Blinded;SG_Charmed;SG_Confused;SG_Disease;SG_Drunk;SG_Exhausted;SG_Frightened;SG_Paralyzed;SG_Poisoned;SG_Sleeping;SG_Taunted;SG_Unconscious;SURPRISED;SHOCKED;RAY_OF_ENFEEBLEMENT;PETRIFIED;ACID;TWN_OOZE_PUTRID_AURA_STATUS;SCL_SHADOW_CURSE"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;TWN_AasimarSurvivor_SpawnShadow"
+// data "Passives" "CX_Fighter_Champion_Boost;ExtraAttack;AntimagicSusceptibility;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;TWN_AasimarSurvivor_SpawnShadow" (Stats - Characters Vanilla)
 data "Passives" "CX_Fighter_Champion_Boost;ExtraAttack;AntimagicSusceptibility;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;TWN_AasimarSurvivor_SpawnShadow;MAG_ChargedLightning_TempHP_Helmet_Passive;MAG_ChargedLightning_Electrocute_Armor_Passive;MAG_ChargedLightning_ElectricSurface_Boots_Passive;MAG_ChargedLightning_ElectrifyWater_Boots_Passive;MAG_ChargedLightning_Dash_Boots_Passive;MAG_Thunder_Reverberation_Gloves_Passive;LightningAbsortion;ARA_Cloak_StaticCharge_Passive;ARA_Cloak_KeepCharged_Passive"
 
 // Grym - Provide a baseline way to damage him through Acid and Bludgeoning (see Statuses stats file)
@@ -151,14 +153,15 @@ using "Incubus"
 // data "Progressions" ""
 data "Progressions" "cbe5059f-7a9f-4b98-be6a-07c9cd8e02c2"
 
-// Vengeful Cambions (House of Hope) (Added Warlock progressions, add Fiend subclass in config, and give Pact of the Blade passives)
+// Vengeful Cambions (House of Hope) (Added Warlock progressions, added Fiend, and gave Pact of the Blade passives)
+// Not included: PP_AscendedPact_Text_Passive;PP_AP_Blade_Passive;PP_AP_BladeDeepened_Passive;PP_EverlastingPact_Text_Passive;PP_EP_Blade_Passive;PP_EP_Blade_Two_Passive
 new entry "LOW_HouseOfHope_Cambion"
 type "Character"
 using "LOW_HouseOfHope_Cambion"
 // data "Charisma" "16"
 data "Charisma" "20"
 // // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;"
-// data "Passives" "CX_Warlock_Fiend_Boost;AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;PactOfTheBlade;Goon_Pact_Blade_Passive;PP_AscendedPact_Text_Passive;PP_AP_Blade_Passive;PP_AP_BladeDeepened_Passive;PP_EverlastingPact_Text_Passive;PP_EP_Blade_Passive;PP_EP_Blade_Two_Passive"
+data "Passives" "CX_Warlock_Fiend_Boost;AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;FiendishBlessing;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;PactOfTheBlade;Goon_Pact_Blade_Passive"
 // data "Progressions" ""
 data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 
@@ -266,6 +269,7 @@ data "Vitality" "125"
 // data "PersonalStatusImmunities" ""
 data "PersonalStatusImmunities" "SG_Charmed;SG_Frightened;GAPING_WOUND;CHEST_TRAUMA;BLEEDING;ACID;TURNED"
 // data "Passives" "SHA_VisionOfShar;SHA_Lyrthindor_UnlockExtraSpellSlots;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_MiniBoss_Boost;CX_Cleric_Trickery_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;SHA_VisionOfShar;SHA_Lyrthindor_UnlockExtraSpellSlots;" (Stats - Characters Vanilla)
 data "Passives" "CX_MiniBoss_Boost;CX_Cleric_Trickery_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;SHA_VisionOfShar;SHA_Lyrthindor_UnlockExtraSpellSlots;MultiattackDefense;NPC_DamageReduction;Tough;Durable;MAG_Fighter_ActionSurge_AttackBonus_Gloves_Passive;RelentlessEndurance;MageSlayer_Advantage;MageSlayer_AttackCaster;SavageAttacker"
 // data "NecroticResistance" ""
 data "NecroticResistance" "Resistant"
@@ -382,6 +386,7 @@ new entry "LOW_DeathKnight"
 type "Character"
 using "LOW_DeathKnight"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;Parry;ExtraAttack_2;NecroticAttacks_DeathKnight;Riposte;HellfireDamagePierce_Technical"
+// data "Passives" "CX_MiniBoss_Boost;CX_Paladin_Oathbreaker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;Parry;ExtraAttack_2;NecroticAttacks_DeathKnight;Riposte;HellfireDamagePierce_Technical" (Stats - Characters Vanilla)
 data "Passives" "CX_MiniBoss_Boost;CX_Paladin_Oathbreaker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;Parry;ExtraAttack_2;NecroticAttacks_DeathKnight;Riposte;HellfireDamagePierce_Technical;MageSlayer_Advantage"
 // data "BludgeoningResistance" ""
 data "BludgeoningResistance" "ResistantToNonMagical"
@@ -526,6 +531,7 @@ using "Spider_Giant"
 // data "PersonalStatusImmunities" "WEB;DIFFICULT_TERRAIN_WEB;SPIDER_INFESTATION"
 data "PersonalStatusImmunities" "WEB;DIFFICULT_TERRAIN_WEB;SPIDER_INFESTATION;SG_Poisoned"
 // data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:12;ReactionActionPoint:1" (Stats - Characters Vanilla)
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:12;ReactionActionPoint:1"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules"
 data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;SpiderFallResistance;Spider_Infestation"
@@ -559,7 +565,7 @@ using "Spider_Phase"
 data "PersonalStatusImmunities" "WEB;DIFFICULT_TERRAIN_WEB;SPIDER_INFESTATION;SG_Poisoned"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;FOR_SpiderQueen_SeeInvis"
-data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;FOR_SpiderQueen_SeeInvis;BlindSight;SunlightSensitivity;SpiderFallResistance;Spider_Infestation;JWL_Passive_SymbolLolth;JWL_Passive_Follower_SymbolLolth"
+data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;FOR_SpiderQueen_SeeInvis;Blindsight;SunlightSensitivity;SpiderFallResistance;Spider_Infestation;JWL_Passive_SymbolLolth;JWL_Passive_Follower_SymbolLolth"
 data "ForceResistance" "Resistant"
 
 new entry "Spider_Phase_Queen"
@@ -567,14 +573,15 @@ type "Character"
 using "Spider_Phase_Queen"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;LegendaryAction_FOR_SpiderQueen;FOR_SpiderQueen_SeeInvis"
-data "Passives" "CX_Boss_Boost;SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;LegendaryAction_FOR_SpiderQueen;FOR_SpiderQueen_SeeInvis;BlindSight;SunlightSensitivity;SpiderFallResistance;Spider_Infestation;JWL_Passive_SymbolLolth;JWL_Passive_Follower_SymbolLolth"
+// data "Passives" "CX_Boss_Boost;SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;LegendaryAction_FOR_SpiderQueen;FOR_SpiderQueen_SeeInvis" (Stats - Characters Vanilla)
+data "Passives" "CX_Boss_Boost;SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;LegendaryAction_FOR_SpiderQueen;FOR_SpiderQueen_SeeInvis;Blindsight;SunlightSensitivity;SpiderFallResistance;Spider_Infestation;JWL_Passive_SymbolLolth;JWL_Passive_Follower_SymbolLolth"
 
 new entry "Spider_Phase_Tiny"
 type "Character"
 using "Spider_Phase_Tiny"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;"
 // data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;FOR_SpiderQueen_SeeInvis"
-data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;FOR_SpiderQueen_SeeInvis;BlindSight;SunlightSensitivity;SpiderFallResistance;Spider_Infestation"
+data "Passives" "SpiderWalk;AttackOfOpportunity;Darkvision;DarknessRules;FOR_SpiderQueen_SeeInvis;Blindsight;SunlightSensitivity;SpiderFallResistance;Spider_Infestation"
 
 // ==================================== Summons ====================================
 // "_Base"
@@ -605,6 +612,7 @@ using "LOW_RamazithsTower_Nightsong_Shard"
 // data "PersonalStatusImmunities" "SG_Charmed;FEARED"
 data "PersonalStatusImmunities" "SG_Charmed;SG_Frightened;SG_DifficultTerrain;SG_Exhausted;SG_Poisoned;SG_Sleeping"
 // data "Passives" "AttackOfOpportunity;DarknessRules;ImmuneToDisarm;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;LOW_RamazithsTower_Nightsong_Deva_Interrupt;DivineHealth;"
+// data "Passives" "CX_MiniBoss_Boost;CX_Paladin_Devotion_Boost;AttackOfOpportunity;DarknessRules;ImmuneToDisarm;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;LOW_RamazithsTower_Nightsong_Deva_Interrupt;DivineHealth" (Stats - Characters Vanilla)
 data "Passives" "CX_Paladin_Vengeance_Boost;AttackOfOpportunity;DarknessRules;ImmuneToDisarm;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;LOW_RamazithsTower_Nightsong_Deva_Interrupt;DivineHealth;Mod_Titans_Reach;FullSwing_Passive;FrontFace_Radiant_Feat;Radiant_Strike_Lightbringerfeat;Feat_two_lightorbs;featRadiatingOrb_Ring_Passlight;RadiatingOrb_ArmorLightff;PotentCantrip;NPC_CbD;ArmyArcana"
 data "NecroticResistance" "Resistant"
 
@@ -642,6 +650,7 @@ new entry "Ogre"
 type "Character"
 using "Ogre"
 // data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Barbarian_Berserker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;Goon_Rage_Ogre_Passive" (Stats - Characters Vanilla)
 data "Passives" "CX_Barbarian_Berserker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;Goon_Rage_Ogre_Passive;FullSwing_Passive;Mod_Titans_Reach"
 
 // Lump the Enlightened (Has Wizard progressions, adding Martial boost)
@@ -649,6 +658,7 @@ new entry "FOR_OgreCaptain"
 type "Character"
 using "FOR_OgreCaptain"
 // data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Martial_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse" (Stats - Characters Vanilla)
 data "Passives" "CX_Martial_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;FullSwing_Passive;Mod_Titans_Reach"
 
 // Buthir (Inherits Barbarian progressions, inherits Berserker subclass) (Her boosts from proprietary rage are added to all other rages)
@@ -656,6 +666,7 @@ new entry "FOR_OgreMate"
 type "Character"
 using "FOR_OgreMate"
 // data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Barbarian_Berserker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;Goon_Rage_Ogre_Passive;Goon_Woman_Ogre_Strong_And_Kinda_Hot_When_She_Rages_Skibidi_Rizz_Up_Her_Swamp_Ongfr" (Stats - Characters Vanilla)
 data "Passives" "CX_Barbarian_Berserker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;Goon_Rage_Ogre_Passive;Goon_Woman_Ogre_Strong_And_Kinda_Hot_When_She_Rages_Skibidi_Rizz_Up_Her_Swamp_Ongfr;FullSwing_Passive;Mod_Titans_Reach"
 
 // Polma - Bodyguard of the High Priestess, Cult of the Absolute (Inherits Barbarian progressions, inherits Berserker subclass) (Her boosts from proprietary rage are added to all other rages)
@@ -663,6 +674,7 @@ new entry "GOB_Ogre_Bodyguard"
 type "Character"
 using "GOB_Ogre_Bodyguard"
 // data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Barbarian_Berserker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;Goon_Rage_Ogre_Passive;Goon_Woman_Ogre_Strong_And_Kinda_Hot_When_She_Rages_Skibidi_Rizz_Up_Her_Swamp_Ongfr_2" (Stats - Characters Vanilla)
 data "Passives" "CX_Barbarian_Berserker_Boost;AttackOfOpportunity;DarknessRules;Darkvision;OgreCurse;Goon_Rage_Ogre_Passive;Goon_Woman_Ogre_Strong_And_Kinda_Hot_When_She_Rages_Skibidi_Rizz_Up_Her_Swamp_Ongfr_2;FullSwing_Passive;Mod_Titans_Reach"
 
 // ==================================== Monstrosities ====================================
@@ -693,6 +705,7 @@ new entry "Doppelganger"
 type "Character"
 using "Doppelganger"
 // data "Passives" "Multiattack_Doppelganger;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Rogue_Assassin_Boost;AttackOfOpportunity;Darkvision;DarknessRules;Multiattack_Doppelganger" (Stats - Characters Vanilla)
 data "Passives" "CX_Rogue_Assassin_Boost;AttackOfOpportunity;Darkvision;DarknessRules;Multiattack_Doppelganger;LOW_Guildhall_SneakyRiposte"
 
 // ==================================== Red dudes with horns and shiii ====================================
@@ -789,6 +802,7 @@ data "Wisdom" "12"
 // data "PersonalStatusImmunities" "DIFFICULT_TERRAIN_DEEPWATER"
 data "PersonalStatusImmunities" "DIFFICULT_TERRAIN_DEEPWATER;BURNING;BURNING_TRIAL;WILD_MAGIC_BURNING;BURNING_AZER;BURNING_TRAPWALL"
 // data "Passives" "BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules"
+// data "Passives" "CX_Martial_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules" (Stats - Characters Vanilla)
 data "Passives" "CX_Martial_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;TWN_ApplyWET;BSM_BS_UnstoppableMassacre_Passive"
 data "LightningResistance" "Vulnerable"
 data "ColdResistance" "Resistant"
@@ -799,23 +813,27 @@ new entry "Sahuagin_Champion"
 type "Character"
 using "Sahuagin_Champion"
 // data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules"
+// data "Passives" "CX_Fighter_Champion_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack" (Stats - Characters Vanilla)
 data "Passives" "CX_Fighter_Champion_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack;TWN_ApplyWET;BSM_BS_UnstoppableMassacre_Passive;MAG_LC_Umberlee_Cold_Sickle_Passive"
 
 new entry "Sahuagin_Melee"
 type "Character"
 using "Sahuagin_Melee"
 // data "Passives" "BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules"
+// data "Passives" "CX_Fighter_Champion_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules" (Stats - Characters Vanilla)
 data "Passives" "CX_Fighter_Champion_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;TWN_ApplyWET;BSM_BS_UnstoppableMassacre_Passive;MAG_LC_Umberlee_Cold_Sickle_Passive"
 
 new entry "Sahuagin_Ranged"
 type "Character"
 using "Sahuagin_Ranged"
 // data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules"
+// data "Passives" "CX_Rogue_Assassin_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack" (Stats - Characters Vanilla)
 data "Passives" "CX_Rogue_Assassin_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack;TWN_ApplyWET;BSM_BS_UnstoppableMassacre_Passive;MAG_LC_Umberlee_Cold_Sickle_Passive"
 
 new entry "END_SahuaginAlly_Ranged"
 type "Character"
 using "END_SahuaginAlly_Ranged"
+// data "Passives" "CX_Rogue_Assassin_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack;Sharpshooter_AllIn;Sharpshooter_Bonuses" (Stats - Characters Vanilla)
 data "Passives" "CX_Rogue_Assassin_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack;Sharpshooter_AllIn;Sharpshooter_Bonuses;TWN_ApplyWET;BSM_BS_UnstoppableMassacre_Passive;MAG_LC_Umberlee_Cold_Sickle_Passive"
 
 // ==================================== Kuatoa - Fish gang fish gang ====================================
@@ -834,6 +852,7 @@ type "Character"
 // using "_Humanoid"
 using "Kuotoa"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules" (Stats - Characters Vanilla)
 data "Passives" "CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive;WildMagic"
 data "FireResistance" "Resistant"
 data "LightningResistance" "Vulnerable"
@@ -853,6 +872,7 @@ data "Constitution" "14"
 // data "Vitality" "48"
 data "Vitality" "50"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Evasion"
+// data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Evasion" (Stats - Characters Vanilla)
 data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Evasion;TWN_KuoToa_Storm;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive;Goon_Magic_Allergy_Unlock"
 
 new entry "Kuotoa_Ranger"
@@ -860,8 +880,10 @@ type "Character"
 // using "Kuotoa"
 using "Kuotoa_Ranger"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Ranger_Hunter_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules" (Stats - Characters Vanilla)
 data "Passives" "CX_Ranger_Hunter_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive"
 // data "Progressions" ""
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" (Stats - Characters Vanilla)
 data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 
 new entry "Kuotoa_Caster"
@@ -869,6 +891,7 @@ type "Character"
 // using "Kuotoa"
 using "Kuotoa_Caster"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "CX_Warlock_GreatOldOne_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules" (Stats - Characters Vanilla)
 data "Passives" "CX_Warlock_GreatOldOne_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive;WildMagic;ControlledChaos"
 
 new entry "TWN_KuoToa_melee"
@@ -876,11 +899,13 @@ type "Character"
 // using "Kuotoa"
 using "TWN_KuoToa_melee"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
-data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive;Goon_Magic_Allergy_Unlock"
+// data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm" (Stats - Characters Vanilla)
+data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive"
 
 new entry "TWN_KuoToa_champ"
 type "Character"
 // using "Kuotoa"
 using "TWN_KuoToa_champ"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+// data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm" (Stats - Characters Vanilla)
 data "Passives" "CX_Barbarian_WildMagic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm;Mod_Shock_Thrower;Mod_Wet_Attacks_Passive;Goon_Magic_Allergy_Unlock"

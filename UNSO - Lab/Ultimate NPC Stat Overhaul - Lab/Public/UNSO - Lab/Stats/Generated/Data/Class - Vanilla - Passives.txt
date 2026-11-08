@@ -291,9 +291,9 @@ data "Properties" "IsHidden"
 new entry "LAB_Progression_Druid_Moon"
 type "PassiveData"
 // ! Subclass: Circle of the Moon Druid
-data "DisplayName" "hb7785d94g8723g45b8gb252g11f0270642c1"
+data "DisplayName" "hb7785d94g8723g45b8gb252g11f0270642c1;1"
 // A Druid who specializes in Wild Shaping into massive beasts or even primal elementals.
-data "Description" "h654778cegbf88g49adgb407gcb0cc8299dc0"
+data "Description" "h654778cegbf88g49adgb407gcb0cc8299dc0;1"
 data "Properties" "Highlighted"
 data "Icon" "Skill_Druid_WildShape"
 
@@ -305,9 +305,9 @@ data "Properties" "IsHidden"
 new entry "LAB_Progression_Druid_Spores"
 type "PassiveData"
 // ! Subclass: Circle of the Spores Druid
-data "DisplayName" "h407e27feg0d73g483dgbed5gb58542ff0cca"
+data "DisplayName" "h407e27feg0d73g483dgbed5gb58542ff0cca;1"
 // A Druid who uses fungal growth and decay to augment themselves and harm their foes.
-data "Description" "h5872faaag78ffg4f03g99cbgcda17b06d423"
+data "Description" "h5872faaag78ffg4f03g99cbgcda17b06d423;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_SymbioticEntity"
 
@@ -319,9 +319,9 @@ data "Properties" "IsHidden"
 new entry "LAB_Progression_Druid_Stars"
 type "PassiveData"
 // ! Subclass: Circle of the Stars Druid
-data "DisplayName" "h3c509123g2d68g469aga198g25d6a25261f4"
+data "DisplayName" "h3c509123g2d68g469aga198g25d6a25261f4;1"
 // A Druid who is guided by the infinite mysteries of the cosmos, using their understanding of the stars to enhance their druidic magic.
-data "Description" "h6f1dc210g58e6g4c94g93c7g116b555c6354"
+data "Description" "h6f1dc210g58e6g4c94g93c7g116b555c6354;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_StarMap"
 
@@ -374,9 +374,9 @@ data "Properties" "IsHidden"
 new entry "LAB_Progression_Fighter_Champion"
 type "PassiveData"
 // ! Subclass: Champion Fighter
-data "DisplayName" "haa6f223cg7130g434egb18ag82be10976ef1"
+data "DisplayName" "haa6f223cg7130g434egb18ag82be10976ef1;1"
 // A Fighter who perfects the fundamentals of combat, turning every strike into a display of raw mastery.
-data "Description" "hd11661ccgc093g4932gbfd9g2c60088eebb6"
+data "Description" "hd11661ccgc093g4932gbfd9g2c60088eebb6;1"
 data "Properties" "Highlighted"
 data "Icon" "PassiveFeature_ImprovedCritical"
 
