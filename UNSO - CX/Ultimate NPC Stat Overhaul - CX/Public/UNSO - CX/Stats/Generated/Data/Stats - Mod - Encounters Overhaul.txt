@@ -1,3 +1,9 @@
+// TODO:
+// EO_UND_Evocation_Wizard: Progressions are copied from the Beastmaster Ranger (UCL_Ranger/BeastMaster/etc.) in both the original and live lines. Header says UCL_Wizard;UCL_EvocationSchool;UCL_Wizard_FireShield_Warm;UCL_WarCaster_Int. Need the UCL_EvocationSchool UUID (Wizard 7eefd2dd, FireShield_Warm bcd44f73, WarCaster_Int 82f2fa2c), or check whether this is an upstream EO bug.
+// EO_SCL_Harper_Devotion_Paladin: name says Devotion, but the UCL comment, progressions and boost are all Ancients. Decide which it should be.
+// EO_Lathander_Guard_Eldritch_Fighter: has the EK boost but no Progressions line (no Goon Fighter UUID, no UCL comment). Add 0e6da493 like the other EO Fighters?
+// EO_SCL_Spore_Druid: the original EO Progressions line has the Necromancer Wizard UUIDs. Fixed here to UCL_Druid/Spores/Warcaster_Wis; probably worth reporting upstream.
+
 // ==================================== Encounters Overhaul ====================================
 
 ///////////////////////////////////
@@ -53,7 +59,7 @@ using "EO_DefiledTemple_Gloomstalker_Ranger"
 // data "Progressions" "06762adc-24d9-4689-8d09-8dfa9182dd4b;7dcf10d4-1137-4642-a623-c450c06ab1a9;a9b4a6ab-736c-4727-99f7-9ee4444fb8e1;4f22dd35-542c-4aa0-a790-b6c93c3e252f"
 data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5;06762adc-24d9-4689-8d09-8dfa9182dd4b;7dcf10d4-1137-4642-a623-c450c06ab1a9;a9b4a6ab-736c-4727-99f7-9ee4444fb8e1;4f22dd35-542c-4aa0-a790-b6c93c3e252f"
 // data "Passives" "LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Ranger_Hunter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight"
+data "Passives" "CX_Ranger_GloomStalker_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight"
 
 // (Added Cleric progressions)
 // UCL_Cleric;UCL_TrickeryDomain;UCL_Generic_Str_Asi
@@ -63,7 +69,7 @@ using "EO_DefiledTemple_Trickery_Cleric"
 // data "Progressions" "4577e872-7f55-448b-a6c4-bb3f5a3738b6;7b8f76a2-8e55-4ca4-abd5-7c69f3256cac;4f22dd35-542c-4aa0-a790-b6c93c3e252f"
 data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b;4577e872-7f55-448b-a6c4-bb3f5a3738b6;7b8f76a2-8e55-4ca4-abd5-7c69f3256cac;4f22dd35-542c-4aa0-a790-b6c93c3e252f"
 // data "Passives" "LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight;AttackOfOpportunity;Darkvision;DarknessRules;Darkvision"
-data "Passives" "CX_Cleric_Trickery_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;Darkvision;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight"
+data "Passives" "CX_Cleric_Trickery_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight"
 
 ///////////////////////////////////
 //                               //
@@ -107,7 +113,7 @@ using "EO_UND_Duergar_Draconic_Sorcerer"
 // data "Progressions" "e93883b2-b593-4101-9c97-d6b8c454c053;348f783f-d3b8-4a05-9bc7-b13217990a50;4e68dd42-6acf-409f-843f-4f5753df284e;b40ab293-676f-41d4-919e-bf1f36643548"
 data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f;e93883b2-b593-4101-9c97-d6b8c454c053;348f783f-d3b8-4a05-9bc7-b13217990a50;4e68dd42-6acf-409f-843f-4f5753df284e;b40ab293-676f-41d4-919e-bf1f36643548"
 // data "Passives" "UCL_Quickened_Handler;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
-data "Passives" "CX_Sorcerer_Draconic_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L4;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;UCL_Quickened_Handler"
+data "Passives" "CX_Sorcerer_DraconicBloodline_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L4;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;UCL_Quickened_Handler"
 
 // (Added Fighter progressions)
 // UCL_Fighter;UCL_Champion;UCL_1_FightingStyle_GreatWeaponFighting;UCL_Fighter_ActionSurge_Melee;UCL_Fighter_TwoHander
@@ -127,7 +133,7 @@ using "EO_UND_Duergar_Gloomstalker_Ranger"
 // data "Progressions" "06762adc-24d9-4689-8d09-8dfa9182dd4b;7dcf10d4-1137-4642-a623-c450c06ab1a9;7fa893da-ef8a-458c-a2cf-9de5a0fb0ef4;defed003-fb89-41b8-b59f-a57dae9e50de"
 data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5;06762adc-24d9-4689-8d09-8dfa9182dd4b;7dcf10d4-1137-4642-a623-c450c06ab1a9;7fa893da-ef8a-458c-a2cf-9de5a0fb0ef4;defed003-fb89-41b8-b59f-a57dae9e50de"
 // data "Passives" "Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
-data "Passives" "CX_Ranger_Hunter_Boost;CX_Martial_Boost;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
+data "Passives" "CX_Ranger_GloomStalker_Boost;CX_Martial_Boost;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
 
 // (Added Ranger progressions)
 // UCL_Ranger;UCL_Hunter;UCL_2_FightingStyle_Archery;UCL_Generic_CrossbowExpert
@@ -163,7 +169,7 @@ using "EO_CRE_ElkHeart_Barbarian"
 // data "Progressions" "ae343448-6fce-40b2-8eb7-b5e4316dff58;31d636c6-b955-4e68-a6e7-79d7302453b9;7ccd0334-3564-405f-92ca-806d5a7ff501;36d19089-578d-474f-bfa0-b37f14a138c8"
 data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a;ae343448-6fce-40b2-8eb7-b5e4316dff58;31d636c6-b955-4e68-a6e7-79d7302453b9;7ccd0334-3564-405f-92ca-806d5a7ff501;36d19089-578d-474f-bfa0-b37f14a138c8"
 // data "Passives" "AttackOfOpportunity;HumanMilitia;HumanVersatility;DarknessRules"
-data "Passives" "CX_Barbarian_Boost;CX_Barbarian_Berserker_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Barbarian_Wildheart_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
 // (Added Druid progressions)
 // UCL_Druid;UCL_CircleOfTheMoon;UCL_Generic_TavernBrawler_Wis
@@ -233,7 +239,7 @@ using "EO_CRE_GithTenant_War_Cleric"
 // data "Progressions" "4577e872-7f55-448b-a6c4-bb3f5a3738b6;f1de97de-081b-428b-a83b-2eb1c3069886;4f22dd35-542c-4aa0-a790-b6c93c3e252f"
 data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b;4577e872-7f55-448b-a6c4-bb3f5a3738b6;f1de97de-081b-428b-a83b-2eb1c3069886;4f22dd35-542c-4aa0-a790-b6c93c3e252f"
 // data "Passives" "Parry_Githyanki_EquipTrigger;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Cleric_Trickery_Boost;CX_Magic_Boost;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki;Parry_Githyanki;Parry_Githyanki_EquipTrigger;Surprise_Immunity"
+data "Passives" "CX_Cleric_War_Boost;CX_Magic_Boost;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki;Parry_Githyanki;Parry_Githyanki_EquipTrigger;Surprise_Immunity"
 
 // (Added Paladin progressions)
 // UCL_Paladin;UCL_Ancients;UCL_2_FightingStyle_GreatWeaponFighting;UCL_Generic_Str_Asi;UCL_Bonus_Hp
@@ -301,7 +307,7 @@ using "EO_Windego"
 // data "Progressions" "e93883b2-b593-4101-9c97-d6b8c454c053;348f783f-d3b8-4a05-9bc7-b13217990a50;7680ac46-02fa-4109-97cc-51348846a162;b40ab293-676f-41d4-919e-bf1f36643548"
 data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f;e93883b2-b593-4101-9c97-d6b8c454c053;348f783f-d3b8-4a05-9bc7-b13217990a50;7680ac46-02fa-4109-97cc-51348846a162;b40ab293-676f-41d4-919e-bf1f36643548"
 // data "Passives" "UCL_Metamagic_Heightened_NPC;Ethereal;Darkvision;IncorporealMovement;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-data "Passives" "CX_Sorcerer_Draconic_Boost;CX_Magic_Boost;UCL_Metamagic_Heightened_NPC;Ethereal;Darkvision;IncorporealMovement;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+data "Passives" "CX_Sorcerer_DraconicBloodline_Boost;CX_Magic_Boost;UCL_Metamagic_Heightened_NPC;Ethereal;Darkvision;IncorporealMovement;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 
 // (Added Monk progressions)
 // UCL_FourElements_Thief;UCL_Bonus_Hp
@@ -347,7 +353,7 @@ using "EO_SCL_Harper_Devotion_Paladin"
 // data "Progressions" "14599945-cb3d-461a-9937-8691ac8923ed;3835c8ee-0200-4dd2-a6c2-fd4c518dd5f4;69eae9b0-d17e-429c-9b61-03145d645d0b;36d19089-578d-474f-bfa0-b37f14a138c8"
 data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733;14599945-cb3d-461a-9937-8691ac8923ed;3835c8ee-0200-4dd2-a6c2-fd4c518dd5f4;69eae9b0-d17e-429c-9b61-03145d645d0b;36d19089-578d-474f-bfa0-b37f14a138c8"
 // data "Passives" "AttackOfOpportunity;Tiefling_HellishResistance;DarknessRules;Darkvision"
-data "Passives" "CX_Paladin_Ancients_Boost;CX_Martial_Boost;Tiefling_HellishResistanceAttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "CX_Paladin_Ancients_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
 // (Added Ranger progressions)
 // UCL_Ranger;UCL_BeastMaster;UCL_2_FightingStyle_Archery;UCL_Familiar;UCL_Generic_Sharpshooter
@@ -437,7 +443,7 @@ new entry "EO_SCL_Spore_Druid"
 type "Character"
 using "EO_SCL_Spore_Druid"
 // data "Progressions" "7eefd2dd-5aab-4349-9c22-7c38afe133c4;20c3aeb1-8a5c-4a62-8a21-78b488c3bca8;585820e7-5836-494b-8ee3-ed26673f5821;82f2fa2c-0ac8-458a-b1a3-2d82cd4f6639"
-data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60;7eefd2dd-5aab-4349-9c22-7c38afe133c4;20c3aeb1-8a5c-4a62-8a21-78b488c3bca8;585820e7-5836-494b-8ee3-ed26673f5821;82f2fa2c-0ac8-458a-b1a3-2d82cd4f6639"
+data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60;d3af8a04-c768-487d-bf32-13828fd51f09;a3842d6e-15ba-4ca9-8ea9-6334daa8e566;61ae4889-e080-4e29-a6a9-a68c240744bf"
 // data "Passives" "TAD_Charm;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Druid_Spores_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Darkvision;TAD_Charm"
 
